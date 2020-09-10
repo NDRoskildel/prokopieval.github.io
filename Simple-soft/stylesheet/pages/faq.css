@@ -1,0 +1,137 @@
+﻿/**
+ * CSS: Contents styles for faq.htm page.
+ */
+
+/* Indents
+    ================================================ */
+
+/**
+ * 1. Headers.
+ */
+
+main > h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/**
+ * 2. Links.
+ */
+
+main > a {
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    display: block;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 7px;
+    border-radius: 15px;
+    background-color: #f7f7f7;
+}
+
+/**
+ * 3. Link directory.
+ */
+
+main > a.directory {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+    margin: 0;
+    padding: 3px;
+}
+
+main > a.directory:hover {
+    text-decoration: underline;
+}
+
+/**
+ * 4. Table.
+ */
+
+main > table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+main > table td,
+main > table th {
+    border: 1px solid rgba(0,0,0,.2);
+    font-family: Cambria, serif;
+    padding: 5px;
+}
+
+main > table tr:nth-child(2n + 1) {
+    background-color: #f9f9f9;
+}
+
+/* Fonts
+    ================================================ */
+
+/**
+ * 1. Text.
+ */
+
+main > p {
+    font-family: Cambria, serif;
+    font-size: 1.05em;
+    text-indent: 30px;
+}
+
+/**
+ * 2. Links.
+ */
+
+main > p > a:hover,
+main li > a:hover {
+    text-decoration: underline;
+}
+
+main > p > a,
+main > ul > li > a {
+    font-family: Cambria, serif;
+    font-size: 1.05em;
+}
+
+/**
+ * 3. Lists.
+ */
+
+main > ul > li {
+    font-family: Cambria, serif;
+    text-indent: 30px;
+    font-size: 1.05em;
+}
+
+/* Unions
+    ================================================ */
+
+/**
+ * 1. Row union.
+ */
+
+.union-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/**
+ * 2. Icon.
+ */
+
+.union-row img {
+    width: 35px;
+    height: 35px;
+}
+
+/**
+ * 3. Link.
+ */
+
+.union-row a:hover {
+    text-decoration: underline;
+}

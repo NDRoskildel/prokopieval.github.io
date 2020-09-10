@@ -1,0 +1,1974 @@
+﻿<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="30 days" />
+    <meta name="description" content="Прайс-лист на программы и способы оплаты." />
+    <meta name="keywords" content="Цены на программы простой софт, Цены на услуги, Информация покупателям, Оплата." />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/css/YandexKassa/ya_kassa.css" />
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="/js/YandexKassa/ya_kassa.js"></script>
+    <title>Простой софт - цены</title>
+
+    <style type="text/css">
+        .CPayWay 
+        {
+            font-size: 12pt;
+        }
+        
+        /* у таблицы может быть любой класс или id */
+        .tblServices {
+            width: 693px;
+            font-family: Tahoma;
+            font-size: 9pt;
+            border-color: Silver;
+            border-width: 2px;
+            border-style: solid;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .tblServices tfoot {
+            text-align: left;
+        }
+
+        .N {color: Crimson;}
+        sup {color: Crimson; font-weight: bold; font-size: 10pt;}
+        
+        .tblServices a[href^="#all"], .tblServices a[href="#close"] {
+            text-decoration: none;
+            border-bottom: 1px dashed;
+        }
+
+        /* здесь вся магия, если браузер не поддерживает структурные псевдоклассы, то список будет раскрыт, т.е. доступ к данным сохранится */
+        [id^="all"] {
+            position: fixed; /* чтобы страница "не подпрыгивала" к id */
+        }
+
+            [id^="all"]:target + table a[href^="#all"],
+            [id^="all"]:not(:target) + table tbody tr:nth-of-type(n+15), /* 4 - это порядковый номер tr, после которого строки будут изначально удалены (включительно) */
+            [id^="all"]:not(:target) + table a[href="#close"] {
+                display: none;
+            }
+    </style>
+
+    <script type="text/javascript">
+// изменение величин в таблице цен при изменении валюты
+function ChangePriceCurrency() {
+    var ddl, iIndex, tbl, dblKoef, row, cell, r, c, dblValue, y;
+    ddl = document.getElementById('ddlCurrency');
+    iIndex = ddl.selectedIndex;
+
+    if (iIndex == 0) { // Российский рубль (RUR)
+        dblKoef = 1;
+    } else if (iIndex == 1) { // ЕВРО (EUR)
+        dblKoef = 1 / 86;
+    } else if (iIndex == 2) { // Доллар США (USD)
+        dblKoef = 1 / 79;
+    } else if (iIndex == 3) { // Украинская гривна (UAH)
+        dblKoef = 1 / 2.4;
+    } else if (iIndex == 4) { // Казахский тенге (KZT)
+        dblKoef = 1 / 0.17;
+    } else if (iIndex == 5) { // Белорусский рубль (BYR)
+        dblKoef = 1 / 30;
+    }
+
+    y = document.getElementById('tdYearlyService');
+
+    dblValue = 2000; // parseInt(y.innerHTML);
+    y.innerHTML = Math.round(dblValue * dblKoef) + ' в год';
+
+    tbl = document.getElementById('tblPrices');
+    for (var r = 1; r < tbl.rows.length; r++) { // cycle on rows
+        row = tbl.rows[r];
+        for (var c = 2; c < row.cells.length; c++) { // cycle on cells
+            cell = row.cells[c];
+            if (!isNaN(cell.innerHTML)) { // if numeric
+                if (cell.title == '') {
+                    dblValue = cell.innerHTML;
+                    cell.title = dblValue; // save current value in rur
+                } else {
+                    dblValue = cell.title;
+                    if (iIndex == 0) cell.title = '';
+                }
+                cell.innerHTML = Math.round(dblValue * dblKoef);
+            }
+        }
+    }
+}
+// заполнение цены в форме оплаты через RBK money при выборе программы или лицензии
+function FillPrice(ddlProgram, ddlLicense, txtPrice) {
+    var iProgram, iLicense, sPrice, tbl;
+    iProgram = ddlProgram.selectedIndex;
+    iLicense = ddlLicense.selectedIndex;
+    tbl = document.getElementById('tblPrices');
+    if ((iProgram > 0) && (iLicense > 0)) {
+        // if (iLicense < 5) {
+        sPrice = tbl.rows[iProgram].cells[iLicense + 1].innerHTML;
+        if (isNaN(sPrice)) {
+            sPrice = 'впишите сумму';
+        } else {
+            sPrice = parseInt(sPrice);
+        }
+        txtPrice.value = sPrice;
+    }
+}
+
+// заполнение способов оплаты в форме заказа при выборе программы или лицензии
+function LicenseClick(ddlLicense, ddlPaymentType) {
+    var iLicense = ddlLicense.selectedIndex;
+    for (r = ddlPaymentType.options.length - 1; r >= 0; r--) {
+        ddlPaymentType.remove(r); // remove all items
+    }
+    if (iLicense == 1) { // if БАЗОВАЯ
+        ddlPaymentType.options[1] = new Option('Яндекс.Деньги', 'Яндекс.Деньги');
+        ddlPaymentType.options[2] = new Option('WebMoney', 'WebMoney');
+        ddlPaymentType.options[3] = new Option('RBK Money', 'RBK Money');
+        ddlPaymentType.options[4] = new Option('Почтовый или телеграфный перевод', 'Почтовый или телеграфный перевод');
+        ddlPaymentType.options[5] = new Option('По почте наложенным платежом', 'По почте наложенным платежом');
+        ddlPaymentType.options[6] = new Option('Другой (укажите в комментариях)', 'Другой (укажите в комментариях)');
+        ddlPaymentType.options[7] = new Option('Безналичный платеж без НДС', 'Безналичный платеж без НДС');
+        ddlPaymentType.options[8] = new Option('Безналичный платеж с НДС', 'Безналичный платеж с НДС');
+    } else { // if upper than БАЗОВАЯ
+        ddlPaymentType.options[1] = new Option('Безналичный платеж без НДС', 'Безналичный платеж без НДС');
+        ddlPaymentType.options[2] = new Option('Безналичный платеж с НДС', 'Безналичный платеж с НДС');
+        ddlPaymentType.options[3] = new Option('Яндекс.Деньги', 'Яндекс.Деньги');
+        ddlPaymentType.options[4] = new Option('WebMoney', 'WebMoney');
+        ddlPaymentType.options[5] = new Option('RBK Money', 'RBK Money');
+        ddlPaymentType.options[6] = new Option('Почтовый или телеграфный перевод', 'Почтовый или телеграфный перевод');
+        ddlPaymentType.options[7] = new Option('По почте наложенным платежом', 'По почте наложенным платежом');
+        ddlPaymentType.options[8] = new Option('Другой (укажите в комментариях)', 'Другой (укажите в комментариях)');
+    }
+}
+
+// блокировка-разблокировка полей с реквизитами огранизации в зависимости от способа оплаты
+function ddlPaymentType_onchange(ddlPaymentType) {
+    var sPaymentType, sDis, sColor;
+    sPaymentType = ddlPaymentType.children[ddlPaymentType.selectedIndex].innerHTML;
+    if ((sPaymentType == 'Безналичный платеж с НДС') || (sPaymentType == 'Безналичный платеж без НДС')) {
+        sDis = '';
+        sColor = '';
+    } else {
+        sDis = 'disabled';
+        sColor = 'Gray';
+    }
+    document.getElementById('RS').disabled = sDis; document.getElementById('tdRS').style.color = sColor;
+    document.getElementById('Bank').disabled = sDis; document.getElementById('tdBank').style.color = sColor;
+    document.getElementById('KS').disabled = sDis; document.getElementById('tdKS').style.color = sColor;
+    document.getElementById('BIC').disabled = sDis; document.getElementById('tdBIC').style.color = sColor;
+    document.getElementById('INN').disabled = sDis; document.getElementById('tdINN').style.color = sColor;
+    document.getElementById('KPP').disabled = sDis; document.getElementById('tdKPP').style.color = sColor;
+    document.getElementById('Address').disabled = sDis; document.getElementById('tdAddress').style.color = sColor;
+    document.getElementById('Address2').disabled = sDis; document.getElementById('tdAddress2').style.color = sColor;
+    document.getElementById('Address3').disabled = sDis; document.getElementById('tdAddress3').style.color = sColor;
+    document.getElementById('DocBeforePay').disabled = sDis;
+}
+
+function Address2_onfocus() {
+    if (document.getElementById('Address2').value == '') {
+        document.getElementById('Address2').value = document.getElementById('Address').value;
+    }
+}
+
+function Address3_onfocus() {
+    if (document.getElementById('Address3').value == '') {
+        if (document.getElementById('Address2').value > '') { document.getElementById('Address3').value = document.getElementById('Address2').value; }
+        if (document.getElementById('Address').value > '') { document.getElementById('Address3').value = document.getElementById('Address').value; }
+    }
+}
+
+// 
+function ddlSource_onchange() {
+    var ddlSource = document.getElementById('ddlSource');
+    var txtOtherSource = document.getElementById('txtOtherSource');
+    if (ddlSource.selectedIndex == ddlSource.options.length - 1) { // if Другое selected
+        txtOtherSource.style.visibility = '';
+    } else {
+        txtOtherSource.style.visibility = 'hidden';
+    }
+}
+
+// сабмит формы RBK
+function CheckOnSubmitRbkOrQiwi(ddlProgram, ddlLicense, txtPrice) {
+    if (ddlProgram.selectedIndex < 1) { alert('Заполните поле "Название программы"!'); ddlProgram.focus(); return false }
+    if (ddlLicense.selectedIndex < 1) { alert('Заполните поле "Тип лицензии"!'); ddlLicense.focus(); return false }
+    if (txtPrice.value == '') { alert('Заполните поле "Стоимость лицензии в рублях"!'); txtPrice.focus(); return false }
+    if (confirm("Отправить форму?")) return true; // confirmation
+    return false;
+}
+
+// сабмит формы заказа
+function CheckOnSubmitOrder() {
+    var txtClientEmail = document.getElementById('txtClientEmail');
+    var ddlProgram = document.getElementById('ddlProgram');
+    var ddlLicense = document.getElementById('ddlLicense');
+    var ddlPaymentType = document.getElementById('ddlPaymentType');
+    if (txtClientEmail.value == '') { alert('Заполните поле "Эл. почта"!'); txtClientEmail.focus(); return false }
+    if (ddlProgram.selectedIndex < 1) { alert('Заполните поле "Программа"!'); ddlProgram.focus(); return false }
+    if (ddlLicense.selectedIndex < 1) { alert('Заполните поле "Тип лицензии"!'); ddlLicense.focus(); return false }
+    if (ddlPaymentType.selectedIndex < 1) { alert('Заполните поле "Способ оплаты"!'); ddlPaymentType.focus(); return false }
+    if (confirm("Отправить форму?")) return true; // confirmation
+    return false;
+}
+
+// заполнение формы Qiwi
+function FillQiwiCommentAndPrice() {
+    var ddlProgramQ, ddlLicenseQ, txtPriceQ, txtEmailQ, txtNameQ, ddlCommentQ, sPrice, sProgram, sLicense, sEmail, sName, sComments;
+
+    ddlProgramQ = document.getElementById('ddlProgramQ');
+    ddlLicenseQ = document.getElementById('ddlLicenseQ');
+    txtPriceQ = document.getElementById('amount_rub');
+    ddlCommentQ = document.getElementById('com');
+    txtEmailQ = document.getElementById('txtEmailQ');
+    txtNameQ = document.getElementById('txtNameQ');
+
+    sPrice = GetPrice(ddlProgramQ.selectedIndex, ddlLicenseQ.selectedIndex);
+    sProgram = ddlProgramQ.children[ddlProgramQ.selectedIndex].innerHTML;
+    sLicense = ddlLicenseQ.children[ddlLicenseQ.selectedIndex].innerHTML;
+    sEmail = txtEmailQ.value;
+    sName = txtNameQ.value;
+
+    sComments = sProgram + ' ' + sLicense; // + ' Email: ' + sEmail + ' FIO: ' + sName;
+
+    txtPriceQ.value = sPrice;
+    ddlCommentQ.value = sComments;
+}
+
+function GetPrice(iProgram, iLicense) {
+    var sPrice = '', tbl;
+    tbl = document.getElementById('tblPrices');
+    if ((iProgram > 0) && (iLicense > 0)) {
+        // if (iLicense < 5) {
+        sPrice = tbl.rows[iProgram].cells[iLicense + 1].innerHTML;
+        if (isNaN(sPrice)) {
+            sPrice = 'впишите сумму';
+        } else {
+            sPrice = parseInt(sPrice);
+        }
+    }
+    return sPrice;
+}
+
+function SetSelectedIndex(sID, iSelectedIndex) {
+    var oControl;
+    oControl = document.getElementById(sID);
+    oControl.selectedIndex = iSelectedIndex;
+}
+
+// Qiwi
+
+var ie = document.all;
+var moz = (navigator.userAgent.indexOf("Mozilla") != -1);
+var opera = window.opera;
+var brodilka = "";
+if (ie && !opera) { brodilka = "ie"; }
+else if (moz) { brodilka = "moz"; }
+else if (opera) { brodilka = "opera"; }
+var inputMasks = new Array();
+
+function kdown(inpt, ev) {
+    var id = inpt.getAttribute("id");
+    var idS = id.substring(0, id.length - 1);
+    var idN = Number(id.substring(id.length - 1));
+    inputMasks[idS].BlKPress(idN, inpt, ev);
+}
+
+function kup(inpt, ck) {
+    if (Number(inpt.getAttribute("size")) == inpt.value.length) {
+        var id = inpt.getAttribute("id");
+        var idS = id.substring(0, id.length - 1);
+        var idN = Number((id.substring(id.length - 1))) + 1;
+        var t = document.getElementById(idS + idN);
+        if (ck != 8 && ck != 9) {
+            if (t) { t.focus(); }
+        } else if (ck == 8) {
+            inpt.value = inpt.value.substring(0, inpt.value.length - 1);
+        }
+    }
+}
+
+function Mask(fieldObj) {
+    var template = "(\\d{3})\\d{3}-\\d{2}-\\d{2}";
+    var parts = [];
+    var blocks = [];
+    var order = [];
+    var value = "";
+
+    var Block = function (pattern) {
+        var inptsize = Number(pattern.substring(3, pattern.indexOf('}')));
+        var idS = fieldObj.getAttribute("id");
+        var idN = blocks.length;
+        var text = "";
+
+        var checkKey = function (ck) {
+            return ((ck >= 48) && (ck <= 57)) || ((ck >= 96) && (ck <= 105)) || (ck == 27) || (ck == 8) || (ck == 9) || (ck == 13) || (ck == 45) || (ck == 46) || (ck == 144) || ((ck >= 33) && (ck <= 40)) || ((ck >= 16) && (ck <= 18)) || ((ck >= 112) && (ck <= 123));
+        }
+
+        this.makeInput = function () {
+            return "<input type='text' " + "size='" + inptsize + "' maxlength='" + inptsize + "'" + " id='" + idS + idN + "' onKeyDown='kdown(this, event)' onKeyUp='kup(this, event.keyCode)' value='" + text + "'>";
+        }
+
+        this.key = function (inpt, ev) {
+            if (opera) return;
+            if (!checkKey(ev.keyCode)) {
+                switch (brodilka) {
+                    case "ie":
+                        ev.cancelBubble = true;
+                        ev.returnValue = false;
+                        break;
+                    case "moz":
+                        ev.preventDefault();
+                        ev.stopPropagation();
+                        break;
+                    case "opera":
+                        break;
+                    default:
+                }
+                return;
+            }
+
+            if (ev.keyCode == 8 && inpt.value == "") {
+                var tid = inpt.getAttribute("id");
+                var tidS = tid.substring(0, tid.length - 1);
+                var tidN = Number(tid.substring(tid.length - 1)) - 1;
+                var t = document.getElementById(tidS + tidN);
+                if (t != null) t.focus();
+            }
+        }
+
+        this.getText = function () {
+            text = document.getElementById(idS + idN).value;
+            return text;
+        }
+
+        this.setText = function (val) {
+            text = val;
+        }
+
+        this.getSize = function () {
+            return inptsize;
+        }
+    }
+
+    this.drawInputs = function () {
+        var inputStr = "<span class='Field'>";
+        var p = 0;
+        var b = 0;
+        for (var i = 0; i < order.length; i++) {
+            if (order[i] == "p") {
+                inputStr += parts[p];
+                p++;
+            } else {
+                inputStr += blocks[b].makeInput();
+                b++;
+            }
+        }
+        inputStr += "</span>";
+        document.getElementById("div_" + fieldObj.getAttribute("id")).innerHTML = inputStr;
+        fieldObj.style.display = "none";
+    }
+
+    this.buildFromFields = function () {// constructor
+        var tmpstr = template;
+        while (tmpstr.indexOf("\\") != -1) {
+            var slash = tmpstr.indexOf("\\");
+            var d = "";
+            if (tmpstr.substring(0, slash) != "") {
+                parts[parts.length] = tmpstr.substring(0, slash);
+                order[order.length] = 'p';
+                tmpstr = tmpstr.substring(slash);
+            }
+            var q = tmpstr.indexOf('}');
+            blocks[blocks.length] = new Block(tmpstr.substring(0, q + 1), d);
+            tmpstr = tmpstr.substring(q + 1);
+            order[order.length] = 'b';
+        }
+        if (tmpstr != "") {
+            parts[parts.length] = tmpstr;
+            order[order.length] = 'p';
+        }
+        this.drawInputs();
+    }
+
+    this.buildFromFields();
+
+    this.BlKPress = function (idN, inpt, ev) {
+        blocks[idN].key(inpt, ev);
+    }
+
+    this.makeHInput = function () {
+        var name = fieldObj.getAttribute("name");
+        document.getElementById("div_" + fieldObj.getAttribute("id")).innerHTML =
+        "<input type='text' readonly='readonly' name='" + name + "' value='" + this.getValue() + "'>";
+    }
+
+    this.getFName = function () {
+        return fieldObj.getAttribute("name");
+    }
+
+    this.getValue = function () {
+        value = "";
+        var p = 0;
+        var b = 0;
+        for (var i = 0; i < order.length; i++) {
+            if (order[i] != 'p') {
+                value += blocks[b].getText();
+                b++;
+            }
+        }
+        return value;
+    }
+
+    this.check = function () {
+        for (var i in blocks) {
+            if (blocks[i].getText().length == 0) return false;
+        }
+        return true;
+    }
+}
+    </script>
+
+</head>
+
+<body style="font: 9pt Verdana; margin: 0px 0px 0px 0px;">
+
+<!-- Header -->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!--End header-->
+
+<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>	
+
+				<li><a href="prices.htm" class="current">Цены</a></li>		
+				<li><a href="AllEquipment.htm">Оборудование</a></li>	
+				<li><a href="faq.htm">Вопросы</a></li>			
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm">Галерея</a></li>				
+				<li><a href="responses.htm">Отзывы</a></li>		
+				<li><a href="PsSchool.htm">Обучение</a></li>		
+				<li><a href="partner.htm">Партнеры</a></li>		
+				<li><a href="market.htm">Маркет</a></li>	
+
+				<li><a href="contacts.htm">Контакты</a></li>	
+				<li><a href="support.htm">Поддержка</a></li>	
+				<li><a href="phpBB3/index.php">Форум</a></li>	
+			</ul>
+		</div>
+	</div>
+
+<!-- Main part -->
+    <table border="0" cellspacing="15" style="margin-top: 7px;">
+        <tbody valign="top">
+            <tr>
+                <!-- Left part -->
+                <td style="width: 1%">
+                    <table id="tblNews" border="0" width="188" class="CBorder" cellspacing="5" style="margin-top: 3px">
+                        <tr><td style="background-color: SteelBlue;" class="CNewsCaption">Новости</td></tr>
+<tr><td><b>06.08.2020</b><br />Выход новой версии программы <a href="ClientsCount.htm">Учет клиентов</a> 2.1105</td></tr>
+<tr><td><b>06.08.2020</b><br />Выход новой версии программы <a href="ProductsCount.htm">Склад и торговля</a> 2.1010</td></tr>
+<tr><td><b>06.08.2020</b><br />Выход новой версии программы <a href="PatientsCount.htm">Учет пациентов</a> 2.809</td></tr>
+<tr><td><b>06.08.2020</b><br />Выход новой версии программы <a href="CompCount.htm">Учет компьютеров</a> 2.718</td></tr>
+<tr><td><b>06.08.2020</b><br />Выход новой версии программы <a href="DocumentsCount.htm">Архив документов</a> 2.652</td></tr>
+<tr><td><b>06.08.2020</b><br />Выход новой версии программы <a href="ProjectsCount.htm">Управление проектами</a> 2.622</td></tr>
+<tr><td><b>01.08.2020</b><br />Снижены цены на все типовые конфигурации</td></tr>
+<tr><td><b>31.07.2020</b><br />Новое обучающее видео <a href="https://youtu.be/cHDG8cIPeTY">Безопасность. Запрет редактирования полей по условию</a></td></tr>
+<tr><td><b>30.07.2020</b><br />Новое обучающее видео <a href="https://www.youtube.com/watch?v=glOQmFx7Qmo">Безопасность Сокрытие полного пути к файлу</a></td></tr>
+<tr><td><b>22.07.2020</b><br />Новое обучающее видео <a href="https://youtu.be/YRfdpWC1MR4">Вычисление выражений и хранение результатов</a></td></tr>
+<tr><td><b>21.07.2020</b><br />Новое обучающее видео <a href="https://youtu.be/adyjmMdfaN4">Веб-вызовы и получение информации по ИНН</a></td></tr>
+<tr><td><b>28.05.2020</b><br />Выход новой версии веб-системы <a href="SimpleSite.aspx">Простой сайт</a> 1.139</td></tr>
+<tr><td><b>24.05.2020</b><br />Новое обучающее видео <a href="https://youtu.be/_a7kbG-x884">Генерация документов из Простого сайта</a></td></tr>
+<tr><td><b>06.04.2020</b><br />Выход новой версии программы <a href="Prostoysoft.htm">Prostoysoft Tables</a> 3.34</td></tr>
+<tr><td><b>06.12.2019</b><br />Новое видео Как мы сами ведем учет в облачной системе <a href="SimpleSite.aspx">Простой сайт</a> <img src="Images/New.jpg" alt="" border="0" /></td></tr>
+<tr><td><b>25.11.2019</b><br />Выход новой версии программы <a href="Prostoysoft.htm">Prostoysoft Tables</a> 3.15 с новыми справками (English, German, French, Spain)</td></tr>
+<tr><td><b>01.09.2019</b><br />Выход новой версии программы IP-телефонии <a href="PsPhone.htm">PsPhone</a> 1.15 <img src="Images/New.jpg" alt="" border="0" /></td></tr>
+<tr><td><b>12.08.2019</b><br />Выход новой версии программы <a href="PsMobile.htm">PsMobile</a> 1.35<img src="Images/New.jpg" alt="" border="0" /></td></tr>
+<tr><td><b>21.11.2018</b><br />Новое обучающее видео <a href="https://www.youtube.com/embed/XQNPOj5kB7k">Настройка фискального регистратора АТОЛ</a></td></tr>
+<tr><td><b>22.06.2018</b><br />Новая конфигурация <a href="PsBankDocuments.htm">Банковские документы</a></td></tr>
+</table>
+
+                    <table id="tblPrograms" border="0" width="188" class="CBorder" cellspacing="5" style="margin-top:20px;">
+	                    <tr><td class="CNewsCaption" style="background-color: SteelBlue;">Программы</td></tr>
+	                    <tr><td>1. <a href="ClientsCount.htm">Учет клиентов</a></td></tr>
+	                    <tr><td>2. <a href="ProductsCount.htm">Склад и торговля</a></td></tr>
+	                    <tr><td>3. <a href="CompCount.htm">Учет компьютеров</a></td></tr>
+	                    <tr><td>4. <a href="PatientsCount.htm">Учет пациентов</a></td></tr>
+	                    <tr><td>5. <a href="DocumentsCount.htm">Архив документов</a></td></tr>
+	                    <tr><td>6. <a href="VisitorsCount.htm">Учет посетителей</a></td></tr>
+	                    <tr><td>7. <a href="ProjectsCount.htm">Управление проектами</a></td></tr>
+	                    <tr><td>8. <a href="BooksCount.htm">Учет книг</a></td></tr>
+	                    <tr><td>9. <a href="MyDiscs.htm">Мои диски</a></td></tr>
+	                    <tr><td>10. <a href="CookRecepts.htm">Кулинарные рецепты</a></td></tr>
+	                    <tr><td>11. <a href="FindResults.htm">Анализ результатов поиска</a></td></tr>
+	                    <tr><td>12. <a href="SimpleSite.aspx">Простой сайт</a></td></tr>
+                        <tr><td>13. <a href="PsPhone.htm">PsPhone</a></td></tr>
+                        <tr><td>14. <a href="PsMobile.htm">PsMobile</a></td></tr>
+                        <tr><td>15. <a href="PsMobileScan.htm">PsMobileScan</a></td></tr>
+                        <tr><td>16. <a href="Prostoysoft.htm">Prostoysoft Tables</a></td></tr>
+                    </table>
+
+                    <table id="tblConfigurations" border="0" width="188" class="CBorder" cellspacing="5" style="font-size: 8pt; margin-top:20px;">
+                        <tr><td style="background-color: SteelBlue;" class="CNewsCaption">Конфигурации</td></tr>
+                        <tr><td>1. <a href="Strahovanie.htm">Страховое агентство</a></td></tr>
+                        <tr><td>2. <a href="transport.htm">Транспортная компания</a></td></tr>
+                        <tr><td>3. <a href="AdsAgency.htm">Рекламное агентство</a></td></tr>
+                        <tr><td>4. <a href="AutoClaims.htm">Учет заявок по гарантии</a></td></tr>
+                        <tr><td>5. <a href="LearningCenter.htm">Обучающий центр</a></td></tr>
+                        <tr><td>6. <a href="Potolki.htm">Производство потолков</a></td></tr>
+                        <tr><td>7. <a href="Domofon.htm">Домофоны и антенны</a></td></tr>
+                        <tr><td>8. <a href="Beauty.htm">Салон красоты</a></td></tr>
+                        <tr><td>9. <a href="SchoolComp.htm">Учет в школе</a></td></tr>
+                        <tr><td>10. <a href="Stolovaya.htm">Простая столовая</a></td></tr>
+                        <tr><td>11. <a href="Events.htm">Учет мероприятий</a></td></tr>
+                        <tr><td>12. <a href="Print.htm">Типография</a></td></tr>
+                        <tr><td>13. <a href="Tours.htm">Турагентство</a></td></tr>
+                        <tr><td>14. <a href="Hotel.htm">Простая гостиница</a></td></tr>
+                        <tr><td>15. <a href="Lawyer.htm">Юридическое дело</a></td></tr>
+                        <tr><td>16. <a href="Realty.htm">Агентство недвижимости</a></td></tr>
+                        <tr><td>17. <a href="Fitness.htm">Фитнес-клуб</a></td></tr>
+                        <tr><td>18. <a href="PhotoSalon.htm">Фотосалон</a></td></tr>
+                        <tr><td>19. <a href="Farm.htm">Кролеферма</a></td></tr>
+                        <tr><td>20. <a href="Dento.htm">Стоматология</a></td></tr>
+                        <tr><td>21. <a href="Veterinary.htm">Ветеринарная клиника</a></td></tr>
+                        <tr><td>22. <a href="WindowsDoors.htm">Окна и двери</a></td></tr>
+                        <tr><td>23. <a href="Equipment.htm">Установка и обслуживание оборудования</a></td></tr>
+                        <tr><td>24. <a href="Repairing.htm">Ремонтная мастерская</a></td></tr>
+                        <tr><td>25. <a href="Atelier.htm">Ателье</a></td></tr>
+                        <tr><td>26. <a href="Building.htm">Строительство</a></td></tr>
+                        <tr><td>27. <a href="AutoParts.htm">Продажа автозапчастей</a></td></tr>
+                        <tr><td>28. <a href="MovieCollection.htm">Коллекция аудио/видео</a></td></tr>
+                        <tr><td>29. <a href="Rent.htm">Прокат</a></td></tr>
+                        <tr><td>30. <a href="Cadres.htm">Кадровый учет</a></td></tr>
+                        <tr><td>31. <a href="Transports.htm">Учет автотранспорта</a></td></tr>
+                        <tr><td>32. <a href="Parking.htm">Автостоянка</a></td></tr>
+                        <tr><td>33. <a href="Taxi.htm">Такси</a></td></tr>
+                        <tr><td>34. <a href="Furniture.htm">Мебельное производство</a></td></tr>
+                        <tr><td>35. <a href="AutoService.htm">Автосервис</a></td></tr>
+                        <tr><td>36. <a href="Pawnshop.htm">Ломбард</a></td></tr>
+                        <tr><td>37. <a href="Pharmacy.htm">Аптека</a></td></tr>
+                        <tr><td align="center" style="font-size: 7pt"><a href="databases.htm"><i>Полный список конфигураций...</i></a></td></tr>
+                    </table>
+
+                    <table id="tblSellers" border="0" width="188" class="CBorder" cellspacing="5" style="margin-top:20px;">
+                        <tr><td class="CNewsCaption" style="background-color: SteelBlue;" colspan="3">Онлайн консультанты</td></tr>
+
+                        <tr><td><b>Анжела</b></td><td><img alt="" src="Images/IcqOnline.gif" /></td><td>icq630078085</td></tr>
+                        <tr><td><b>Иван</b></td><td><img alt="" src="Images/IcqOnline.gif" /></td><td>icq17227718</td></tr>
+                    </table>
+                    <br /><br />
+
+                    <!-- рассылки -->
+                    <form target="_top" action="https://subscribe.ru/member/quick" method="post">
+                        <input type="hidden" name="action" value="quick" />
+                        <table border="1" cellspacing="0" cellpadding="2" width="188">
+                            <tr>
+                                <td bgcolor="#fcf5e9" align="center" colspan="2">
+                                    <font size="-1">
+                                        Рассылки
+                                        <a href="https://subscribe.ru/"><b>Subscribe.Ru</b></a>
+                                    </font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#ffffff" align="center" valign="middle" colspan="2">
+                                    <font size="-1">
+                                        <input type="hidden" name="grp" value="comp.soft.biz.vashuchet" />
+                                        <a href="https://subscribe.ru/catalog/comp.soft.biz.vashuchet" target="_top">Простой софт - Автоматизация любого учета</a><br />
+                                        <font size="-2">Ведущая Мария Ларионова</font>
+                                        <input type="text" name="email" size="20" maxlength="100" value="ваш e-mail" style="font-size: 9pt" />
+                                        <input type="submit" value=" OK " style="font-size: 9pt" />
+                                    </font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <a href="mailto:comp.soft.biz.vashuchet-sub@subscribe.ru?subj=subscribe">Подписаться письмом</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="src" value="list_comp.soft.biz.vashuchet" />
+                    </form>
+                    <!-- end -->
+                </td>
+
+                <!-- Center part -->
+                <td>
+                    <b class="CPageCaption" style="font-size:17pt;">Прайс-лист на программы и способы оплаты</b>
+                    <hr />
+
+                    <table border="0" width="100%" style="margin-top: 10px; margin-bottom: 6px;">
+                        <tr>
+                            <td style="color: #005000; font-family: Verdana; font-size: 11pt;"><b><i>Для покупки любой программы:</i></b></td>
+                            <td align="center" valign="top" nowrap class="green" style="padding-top: 9px;"><a href="prices.htm#OrderForm" style="color: White; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сделать заказ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+                        </tr>
+                        <tr><td style="padding-top: 5px;"><b>1.</b> Выберите лицензию</td></tr>
+                        <tr><td><b>2.</b> Выберите способ оплаты и оплатите</td></tr>
+                        <tr><td><b>3.</b> Сообщите нам об этом - в емейл вложите фото или скан платежки. Мы ответим вам с лицензионным кодом.</td></tr>
+                    </table>
+
+                    <a name="1" href="#1" style="cursor: text; text-decoration: none;"><p class="CPageCaption">Цены на программы</p></a>
+
+                    <table border="0" style="width: 622px;">
+                        <tr>
+                            <td>
+                                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="1%">Валюта:</td>
+                                        <td style="padding-left: 4px;">
+                                            <select id="ddlCurrency" name="ddlCurrency" class="input" style="font-family: Arial; font-size: 9pt;" onchange="return ChangePriceCurrency();">
+                                                <option>Российский рубль</option>
+                                                <option>ЕВРО</option>
+                                                <option>Доллар США</option>
+                                                <option>Украинская гривна</option>
+                                                <option>Казахский тенге</option>
+                                                <option>Белорусский рубль</option>
+                                            </select>
+                                        </td>
+                                        <td align="center"><a href="editions.htm" style="font-weight: bold;">Сравнение лицензий</a></td>
+                                        <td align="right"><a href="License.htm" style="font-weight: bold;">Лицензионный договор</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="2" id="tblPrices" cellspacing="0" cellpadding="2" bordercolor="Gainsboro" style="width: 693px; border-color:Silver;border-width:2px;border-style:solid;border-collapse:collapse; font-family: Arial; font-size: 9pt; margin-top:10px;">
+                                    <tr align="center" valign="middle" style="height: 40px; font-weight: bold; font-style: normal; background-color: Gainsboro">
+                                        <td>&nbsp;</td>
+                                        <td style="font-style: normal; white-space: nowrap; font-family: Verdana; font-style: normal; color: black;">Программа</td>
+                                        <td class="CHome" valign="top">Лицензия<br />"БАЗОВАЯ"<br />на 1<br />рабочее место</td>
+                                        <td class="CStd">Лицензия<br />"СТАНДАРТ"<br />сетевая на 3<br />рабочих места</td>
+                                        <td class="CBiz">Лицензия<br />"БИЗНЕС"<br />сетевая на 5<br />рабочих мест</td>
+                                        <td class="CPro">Лицензия<br />"ПРО"<br />сетевая на 10<br />рабочих мест</td>
+                                        <td class="CCorp">Лицензия<br />"КОРП"<br />сетевая на 20<br />рабочих мест</td>
+                                        <td class="CVip">Лицензия<br />"ВИП"<br />сетевая на 50<br />или на XX р.м.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1.</td>
+                                        <td class="CProduct"><a href="ClientsCount.htm">Учет клиентов</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=1&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td class="CProduct"><a href="ProductsCount.htm">Склад и торговля</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=2&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td class="CProduct"><a href="CompCount.htm">Учет компьютеров</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=3&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td class="CProduct"><a href="PatientsCount.htm">Учет пациентов</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=4&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td class="CProduct"><a href="DocumentsCount.htm">Архив документов</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=5&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td class="CProduct"><a href="VisitorsCount.htm">Учет посетителей</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=6&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td class="CProduct"><a href="ProjectsCount.htm">Управление проектами</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=7&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.</td>
+                                        <td class="CProduct"><a href="BooksCount.htm">Учет книг</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=8&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.</td>
+                                        <td class="CProduct"><a href="MyDiscs.htm">Мои диски</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=9&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10.</td>
+                                        <td class="CProduct"><a href="CookRecepts.htm">Кулинарные рецепты</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=10&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11.</td>
+                                        <td class="CProduct"><a href="FindResults.htm">Анализ результатов поиска</a></td>
+                                        <td align="center">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=11&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12.</td>
+                                        <td class="CProduct"><a href="PsPhone.htm">PsPhone</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=12&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13.</td>
+                                        <td class="CProduct"><a href="PsMobile.htm">PsMobile</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=13&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14.</td>
+                                        <td class="CProduct"><a href="PsMobileScan.htm">PsMobileScan</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=14&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15.</td>
+                                        <td class="CProduct"><a href="Prostoysoft.htm">Prostoysoft Tables</a></td>
+                                        <td class="CHome">3000</td>
+                                        <td class="CStd">9000</td>
+                                        <td class="CBiz">15000</td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=15&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16.</td>
+                                        <td class="CProduct"><a href="SimpleSite.aspx">Простой сайт SimpleSite</a></td>
+                                        <td align="center"> - </td>
+                                        <td align="center"> - </td>
+                                        <td class="CBiz"> - </td>
+                                        <td class="CPro">20000</td>
+                                        <td class="CCorp">25000</td>
+        					            <td class="CVip">&nbsp;29900<a href="prices.htm?program=16&license=6#OrderForm" title="Заказать" style="text-decoration: none; font-weight: bold">...</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <p style="margin-left: 5px;margin-top: 5px;font-size:8pt;">
+                        • <a href="AllDatabases.htm">Цены на конфигурации</a><br />
+                    </p>
+
+                    <a name="2" href="#2" style="cursor: text; text-decoration: none;"><p class="CPageCaption">Цены на услуги</p></a>
+                    <br id="all1" />
+                    <table border="2" class="tblServices" cellspacing="0" cellpadding="2" bordercolor="Gainsboro">
+                        <tr align="center" valign="middle" style="font-weight: bold; height:35px; background-color: Gainsboro">
+                            <td>Услуга</td>
+                            <td style="width: 150px;">Цена</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <b>1. ГОДОВАЯ ПОДПИСКА НА ОБНОВЛЕНИЯ И ФОРУМ</b>
+                                <div>
+                                    • возможность скачивать и устанавливать обновления программы (EXE-файл)<br />
+                                    • возможность задавать вопросы на форуме (членство в клубе разработчиков) <i style="font-size: smaller; float: right;"><a href="Updates.htm">подробнее</a>&nbsp;</i><br />
+                                </div>
+                            </td>
+                            <td align="center" id="tdYearlyService"><b class="N">2000 руб</b>/год <sup title="Приобретение этой услуги не является обязательным. Вы можете оставаться на старой версии ПО." style="cursor:default">*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <b><a name="StandartSupport"></a>2. ИНФОРМАЦИОННО-ТЕХНИЧЕСКОЕ СОПРОВОЖДЕНИЕ (ПОДДЕРЖКА)</b>
+                                <div>
+                                    • рассмотрение обращений с просмотром скриншотов, видео от клиента <!-- <a href="terms.htm">Регламент</a>--> <br />
+                                    • консультации по различным средствам связи преимущественно по e-mail<br />
+                                    • работа с конфигурацией БД клиента по вопросам поддержки в рамках лимита по пакету<br />
+                                    • удаленные сеансы с подключением к компьютеру клиента только на платных пакетах<br />
+                                    • возможность устанавливать обновления программы во время действия пакета <i style="font-size: smaller; float: right;"><a href="support.htm">подробнее</a>&nbsp;</i><br />
+                                </div>
+                            </td>
+                            <td align="center"><b class="N">6000 руб</b>/год<br />(5 часов работы)<br />либо в соответствии с <b><a href="support.htm" style="text-decoration: none; color: crimson">приобретенным пакетом</a></b><br />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <b style="white-space: nowrap">3. СЕАНС СВЯЗИ С ИТ-СПЕЦИАЛИСТОМ (работа с БД клиента, коучинг-обучение)</b>
+                                <div>
+                                    • Удаленный сеанс связи для обучения настройкам программы по телефону, Skype,<br />Viber, WhatsApp с подключением к компьютеру клиента, либо удаленная работа <i style="font-size: smaller; float: right;"><a href="3_Сеанс связи с ИТ-специалистом (работа, коучинг-обучение).doc">подробнее</a>&nbsp;</i><br />
+                                </div>
+                            </td>
+                            <td align="center">
+                                <b class="N">1200 руб</b>/час <sup title="2 часа минимум. Либо 6000 руб/день (8 часов), либо 15000 руб/20 часов, либо 30000 руб/40 часов" style="cursor:default">*</sup><br />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <b style="white-space: nowrap">4. ВЫЕЗД СПЕЦИАЛИСТА В ОФИС КЛИЕНТА, БЕСЕДА, ПОДГОТОВКА НАЧАЛЬНОГО ТЗ</b>
+                                <div>
+                                    • Демонстрация ПО, обсуждения деталей техзадания и договора. 2 часа <i style="font-size: smaller; float: right;"><a href="4_Выезд специалиста в офис клиента, беседа и начальное ТЗ.doc">подробнее</a>&nbsp;</i><br />
+                                </div>
+                            </td>
+                            <td align="center"><b class="N">3000 руб</b> (2 часа) <sup title="Цена может отличаться по регионам: Санкт-Петербург 3000 руб, Москва 4000 руб" style="cursor:default">*</sup></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <b style="white-space: nowrap">5. АУДИТ ПРОЦЕССОВ, СОСТАВЛЕНИЕ ТЕХНИЧЕСКОГО ЗАДАНИЯ, ДОКУМЕНТАЦИЯ</b>
+                                <div>
+                                    • наш ИТ-специалист-аналитик проанализирует ваши задачи и бизнес-процессы,<br /> составит структуру данных и план внедрения, оформит техническое задание <i style="font-size: smaller; float: right;"><a href="5_Составление технического задания, документирование, аудит.doc">подробнее</a>&nbsp;</i><br />
+                                </div>
+                            </td>
+                            <td align="center"><b class="N">12 000 руб</b> (16 часов) <sup title="Полный реинжиниринг бизнес-процессов и разработка ТЗ с четко прописанной структурой базы данных - таблиц, полей, списков, документов, отчетов, ролей, прав доступа и операций. Примерная трудоемкость 1 неделя (40 часов) 20 000 руб." style="cursor:default">*</sup></td>
+                        </tr>
+
+
+                        <tr style="background-color: RGB(230,244,255);">
+                            <td>
+                                <b style="white-space: nowrap">6. НАСТРОЙКА КОНФИГУРАЦИИ БАЗЫ ДАННЫХ (внедрение ИТ-проекта)</b><br />
+                                <div>
+                                    • Работа с БД: создание таблиц, полей, форм, формул, отчетов, ролей и прав доступа<br />
+                                    • Запись обучающих и отчетных видео по выполненной работе<br />
+                                    • Удаленные сеансы, консультации, обучение, установка ПО <i style="font-size: smaller; float: right;"><a href="services.htm">подробнее</a>&nbsp;</i><br />
+                                </div>
+                            </td>
+                            <td align="center"><b class="N">20 000 руб</b> (40 часов) <sup title="По новым проектам цена на первую неделю договорная, зависит от сложности ТЗ, обычно 30000руб, вторая 25000руб, третья и дальше (если надо) - 20000руб(40час)." style="cursor:default">*</sup><br />или договорная под реализацию</td>
+                        </tr>
+                    </table>
+
+
+                    <!--
+                    <p style="margin-left: 250px;margin-top: 5px;font-size:8pt;">
+                        <a href="#all1">показать весь список</a>
+                    </p>
+                    <br />
+                    -->
+
+
+                    <a name="3" href="#3" style="cursor: text; text-decoration: none"><h4>Информация покупателям:</h4></a>
+
+                    <div style="margin-left: 5px; margin-bottom: 20px;">
+                        <!-- <b>1.</b> Все цены <b>в российских рублях</b>. Если оплата в другой валюте, то по курсу ЦБ<br /> -->
+                        <b>1.</b> <b>Апгрейд лицензии</b> возможен в любое время <b>доплатой разницы</b> в стоимости редакций. Вы получите новый ЛК.<br />
+                        <b>2.</b> <b>Лицензионный код не ограничен по времени</b><br /><br />
+                    </div>
+
+                    <h4><a name="4" href="#4" style="text-decoration: none; color: #005000; cursor: text">Комплект поставки:</a></h4>
+
+                    <div style="margin-left: 5px;">
+                        <b>1.</b> Дистрибутив программы (скачивается с сайта самостоятельно)<br />
+                        <b>2.</b> <b style="color: Firebrick">Персональный лицензионный код</b>, дающий право использования ПО (e-mail придет в течении рабочего часа)<br />
+
+                        <!--
+                        <b>3.</b> Стандартная поддержка по e-mail в течение 1 года <b><i><a href="terms.htm" style="font-size:8pt;">Регламент</a></i></b><br />
+                        -->
+
+                        <b>3.</b> Лицензионный договор, договор приобретения (или договор передачи прав пользования), счет, акт и накладная (при оплате по безналу)<br />
+                        <b>4.</b> <b style="color: Firebrick">Фирменный CD-диск</b> высылаем Почтой России (при покупки лицензии не ниже "СТАНДАРТ")
+                        <div style="margin: 5px; color:Gray; font-size:8pt;">
+                            CD-диск содержит демо-версии всех наших программ, которые есть на сайте, и является рекламным материалом, не является товаром.<br />
+                            Товаром является персональный лицензионный код (пункт 2).
+                        </div>
+                        <br />
+                        <a href="Images/AllCD.jpg" title="CD-диски" target="_blank"><img alt="" src="Images/CD.gif" style="border-style: none" /></a><br />
+                    </div>
+
+                    <a name="5" href="#5" style="cursor: text; text-decoration: none;"><p class="CPageCaption" style="font-size:19pt;margin-top:35px;margin-bottom:5px">Способы оплаты</p></a>
+                    <hr style="margin-top:0px;margin-bottom:15px" />
+
+                    <!-- Yandex Payments (Yandex Kassa) -->
+
+                    <div class="ya-kassa">
+                        <table border="0" cellpadding="3">
+                            <tr>
+                                <td colspan="2"><a name="YandexKassa" href="#YandexKassa" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">1. Онлайн оплата банковской картой через</b></a></td>
+                                <td align="right"><a href="https://kassa.yandex.ru/"><img src="Images/YandexKassaLogo.png" alt="" /></a></td>
+                                <td align="right"><b class="CPayWay"> - Visa, Mastercard, Maestro, МИР</b></td>
+                            </tr>
+                        </table>
+
+                        <form action="/YandexKassa/YandexPayment.aspx" method="post" name="YandexKassaForm" class="YandexKassaForm" id="YandexKassaForm">
+                            <label for="YandexKassaForm__program">Программа:</label>
+                            <select name="programm" id="YandexKassaForm__programm" required>
+                                <option value="" selected disabled hidden>Программа</option>
+                                <option value="0">(Не требуется)</option>
+                                <option value="1">Учет клиентов</option>
+                                <option value="2">Склад и торговля</option>
+                                <option value="3">Учет компьютеров</option>
+                                <option value="4">Учет пациентов</option>
+                                <option value="5">Архив документов</option>
+                                <option value="6">Учет посетителей</option>
+                                <option value="7">Управление проектами</option>
+                                <option value="8">Учет книг</option>
+                                <option value="9">Мои диски</option>
+                                <option value="10">Кулинарные рецепты</option>
+                                <option value="11">Анализ результатов поиска</option>
+                                <option value="12">Простой сайт</option>
+                                <option value="13">PsPhone</option>
+                                <option value="14">PsMobile</option>
+                                <option value="15">Prostoysoft Tables</option>
+                            </select>
+                            <label for="YandexKassaForm__license">Вид лицензии:</label>
+                            <select name="license" id="YandexKassaForm__license" required>
+                                <option value="" selected disabled hidden>Лицензия</option>
+                                <option value="0">(Нет)</option>
+                            </select>
+                            <label for="YandexKassaForm__config">Конфигурация:</label>
+                            <select name="config" id="YandexKassaForm__config" required>
+                                <option value="" selected disabled hidden>Конфигурация</option>
+                                <option value="0">(Не требуется)</option>
+                                <option value="1">CRM-система для отдела продаж новостроек</option>
+                                <option value="2">Event-агентство</option>
+                                <option value="3">Автобизнес</option>
+                                <option value="4">Автомойка</option>
+                                <option value="5">АвтоМотоСклад</option>
+                                <option value="6">Авторазборка</option>
+                                <option value="7">Автосервис</option>
+                                <option value="8">Автостоянка</option>
+                                <option value="9">Агентство недвижимости</option>
+                                <option value="10">Аптека</option>
+                                <option value="11">АРМ кассира</option>
+                                <option value="12">Ателье</option>
+                                <option value="13">База отдыха</option>
+                                <option value="14">База охоты и рыбалки</option>
+                                <option value="15">Банковские документы</option>
+                                <option value="16">Баня</option>
+                                <option value="17">Ветеринарная клиника</option>
+                                <option value="18">Винный погреб</option>
+                                <option value="19">Государственный учебный центр</option>
+                                <option value="20">Детский центр</option>
+                                <option value="21">Домашняя бухгалтерия</option>
+                                <option value="22">Домофоны и антенны</option>
+                                <option value="23">Йога-центр</option>
+                                <option value="24">Кадровое агентство</option>
+                                <option value="25">Кадровый учет</option>
+                                <option value="26">Клиника пластической хирургии</option>
+                                <option value="27">Клининговая компания</option>
+                                <option value="28">Коллекция аудио и видео</option>
+                                <option value="29">Консалтинг и аудит</option>
+                                <option value="30">Кролеферма</option>
+                                <option value="31">Курьерская служба</option>
+                                <option value="32">Ломбард</option>
+                                <option value="33">Магазин алкогольной продукции</option>
+                                <option value="34">Магазин одежды</option>
+                                <option value="35">Магазин продуктов</option>
+                                <option value="36">Магазин сантехники</option>
+                                <option value="37">Мебельное производство</option>
+                                <option value="38">Медицинская комиссия</option>
+                                <option value="39">Медицинский центр</option>
+                                <option value="40">Микрофинансовая организация</option>
+                                <option value="41">Многоуровневый паркинг</option>
+                                <option value="42">Обучающий центр</option>
+                                <option value="43">Окна и двери</option>
+                                <option value="44">Охранное предприятие</option>
+                                <option value="45">Пилорама</option>
+                                <option value="46">Подсчет голосов в ТСЖ</option>
+                                <option value="47">Прачечная-химчистка</option>
+                                <option value="48">Продажа автозапчастей</option>
+                                <option value="49">Продажа стройматериалов</option>
+                                <option value="50">Производство кухонь</option>
+                                <option value="51">Производство потолков</option>
+                                <option value="52">Производство сувениров</option>
+                                <option value="53">Производство электроники</option>
+                                <option value="54">Производство</option>
+                                <option value="55">Прокат</option>
+                                <option value="56">Простая гостиница</option>
+                                <option value="57">Простая столовая</option>
+                                <option value="58">Простое кафе</option>
+                                <option value="59">Рекламное агентство</option>
+                                <option value="60">Ремонт квартир</option>
+                                <option value="61">Ремонтная мастерская</option>
+                                <option value="62">Ритуальное агентство</option>
+                                <option value="63">Рыболовная ферма</option>
+                                <option value="64">Салон красоты</option>
+                                <option value="65">Система бюджетирования</option>
+                                <option value="66">Спортивная школа</option>
+                                <option value="67">Стоматология</option>
+                                <option value="68">Страховое агентство</option>
+                                <option value="69">Страховой брокер</option>
+                                <option value="70">Строительство индивидуальных домов</option>
+                                <option value="71">Строительство многоквартирных домов</option>
+                                <option value="72">Строительство</option>
+                                <option value="73">Студия танцев</option>
+                                <option value="74">Суши и пицца</option>
+                                <option value="75">Такси</option>
+                                <option value="76">Типография</option>
+                                <option value="77">Транспортная компания</option>
+                                <option value="78">Турагентство</option>
+                                <option value="79">Управление социальной защитой населения</option>
+                                <option value="80">Управленческий учет</option>
+                                <option value="81">Управляющая компания</option>
+                                <option value="82">Установка и обслуживание оборудования</option>
+                                <option value="83">Учебное заведение</option>
+                                <option value="84">Учет автотранспорта</option>
+                                <option value="85">Учет в школе</option>
+                                <option value="86">Учет гарантийных заявок</option>
+                                <option value="87">Учет договоров</option>
+                                <option value="88">Учет зарплаты и кадров</option>
+                                <option value="89">Учет мероприятий и семинаров</option>
+                                <option value="90">Учет мигрантов</option>
+                                <option value="91">Учет оборудования в школе</option>
+                                <option value="92">Учет судебных дел</option>
+                                <option value="93">Учет услуг ЖКХ</option>
+                                <option value="94">Фитнес-клуб</option>
+                                <option value="95">Фотосалон</option>
+                                <option value="96">Центр андрологии</option>
+                                <option value="97">Юридическое дело</option>
+                            </select>
+                            <label for="YandexKassaForm__service">Услуга:</label>
+                            <select name="service" id="YandexKassaForm__service" required>
+                                <option value="" selected disabled hidden>Услуга</option>
+                                <option value="0">(Не требуется)</option>
+                                <option value="1">Годовая подписка на обновления</option>
+                                <option value="2">Стандартная поддержка</option>
+                                <option value="3">Сеанс связи с ИТ-специалистом</option>
+                                <option value="4">Выезд специалиста в офис клиента</option>
+                                <option value="5">Составление тех. задания, документирование, аудит проекта</option>
+                                <option value="6">Настройка конфигурации базы данных</option>
+                                <option value="7">Другое</option>
+                            </select>
+                            <label for="YandexKassaForm__another" id="YandexKassaForm__lbAnother" hidden>Введите свое наименование:</label>
+                            <input type="text" name="another" placeholder="Наименование другой услуги" id="YandexKassaForm__another" hidden />
+                            <label for="YandexKassaForm__name">Имя, Фамилия:</label>
+                            <input type="text" name="name" placeholder="John Doe" id="YandexKassaForm__name" required />
+                            <label for="YandexKassaForm__phone">Телефон:</label>
+                            <input type="text" name="phone" placeholder="+7(999)999-99-99" id="YandexKassaForm__phone" required />
+                            <label for="YandexKassaForm__email">Email:</label>
+                            <input type="text" name="email" placeholder="simple@mail.ru" id="YandexKassaForm__email" />
+                            <label for="YandexKassaForm__price">Сумма заказа (руб.):</label>
+                            <input type="text" name="price" placeholder="0 руб." id="YandexKassaForm__price" required />
+                            <label for="YandexKassaForm__promocode">Промокод:</label>
+                            <input type="text" name="promocode" placeholder="Промокод вводить здесь" id="YandexKassaForm__promocode" />
+                            <div style="text-align: left; margin-top: 15px;">
+                                <button class="green" value="Оплатить" style="cursor: pointer">Оплатить</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <br /><br />
+                    <table border="0" cellpadding="3">
+                        <tr>
+                            <td colspan="9" nowrap><a name="PayPal" href="#PayPal" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">2. Платежная система PayPal</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="PEQ88NRNFCB6C">
+<table>
+<tr><td><input type="hidden" name="on0" value="Оплатить в рублях">Оплатить в рублях</td></tr><tr><td><select name="os0">
+	<option value="Лицензия Базовая">Лицензия Базовая 3 000,00 RUB</option>
+	<option value="Лицензия Стандарт">Лицензия Стандарт 9 000,00 RUB</option>
+	<option value="Лицензия Бизнес">Лицензия Бизнес 15 000,00 RUB</option>
+	<option value="Лицензия ПРО">Лицензия ПРО 20 000,00 RUB</option>
+	<option value="Лицензия Корп">Лицензия Корп 25 000,00 RUB</option>
+	<option value="Лицензия ВИП">Лицензия ВИП 29 900,00 RUB</option>
+	<option value="Лицензия ВИП-Партнер">Лицензия ВИП-Партнер 299 000,00 RUB</option>
+	<option value="Годовая подписка">Годовая подписка 2 000,00 RUB</option>
+	<option value="ИТС-поддержка">ИТС-поддержка 6 000,00 RUB</option>
+	<option value="Настройка конфигурации">Настройка конфигурации 30 000,00 RUB</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="RUB">
+<input type="image" src="https://www.paypalobjects.com/ru_RU/RU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
+<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+                            </td>
+                            <td style="padding-left: 20px">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXU4ZRFLSNJJN">
+<table>
+<tr><td><input type="hidden" name="on0" value="Оплатить в USD">Оплатить в USD</td></tr><tr><td><select name="os0">
+	<option value="Лицензия Базовая">Лицензия Базовая $50,00 USD</option>
+	<option value="Лицензия Стандарт">Лицензия Стандарт $140,00 USD</option>
+	<option value="Лицензия Бизнес">Лицензия Бизнес $230,00 USD</option>
+	<option value="Лицензия ПРО">Лицензия ПРО $310,00 USD</option>
+	<option value="Лицензия Корп">Лицензия Корп $390,00 USD</option>
+	<option value="Лицензия ВИП">Лицензия ВИП $500,00 USD</option>
+	<option value="Лицензия ВИП-Партнер">Лицензия ВИП-Партнер $5 000,00 USD</option>
+	<option value="Годовая подписка">Годовая подписка $30,00 USD</option>
+	<option value="ИТС-поддержка">ИТС-поддержка $100,00 USD</option>
+	<option value="Настройка конфигурации">Настройка конфигурации $500,00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/ru_RU/RU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
+<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+                            </td>
+                            <td valign="top" style="padding-left: 20px">
+
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="TYJMLD37CAYSN">
+<table>
+<tr><td><input type="hidden" name="on0" value="Оплатить в EUR">Оплатить в EUR</td></tr><tr><td><select name="os0">
+	<option value="Лицензия Базовая">Лицензия Базовая €40,00 EUR</option>
+	<option value="Лицензия Стандарт">Лицензия Стандарт €125,00 EUR</option>
+	<option value="Лицензия Бизнес">Лицензия Бизнес €210,00 EUR</option>
+	<option value="Лицензия ПРО">Лицензия ПРО €277,00 EUR</option>
+	<option value="Лицензия Корп">Лицензия Корп €347,00 EUR</option>
+	<option value="Лицензия ВИП">Лицензия ВИП €400,00 EUR</option>
+	<option value="Лицензия ВИП-Партнер">Лицензия ВИП-Партнер €4 000,00 EUR</option>
+	<option value="Годовая подписка">Годовая подписка €30,00 EUR</option>
+	<option value="ИТС-поддержка">ИТС-поддержка €85,00 EUR</option>
+	<option value="Настройка конфигурации">Настройка конфигурации €415,00 EUR</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="EUR">
+<input type="image" src="https://www.paypalobjects.com/ru_RU/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal — более безопасный и легкий способ оплаты через Интернет!">
+<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <br /><br />
+                    <!-- QIWI start -->
+                    <table cellpadding="3">
+                        <tr><td><a name="Qiwi" href="#Qiwi" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">3. Оплата через систему "QIWI"</b></a></td></tr>
+                    </table>
+                    <br />
+
+                    <div align="left" style="margin:0; padding:5px; width:500px; border:1px solid #ddd; background:#fff; border-radius: 7px; -webkit-border-radius: 7px; -moz-border-radius: 7px; font:normal 14px/14px Geneva,Verdana,Arial,Helvetica,Tahoma,sans-serif;">
+                        <form action="http://w.qiwi.ru/setInetBill_utf.do" method="get" accept-charset="UTF-8" onsubmit="return checkSubmit();">
+
+                            <input type="hidden" name="from" value="19935" />
+                            <input type="hidden" name="lifetime" value="0.0" />
+                            <input type="hidden" name="check_agt" value="false" />
+
+                            <!-- используйте это поле для передачи уникального идентификатора заказа/платежа в вашей системе -->
+                            <p style="text-align:center; color:#006699; padding: 20px 0px; background:url(Images/QiwiLogo.jpg) no-repeat 10px 50%;">
+                                Выставление счета за покупку
+                            </p>
+                            <table border="0" style="border-collapse:collapse;">
+                                <tr style="background:#f1f5fa;">
+                                    <td style="color:#a3b52d; width:45%; text-align:left; padding-left:13px;">* Название программы</td>
+                                    <td style="padding:10px">
+                                        <select id="ddlProgramQ" name="ddlProgramQ" class="input" style="width: 279px; font-family: Arial; font-size: 9pt;">
+                                            <option selected="selected"></option>
+                                            <option>Учет клиентов</option>
+                                            <option>Склад и торговля</option>
+                                            <option>Учет компьютеров</option>
+                                            <option>Учет пациентов</option>
+                                            <option>Архив документов</option>
+                                            <option>Учет посетителей</option>
+                                            <option>Управление проектами</option>
+                                            <option>Учет книг</option>
+                                            <option>Мои диски</option>
+                                            <option>Кулинарные рецепты</option>
+                                            <option>Анализ результатов поиска</option>
+                                            <option>Простой сайт</option>
+                                            <option>PsPhone</option>
+                                            <option>PsMobile</option>
+                                            <option>Prostoysoft Tables</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color:#a3b52d; width:45%; text-align:left; padding-left:13px;">* Лицензия</td>
+                                    <td style="padding:10px">
+                                        <select id="ddlLicenseQ" name="ddlLicenseQ" class="input" style="width: 279px; font-family: Arial; font-size: 9pt;" onchange="return FillQiwiCommentAndPrice();">
+                                            <option></option>
+                                            <option>БАЗОВАЯ (1 р.м.)</option>
+                                            <option>СТАНДАРТ (3 р.м.)</option>
+                                            <option>БИЗНЕС (5 р.м.)</option>
+                                            <option>ПРО (10 р.м.)</option>
+                                            <option>КОРП (20 р.м.)</option>
+                                            <option>ВИП</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr style="background:#f1f5fa;">
+                                    <td style="color:#a3b52d; width:45%; text-align:left; padding-left:13px;">* Сумма</td>
+                                    <td style="padding:10px">
+                                        <input type="text" id="amount_rub" name="amount_rub" value="" style="width:50px; text-align:right;" /> руб.
+                                        <input type="text" name="amount_kop" value="" maxlength="2" size="2" style="text-align:right;" /> коп.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color:#a3b52d; width:45%; text-align:left; padding-left:13px;">* Мобильный телефон<br />&nbsp;&nbsp;&nbsp;(пример: 9057772233)</td>
+                                    <td style="padding:10px">
+                                        <input type="text" name="to" id="idto" style="width:130px;" />
+                                        <span id="div_idto"></span>
+                                        <script type="text/javascript">
+					                inputMasks["idto"] = new Mask(document.getElementById("idto"));
+					                function checkSubmit() {
+					                    if (inputMasks["idto"].getValue().match(/^\d{10}$/)) {
+					                        document.getElementById("idto").setAttribute("disabled", "disabled");
+					                        inputMasks["idto"].makeHInput();
+					                        return true;
+					                    } else {
+					                        alert("Введите номер телефона в федеральном формате без \"8\" и без \"+7\"");
+					                        return false;
+					                    }
+					                }
+                                        </script>
+                                    </td>
+                                </tr>
+                                <tr style="background:#f1f5fa;">
+                                    <td style="color:#a3b52d; width:45%; text-align:left; padding-left:13px;">* Ваш e-mail</td>
+                                    <td style="padding:10px">
+                                        <input type="text" id="txtEmailQ" name="txtEmailQ" value="" style="width: 278px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color:#a3b52d; width:45%; text-align:left; padding-left:25px;">Имя, Фамилия</td>
+                                    <td style="padding:10px">
+                                        <input type="text" id="txtNameQ" name="txtNameQ" value="" style="width: 278px;" />
+                                    </td>
+                                </tr>
+                                <tr style="background:#f1f5fa;">
+                                    <td style="color:#a3b52d; width:45%; text-align:left; padding-left:25px;">Комментарий</td>
+                                    <td style="padding:10px">
+                                        <input type="text" id="com" name="com" value="" style="width: 278px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-top: 20px; padding-left: 7px; padding-bottom: 16px;">
+                                        <input type="submit" id="SubmitOrderQ" name="SubmitOrderQ" value="Оплатить" class="green" style="cursor: pointer" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+                    <!-- QIWI end -->
+
+
+                    <br /><br />
+                    <!-- RBK Money start -->
+                    <table border="0" cellpadding="3">
+                        <tr>
+                            <td colspan="3"><a name="RbkMoney" href="#RbkMoney" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">4. Оплата через систему</b></a></td>
+                            <td align="right"><img src="Images/RbkMoneyLogo.png" alt="" /></td>
+                        </tr>
+                        <tr>
+                            <td><img alt="" src="Images/MasterCard.png" style="width: 100px;" /></td>
+                            <td><img alt="" src="Images/VISA.png" style="width: 100px;" /></td>
+                            <td><img alt="" src="Images/MIR.png" style="width: 100px;" /></td>
+                        </tr>
+                    </table>
+
+                    <br />
+                    Практически всеми возможными способами можно оплатить через систему "RBKmoney", в которой у нас открыт счет:
+                    банковские карты (<b>MasterCard</b>, <b>VISA</b>, <b>МИР</b>) любого российского банка, банковские переводы, терминалы, электронные системы
+                    (Яндекс.Деньги, Webmoney, Контакт и др.), <b>SMS-платеж</b> и другие способы. Для оплаты заполните форму и нажмите кнопку "Оплатить".
+
+                    <br />
+                    <a name="RbkMoneyForm"></a>
+                    <br />
+
+                    <form action="http://simple-soft.ru/" method="GET">
+                        <script src="https://checkout.rbk.money/checkout.js" class="rbkmoney-checkout"
+                                data-invoice-template-id="12a2YtqeMjY"
+                                data-invoice-template-access-token="eyJhbGciOiJFUzI1NiIsImtpZCI6IllKSWl0UWNNNll6TkgtT0pyS2s4VWdjdFBVMlBoLVFCLS1tLXJ5TWtrU3MiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjAsImp0aSI6IjEyYTJZdUtBYTAwIiwicmVzb3VyY2VfYWNjZXNzIjp7ImNvbW1vbi1hcGkiOnsicm9sZXMiOlsicGFydHkuKi5pbnZvaWNlX3RlbXBsYXRlcy4xMmEyWXRxZU1qWS5pbnZvaWNlX3RlbXBsYXRlX2ludm9pY2VzOndyaXRlIiwicGFydHkuKi5pbnZvaWNlX3RlbXBsYXRlcy4xMmEyWXRxZU1qWTpyZWFkIl19fSwic3ViIjoiZDY2YTYxZmQtMzhjOC00YmM1LThjMDQtOGYwY2JhZTYzODExIn0.16d8hySwpe9jFmRve_vAyfL-MaW8qYxWAmAOOO1wHv9x8R9QkDd_aBWPGBHotDp3Z1GJgq6X9GQnCIWZHbVgMg"
+                                data-name="Оплатить"
+                                data-wallets=true
+                                data-description="Оплата на сайте"
+                                data-label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Оплатить&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+                        </script>
+                    </form>
+
+                    <!-- RBK Money end -->
+
+
+                    <br /><br />
+                    <table border="0" cellpadding="3" style="width: 510px; height: 140px">
+                        <tr><td colspan="9"><a name="YandexMoney" href="#YandexMoney" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">5. Оплата электронными деньгами</b></a></td></tr>
+                        <tr><td><img alt="" src="Images/YandexMoney.gif" /></td><td><a href="prices.htm#OrderForm" onclick="SetSelectedIndex('ddlPaymentType', 2);">Заполните форму >></a></td></tr>
+                        <tr><td><img alt="" src="Images/Webmoney.gif" /></td><td><a href="prices.htm#OrderForm" onclick="SetSelectedIndex('ddlPaymentType', 3);">Заполните форму >></a></td></tr>
+                    </table>
+
+                    <br /><br />
+                    <table border="0" cellpadding="3" style="width: 510px;">
+                        <tr><td colspan="9"><a name="SberbankOnline" href="#SberbankOnline" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">6. Оплата через Сбербанк.Онлайн в организацию</b></a></td></tr>
+                        <tr><td><img alt="" src="Images/Sberbank.gif" /></td><td><a href="prices.htm#OrderForm" onclick="SetSelectedIndex('ddlPaymentType', 6);">Заполните форму >></a></td></tr>
+                    </table>
+                    <p style="font-weight: bold">
+                        <a href="https://youtu.be/J_eyKUKHhBE">Видео демонстрация</a>
+                    </p>
+
+                    <table cellpadding="3" style="margin-top:30px">
+                        <tr><td><a name="Allsoft" href="#Allsoft" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">7. Оплата через интернет-магазин Allsoft</b></a></td></tr>
+                        <tr><td><a href="http://allsoft.ru"><img src="Images/logo_allsoft.png" alt="" border="0" /></a></td></tr>
+                    </table>
+                    <p>
+                        Жители России, Украины, Белоруссии, Казахстана, Узбекистана и других стран СНГ могут оплатить в национальной валюте через местное представительство Allsoft.
+                    </p>
+
+
+                    <br /><br />
+
+                    <table cellpadding="3">
+                        <tr><td nowrap><a name="Beznal" href="#Beznal" style="text-decoration:none;color:black;cursor:text"><b class="CPayWay">8. Оплата по безналичному расчету от организации</b></a></td></tr>
+                        <tr><td><img alt="" src="Images/Cashless.gif" /></td></tr>
+                    </table>
+
+                    Заполните, пожалуйста, форму заявку ниже, и вам придет электронный документ "Счет" по емейл. Оригиналы документов и весь <a href="#4">комплект поставки</a>
+                    мы пришлем Вам Почтой России.
+
+                    <p>
+                        1. Вы заполняете форму ниже или присылаете нам ваши реквизиты по емейл<br />
+                        2. Мы выставляем вам счет по электронной почте<br />
+                        3. Вы оплачиваете<br />
+                        4. При получении оплаты мы посылаем вам персональный лицензионный код к программе по емейл и весь <a href="#4">комплект поставки</a> Почтой России<br />
+                        5. Один экземпляр накладной с вашей печатью и подписью вы отправляете нам обратно<br />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td valign="top">
+                    <form id="OrderForm" method="post" action="sendform.aspx?formtype=OrderForm" onsubmit="return CheckOnSubmitOrder();">
+
+                        <a name="OrderForm" href="#OrderForm" style="cursor: text;text-decoration: none;"><p class="CPageCaption" style="font-size: 18pt;">Оформить заказ</p></a>
+
+                        <fieldset class="CFrame" style="padding: 9px 9px 0px 9px; margin: 0px 0px 0px 0px; width: 700px; height: 365px; font-family: Arial; font-size: 10pt;">
+                            <br />
+
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr valign="top">
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="1" style="font-family: Arial;">
+                                            <tr class="CTr">
+                                                <td style=" white-space:nowrap;color:Firebrick;font-weight:bold">* Программа</td>
+                                                <td>
+                                                    <select id="ddlProgram" name="ddlProgram" class="input" style="width: 265px; font-family: Arial; font-size: 9pt;">
+                                                        <option selected="selected"></option>
+                                                        <option>Учет клиентов</option>
+                                                        <option>Склад и торговля</option>
+                                                        <option>Учет компьютеров</option>
+                                                        <option>Учет пациентов</option>
+                                                        <option>Архив документов</option>
+                                                        <option>Учет посетителей</option>
+                                                        <option>Управление проектами</option>
+                                                        <option>Учет книг</option>
+                                                        <option>Мои диски</option>
+                                                        <option>Кулинарные рецепты</option>
+                                                        <option>Анализ результатов поиска</option>
+                                                        <option>PsPhone</option>
+                                                        <option>PsMobile</option>
+                                                        <option>PsMobileScan</option>
+                                                        <option>Prostoysoft Tables</option>
+                                                        <option>Простой сайт SimpleSite</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td style="color:Firebrick;font-weight:bold">* Лицензия <a href="editions.htm" title="подробнее" style="text-decoration: none; font-weight: bold">...</a></td>
+                                                <td>
+                                                    <select id="ddlLicense" name="ddlLicense" class="input" style="width: 265px; font-family: Arial; font-size: 9pt;"
+                                                            onchange="return LicenseClick(document.getElementById('ddlLicense'), document.getElementById('ddlPaymentType'));">
+                                                        <option></option>
+                                                        <option>БАЗОВАЯ на 1 рабочее место (3000 руб)</option>
+                                                        <option>СТАНДАРТ сетевая на 3 р.м. (9000 руб)</option>
+                                                        <option>БИЗНЕС сетевая на 5 р.м. (15000 руб)</option>
+                                                        <option>ПРО сетевая на 10 р.м. (20000 руб)</option>
+                                                        <option>КОРП сетевая на 20 р.м. (25000 руб)</option>
+                                                        <option>ВИП сетевая на 50 р.м. (29900 руб)</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="CTr">
+                                                <td style="padding-left: 8px;" title="Конфигурация - это конкретная БД с настройками под предметную область. Если требуется, то укажите. Цена 5000 руб.">Конфигурация<br /></td>
+                                                <td title="Конфигурация - это конкретная БД с настройками под предметную область. Если требуется, то укажите. Цена 5000 руб.">
+                                                    <!--<input type="text" id="Config" name="Config" maxlength="255" style="width: 265px;" />-->
+
+                                                    <select id="Config" name="Config" style="width: 265px; font-family: Arial; font-size: 9pt;">
+                                                        <option selected="selected"></option>
+                                                        <option>не нужна никакая</option>
+                                                        <option>CRM-система для отдела продаж новостроек</option>
+                                                        <option>Event-агентство</option>
+                                                        <option>Автобизнес</option>
+                                                        <option>Автомойка</option>
+                                                        <option>АвтоМотоСклад</option>
+                                                        <option>Авторазборка</option>
+                                                        <option>Автосервис</option>
+                                                        <option>Автостоянка</option>
+                                                        <option>Агентство недвижимости</option>
+                                                        <option>Аптека</option>
+                                                        <option>АРМ кассира</option>
+                                                        <option>Ателье</option>
+                                                        <option>База отдыха</option>
+                                                        <option>База охоты и рыбалки</option>
+                                                        <option>Банковские документы</option>
+                                                        <option>Баня</option>
+                                                        <option>Ветеринарная клиника</option>
+                                                        <option>Винный погреб</option>
+                                                        <option>Государственный учебный центр</option>
+                                                        <option>Детский центр</option>
+                                                        <option>Домашняя бухгалтерия</option>
+                                                        <option>Домофоны и антенны</option>
+                                                        <option>Йога-центр</option>
+                                                        <option>Кадровое агентство</option>
+                                                        <option>Кадровый учет</option>
+                                                        <option>Клиника пластической хирургии</option>
+                                                        <option>Клининговая компания</option>
+                                                        <option>Коллекция аудио и видео</option>
+                                                        <option>Консалтинг и аудит</option>
+                                                        <option>Кролеферма</option>
+                                                        <option>Курьерская служба</option>
+                                                        <option>Ломбард</option>
+                                                        <option>Магазин алкогольной продукции</option>
+                                                        <option>Магазин одежды</option>
+                                                        <option>Магазин продуктов</option>
+                                                        <option>Магазин сантехники</option>
+                                                        <option>Мебельное производство</option>
+                                                        <option>Медицинская комиссия</option>
+                                                        <option>Медицинский центр</option>
+                                                        <option>Микрофинансовая организация</option>
+                                                        <option>Многоуровневый паркинг</option>
+                                                        <option>Обучающий центр</option>
+                                                        <option>Окна и двери</option>
+                                                        <option>Охранное предприятие</option>
+                                                        <option>Пилорама</option>
+                                                        <option>Подсчет голосов в ТСЖ</option>
+                                                        <option>Прачечная-химчистка</option>
+                                                        <option>Продажа автозапчастей</option>
+                                                        <option>Продажа стройматериалов</option>
+                                                        <option>Производство кухонь</option>
+                                                        <option>Производство потолков</option>
+                                                        <option>Производство сувениров</option>
+                                                        <option>Производство электроники</option>
+                                                        <option>Производство</option>
+                                                        <option>Прокат</option>
+                                                        <option>Простая гостиница</option>
+                                                        <option>Простая столовая</option>
+                                                        <option>Простое кафе</option>
+                                                        <option>Рекламное агентство</option>
+                                                        <option>Ремонт квартир</option>
+                                                        <option>Ремонтная мастерская</option>
+                                                        <option>Ритуальное агентство</option>
+                                                        <option>Рыболовная ферма</option>
+                                                        <option>Салон красоты</option>
+                                                        <option>Система бюджетирования</option>
+                                                        <option>Спортивная школа</option>
+                                                        <option>Стоматология</option>
+                                                        <option>Страховое агентство</option>
+                                                        <option>Страховой брокер</option>
+                                                        <option>Строительство индивидуальных домов</option>
+                                                        <option>Строительство многоквартирных домов</option>
+                                                        <option>Строительство</option>
+                                                        <option>Студия танцев</option>
+                                                        <option>Суши и пицца</option>
+                                                        <option>Такси</option>
+                                                        <option>Типография</option>
+                                                        <option>Транспортная компания</option>
+                                                        <option>Турагентство</option>
+                                                        <option>Управление социальной защитой населения</option>
+                                                        <option>Управленческий учет</option>
+                                                        <option>Управляющая компания</option>
+                                                        <option>Установка и обслуживание оборудования</option>
+                                                        <option>Учебное заведение</option>
+                                                        <option>Учет автотранспорта</option>
+                                                        <option>Учет в школе</option>
+                                                        <option>Учет гарантийных заявок</option>
+                                                        <option>Учет договоров</option>
+                                                        <option>Учет зарплаты и кадров</option>
+                                                        <option>Учет мероприятий и семинаров</option>
+                                                        <option>Учет мигрантов</option>
+                                                        <option>Учет оборудования в школе</option>
+                                                        <option>Учет судебных дел</option>
+                                                        <option>Учет услуг ЖКХ</option>
+                                                        <option>Фитнес-клуб</option>
+                                                        <option>Фотосалон</option>
+                                                        <option>Центр андрологии</option>
+                                                        <option>Юридическое дело</option>
+                                                        <option>Ремонтно-строительная организация</option>
+
+                                                    </select>
+
+                                                </td>
+                                            </tr>
+
+                                            <tr class="CTr">
+                                                <td style="padding-left: 8px;">Поддержка <a href="support.htm" title="подробнее" style="text-decoration: none; font-weight: bold">...</a></td>
+                                                <td>
+                                                    <!--
+                                                    <select id="ddlSupport" name="ddlSupport" style="width: 265px; font-family: Arial; font-size: 9pt;">
+                                                        <option selected="selected"></option>
+                                                        <option>Базовое обслуживание 1 час/мес (1400 руб)</option>
+                                                        <option>Стандарт обслуживание 5 час/мес (6000 руб)</option>
+                                                        <option>Премиум обслуживание 10 час/мес (10000 руб)</option>
+                                                        <option>ВИП обслуживание 20 час/мес (20000 руб)</option>
+                                                    </select>
+
+                                                    <select id="ddlSupport" name="ddlSupport" style="width: 265px; font-family: Arial; font-size: 9pt;">
+                                                        <option selected="selected"></option>
+                                                        <option>Поддержка СТАНДАРТ 5 часов/год 6000 руб</option>
+                                                        <option>Поддержка ПРЕМИУМ 10 часов/год 10000 руб</option>
+                                                        <option>Поддержка ВИП 20 часов/год 20000 руб</option>
+                                                        <option>НАСТРОЙКА КОНФИГУРАЦИИ 20 часов 15000 руб</option>
+                                                    </select>
+                                                    -->
+
+                                                    <select id="ddlSupport" name="ddlSupport" style="width: 265px; font-family: Arial; font-size: 9pt;">
+                                                        <option selected="selected"></option>
+                                                        <option>Поддержка СТАНДАРТ</option>
+                                                        <option>НАСТРОЙКА КОНФИГУРАЦИИ 20 часов</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 8px;">Комментарии<br /></td>
+                                                <td>
+                                                    <input type="text" id="txtComments" name="txtComments" maxlength="255" style="width: 260px;margin-top:2px" />
+                                                </td>
+                                            </tr>
+
+                                            <tr class="CTr">
+                                                <td style="padding-left:8px;color:SteelBlue;font-weight:bold">Ваше&nbsp;&nbsp;ФИО</td>
+                                                <td><input type="text" id="txtFIO" name="txtFIO" maxlength="255" style="width: 260px" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td style="padding-left:8px;color:SteelBlue;font-weight:bold"><div id="lblCompany">Организация</div></td>
+                                                <td><input type="text" id="txtCompany" name="txtCompany" maxlength="255" style="width: 260px" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td style="white-space:nowrap;color:Firebrick;font-weight:bold">* Телефон</td>
+                                                <td><input type="text" id="txtClientPhone" name="txtClientPhone" maxlength="255" style="width: 260px" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td style="white-space:nowrap;color:Firebrick;font-weight:bold">* Эл. почта</td>
+                                                <td><input type="text" id="txtClientEmail" name="txtClientEmail" maxlength="255" style="width: 260px" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td style="white-space:nowrap;padding-right:8px;color:Firebrick;font-weight:bold" title="Способ оплаты, наиболее удобный для вашей бухгалтерии (с НДС или без НДС)">* Способ оплаты</td>
+                                                <td>
+                                                    <select id="ddlPaymentType" name="ddlPaymentType" style="width: 265px; font-family: Arial; font-size: 9pt;"
+                                                            onchange="return ddlPaymentType_onchange(document.getElementById('ddlPaymentType'));" title="Способ оплаты, наиболее удобный для вашей бухгалтерии (с НДС или без НДС)">
+                                                        <option></option>
+                                                        <option selected="selected">Безналичный платеж без НДС</option>
+                                                        <option>Яндекс.Деньги</option>
+                                                        <option>WebMoney</option>
+                                                        <option>RBK Money (Visa, MasterCard, терминалы)</option>
+                                                        <option>QIWI</option>
+                                                        <option>Сбербанк Онлайн</option>
+                                                        <option>Банковские карты (см. RBK Money)</option>
+                                                        <option>Почтовый перевод (см. RBK Money)</option>
+                                                        <option>По почте наложенным платежом</option>
+                                                        <option>Терминалы (см. RBK Money)</option>
+                                                        <option>Наличными в офисе "Простой софт" в СПб</option>
+                                                        <option>Другой (укажите в комментариях)</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td nowrap title="Пожалуйста, ответьте, как вы впервые узнали о нас" style="color:SteelBlue;font-weight:bold;padding-left:8px;padding-top:5px;padding-right:3px;vertical-align:top;">Как узнали?</td>
+                                                <td style="width: 236px;">
+
+                                                    <select id="ddlSource" name="ddlSource" title="Пожалуйста, ответьте, как вы впервые узнали о нас" style="width:265px;margin-top:2px;font-family:Arial;font-size:9pt;"
+                                                            onchange="return ddlSource_onchange();">
+                                                        <option selected="selected"></option>
+                                                        <option>Я не помню</option>
+                                                        <option>Мне это не известно</option>
+                                                        <option>Яндекс-Поиск</option>
+                                                        <option>Яндекс-Директ</option>
+                                                        <option>Яндекс-Маркет</option>
+                                                        <option>Яндекс-Каталог</option>
+                                                        <option>Google-Поиск</option>
+                                                        <option>Google-AdWords</option>
+                                                        <option>Bing-Поиск</option>
+                                                        <option>Рамблер</option>
+                                                        <option>Другая поисковая система</option>
+                                                        <option>Youtube</option>
+                                                        <option>Вконтакте</option>
+                                                        <option>Instagram</option>
+                                                        <option>Софт-каталоги</option>
+                                                        <option>Сайты Интернета</option>
+                                                        <option>Входящий email</option>
+                                                        <option>Входящий звонок</option>
+                                                        <option>Рекомендация знакомого</option>
+                                                        <option>2GIS</option>
+                                                        <option>Другое</option>
+                                                    </select>
+                                                    <input type="text" id="txtOtherSource" name="txtOtherSource" maxlength="255" style="width: 242px; visibility: hidden;" value="пожалуйста, впишите" />
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td></td>
+                                                <td style="padding-top: 0px;">
+                                                    <input type="submit" id="SubmitOrder" name="SubmitOrder" class="green" style="cursor: pointer" value="Отправить" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="1" style="font-family: Arial; margin-left: 1px; margin-right: 5px;">
+                                            <tr class="CTr">
+                                                <td align="center" id="tdINN" style="color:SteelBlue; padding-right: 2px;"><b>ИНН</b></td>
+                                                <td><input type="text" id="INN" name="INN" maxlength="255" style="width: 242px;" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdKPP" style="padding-right: 2px;">КПП</td>
+                                                <td><input type="text" id="KPP" name="KPP" maxlength="255" style="width: 242px;" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdRS" style="padding-right: 2px;">р/с</td>
+                                                <td><input type="text" id="RS" name="RS" maxlength="255" style="width: 242px;" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdBank" style="padding-right: 2px;">Банк</td>
+                                                <td><input type="text" id="Bank" name="Bank" maxlength="255" style="width: 242px;" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdKS" style="padding-right: 2px;">к/c</td>
+                                                <td><input type="text" id="KS" name="KS" maxlength="255" style="width: 242px;" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdBIC" style="padding-right: 2px;">БИК</td>
+                                                <td><input type="text" id="BIC" name="BIC" maxlength="255" style="width: 242px;" /></td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdAddress" title="Адрес юридический" nowrap style="padding-left: 8px;">Адрес юр.</td>
+                                                <td>
+                                                    <input type="text" id="Address" name="Address" maxlength="255" style="width: 242px;" title="Пример: 123456, г. Москва, пр. Мира, д. 1, кв. 1" />
+                                                </td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdAddress2" title="Адрес фактический (грузополучатель)" nowrap style="padding-left: 8px;">Адрес факт.</td>
+                                                <td>
+                                                    <input type="text" id="Address2" name="Address2" maxlength="255" style="width: 242px;" title="Пример: 123456, г. Москва, пр. Мира, д. 1, кв. 1" LANGUAGE=javascript onfocus="return Address2_onfocus()" /><br />
+                                                </td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td align="center" id="tdAddress3" title="Адрес почтовый для отправки документов" nowrap style="padding-left:8px;padding-right:2px;color:SteelBlue;"><b>Адрес почт.</b></td>
+                                                <td>
+                                                    <input type="text" id="Address3" name="Address3" maxlength="255" style="width: 242px;" title="Пример: 123456, г. Москва, пр. Мира, д. 1, кв. 1" LANGUAGE=javascript onfocus="return Address3_onfocus()" />
+                                                </td>
+                                            </tr>
+                                            <tr class="CTr" valign="top">
+                                                <td colspan="2" nowrap align="right">
+                                                    <input type="checkbox" id="DocBeforePay" name="DocBeforePay" title="Поставьте галочку, если еще до оплаты вашей организации нужны оригиналы документов в бумажном виде (бюджетная организация)" style="margin: 3px 0px 0px 0px;width: 16px;" />
+                                                    <span style="font-family: Arial; font-size: 10px;" title="Поставьте галочку, если еще до оплаты вашей организации нужны оригиналы документов в бумажном виде (бюджетная организация)">
+                                                        Требуются оригиналы документов до оплаты
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="CTr">
+                                                <td style="padding-left: 8px; padding-right: 3px;" title="Промо-код, дающий скидку Вы можете указать, если он у Вас есть" nowrap>Промо-код<br /></td>
+                                                <td title="Промо-код, дающий скидку Вы можете указать, если он у Вас есть">
+                                                    <input type="text" id="promocode" name="promocode" maxlength="255" style="width: 242px;" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p style="margin-left: 110px; font: bold italic 8pt Verdana; color: DimGray;">Отправляя заказ, Вы соглашаетесь на обработку персональных данных.</p>
+                        </fieldset>
+
+                        <script type="text/javascript">
+                // Read info in URL (about program, configuration, license...)
+                var s, i, sProg, sConf, sSupport, sComments, sPaymentType, oControl;
+
+                s = location.href;
+
+                i = s.indexOf('program=');
+                if (i > 0) {
+                    sProg = s.substring(i + 8);
+
+                    i = sProg.indexOf('&');
+                    if (i < 0) i = sProg.indexOf('#');
+                    sProg = sProg.substr(0, i);
+
+                    if (sProg.length > 0) {
+                        sProg = decodeURI(sProg);
+                        oControl = document.getElementById('ddlProgram');
+
+                        if (!isNaN(sProg)) { // if numeric
+                            oControl.selectedIndex = sProg;
+                        } else {
+                            oControl.value = sProg;
+                        }
+
+                        if (oControl.value=='') {
+                            oControl.selectedIndex = 1; //"Учет клиентов" by default
+                        }
+
+                        document.getElementById('ddlLicense').selectedIndex = 1;
+                    }
+                }
+
+                i = s.indexOf('conf=');
+                if (i > 0) {
+                    sConf = s.substring(i + 5);
+                    i = sConf.indexOf('#')
+                    sConf = sConf.substr(0, i);
+                    if (sConf.length > 0) {
+                        sConf = decodeURI(sConf);
+
+                        oControl = document.getElementById('Config');
+                        if (oControl) oControl.value = sConf;
+
+                        oControl = document.getElementById('txtComments');
+                        if (oControl) oControl.value = 'Конфигурация "' + sConf + '"';
+
+                        oControl = document.getElementById('ddlLicense');
+                        if (oControl) oControl.selectedIndex = 1;
+                    }
+                }
+
+                i = s.indexOf('license=');
+                if (i > 0) {
+                    sLicense = s.substring(i + 8);
+
+                    i = sLicense.indexOf('#');
+                    sLicense = sLicense.substr(0, i);
+
+                    oControl = document.getElementById('ddlLicense');
+                    if (!isNaN(sLicense)) { // if numeric
+                        oControl.selectedIndex = sLicense;
+
+                        if (sLicense == 6) document.getElementById('txtComments').value = 'Интересует ВИП на XX рабочих мест';
+                    } else {
+                        sLicense = decodeURI(sLicense);
+                        oControl.value = sLicense;
+                    }
+
+                }
+
+                i = s.indexOf('support=');
+                if (i > 0) {
+                    sSupport = s.substring(i + 8);
+                    i = sSupport.indexOf('#')
+                    sSupport = sSupport.substr(0, i);
+                    if (sSupport.length > 0) {
+                        sSupport = decodeURI(sSupport);
+                        oControl = document.getElementById('ddlSupport');
+                        if (!isNaN(sSupport)) { // if numeric
+                            oControl.selectedIndex = sSupport;
+                        } else {
+                            oControl.value = sSupport;
+                        }
+                    }
+                }
+
+                i = s.indexOf('comments=');
+                if (i > 0) {
+                    sComments = s.substring(i + 9);
+                    i = sComments.indexOf('#')
+                    sComments = sComments.substr(0, i);
+                    if (sComments.length > 0) {
+                        sComments = decodeURI(sComments);
+                        oControl = document.getElementById('txtComments');
+                        oControl.value = sComments;
+                    }
+                }
+
+                document.getElementById('ddlCurrency').selectedIndex = 0;
+                        </script>
+                    </form>
+                </td>
+
+                <!-- Right part -->
+                <td></td>
+            </tr>
+            <tr>
+
+                <!-- Bottom part -->
+                <td colspan="3">
+                    <br />
+
+
+
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body>
+</html>

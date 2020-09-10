@@ -1,0 +1,485 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+    <title>Простой софт - Конфигурация "Система бюджетирования"</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="text/css" http-equiv="Content-Style-Type" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="30 days" />
+    <meta name="description" content="Программа для планирования бюджетов, контроля расходв и анализа." />
+    <meta name="keywords" content="Система бюджетирования, бюджет, бюджет доходов и расходов, БДР, БДДС, ББЛ, продажи, задачи" />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+   
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var elWrap = $('#slider'),
+                el = elWrap.find('img'),
+                indexImg = 1,
+                indexMax = el.length;
+
+            function change() {
+                el.fadeOut(1000);
+                el.filter(':nth-child(' + indexImg + ')').fadeIn(500);
+            }
+
+            function autoCange() {
+                indexImg++;
+                if (indexImg > indexMax) {
+                    indexImg = 1;
+                }
+                change();
+            }
+            var interval = setInterval(autoCange, 3000);
+
+            elWrap.mouseover(function () {
+                clearInterval(interval);
+            });
+            elWrap.mouseout(function () {
+                interval = setInterval(autoCange, 3000);
+            });
+
+            elWrap.append('<span class="next"></span><span class="prev"></span>');
+
+            $('span.next').click(function () {
+                indexImg++;
+                if (indexImg > indexMax) {
+                    indexImg = 1;
+                }
+                change();
+            });
+            $('span.prev').click(function () {
+                indexImg--;
+                if (indexImg < 1) {
+                    indexImg = indexMax;
+                }
+                change();
+            });
+        });
+    </script>
+
+</head>
+
+<body style="font: Verdana 9pt; margin: 0px 0px 0px 0px;">
+
+    <!-- Header -->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>	
+
+				<li><a href="prices.htm">Цены</a></li>		
+				<li><a href="AllEquipment.htm">Оборудование</a></li>	
+				<li><a href="faq.htm">Вопросы</a></li>			
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm">Галерея</a></li>				
+				<li><a href="responses.htm">Отзывы</a></li>		
+				<li><a href="PsSchool.htm">Обучение</a></li>		
+				<li><a href="partner.htm">Партнеры</a></li>		
+				<li><a href="market.htm">Маркет</a></li>	
+
+				<li><a href="contacts.htm">Контакты</a></li>	
+				<li><a href="support.htm">Поддержка</a></li>	
+				<li><a href="phpBB3/index.php">Форум</a></li>	
+			</ul>
+		</div>
+	</div>
+<!-- Main part -->
+    <table border="0" width="100%" cellspacing="15" style="margin-top: 7px;">
+        <tbody valign="top">
+            <tr>
+                <!-- Left part -->
+                <td></td>
+
+                <!-- Center part -->
+                <td>
+                    <table id="tblLogoAndProgramInfo" border="0" width="100%" cellpadding="10">
+                        <tr>
+                            <td valign="top" rowspan="9" style="width: 1%; padding-top:20px;">
+                                <img alt="" src="Images/BudgetControl_logo.png" style="border-style: none" />
+                            </td>
+                            <td colspan="9" style="white-space: nowrap">
+                                <table id="tblProductTitle" border="0" width="100%">
+                                    <tr>
+                                        <td><b class="CPageCaption">Конфигурация "Система бюджетирования"</b></td>
+                                        <td align="center" style="color: DarkRed;"></td>
+                                        <td align="right" style="padding-right: 20px;"><b class="CPrice">6000 руб.</b></td>
+                                        <td align="right" class="CButton2"><a href="prices.htm?program=Учет клиентов&conf=Система бюджетирования#OrderForm" style="color: Black; text-decoration: none;" target="_parent">Купить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <hr class="CHr" />
+                                            <b></b>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+								
+							<table border="1" cellpadding="0" cellspacing="0" bordercolor="Gainsboro" style="border-color:LightGray;border-width:1px;border-style:solid;border-collapse:collapse;">
+								<tr>
+									<td nowrap><img alt="" src="Images/downloadNew.png" style="border-style: none" /></td>
+									<td nowrap style="width:190px;vertical-align: middle;padding: 5px;"><a href="ClientsCount.msi">Скачать программу</a></td>
+									<td class="size" style="vertical-align: middle;padding: 5px;">12 Мб</td>
+									<td nowrap style="vertical-align: middle;padding: 5px;">дистрибутив ПО "Учет клиентов"</td>
+								</tr>
+								<tr valign="bottom">
+									<td nowrap><img alt="" src="Images/downloadNew.png" style="border-style: none" /></td>
+									<td nowrap style="vertical-align: middle;padding: 5px;"><a href="BudgetControl.zip" target="_blank">Скачать конфигурацию</a></td>
+									<td class="size" style="vertical-align: middle;padding: 5px;">3 Мб</td>
+									<td style="vertical-align: middle;padding: 5px;">MDB-файл</td>
+								</tr>
+							</table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br />
+							
+					<p>
+					Это решение для автоматизации бюджетирования в компании. Предназначено для формирования бюджетов.
+					</p>
+					<p>					
+					Бюджетирование в компании является одним из важнейших аспектов, где планируется стоимость тех действий, через исполнение которых осуществляется реализация всей вертикали планов - и стратегических, и оперативных.
+					Результатом бюджетного процесса в рамках общего процесса планирования будет получение трех основных бюджетов преприятия:<br />
+					 - Бюджет движения денег как прогнозный отчет о движении денежных средств<br />
+					 - Бюджет доходов и расходов, как прогнозный отчет о прибылях и убытках<br />
+					 - Прогнозный бюджет баланса<br />
+					<br />
+					Это поможет более эффективно вести управление вашей компании. А так же вести планирование, анализ.					
+					</p>
+
+					<p>
+					Бюджетирование является очень важным для того, чтобы можно было оптимизировать затраты. Для того, чтобы эффективно рассчитать бюджет, требуется иметь возможность контролировать все доходы и расходы практически в режиме реального времени, иначе существует риск, что какие-то статьи бюджета окажутся более расходными, чем предполагалось. По этой причине мы создали эту конфигурацию! Она поможет сделать процесс работы с финансами более простым и понятным. Так же, можно заказать доработку этой конфигурацции конкретно для Вашей компании!
+					</p>
+                    <br />
+					
+					
+                    <div id="slider" class="slider_wrap">
+                        <img alt="Image 1" class="active" src="Images/BudgetControl_01_slide.png" />
+                        <img alt="Image 2" src="Images/BudgetControl_02_slide.png" />
+                        <img alt="Image 3" src="Images/BudgetControl_03_slide.png" />
+                    </div>
+				
+
+                    <br />
+				   <table border="0" cellspacing="0" align="left" style="margin: 10px;">
+	<tr>
+		<td nowrap>
+            <h3 style="color: #4682b4;font-size:15.5pt">Видео презентация</h3></a>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/vPcDquW6tHM" frameborder="0" allowfullscreen="true"></iframe>
+		</td>
+	</tr>
+ </table>
+    </td>
+</tr>
+<tr>
+	<td></td> 
+    <td>
+					
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                   <br />
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/FunctionLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />Основные функции</h3> </td>
+                        </tr>
+                    </table>
+                    <br />
+
+                    <div style="border: thin solid #E5E5E5; border-radius: 15px; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 50px; padding: 0px 12px 12px 12px; width: 95%">
+                        <table width="100%" border="0" cellpadding="10">
+                            <tbody valign="top">
+                                <tr>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Создание различных бюджетов</b></div>
+										Например:<br />
+										 - Бюджет движения денег как прогнозный отчет о движении денежных средств<br />
+										 - Бюджет доходов и расходов, как прогнозный отчет о прибылях и убытках<br />
+										 - Прогнозный бюджет баланса<br />
+                                    </td>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Система отчетов(с выгрузкой в Excel, Word)</b></div>	
+										- Есть список стандартных отчетов<br />
+										- Благодаря гибкой системе отчетов, есть возможность создания и настройки новых – простых и нестандартных отчетов по различным параметрам<br />
+										- Есть возможность выгрузки отчетов в Excel, Word<br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Ведение, планирование, контроль и анализ бюджетов компании</b></div>										
+										- Создание единой базы: включая контрагентов, договоры, статьи, ЦФУ, проекты и т. д.<br />	
+										- Планирование доходов и расходов, движения денежных средств<br />
+										- Составление прогнозного баланса	<br />
+										- Долгосрочное (стратегическое) финансовое планирование (например, на год или более)	<br />	
+										- Контроль исполнения финансовых планов (проверку соблюдения контрольных цифр доходов и лимитов расходов)<br />
+										- Создания единого формата учета и отчетности(основные формы системы бюджетирования: бюджет доходов и расходов, бюджет движения денежных средств и бюджет по балансовому листу)<br />	
+                                    </td>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Система бюджетного управления позволяет компании автоматизировать:</b></div>
+										- все расчеты, заложенные в методологии бюджетного планирования<br />
+										- формирование главных бюджетных форм<br />
+										- процесс согласования бюджетов<br />
+										- процесс контроля и анализа исполнения бюджета							
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/PlusLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />Преимущества системы</h3> </td>
+                        </tr>
+                    </table>
+                    <br />
+
+                    <div style="border: thin solid #E5E5E5; border-radius: 15px; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 50px; padding: 0px 12px 12px 12px; width: 95%">
+                        <table width="100%" border="0" cellpadding="10">
+                            <tbody valign="top">
+                                <tr>
+                                    <td><img alt="" src="Images/tick.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Позволяет быстро построить бюджетную модель компании, приближенную к реальной финансовой и бюджетной структуре</b></div>										
+										
+                                    </td>
+                                    <td><img alt="" src="Images/tick.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Имеет удобную структуру таблиц</b></div>	
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="" src="Images/tick.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Отличается простой структурой и понятным интерфейсом</b></div>
+                                    </td>
+                                    <td><img alt="" src="Images/tick.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Доступен в освоении и использовании, дает возможность быстро разработать и проанализировать бюджетную модель компании</b></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="" src="Images/tick.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Позволяет легко вносить изменения в ходе работы с бюджетом, при этом все существующие бюджетные данные сохраняются</b></div>
+                                    </td>
+                                    <td><img alt="" src="Images/tick.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Гибкая настройка программы(мощная система создания новых таблиц, система отчетов, ограничение прав доступа)</b></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/ScreenShotLogo1.png" style="border-style: none;" /> </td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt">Скриншоты конфигурации</h3> </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <div style="border: thin solid #E5E5E5; border-radius: 15px; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 50; padding: 0px 12px 12px 12px; width: 95%">
+                        <table border="0" cellpadding="10" width="100%">
+
+                            <tr>
+                                <td><p style="color: #086585; font-weight: bolder">Бюджеты</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">Платежный календарь</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">Статьи доходов/расходов</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href="Images/BudgetControl_01.png" target="_blank"><img alt="Кликните для увеличения" src="Images/BudgetControl_01_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/BudgetControl_02.png" target="_blank"><img alt="Кликните для увеличения" src="Images/BudgetControl_02_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/BudgetControl_03.png" target="_blank"><img alt="Кликните для увеличения" src="Images/BudgetControl_03_small.png" style="border-style: none" /></a></td>
+                            </tr>
+
+                            <tr>
+                                <td><p style="color: #086585; font-weight: bolder">Отчет "Бюджет доходов и расходов"</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">Отчет "Бюджет по балансовому листу"</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">Отчет "Бюджет - сводный отчет"</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href="Images/BudgetControl_04.png" target="_blank"><img alt="Кликните для увеличения" src="Images/BudgetControl_04_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/BudgetControl_05.png" target="_blank"><img alt="Кликните для увеличения" src="Images/BudgetControl_05_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/BudgetControl_06.png" target="_blank"><img alt="Кликните для увеличения" src="Images/BudgetControl_06_small.png" style="border-style: none" /></a></td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/InstallLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />Установка программы</h3> </td>
+                        </tr>
+                    </table>
+                    <p>Для установки программы необходимо:</p>
+                    <ul>
+                        <li>Скачать программу <a href="ClientsCount.msi">ClientsCount.msi</a></li>
+                        <li>Запустить программу установки сделав двойной клик на скаченном файле</li>
+                        <li>Следуя инструкциям программы-установщика инсталлировать программу на жесткий диск</li>
+                        <li>Запустить программу, выбрав ее в меню «Программы» по нажатию кнопки «Пуск» или ярлык на рабочем столе.</li>
+                    </ul>
+
+                    <p>
+                        Чтобы заменить вашу текущую версию программы новой, надо сначала удалить текущую и затем установить новую.
+                    </p>
+
+
+                </td>
+
+                <!-- Right part -->
+                <td></td>
+            </tr>
+            <tr>
+
+                <!-- Bottom part -->
+                <td colspan="3">
+                    <br />
+
+
+
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body>
+</html>

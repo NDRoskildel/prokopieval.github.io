@@ -1,0 +1,133 @@
+﻿/**
+ * CSS: Contents styles for AllEquipment.htm.
+ */
+
+/* Sections
+    ================================================ */
+
+/**
+ * 1. Root section.
+ */
+
+.wrapper-sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/**
+ * 2. Section.
+ */
+
+.wrapper-sections .section {
+    width: 360px;
+    border: 1px solid rgba(0,0,0,.3);
+    padding: 10px;
+    margin: 10px;
+}
+
+/**
+ * 3. Section header.
+ */
+
+.section h4 {
+    text-align: center;
+    background-color: #0099ff;
+    padding: 10px;
+    display: block;
+    color: #fff;
+}
+
+/**
+ * 4. Section describe.
+ */
+
+.section p {
+    text-align: justify;
+    text-indent: 30px;
+    font-family: "Cambria", serif;
+    font-size: 0.9em;
+}
+
+/**
+ * 5. Equip item.
+ */
+
+.section p.strong {
+    font-weight: bold;
+    text-align: left;
+}
+
+.section .union-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.section .union-row > img {
+    width: 100px;
+    height: 49px;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+@media screen and (max-width: 500px) {
+    .section .union-row {
+        flex-direction: column;
+    }
+    .section .union-row > img {
+        margin: 5px auto;
+    }
+}
+
+/**
+ * 6. Section image.
+ */
+
+.section > img {
+    margin: 10px auto;
+    display: block;
+    max-width: 360px;
+}
+
+@media screen and (max-width: 300px) {
+    .section > img {
+        width: 50%;
+    }
+}
+
+/**
+ * 7. Section links.
+ */
+
+.section > a {
+    display: block;
+}
+
+.section > a:hover {
+    text-decoration: underline;
+}
+
+/* Indents
+    ================================================ */
+
+/**
+ * 1. Headers.
+ */
+
+main h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/**
+ * 2. Text.
+ */
+
+main > p {
+    text-indent: 30px;
+    margin: 5px 0;
+    padding: 5px 0;
+}

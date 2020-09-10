@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Тестовое меню</title>    
+    <style>		
+		.clear {
+			clear: both;
+		}
+	    
+		.navigation {
+		  list-style: none;
+		  padding: 0;
+		  margin: 0;
+		  background: #b3b3b3;
+		  border-top: solid 3px #fff;
+		  border-bottom: solid 3px #fff;
+		  /*
+		  box-shadow:  0px -2px 3px -1px rgba(0, 0, 0, 1);
+		  */
+		}
+
+		.navigation li {
+		  float: left;
+		}
+
+		.navigation li:hover {
+		  background: #222;
+		}
+
+		.navigation li:first-child {
+		  -webkit-border-radius: 5px 5px 0 0;
+		  border-radius: 5px 0 0 5px;
+		}
+
+		.navigation li a {
+		  display: block;
+		  padding: 0 20px;
+		  text-decoration: none;
+		  line-height: 40px;
+		  color: #fff;
+		}
+
+		.navigation ul {
+		  display: none;
+		  position: absolute;
+		  list-style: none;
+		  margin-left: -3px;
+		  padding: 0;
+		  overflow: hidden;
+		}
+
+		.navigation ul li {
+		  float: none;
+		}
+
+		.navigation li:hover > ul {
+		  display: block;
+		  background: #b3b3b3;
+		  border: solid 3px #fff;
+		  border-top: 0;
+		  
+		  -webkit-border-radius: 0 0 8px 8px;
+		  border-radius: 0 0 8px 8px;
+		  
+		  -webkit-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+		  box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+		}
+
+		.navigation li:hover > ul li:hover {
+		  -webkit-border-radius: 0 0 5px 5px;
+		  border-radius: 0 0 5px 5px;
+		}
+
+		.navigation li li a:hover {
+		  background: #000;
+		}
+
+		.navigation ul li:last-child a,
+		.navigation ul li:last-child a:hover {
+		  -webkit-border-radius: 0 0 5px 5px;
+		  border-radius: 0 0 5px 5px;
+		}
+		
+		.navigationCurr {
+		  background: #787474;
+		}		
+	</style>
+  </head>
+
+  <body>
+
+  
+  <ul class="navigation">
+    <li><a href="" title="Home" class="navigationCurr" >Главная</a></li>
+    <li><a href="" title="About us">Вопросы</a></li>
+    <li><a href="" title="Portfolio">Программы</a>
+      <ul>
+        <li><a href="" title="Websites">Конфигурации</a></li>
+        <li><a href="" title="Webshops">Простой сайт</a></li>
+      </ul>
+    </li>
+    <li><a href="" title="Contact">Контакты</a></li>
+    <div class="clear"></div>
+  </ul>
+  
+    
+    
+    
+  </body>
+</html>

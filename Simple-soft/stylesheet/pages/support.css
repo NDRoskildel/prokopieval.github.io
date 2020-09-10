@@ -1,0 +1,256 @@
+﻿/**
+ * CSS: Contents styles for support.htm page.
+ */
+
+/* Indents
+    ============================================================== */
+
+/**
+ * 1. Header.
+ */
+
+main > h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main > h4 {
+    display: block;
+    text-align: center;
+    border: none;
+    font-family: Tahoma, sans-serif;
+}
+
+/**
+ * 2. Paragraph.
+ */
+
+main > p {
+    font-family: Cambria, serif;
+    font-size: 1em;
+    text-indent: 30px;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+/* Unions
+    ============================================================== */
+
+/**
+ * 1. Union row.
+ */
+
+.union-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/**
+ * 2. Union column.
+ */
+
+.union-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Fonts
+    ============================================================== */
+
+/**
+ * 1. Mini comments.
+ */
+
+.notes {
+    font-family: Cambria, serif;
+    font-size: 0.8em;
+}
+
+/**
+ * 2. Colors.
+ */
+
+.red {
+    color: #ff3300;
+}
+
+/* Support form
+    ============================================================== */
+
+/**
+ * 1. Form container.
+ */
+
+.support-form-container {
+    width: 100%;
+    background-color: #eee;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+/**
+ * 2. Form.
+ */
+
+.support-form-container form {
+    border: 1px solid rgba(0,0,0,.2);
+    width: 50%;
+    min-width: 220px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/**
+ * 3. Text-box.
+ */
+
+.support-form-container input[type="text"],
+.support-form-container select,
+.support-form-container textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.2);
+    font-family: Cambria, serif;
+    font-style: italic;
+}
+
+.support-form-container select {
+    cursor: pointer;
+}
+
+.support-form-container textarea {
+    resize: vertical;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+.support-form-container input[type="file"] {
+    font-family: Cambria, serif;
+    margin: 5px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.support-form-container input[type="checkbox"] {
+    margin: 5px 0;
+    outline: none;
+    border: none;
+}
+
+/**
+ * 4. Label.
+ */
+
+.support-form-container label {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 5px 0;
+    font-family: Cambria, serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.support-form-container .checkbox-label {
+    width: auto;
+}
+
+/**
+ * 5. Placeholder text.
+ */
+
+.support-form-container input::placeholder {
+    font-family: Cambria, serif;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/**
+ * 6. Button.
+ */
+
+.support-form-container .b-main {
+    background-color: #66CC66;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* Contacts
+    ============================================================== */
+
+/**
+ * 1. Contacts container.
+ */
+
+.contacts-container .contacts-container__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,.2);
+    margin: 10px;
+    padding: 10px;
+}
+
+/**
+ * 2. Images.
+ */
+
+.contacts-container__item img {
+    width: 64px;
+    height: 64px;
+}
+
+/**
+ * 3. Header.
+ */
+
+.contacts-container__item h4 {
+    width: 100%;
+}
+
+/* Smartphone
+    ============================================================== */
+
+/**
+ * 1. Support form.
+ */
+
+@media screen and (max-width: 500px) {
+    .support-form-container {
+        background-color: #fff;
+    }
+
+    .support-form-container form {
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+}
+
+/**
+ * 2. Main indents.
+ */
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+}
+

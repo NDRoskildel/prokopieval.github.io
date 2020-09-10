@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<title>AG Advance</title>
+</head>
+<body>
+	<!-- .......Каталог........... -->
+	<div class="header-catalog">
+		<div class="header-catalog-hide">
+			<img src="assets/img/burger.svg" alt="">
+			<div>
+				<img src="assets/img/arrow_r_head.svg" alt="">
+				<p>Каталог наших грунтов</p>
+			</div>
+		</div>
+		<div class="header-catalog-content">
+			<img class="header-catalog-logo" src="assets/img/logo.svg" alt="">
+			<h2>Каталог грунтов</h2>
+			<hr>
+			<div class="header-catalog-title">«Многоцелевой»</div>
+			<div class="header-catalog-list">
+				<div><img src="assets/img/Ellipse_torf.svg" alt=""><p>20% торф верховой</p></div>
+				<div><img src="assets/img/Ellipse_grunt.svg" alt=""><p>60% растительный грунт</p></div>
+				<div><img src="assets/img/Ellipse_pesok.svg" alt=""><p>20% песок</p></div>
+			</div>
+			<div class="header-catalog-title">«Дачник»</div>
+			<div class="header-catalog-list">
+				<div><img src="assets/img/Ellipse_torf.svg" alt=""><p>40% торф верховой</p></div>
+				<div><img src="assets/img/Ellipse_grunt.svg" alt=""><p>40% растительный грунт</p></div>
+				<div><img src="assets/img/Ellipse_pesok.svg" alt=""><p>20% песок</p></div>
+			</div>
+			<div class="header-catalog-title">«Садовый»</div>
+			<div class="header-catalog-list">
+				<div><img src="assets/img/Ellipse_torf.svg" alt=""><p>40% торф верховой</p></div>
+				<div><img src="assets/img/Ellipse_grunt.svg" alt=""><p>40% пойменная земля</p></div>
+				<div><img src="assets/img/Ellipse_pesok.svg" alt=""><p>20% песок</p></div>
+			</div>
+			<div class="header-catalog-title">«Газонный»</div>
+			<div class="header-catalog-list">
+				<div><p>Формируется по Вашему запросу</p></div>
+			</div>
+			<hr class="header-catalog-content-hr">
+			<div class="header-catalog-list">
+				<div><p>Рассчитайте стоимость поставки грунта исходя из ваших объемов и условий доставки онлайн</p></div>
+			</div>
+			<a class="header-catalog-button" href="#order">Рассчитать стоимость</a>
+			<div class="header-catalog-callback">
+				<img src="assets/img/phone_brown.svg" alt=""><a href="tel:79252651291">8 (925) 265-12-91</a>
+			</div>
+			<div class="header-catalog-callback">
+				<a href="#questons">Заказать обратный звонок</a>
+			</div>
+		</div>
+	</div> 
+	<!-- .......Показать Каталог........... -->
+	<div class="header-catalog-show">
+		<img src="assets/img/burger.svg" alt="">
+		<div>
+			<img src="assets/img/arrow_l_head.svg" alt="">
+			<p>Каталог наших грунтов</p>
+		</div>
+	</div>
+	<!-- Всплывающая форма -->
+	<div id="popup-form" class="popup">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3 popup-container">
+					<div class="popup-content">
+						<form id="form" action="">
+							<div class="popup-content-title">Мы очень рады быть полезными для Вас</div>
+							<label for="">Ведите Ваше имя</label>
+							<input id="name" type="text">	
+							<label for="">Ведите Ваш телефон</label>
+							<input id="phone" type="text" placeholder="8 (888) 888-88-88">
+							<button id="send">Отправить заявку</button>
+						</form>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Всплывающая форма успешно -->
+	<div id="popup-form-success" class="popup">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3 popup-container">
+					<div class="popup-content">
+						<div class="popup-success">
+							<img src="assets/img/popup.svg" alt="">
+							<p><span>Спасибо</span>, что обратились к нам.<br> Наш сотрудник свяжется с Вами в <span>ближайшее время</span>.</p>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Мобильная навигация -->
+	<header class="mobile-header">
+		<div class="mobile-header-container">
+			<div class="mobile-header-logo"><img src="assets/img/logo.svg" alt=""></div>
+			<div class="mobile-header-box">
+				<img class="order-form" src="assets/img/phone-m.svg" alt="">
+				<img id="mobile-header-burger" src="assets/img/humburger.svg" alt="">
+			</div>
+		</div>
+		<div class="mobile-header-hiden">
+			<nav class="mobile-header-nav">
+				<ul class="mobile-header-nav-items">
+					<li><a href="#">главная</a></li>
+					<li><a href="#catalog">каталог грунтов</a></li>
+					<li><a href="#calculation">подобрать рецепт</a></li>
+					<li><a href="#free">заказать бесплатный образец</a></li>
+					<li><a href="#order">калькулятор</a></li>
+					<li><a href="#about">о нас</a></li>
+					<li><a href="#contact">контакты</a></li>
+					<li><a href="#questions">оставить заявку</a></li>
+				</ul>
+				<ul class="mobile-header-nav-number">
+					<li>01</li>
+					<li>02</li>
+					<li>03</li>
+					<li>04</li>
+					<li>05</li>
+					<li>06</li>
+					<li>07</li>
+					<li>08</li>
+				</ul>
+			</nav>
+			<div class="mobile-header-callback">
+				<div class="mobile-header-callback-item">
+					<img src="assets/img/phone-mob.svg" alt="">
+					<a href="tel:79252651291">8 (925) 265-12-91</a>
+				</div>
+				<div class="mobile-header-callback-item">
+					<img src="assets/img/phone-mob.svg" alt="">
+					<a href="tel:74997558642">8 (499) 755-86-42</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Обычная навигация -->
+	<header id="main-header" class="header">
+		<!-- .......Шапка........... -->
+		<div class="container">
+			<nav class="header-nav">
+				<div class="header-logo">
+					<div class="header-logo-box">
+						<img src="assets/img/logo.svg" alt="">
+						<p>ООО «Эдванс» </p>
+					</div>
+					<div class="header-logo-text">
+						Поставка плодородного грунта <br>
+						в Москве и Московской области
+					</div>
+				</div>
+				<div class="header-nav-items">
+			    	<a class="" href="#catalog">Каталог грунтов</a>
+			       	<a class="" href="#order">Заказать доставку</a>
+			    	<a class="" href="#about">О компании</a>
+			    	<a class="" href="#calculation">Расчёт грунта</a>
+			    	<a class="" href="#advantages">Преимущества</a>
+			    	<a class="" href="#contact">Контакты</a>
+			    </div>
+			    <div class="header-contacts">
+					<a href="tel:89252651291">8 (925) 265-12-91</a>
+					<div class="header-contacts-box">
+						<img src="assets/img/phone.svg" alt="">
+						<a href="#questions">Заказать обратный звонок</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 header-text">
+					<h1>Поставка плодородного грунта <br class="section-title-desc"> для озеленения <span class="section-title-mob">в Москве и МО</span></h1>
+					<p>На основе  черноземно-торфо-песчанных смесей</p>
+					<button class="section-title-desc order-form" id="order-form">
+						Заказать доставку грунта
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 header-advantages">
+					<div class="header-advantages-title section-title-desc">Большой выбор грунта</div>
+					<img src="assets/img/header_1.svg" alt="">
+					<p><span class="section-title-desc">Мы</span> <span class="big-m">п</span>оставляем грунт от большого количества производителей<span class="section-title-desc"> и можем предложить вам любую линейку</span></p>
+				</div>
+				<div class="col-lg-3 header-advantages">
+					<div class="header-advantages-title section-title-desc">Работаем для всех</div>
+					<img src="assets/img/header_2.svg" alt="">
+					<p>Поставляем грунты <span class="section-title-desc">в больших объёмах</span> для строительных компаний <span class="section-title-desc">и частным лицам по доступной цене</span></p>
+				</div>
+				<div class="col-lg-3 header-advantages ">
+					<div class="header-advantages-title section-title-desc">Круглосуточная доставка</div>
+					<img src="assets/img/Outline.svg" alt="">
+					<p>Круглосуточная доставка в день заказа по Москве и <span class="section-title-mob">МО</span><span class="section-title-desc">Московской области. Доставка выполняется самосвалами</span></p>
+				</div>
+				<div class="col-lg-3 header-advantages">
+					<div class="header-advantages-title section-title-desc">Бесплатная консультация</div>
+					<img src="assets/img/header_4.svg" alt="">
+					<p>Поможем подобрать нужный рецепт грунта <span class="section-title-desc">конкретно под Ваши задачи. Наша консультация</span> абсолютно <span class="section-title-mob">бесплатно</span><span class="section-title-desc">бесплатная</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 header-text">
+					<button class="section-title-mob order-form" id="order-form">
+						Заказать доставку грунта
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="catalog">
+		<div class="container">
+			<div class="row">
+				<div id="catalog" class="col-lg-12 section-title">Каталог грунтов</div>
+			</div>
+			<div class="row">
+				<div class="col-6 col-lg-1 order-2 order-lg-1 catalog-slider-arrow-dot catalog-slider-arrow my-auto">
+					<img class="catalog-slider-arrow-left section-title-desc" src="assets/img/catalog-left.svg" alt="">
+					<img class="catalog-slider-arrow-left section-title-mob" src="assets/img/catalog-left-mob.svg" alt="">
+				</div>
+				<div class="col-lg-10 order-1 order-lg-2 catalog-slider">
+					<div class="catalog-slider-item">
+						<div class="catalog-slider-title">Описание грунта <br class="section-title-mob">«Многоцелевой»</div>
+						<div class="catalog-slider-container">
+							<div class="catalog-slider-content">
+								<div class="catalog-slider-diagram">
+									<div class="catalog-slider-diagram-img">
+										<img class="section-title-desc" src="assets/img/catalog-diagram-1.svg" alt="">
+										<img class="section-title-mob" src="assets/img/catalog-grunt-1.png" alt="">
+									</div>
+									<div class="catalog-slider-diagram-legend">
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/brown.svg" alt="">
+											<p>30% торф </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/black.svg" alt="">
+											<p>60% чернозём </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/yellow.svg" alt="">
+											<p>10% песок </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/gray.svg" alt="">
+											<p>0% растительный грунт </p>
+										</div>
+										<!-- <div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/Rectangle-checked.svg" alt="">
+											<p>Окатыш </p>
+										</div> -->
+									</div>
+								</div>
+								<div class="catalog-slider-text">
+									Данный почвогрунт это высокоплодородная просеянная смесь. Благодаря 20% содержанию песка, обеспечивается наивысший коэффициент влагообмена и воздухообмена, следовательно, максимально быстрой доставки питания для посаженных семян 
+и корешков газонной травы, плодоовощных культур. Пользуется заслуженным спросом.
+								</div>
+							</div>
+							<div class="catalog-slider-img">
+								<img src="assets/img/catalog-1.png" alt="">
+							</div>
+						</div>
+						<div class="catalog-slider-button">
+							<a href="#order">Рассчитать стоимость доставки</a>
+						</div>
+					</div>
+					<div class="catalog-slider-item">
+						<div class="catalog-slider-title">Описание грунта <br class="section-title-mob"> «Дачник»</div>
+						<div class="catalog-slider-container">
+							<div class="catalog-slider-content">
+								<div class="catalog-slider-diagram">
+									<div class="catalog-slider-diagram-img">
+										<img class="section-title-desc" src="assets/img/catalog-diagram-2.svg" alt="">
+										<img class="section-title-mob" src="assets/img/catalog-grunt-2.png" alt="">
+									</div>
+									<div class="catalog-slider-diagram-legend">
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/brown.svg" alt="">
+											<p>20% торф </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/black.svg" alt="">
+											<p>40% чернозём </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/yellow.svg" alt="">
+											<p>20% песок </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/gray.svg" alt="">
+											<p>20% растительный грунт </p>
+										</div>
+										<!-- <div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/Rectangle-checked.svg" alt="">
+											<p>Компост </p>
+										</div> -->
+									</div>
+								</div>
+								<div class="catalog-slider-text">
+									Данный почвогрунт это высокоплодородная просеянная смесь. Благодаря 20% содержанию песка, обеспечивается наивысший коэффициент влагообмена и воздухообмена, следовательно, максимально быстрой доставки питания для посаженных семян 
+и корешков газонной травы, плодоовощных культур. Пользуется заслуженным спросом.
+								</div>
+							</div>
+							<div class="catalog-slider-img">
+								<img src="assets/img/catalog-2.png" alt="">
+							</div>
+						</div>
+						<div class="catalog-slider-button">
+							<a href="#order">Рассчитать стоимость доставки</a>
+						</div>
+					</div>
+					<div class="catalog-slider-item">
+						<div class="catalog-slider-title">Описание грунта <br class="section-title-mob">«Садовый»</div>
+						<div class="catalog-slider-container">
+							<div class="catalog-slider-content">
+								<div class="catalog-slider-diagram">
+									<div class="catalog-slider-diagram-img">
+										<img class="section-title-desc" src="assets/img/catalog-diagram-3.svg" alt="">
+										<img class="section-title-mob" src="assets/img/catalog-grunt-3.png" alt="">
+									</div>
+									<div class="catalog-slider-diagram-legend">
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/brown.svg" alt="">
+											<p>20% торф</p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/black.svg" alt="">
+											<p>20% чернозём </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/yellow.svg" alt="">
+											<p>20% песок </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/gray.svg" alt="">
+											<p>40% растительный грунт </p>
+										</div>
+										<!-- <div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/Rectangle-checked.svg" alt="">
+											<p>Опилки </p>
+										</div> -->
+									</div>
+								</div>
+								<div class="catalog-slider-text">
+									Данный почвогрунт это высокоплодородная просеянная смесь. Благодаря 20% содержанию песка, обеспечивается наивысший коэффициент влагообмена и воздухообмена, следовательно, максимально быстрой доставки питания для посаженных семян 
+и корешков газонной травы, плодоовощных культур. Пользуется заслуженным спросом.
+								</div>
+							</div>
+							<div class="catalog-slider-img">
+								<img src="assets/img/catalog-3.png" alt="">
+							</div>
+						</div>
+						<div class="catalog-slider-button">
+							<a href="#order">Рассчитать стоимость доставки</a>
+						</div>
+					</div>
+					<div class="catalog-slider-item">
+						<div class="catalog-slider-title">Описание грунта <br class="section-title-mob"> «Газонный» <br>
+							Формируется по вашему запросу 
+						</div>
+						<div class="catalog-slider-container">
+							<div class="catalog-slider-content">
+								<div class="catalog-slider-diagram">
+									<div class="catalog-slider-diagram-img">
+										<img class="section-title-desc" src="assets/img/catalog-diagram-4.svg" alt="">
+										<img class="section-title-mob" src="assets/img/catalog-grunt-4.png" alt="">
+									</div>
+									<div class="catalog-slider-diagram-legend">
+										<!-- <div class="catalog-slider-diagram-legend-item">
+											<p>Формируется по вашему запросу </p>
+										</div> -->
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/Rectangle-checked.svg" alt="">
+											<p>Окатыш </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/Rectangle-checked.svg" alt="">
+											<p>Компост </p>
+										</div>
+										<div class="catalog-slider-diagram-legend-item">
+											<img src="assets/img/Rectangle-checked.svg" alt="">
+											<p>Опилки </p>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-slider-text">
+									Данный почвогрунт это высокоплодородная просеянная смесь. Благодаря 20% содержанию песка, обеспечивается наивысший коэффициент влагообмена и воздухообмена, следовательно, максимально быстрой доставки питания для посаженных семян и корешков газонной травы, плодоовощных культур. Пользуется заслуженным спросом.
+
+								</div>
+							</div>
+							<div class="catalog-slider-img">
+								<img src="assets/img/catalog-4.png" alt="">
+							</div>
+						</div>
+						<div class="catalog-slider-button">
+							<a href="#calculation">Подобрать свой рецепт</a>
+						</div>
+					</div>
+				</div>
+				<div class=" col-6 col-lg-1 order-3 catalog-slider-arrow my-auto">
+					<img class="catalog-slider-arrow-right section-title-desc" src="assets/img/catalog-right.svg" alt="">
+					<img class="catalog-slider-arrow-right section-title-mob" src="assets/img/catalog-right-mob.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="recipe">
+		<div class="container">
+			<div class="row">
+				<div id="calculation" class="col-lg-12 section-title"><span class="section-title-desc">Подберите свою рецептуру</span><span class="section-title-mob">Подберите свой рецепт</span></div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 recipe-container">
+					<div class="recipe-content">
+					<div class="recipe-content-container">
+						<div class="recipe-description">
+							<div class="recipe-description-img">
+								<img src="assets/img/chernozem_1.png" alt="">
+							</div>
+							<div class="recipe-description-container">
+								<div class="recipe-description-title">Чернозём</div>
+								<div class="recipe-description-content">
+									<p>Благодаря богатому содержанию гумуса, хорошим водно-воздушным свойствам он является наилучшим грунтом для выращивания различных растений</p>
+									<img src="assets/img/recipe-1.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="recipe-choice">
+							<div class="recipe-choice-text">
+								Выберите количество чернозёма
+							</div>
+							<div class="recipe-choice-container">
+								<select id="recipe-choice-chernozem">
+									<option selected value="0">0%</option>
+									<option value="1">10%</option>
+									<option value="2">20%</option>
+									<option value="3">30%</option>
+									<option value="4">40%</option>
+									<option value="5">50%</option>
+									<option value="6">60%</option>
+									<option value="7">70%</option>
+									<option value="8">80%</option>
+									<option value="9">90%</option>
+									<option value="10">100%</option>					
+								</select>
+								<!-- <div class="recipe-choice-container-range">
+									<input id="recipe-range-chernozem" type="range" list="tickmarks" name="volume"  min="0" max="10">
+								</div>
+								<ul class="recipe-choice-container-range-labels">
+								  <li>0%</li>
+								  <li>10%</li>
+								  <li>20%</li>
+								  <li>30%</li>
+								  <li>40%</li>
+								  <li>50%</li>
+								  <li>60%</li>
+								  <li>70%</li>
+								  <li>80%</li>
+								  <li>90%</li>
+								  <li>100%</li>
+								</ul> -->
+							</div>
+						</div>
+					</div>
+					<div class="recipe-content-container">
+						<div class="recipe-description">
+							<div class="recipe-description-img">
+								<img src="assets/img/pesok_1.png" alt="">
+							</div>
+							<div class="recipe-description-container">
+								<div class="recipe-description-title">Песок</div>
+								<div class="recipe-description-content">
+									<p>Песок создаёт более рыхлую структуру растительного грунта, препятствует образованию почвенной корки и улучшает условия для «дыхания» корней</p>
+									<img src="assets/img/recipe-2.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="recipe-choice">
+							<div class="recipe-choice-text" style="color: #8E5F25;">
+								Выберите количество песка
+							</div>
+							<div class="recipe-choice-container">
+								<select id="recipe-choice-pesok">
+									<option selected value="0">0%</option>
+									<option value="1">10%</option>
+									<option value="2">20%</option>
+									<option value="3">30%</option>
+									<option value="4">40%</option>
+									<option value="5">50%</option>
+									<option value="6">60%</option>
+									<option value="7">70%</option>
+									<option value="8">80%</option>
+									<option value="9">90%</option>
+									<option value="10">100%</option>							
+								</select>
+								<!-- <div class="recipe-choice-container-range">
+									<input id="recipe-range-pesok" type="range" list="tickmarks" name="volume"  min="0" max="10">
+								</div>
+								<ul class="recipe-choice-container-range-labels">
+								  <li>0%</li>
+								  <li>10%</li>
+								  <li>20%</li>
+								  <li>30%</li>
+								  <li>40%</li>
+								  <li>50%</li>
+								  <li>60%</li>
+								  <li>70%</li>
+								  <li>80%</li>
+								  <li>90%</li>
+								  <li>100%</li>
+								</ul> -->
+							</div>
+						</div>
+					</div>
+					<div class="recipe-content-container">
+						<div class="recipe-description">
+							<div class="recipe-description-img">
+								<img src="assets/img/grunt_1.png" alt="">
+							</div>
+							<div class="recipe-description-container">
+								<div class="recipe-description-title"><span class="section-title-desc">Растительный</span><span class="big-m">г</span>рунт</div>
+								<div class="recipe-description-content">
+									<p>В растительном грунте в большом количестве содержится калий, азот, фосфор и иные вещества, необходимые для нормального роста растений</p>
+									<img src="assets/img/recipe-3.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="recipe-choice">
+							<div class="recipe-choice-text" style="color: #6D6969;">
+								Выберите количество растительного грунта
+							</div>
+							<div class="recipe-choice-container">
+								<select id="recipe-choice-grunt">
+									<option selected value="0">0%</option>
+									<option value="1">10%</option>
+									<option value="2">20%</option>
+									<option value="3">30%</option>
+									<option value="4">40%</option>
+									<option value="5">50%</option>
+									<option value="6">60%</option>
+									<option value="7">70%</option>
+									<option value="8">80%</option>
+									<option value="9">90%</option>
+									<option value="10">100%</option>							
+								</select>
+								<!-- <div class="recipe-choice-container-range">
+									<input id="recipe-range-grunt" type="range" list="tickmarks" name="volume"  min="0" max="10">
+								</div>
+								<ul class="recipe-choice-container-range-labels">
+								  <li>0%</li>
+								  <li>10%</li>
+								  <li>20%</li>
+								  <li>30%</li>
+								  <li>40%</li>
+								  <li>50%</li>
+								  <li>60%</li>
+								  <li>70%</li>
+								  <li>80%</li>
+								  <li>90%</li>
+								  <li>100%</li>
+								</ul> -->
+							</div>
+						</div>
+					</div>
+					<div class="recipe-content-container">
+						<div class="recipe-description">
+							<div class="recipe-description-img">
+								<img src="assets/img/torf_1.png" alt="">
+							</div>
+							<div class="recipe-description-container">
+								<div class="recipe-description-title">Торф</div>
+								<div class="recipe-description-content" style="padding-bottom: 0;">
+									<p>Торф улучшает структуру грунта, повышает его пористость, водопроницаемость и воздухопроницаемость, поглощает излишнюю влагу.</p>
+									<img src="assets/img/recipe-4.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="recipe-choice">
+							<div class="recipe-choice-text" style="color: #5C3A28;">
+								Выберите количество торфа
+							</div>
+							<div class="recipe-choice-container">
+								<select id="recipe-choice-torf">
+									<option selected value="0">0%</option>
+									<option value="1">10%</option>
+									<option value="2">20%</option>
+									<option value="3">30%</option>
+									<option value="4">40%</option>
+									<option value="5">50%</option>
+									<option value="6">60%</option>
+									<option value="7">70%</option>
+									<option value="8">80%</option>
+									<option value="9">90%</option>
+									<option value="10">100%</option>							
+								</select>
+								<!-- <div class="recipe-choice-container-range">
+									<input id="recipe-range-torf" type="range" list="tickmarks" name="volume"  min="0" max="10">
+								</div>
+								<ul class="recipe-choice-container-range-labels">
+								  <li>0%</li>
+								  <li>10%</li>
+								  <li>20%</li>
+								  <li>30%</li>
+								  <li>40%</li>
+								  <li>50%</li>
+								  <li>60%</li>
+								  <li>70%</li>
+								  <li>80%</li>
+								  <li>90%</li>
+								  <li>100%</li>
+								</ul> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="recipe-order">
+					<div class="recipe-order-img"></div>
+					<div class="recipe-order-container">
+						<div class="recipe-order-title">Ваш рецепт для заказа</div>
+						<div class="recipe-order-range-container">
+							<div class="recipe-order-range">
+								<div id="recipe-value-chernozem" class="recipe-order-range-box"></div>
+								<p>Чернозём</p>
+							</div>
+							<div class="recipe-order-range">
+								<div id="recipe-value-pesok" class="recipe-order-range-box"></div>
+								<p>Песок</p>
+							</div>
+							<div class="recipe-order-range">
+								<div id="recipe-value-grunt" class="recipe-order-range-box"></div>
+								<p>Грунт</p>
+							</div>
+							<div class="recipe-order-range">
+								<div id="recipe-value-torf" class="recipe-order-range-box"></div>
+								<p>Торф</p>
+							</div>
+						</div>
+						<div class="recipe-order-checkbox">
+							<input id="radio-1" type="checkbox" name="lang" value="" ><label for="radio-1">Окатыш</label>
+							<input id="radio-2" type="checkbox" name="lang" value=""><label for="radio-2">Опилки</label>
+							<input id="radio-3" type="checkbox" name="lang" value=""><label for="radio-3">Кампост</label>
+						</div>
+						<div class="recipe-order-form">
+							<input id="recipe-name" type="text" placeholder="Введите имя">
+							<input id="recipe-phone" type="text" placeholder="Введите телефон">
+						</div>
+						<button id="recept">Получить предложение</button>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sample">
+		<div class="container">
+			<div class="row">
+				<div id="free" class="col-lg-12 section-title">Дарим бесплатный образец почвогрунта</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 sample-container">
+					<div class="sample-box">
+						<div class="sample-title section-title-desc">Выберите вид почвогрунта <br>и мы бесплатно доставим его Вам </div>
+						<form id="form-free" class="sample-form" action="">
+							<label for="">Выберите образец грунта</label>
+							<select id="form-free-select">
+								<option hidden disabled selected value> </option>
+								<option value="Крокодил Гена">Крокодил Гена</option>
+								<option value="Шапокляк">Шапокляк</option>
+								<option value="Крыса Лариса">Крыса Лариса</option>
+							</select>
+							<label for="">Введите Ваше имя</label>
+							<input id="form-free-name" type="text">
+							<label for="">Введите Ваш телефон</label>
+							<input id="form-free-phone" type="text" placeholder="8 (888) 888-88-88">
+						</form>
+						<button id="form-free-send">Получить бесплатный образец</button>
+					</div>
+				</div>
+				<div class="col-lg-6 my-auto sample-img"><img src="assets/img/sample-img.png" alt=""></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="howwework section-title-desc">
+		<div class="container">
+			<div class="row">
+				<!-- <div class="col-lg-12 about-title">Как мы работаем</div> -->
+				<div class="col-lg-12 section-title">Как мы работаем</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/document.svg" alt="">
+						<img src="assets/img/about-arrow.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						Вы оставляете заявку на сайте или отправляете заявку на почту.
+					</div>
+				</div>
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/about-headphones.svg" alt="">
+						<img src="assets/img/about-arrow.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						В течении 5 минут с Вами связывается наш сотрудник<span class="section-title-desc">, согласовывает данные</span> и отправляет заявку в работу.
+					</div>
+				</div>
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/about-lorry.svg" alt="">
+						<img src="assets/img/about-arrow.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						Грунт приезжает к получателю в самые короткие сроки<span class="section-title-desc">.</span> <span class="smal-m">Б</span>ез <span class="section-title-mob">лишних</span> задержек <span class="section-title-desc">и лишних перегрузов на складах</span>.
+					</div>
+				</div>
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/about-card.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						<span class="section-title-desc">Оплата производится после получения грунта. </span>Оплатить можно денежным переводом на карту Сбербанка.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="whyus">
+		<div class="container">
+			<div class="row">
+				<div id="advantages" class="col-lg-12 section-title"><span class="section-title-desc">Почему с нами стоит сотрудничать</span><span class="section-title-mob">Наши преимущества</span></div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="whyus-slider owl-carousel">
+						<div class="whyus-slider-item">
+							<div class="whyus-slider-container">
+								<div class="whyus-slider-item-title">Работаем для всех</div>
+								<img src="assets/img/crew.svg" alt="">
+								<p>Поставляем грунты в больших объёмах для строительных компаний частным лицам по доступной цене</p>
+							</div>
+							<img class="whyus-slider-item-shadow" src="assets/img/shadow-whyus.png" alt="">
+						</div>
+						<div class="whyus-slider-item">
+							<div class="whyus-slider-container">
+								<div class="whyus-slider-item-title">Портал поставщиков</div>
+								<img  src="assets/img/portal.svg" alt="">
+								<p>Наша компания входит в сообщество «Портал поставщиков»</p>
+							</div>
+							<img class="whyus-slider-item-shadow" src="assets/img/shadow-whyus.png" alt="">
+						</div>
+						<div class="whyus-slider-item">
+							<div class="whyus-slider-container">
+								<div class="whyus-slider-item-title">Большой выбор грунта</div>
+								<img src="assets/img/Grunt.svg" alt="">
+								<p>Мы поставляем грунт от большого количества производителей и можем предложить вам любую линейку</p>
+							</div>
+							<img class="whyus-slider-item-shadow" src="assets/img/shadow-whyus.png" alt="">
+						</div>
+						<div class="whyus-slider-item">
+							<div class="whyus-slider-container">
+								<div class="whyus-slider-item-title">Круглосуточная доставка</div>
+								<img src="assets/img/lorry.svg" alt="">
+								<p>Круглосуточная доставка в день заказа по Москве и Московской области. Доставка выполняется самосвалами</p>
+							</div>
+							<img class="whyus-slider-item-shadow" src="assets/img/shadow-whyus.png" alt="">
+						</div>
+						<div class="whyus-slider-item">
+							<div class="whyus-slider-container">
+								<div class="whyus-slider-item-title">Бесплатная консультация</div>
+								<img src="assets/img/headphones.svg" alt="">
+								<p>Поможем подобрать нужный рецепт грунта конкретно под Ваши задачи абсолютно бесплатно</p>
+							</div>
+							<img class="whyus-slider-item-shadow" src="assets/img/shadow-whyus.png" alt="">
+						</div>
+
+					</div>
+					<div class="whyus-slider-arrow">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="costs">
+		<div class="container">
+			<div class="row">
+				<div id="order" class="col-lg-12 section-title">Рассчитайте стоимость поставки грунта</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 costs-container">
+					<form id="form-delivery" class="costs-form" action="">
+						<label for="">Адрес доставки грунта</label>
+						<input id="form-delivery-adress" type="text">
+						<label for="">Выберите тип грунта</label>
+						<select id="form-delivery-select">
+							<option hidden disabled selected value> </option>
+							<option value="Крокодил Гена">Крокодил Гена</option>
+							<option value="Шапокляк">Шапокляк</option>
+							<option value="Крыса Лариса">Крыса Лариса</option>
+						</select>
+						<label for="">Объём, м<sup>3</sup></label>
+						<input id="form-delivery-size" type="text">
+						<label for="">Какой транспорт доставки? :</label>
+						<div class="costs-choice">
+							<input id="cost-1" name="cost-1" type="radio" checked> <label for="cost-1">Самосвал</label><!-- <br> -->
+							<input id="cost-2" name="cost-1" type="radio"> <label for="cost-2">Тонар</label>
+						</div>
+						<div class="costs-modul">
+							<p>Стоимость поставки грунта, ₽</p>
+							<div class="costs-box"></div>
+						</div>	
+					</form>
+					<button id="delivery-send">Заказать доставку грунта</button>
+				</div>
+				<div class="col-lg-6 costs-img"><img src="assets/img/iveco.jfif" alt=""></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about">
+		<div class="container">
+			<div class="row">
+				<div id="about" class="col-lg-12 section-title">Давайте знакомиться</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 about-text">
+					ООО «Эдванс» занимается продажей плодородных грунтов частным лицам и строительным компаниям в Москве и МО. <br class="section-title-mob"><br class="section-title-mob">Мы поставляем грунт более десяти лет и за это время стали экспертами 
+					в организации поставок плодородного грунта.  <br><br>
+					Наша сеть партнёров-производителей позволяет каждому клиенту предложить именно то, что ему требуется.<br class="section-title-mob"><br class="section-title-mob"> Все наши производители имеют лицензии и сертификаты качества. Благодаря высокому качеству грунта и внимательному отношению к нашим клиентам 
+					мы сохраняем лидирующие позиции на рынке.
+				</div>
+				<div class="col-lg-6 about-img my-auto"><img src="assets/img/Group 718 1.png" alt=""></div>
+			</div>
+			
+			<div class="row section-title-mob">
+				<div class="col-lg-12 about-title">Как мы работаем</div>
+				<!-- <div class="col-lg-12 section-title">Как мы работаем</div> -->
+			</div>
+			<div class="row section-title-mob">
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/document.svg" alt="">
+						<img src="assets/img/about-arrow.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						Вы оставляете заявку на сайте или отправляете заявку на почту.
+					</div>
+				</div>
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/about-headphones.svg" alt="">
+						<img src="assets/img/about-arrow.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						В течении 5 минут с Вами связывается наш сотрудник<span class="section-title-desc">, согласовывает данные</span> и отправляет заявку в работу.
+					</div>
+				</div>
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/about-lorry.svg" alt="">
+						<img src="assets/img/about-arrow.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						Грунт приезжает к получателю в самые короткие сроки<span class="section-title-desc">.</span> <span class="smal-m">Б</span>ез <span class="section-title-mob">лишних</span> задержек <span class="section-title-desc">и лишних перегрузов на складах</span>.
+					</div>
+				</div>
+				<div class="col-lg-3 about-advantage">
+					<div class="about-advantage-img">
+						<img src="assets/img/about-card.svg" alt="">
+					</div>
+					<div class="about-advantage-text">
+						<span class="section-title-desc">Оплата производится после получения грунта. </span>Оплатить можно денежным переводом на карту Сбербанка.
+					</div>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-lg-12 about-title">Наши стандарты качества</div>
+			</div>
+			<div class="row align-items-stretch about-slider">
+				<div class="col-lg-6 about-standart">
+					<div class="about-standart-bg-1">
+						<div class="about-standart-title">Экологичность грунта</div>
+						<div class="about-standart-text">
+							Все почвогрунты компании «Эдванс» сертифицированы системой "Московского экологического регистра", который гарантирует их качество, экологическую чистоту и безопасность. <br><br>
+							<span class="section-title-desc">Это значит, что в нашей продукции не превышены нормы содержания радионуклидов, тяжелых металлов и пестицидов, отсутствуют семена и корни сорных трав.</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 about-standart">
+					<div class="about-standart-bg-2">
+						<div class="about-standart-title">Современное оборудование</div>
+						<div class="about-standart-text">
+							<span class="section-title-desc">В нашей компании имеется разнообразное европеское дробильное, сепарирующее и погрузочное оборудование. <br><br></span>
+							Наличие такого оборудования  как троммель от английского производителя Anaconda TD516R , позволяет предложить клиенту как переработку «тяжелых» глинистых и замусоренных грунтов, так и приготовление искусственных плодородных смесей самых мелких фракций.
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 about-standart">
+					<div class="about-standart-bg-3">
+						<div class="about-standart-title">Постановление № 514-ПП</div>
+						<div class="about-standart-text">
+							В соответствие с Постановлением Правительства города Москвы 
+							от 27 июля 2004 г. № 514-ПП «О повышении качества почвогрунтов
+							в городе Москве» и изменениями к нему, компания «Эдванс» организовала производство <span class="section-title-desc">по приготовлению многокомпонентных искусственных почвогрунтов, отвечающих требованиям указанного Постановления.</span><span class="section-title-mob">согласно данному требованию</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 about-standart">
+					<div class="about-standart-bg-4">
+						<div class="about-standart-title">Контроль компонентов</div>
+						<div class="about-standart-text">
+							Компания «Эдванс» проводит контроль всех компонентов 
+							для производства почвогрунта – торф, песок, грунт<span class="section-title-desc">. <br><br>
+								Верховой фрезерованный торф из основных месторождений Владимирской и Тверской области, речной или мытый карьерный песок, растительный грунт проходят входящий контроль на производстве и</span> в лаборатории. 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 about-slider-arrow about-slider-arrow-dot">
+					<img class="about-slider-arrow-left" src="assets/img/catalog-left-mob.svg" alt="">
+				</div>
+				<div class="col-6 about-slider-arrow">
+					<img class="about-slider-arrow-right" src="assets/img/catalog-right-mob.svg" alt="">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 about-title">Сертификаты качества</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-5 about-text">
+					Компания «Эдванс» специализируется на поставке
+сертифицированных экологически чистых 
+почвогрунтов и их компонентов <br><br>Все поставляемые нами почвогрунты полностью 
+соответствуют требованиям: 
+					<div class="about-text-cursiv">
+						СанПин 2.1.7.1287-03 "Санитарно-эпидемиологические требования к качеству песка (почвы)" 
+					</div>
+					<div class="about-text-cursiv">
+						СанПин 3.2.1333-03 "Профилактика паразитарных болезней на территории Российское Федерации"
+					</div>
+					<div class="about-text-cursiv">
+						Постановления № 514-ПП «О повышении качества 
+почвогрунтов в городе Москве» 
+					</div>
+				</div>
+				<div class="col-lg-7 about-certificate">
+					<a data-fancybox href="assets/img/certificate1.png"><img src="assets/img/certificate1.png" alt=""></a>
+					<a data-fancybox href="assets/img/certificate1.png"><img src="assets/img/certificate2.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="questions">
+		<div class="container">
+			<div class="row">
+				<div id="questions" class="col-lg-12 section-title"><span class="section-title-desc">Будем рады ответить на Ваши вопросы</span><span class="section-title-mob">Заказать доставку</span></div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 questions-form">
+					<form id="form-question"  action="">
+						<label for="">Как к Вам обращаться?</label>
+						<input id="form-question-name" type="text" placeholder="Введите имя">
+						<label for="">На какой номер можно позвонить?</label>
+						<input id="form-question-phone" type="text" placeholder="8 (888) 888-88-88">
+						<label for="">Если у Вас есть вопросы, обязательно напишите</label>
+						<textarea id="form-question-subject" name="" id="" rows="6" placeholder="Например: Какой тип грунта мне лучше 
+                    выбрать для сада?">	
+						</textarea>
+					</form>
+					<button id="form-question-send">Получить консультацию</button>
+				</div>
+				<div class="col-lg-6 questions-img">
+					<img src="assets/img/questions.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="map">
+		<div class="container">
+			<div class="row">
+				<div id="contact" class="col-lg-12 section-title">Ждём Вас в гости</div>
+			</div>
+		</div>
+		<div class="map-container">
+			<div class="container">
+				<div class="row">
+					<div class="offset-lg-8 col-lg-4 map-contact">
+						<div class="map-contact-item section-title-desc">
+							<div class="map-contact-item-img">
+								<img src="assets/img/geo-blue.svg" alt="">
+								<img src="assets/img/geo-red.svg" alt="">
+							</div>	
+							<div class="map-contact-item-text">
+								<p>Наше производство</p>
+							</div>
+						</div>
+						<div class="map-contact-item">
+							<div class="map-contact-item-img">
+								<img src="assets/img/geo-green.svg" alt="">
+							</div>	
+							<div class="map-contact-item-text">
+								<p>Наш адрес:</p>
+								<p>111 020 г. Москва, ул. Солдатская д.3, этаж 1, офис 3</p>
+							</div>
+						</div>
+						<div class="map-contact-item">
+							<div class="map-contact-item-img">
+								<img src="assets/img/phone.svg" alt="">
+							</div>	
+							<div class="map-contact-item-text">
+								<p>Телефон:</p>
+								<p>отдел продаж: <a href="tel:79252651291">8 (925) 265-12-91</a></p>
+								<p>корпоративный: <a href="tel:74997558642">8 (499) 755-86-42</a></p>
+							</div>
+						</div>
+						<div class="map-contact-item">
+							<div class="map-contact-item-img">
+								<img class="section-title-desc" src="assets/img/mail.svg" alt="">
+								<img class="section-title-mob" src="assets/img/mail-mob.svg" alt="">
+							</div>	
+							<div class="map-contact-item-text">
+								<p>Почта:</p>
+								<p><a href="mailto:advance.sale@mail.ru">advance.sale@mail.ru</a></p>
+							</div>
+						</div>
+						<div class="map-contact-item section-title-mob">
+							<div class="map-contact-item-img">
+								<img class="section-title-mob" src="assets/img/time-m.svg" alt="">
+							</div>	
+							<div class="map-contact-item-text section-title-mob">
+								<p>Режим работы: </p>
+								<p>Понедельник – Пятница, 9:00 – 18:00</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="map-map">
+				<div style="position:absolute;top:0;z-index:0; width:100%!important;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс.Карты</a><a href="https://yandex.ru/maps/?ll=37.385524%2C55.584222&mode=search&sll=37.631720%2C55.738961&sspn=0.566745%2C0.182968&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&utm_medium=mapframe&utm_source=maps&z=9.09" style="color:#eee;font-size:12px;position:absolute;top:14px;z-index:0!important;">Москва — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQheJEVoA" width="100%" height="500" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+			</div>
+		</div>
+		
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-lg-4 footer-logo">
+					<img src="assets/img/logo.svg" alt="">
+					<p>ООО «Эдванс»</p>
+				</div>
+				<div class="col-lg-4 footer-copyright">
+					<p>Copyright <!-- <span>&copy;</span> --> <img src="assets/img/Copyright.svg" alt=""> 2020 ADVANCE</p>
+					<p>Сайт создан в веб-студии ITLAUNCH 2020г.</p>
+				</div>
+				<div class="col-lg-4 footer-contacts">
+					<div class="footer-contacts-item">
+						<img src="assets/img/phone.svg" alt="">
+						<a href="tel:79252651291">8 (925) 265-12-91</a>
+					</div>
+					<div class="footer-contacts-item">
+						<a href="tel:79252651291">Заказать обратный звонок</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="assets/js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+ 	<script src="assets/js/bootstrap.min.js"></script>
+ 	<script src="assets/js/wow.min.js"></script>
+ 	<script src="assets/js/owl.carousel.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="assets/js/forms.js"></script>
+	<!-- <script>
+		new WOW().init();
+    </script> -->
+</body>
+</html>

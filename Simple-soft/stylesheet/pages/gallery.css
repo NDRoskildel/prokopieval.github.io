@@ -1,0 +1,15 @@
+﻿/**
+ * CSS: Contents styles for gallery.htm page.
+ */
+
+/* Indents
+    ================================================ */
+
+/**
+ * 1. Headers.
+ */
+
+main > h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

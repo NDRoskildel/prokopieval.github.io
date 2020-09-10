@@ -1,0 +1,357 @@
+
+.wrapper {background: #f3f3f3;} /* Весь блок страницы*/
+.title {text-align:center;} /*Блок с заголовком*/
+.title h1 {font-size:36px;} /*Главный заголовок*/
+.title h2 {font-size:20px;} /* Главный подзаголовок */
+.download {text-align:center;margin:20px 0;} /*Блок с кнопкой "Скачать" */
+.main_part {margin:0 20px; font-size:15px;} /* Основная часть страницы */
+.main_part h2 {font-size:22px;color:DarkGreen;} 
+.main_part h3 {font-size:18px;color:green}
+.video {border-top:1px solid #ccc;border-bottom:1px solid #ccc; padding:20px 0;} /*Блок с видео на странице для Турагентства*/
+.video_desc {float: right; text-align: right; width: 50%;} /* Блок с описанием видео*/
+.video_desc h2 {text-align: center;font-size: 28px;margin: 0; padding-bottom:20px;} /* Заголовок у описания для видео */
+.cta {text-align:center; font-size:16px;} /* Строка с призывом к действию после ЧаВо*/
+.func_list {display: inline-flex;} /* Блоки в "Основных функциях" */
+.func_img {width:30%;} /* Блок с изображением в "Основных функциях" */
+.func_img img {width:100%;} 
+.func_desc {width:70%; margin:20px;} /*Блок с текстом в "Основных функциях" */
+.sign {text-align:right; margin:20px;font-style:italic;} /* Подпись руководителя внизу страницы ЧОП */
+.div {margin:0 auto;text-align:center;} /* Блок с контактами под ЧаВО*/
+/* Каждый блок с контактом под ЧаВо*/
+.cont {
+	width: 19%;
+	display: inline-table;
+	line-height:25px;
+}
+.cont i {
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 32px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+	display:inline-table;
+}
+/* Первый блок со списком и формой*/
+.first {
+	width:100%;
+	padding:10px;
+	margin:10px 10px 10px -10px;
+	border:2px solid #ccc;
+	display:inline-flex;
+}
+/*Блок с фотографией Абрамова И.В.*/
+.photo {
+	width: 50%;
+	text-align: center;
+	margin: 20px;
+	font-size: 12px;
+}
+/* Блок с главным списком */
+.checklist {
+	display:inline-block;
+	width:50%;
+	border-right:1px solid #ccc;
+}
+/*Каждый пункт этого списка*/
+.checklist article {
+	font-size:17px;
+	margin:20px 0;
+	background:url('http://prostoysoft.ru/Images/tick.jpg') no-repeat;
+	padding-left:40px;
+	height:32px;
+}
+/* Форма в начале страницы */
+.order_form {
+  width:50%;
+  text-align:center;
+  display:inline-block;
+  margin: 0 20px;
+}
+.order_form h3 {
+  font-size: 17px;
+  line-height: 22px;
+  padding-bottom: 10px;
+}
+.order_form .row {
+  clear: both;
+  overflow: hidden;
+  width: 80%;
+  height: 50px;
+  margin:10px auto;
+}
+.order_form .row input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  outline: none;
+  line-height: 50px;
+  padding: 0 10px 0 50px;
+}
+.order_form .l_name input[type="text"] {
+  background: #ffffff url(./Images/ico01.png) 18px center no-repeat;
+  border-radius: 3px 3px 0 0;
+}
+.order_form .l_mail input[type="text"] {
+  background: #ffffff url(./Images/ico03.png) 18px center no-repeat;
+  border-radius: 0 0 3px 3px;
+}
+
+.order_form .row_button {
+  padding-top: 5px;
+}
+.order_form .row_button button,
+.order_form .row_button .button {
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+button.orange,
+.button.orange {
+  background: #d7783c;
+  text-shadow: 2px 2px 1px #be481a;
+  box-shadow: inset 0 1px 0 #ebcfb9, 2px 2px 0 #a4450a;
+}
+button.orange:hover,
+.button.orange:hover {
+  background: #e8894d;
+}
+button.orange:active,
+.button.orange:active {
+  background: #c6672b;
+} 
+
+/**Стили блока с текстом внутри спойлера**/
+.spoiler {margin:5px 0;}
+.spoiler-content{
+display:none;  
+padding:15px 20px; 
+border:1px solid #ccc; 
+margin-top:5px; 
+background:#F0F0F0; 
+}
+/**Стили блока оборачивающего каждый блок**/
+.spoiler-block{
+margin-top:10px; 
+}
+/**Стили кнопки спойлера**/
+.spoiler-title {
+border:1px solid #B9B9B9;
+background: #ccc;
+background:linear-gradient(#CACACA, #E8E8E8);
+padding:10px;
+text-decoration:none;
+color:#000; 
+display:block; 
+}
+/* ------ Стили для слайдера
+-----------------------------------------------*/
+
+.slider {
+width:100%;
+position:relative;
+padding-bottom:26px;
+background:url(./gfx/bottom_shadow.png) no-repeat bottom center;
+}
+
+.sliderContent {
+width:100%;
+height:100%;
+text-align:center;
+clear:both;
+position:relative;
+overflow:hidden;
+}
+.slider img {height:100%;width:100%;}
+.slider h2 {text-align:center;}
+.sliderArrows a {
+display:block;
+text-indent:-9999px;
+outline:none;
+z-index:50;
+background-image:url(./gfx/prev_next.png);
+width:42px;
+height:42px;
+position:absolute;
+top:50%;
+margin-top:-34px;
+}
+
+.prev {
+background-position:0 0;
+left:15px;
+}
+
+.prev:hover {
+background-position:0 -44px;
+}
+
+.next {
+right:15px;
+background-position:-44px 0;
+}
+
+.next:hover {
+background-position:-44px -44px;
+}
+
+.sliderContent .item {
+position:absolute;
+width:100%;
+}
+
+.sliderBullets {
+position:absolute;
+bottom:0;
+left:50%;
+z-index:50;
+margin-left:-45px;
+}
+
+.sliderBullets a {
+display:block;
+float:left;
+text-indent:-9999px;
+outline:none;
+margin-left:5px;
+width:10px;
+height:11px;
+background:url(./gfx/bullets.png) no-repeat;
+}
+
+.sliderBullets .active {
+background-position:0 -11px;
+}
+
+.sliderContent a {
+outline:none;
+}
+/* Конец кода для слайдера*/
+
+/* Кнопка Скачать */
+.button {
+    display: inline-block;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+    
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
+
+.button span {
+    background-color: #E8E8E8;
+    
+    background-image: 
+        /* gloss gradient */
+        -webkit-gradient(
+            linear, 
+            left bottom, 
+            left top, 
+            color-stop(50%,rgba(255,255,255,0)), 
+            color-stop(50%,rgba(255,255,255,0.3)), 
+            color-stop(100%,rgba(255,255,255,0.2))),
+        
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(210,210,210,0.3)), 
+            color-stop(20%,rgba(210,210,210,0)), 
+            color-stop(80%,rgba(210,210,210,0)), 
+            color-stop(100%,rgba(210,210,210,0.3))),
+        
+        /* light inner gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(20%,rgba(255,255,255,0.5)), 
+            color-stop(80%,rgba(255,255,255,0.5)), 
+            color-stop(100%,rgba(255,255,255,0))),        
+        
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear, 
+            0% 100%, 
+            100% 0%, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(40%,rgba(255,255,255,0)), 
+            color-stop(40%,#D2D2D1), 
+            color-stop(60%,#D2D2D1), 
+            color-stop(60%,rgba(255,255,255,0)), 
+            color-stop(100%,rgba(255,255,255,0)));
+    
+        -webkit-box-shadow:
+            0px -1px #fff, /* top highlight */
+            0px 1px 1px #FFFFFF; /* bottom edge */
+    
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+    
+    -webkit-border-radius: 10px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    
+    color: #3A474D;
+    text-transform: uppercase;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+    font-weight: 700;
+    font-size: 32px;
+    
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+}
+
+        .button span:hover {
+            color: #AEBF3B;
+            text-shadow: 0px -1px #97A63A;
+            cursor: pointer;
+        }
+
+        .button:active {
+            -webkit-box-shadow: 
+                0px 3px rgba(128,128,128,1),
+                0px 4px rgba(118,118,118,1),
+                0px 5px rgba(108,108,108,1),
+                0px 6px rgba(98,98,98,1),
+                0px 7px rgba(88,88,88,1),
+                0px 8px rgba(78,78,78,1),
+                0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+        }
+
+        .button:active span{
+            -webkit-transform: translate(0, 5px); /* depth of button press */
+        }
+
+    .button span:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+    
+        position: absolute;
+        right: 14px;
+        top: 12px;    
+        
+        font-family: 'Cabin';
+        font-weight: 700;
+        color: #AEBF3B;
+        text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+        font-size: 26px;
+    }
+/* Конец CSS кода для кнопки "скачать" */

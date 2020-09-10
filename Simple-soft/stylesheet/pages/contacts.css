@@ -1,0 +1,106 @@
+﻿/**
+ * CSS: Contents styles for contacts.htm page.
+ */
+
+/* Indents
+    ============================================================== */
+
+/**
+ * 1. Header.
+ */
+
+main > h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Unions
+    ============================================================== */
+
+/**
+ * 2. Union column.
+ */
+
+.union-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* Contact elements
+    ============================================================== */
+
+/**
+ * 1. Container.
+ */
+
+.contacts-container {
+    width: 100%;
+}
+
+/**
+ * 2. Each item.
+ */
+
+.contacts-container__item {
+    border: 1px solid rgba(0,0,0,.2);
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/**
+ * 3. Header.
+ */
+
+.contacts-container__item h4 {
+    border: none;
+    text-align: left;
+    color: #fff;
+    background-color: #0099ff;
+    padding: 10px;
+    margin: 0;
+}
+
+/**
+ * 4. Table and cells.
+ */
+
+.contacts-container__item table {
+    border-collapse: collapse;
+}
+
+.contacts-container__item td {
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 5px;
+    width: 50%;
+}
+
+.contacts-container__item tr:nth-child(2n+1) {
+    background-color: #efefef;
+}
+
+/**
+ * 5. Image.
+ */
+
+.contacts-container__item img {
+    border: none;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/**
+ * 6. Text.
+ */
+
+.contacts-container__item p {
+    border: none;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contacts-container__item > p {
+    margin: 10px 0;
+}

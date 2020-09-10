@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Simple-soft", "E:\Personal\Projects\Simple-soft\", "{502EF7D7-E3EC-4928-AD71-21382214E62B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = ""
+		Debug.AspNetCompiler.VirtualPath = "/simple-soft"
+		Debug.AspNetCompiler.PhysicalPath = "..\simple-soft\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\simple-soft\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/simple-soft"
+		Release.AspNetCompiler.PhysicalPath = "..\simple-soft\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\simple-soft\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "12737"
+		VWDDynamicPort = "true"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5} = {FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebService", "..\WebService\WebService.vbproj", "{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{502EF7D7-E3EC-4928-AD71-21382214E62B}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{502EF7D7-E3EC-4928-AD71-21382214E62B}.Debug|.NET.Build.0 = Debug|Any CPU
+		{502EF7D7-E3EC-4928-AD71-21382214E62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502EF7D7-E3EC-4928-AD71-21382214E62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502EF7D7-E3EC-4928-AD71-21382214E62B}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{502EF7D7-E3EC-4928-AD71-21382214E62B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{502EF7D7-E3EC-4928-AD71-21382214E62B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}.Release|.NET.ActiveCfg = Release|Any CPU
+		{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9D9AEA-52D9-41F0-8ADE-77A354E67BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

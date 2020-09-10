@@ -1,0 +1,665 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+<title>Простой софт - поддержка</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="robots" content="index,follow" />
+<meta name="revisit-after" content="30 days" />
+<meta name="description" content="Программы для автоматизации бизнеса, услуги по разработке баз данных. На сайте Вы можете скачать демо-версии программ: Учет клиентов, компьютеров, пациентов, складской учет, управление проектами и др." />
+<meta name="keywords" content="программы для бизнеса, учет клиентов, разработка софта, скачать программы, разработка баз данных, базы данных, програмы, автоматизация, учет, документооборот, делопроизводство, архив документов" />
+<link href="styles.css" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
+
+ <style>
+  #dialog label, #dialog input { display:block; }
+  #dialog label { margin-top: 0.5em; }
+  #dialog input, #dialog textarea { width: 95%; }
+  #tabs { margin-top: 1em; }
+  #tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+  #add_tab { cursor: pointer; }
+
+	.input {
+		border: 2px solid white; 
+		-webkit-box-shadow: 
+		  inset 0 0 8px  rgba(0,0,0,0.1),
+				0 0 16px rgba(0,0,0,0.1); 
+		-moz-box-shadow: 
+		  inset 0 0 8px  rgba(0,0,0,0.1),
+				0 0 16px rgba(0,0,0,0.1); 
+		box-shadow: 
+		  inset 0 0 8px  rgba(0,0,0,0.1),
+				0 0 16px rgba(0,0,0,0.1); 
+		padding: 7px;
+		background: rgba(255,255,255,0.5);
+		margin: 0 0 5px 0;
+		text-align:left; 
+		width: 350px;
+		font-size: 16pt;	
+	}
+	.txt1{
+	  color: Firebrick;font-size: 16px;
+	 }
+ </style>
+  
+<script language="javascript" type="text/javascript">
+<!--
+/*
+    function CheckOnSubmit() {
+        if (document.getElementById('ddlProgram').selectedIndex < 1) { alert('Заполните поле "Программа"!'); document.getElementById('ddlProgram').focus(); return false }
+        if (document.getElementById('ddlDbms').selectedIndex < 1) { alert('Заполните поле "СУБД"!'); document.getElementById('ddlDbms').focus(); return false }
+        if (document.getElementById('Version').value == '') { alert('Заполните поле "Версия"!'); document.getElementById('Version').focus(); return false }
+        if (document.getElementById('OS').value == '') { alert('Заполните поле "Операционная система"!'); document.getElementById('OS').focus(); return false }
+        if (document.getElementById('CEmail').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('CEmail').focus(); return false }
+
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+	
+    function CheckOnSubmit2() {
+        if (document.getElementById('ddlProgram2).selectedIndex < 1) { alert('Заполните поле "Программа"!'); document.getElementById('ddlProgram2').focus(); return false }
+        if (document.getElementById('ddlDbms2').selectedIndex < 1) { alert('Заполните поле "СУБД"!'); document.getElementById('ddlDbms2').focus(); return false }
+        if (document.getElementById('Version2').value == '') { alert('Заполните поле "Версия"!'); document.getElementById('Version2').focus(); return false }
+        if (document.getElementById('OS2').value == '') { alert('Заполните поле "Операционная система"!'); document.getElementById('OS2').focus(); return false }
+        if (document.getElementById('CEmail2').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('CEmail2').focus(); return false }
+		if (document.getElementById('checkbox1').checked=false) { alert('Нужно согласие с договором!'); document.getElementById('checkbox1').focus(); return false }
+		
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }	
+*/
+//-->
+</script>
+
+</head>
+
+<body style="font: Verdana 9pt; margin: 0px 0px 0px 0px;">
+
+<!-- Header -->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>	
+
+				<li><a href="prices.htm">Цены</a></li>		
+				<li><a href="AllEquipment.htm">Оборудование</a></li>	
+				<li><a href="faq.htm">Вопросы</a></li>			
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm">Галерея</a></li>				
+				<li><a href="responses.htm">Отзывы</a></li>		
+				<li><a href="PsSchool.htm">Обучение</a></li>		
+				<li><a href="partner.htm">Партнеры</a></li>		
+				<li><a href="market.htm">Маркет</a></li>	
+
+				<li><a href="contacts.htm">Контакты</a></li>	
+				<li><a href="support.htm" class="current">Поддержка</a></li>	
+				<li><a href="phpBB3/index.php">Форум</a></li>	
+			</ul>
+		</div>
+	</div>
+<!-- Main part -->
+<table border="0" width="100%" cellspacing="15" style="margin-top: 7px;">
+<tbody valign="top">
+	<tr>
+		<!-- Left part -->
+		<td style="width: 1%">
+			<table id="tblPrograms" border="0" width="188" class="CBorder" cellspacing="5">
+	            <tr><td class="CNewsCaption" style="background-color: SteelBlue;">Программы</td></tr>
+	            <tr><td>1. <a href="ClientsCount.htm">Учет клиентов</a></td></tr>
+	            <tr><td>2. <a href="ProductsCount.htm">Склад и торговля</a></td></tr>
+	            <tr><td>3. <a href="CompCount.htm">Учет компьютеров</a></td></tr>
+	            <tr><td>4. <a href="PatientsCount.htm">Учет пациентов</a></td></tr>
+	            <tr><td>5. <a href="DocumentsCount.htm">Архив документов</a></td></tr>
+	            <tr><td>6. <a href="VisitorsCount.htm">Учет посетителей</a></td></tr>
+	            <tr><td>7. <a href="ProjectsCount.htm">Управление проектами</a></td></tr>
+	            <tr><td>8. <a href="BooksCount.htm">Учет книг</a></td></tr>
+	            <tr><td>9. <a href="MyDiscs.htm">Мои диски</a></td></tr>
+	            <tr><td>10. <a href="CookRecepts.htm">Кулинарные рецепты</a></td></tr>
+	            <tr><td>11. <a href="FindResults.htm">Анализ результатов поиска</a></td></tr>
+	            <tr><td>12. <a href="SimpleSite.aspx">Простой сайт</a></td></tr>
+                <tr><td>13. <a href="PsPhone.htm">PsPhone</a></td></tr>
+                <tr><td>14. <a href="PsMobile.htm">PsMobile</a></td></tr>
+                <tr><td>15. <a href="PsMobileScan.htm">PsMobileScan</a></td></tr>
+                <tr><td>16. <a href="Prostoysoft.htm">Prostoysoft Tables</a></td></tr>
+            </table>
+
+	        <table id="Table1" border="0" width="188" class="CBorder" cellspacing="5" style="margin-top:20px;">
+		        <tr><td class="CNewsCaption" style="background-color: SteelBlue;" colspan="3">Онлайн консультанты</td></tr>
+                
+		        <tr><td><b>Анжела</b></td><td><img alt="" src="Images/IcqOnline.gif" /></td><td>icq630078085</td></tr>
+                <tr><td><b>Иван</b></td><td><img alt="" src="Images/IcqOnline.gif" /></td><td>icq17227718</td></tr>
+	        </table>
+            <br /><br />
+
+<!-- рассылки -->
+<form target="_top" action="https://subscribe.ru/member/quick" method="post">
+<input type="hidden" name="action" value="quick" />
+<table border="1" cellspacing="0" cellpadding="2" width="188">
+<tr><td bgcolor="#fcf5e9" align="center" colspan="2">
+<font size="-1">Рассылки
+<a href="https://subscribe.ru/"><b>Subscribe.Ru</b></a></font></td></tr><tr>
+<td bgcolor="#ffffff" align="center" valign="middle" colspan="2">
+<font size="-1">
+<input type="hidden" name="grp" value="comp.soft.biz.vashuchet" />
+<a href="https://subscribe.ru/catalog/comp.soft.biz.vashuchet" target="_top">Простой софт - Автоматизация любого учета</a><br />
+<font size="-2">Ведущая Мария Ларионова</font>
+<input type="text" name="email" size="20" maxlength="100" value="ваш e-mail" style="font-size: 9pt" />
+<input type="submit" value=" OK " style="font-size: 9pt" />
+</font></td></tr>
+<tr><td align="center">
+<a href="mailto:comp.soft.biz.vashuchet-sub@subscribe.ru?subj=subscribe">Подписаться письмом</a>
+</td></tr>
+</table>
+<input type="hidden" name="src" value="list_comp.soft.biz.vashuchet" />
+</form>
+<!-- end -->
+
+		</td> 
+
+		<!-- Center part -->
+		<td>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td>
+			            
+						<p style="text-align: center;">
+							<span style="font-family: 'Roboto Slab', serif; font-size: 36px; color: #000000; background-color: #ffffff;">
+								<strong>&nbsp;<span style="font-size: 40px;">&nbsp;<span style="color: #ff0000">Поддержка</span>&nbsp;</span></strong>
+							</span>
+						</p>
+											
+						<p style="text-align: center;">
+							<strong>
+								<span style="font-family: 'Open Sans', sans-serif; background-color: #ffffff; font-size: 18px; color: #000000;">&nbsp;Поддержка осуществляется в соответствии с <b><a href="terms.htm">Регламентом оказания технической поддержки</a></b>&nbsp;</span>
+							</strong>
+						</p>
+											
+						<p style="text-align: center;">
+							<strong>
+								<span style="font-family: 'Open Sans', sans-serif; background-color: #ffffff; font-size: 18px; color: #000000;">&nbsp;Скорость ответа зависит от сложности вопроса и полноты информации (соблюдение 3-х пунктов ниже).&nbsp;</span>
+							</strong>
+						</p>											
+                    </td>
+                    
+                </tr>
+            </table>
+			
+            <hr style="text-align: left" />
+
+		
+<table>
+	<tbody>
+	<tr>
+		<td> <h3 style="font-size:26px;"><br />Важно предоставить:</h3></td>
+	</tr>
+	</tbody>
+</table>
+
+<div style="height:auto; border: thin solid #E5E5E5; border-radius: 15px; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(198, 194, 194, 0.4); padding: 0px 12px 12px 12px; width: 90%">
+	<p>
+		<b style="font-size: 12pt;"><i>1. Описание проблемы и действия пользователя</i></b><br />
+        Пронумерованным списком и на конкретном примере с указанием ID записи, имя поля, таблицы. Если описать проблему трудно или долго, то вы можете снять видео с 
+        помощью нашей бесплатной программы <a href="PsCam.exe" style="color: OrangeRed; font-weight: bold">PsCam</a> со звуковым сопровождением желательно и прислать 
+        нам файл .AVI в архиве 7z, RAR или ZIP на емейл поддерки или ссылку для скачивания. Видео с плохим качеством (снятые на телефон) не рассматриваются.
+	</p>
+
+	<p style="margin-top: 15px;">
+		<b style="font-size: 12pt;"><i>2. Скриншот или видео</i></b> снятое на <a href="PsCam.exe" style="color: OrangeRed; font-weight: bold">PsCam</a>
+        с сообщением об ошибке или конкретным проблемным местом. Полноэкранный снимок (скриншот экрана) делается нажатием клавиши PrintScreen (в правом верхнем углу 
+        клавиатуры) и далее, находясь в программе Paint или Word, сделайте "Вставить из буфера".
+		Картинку лучше сохранять в сжатом формате (.JPG, .GIF, .PNG), но не в .BMP. Проблемное место можно подчеркнуть красной линией, овалом или выделить как-то по-другому.
+	</p>
+
+	<p style="margin-top: 15px;">
+		<b style="font-size: 12pt;"><i>3. Копию базы данных</i></b> с которой происходит проблема. Если проблема наблюдается на любой БД, в том числе на нашей демо БД, 
+        то вашу базу присылать не обязательно.
+        
+        <p>
+        Если вы не согласны предоставлять персональные данные и конфиденциальную информацию, то можно сделать копию БД, в которой удалить большинство записей, оставив 1-2 
+        записи в каждой таблице для удобного тестирования. А в осташихся записях заместить всю конфиденциальную информацию каким-то одним символом, например буквой "X". 
+        Конфиденциальность данных мы гарантируем.
+		</p>
+
+        <p>
+        База данных - это один единственный файл с расширением .mdb, путь к которому указан внизу в строке-статусе <a href="Images/PathToDb.jpg" style="color: OrangeRed; font-weight: bold">скриншот</a>. 
+		В случае MS SQL Server пришлите файл .bak (бакап БД). 
+		Желательно удалить пароль на БД (если он задан для .mdb-файла), сжать БД и поместить в архив ZIP, RAR или 7z. 
+        </p>
+	</p>
+</div>	
+
+<div style="width: 92%; text-align: center;">
+	<div id="tabs" style="width: 650px; margin-top: 22px">
+	  <ul>
+		<li style="background-color: #bcffbc;border: 1px solid #9b9b9b;"><a href="#tabs-1">Бесплатное обращение</a></li>
+		<li style="background-color: #fcc6c6;border: 1px solid #9b9b9b;"><a href="#tabs-2">Платное рассмотрение заявки</a></li>
+	  </ul>
+	  <div id="tabs-1" class="tab_content" style="background-color: #f5fff5;">
+
+		<form id="SupportForm" action="sendform.aspx?formtype=SupportForm" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit();">
+			<div style="margin: 10px 0 6px;text-align: left;"><span style="display: inline-block; font-size: 22px; color: green; min-width: 210px; max-width: auto; margin-bottom: 8px;" >Форма бесплатного обращения в поддержку</span></div>
+                <p>(сообщение об ошибке, пожелание, небольшая консультация)</p>
+				<table border="0" cellpadding="2" style="font-family: Arial; padding-right: 10px;">
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1">Программа</td>
+						<td>
+							<select id="ddlProgram" name="ddlProgram" class="input" style="width: 290px; font-family: Arial; font-size: 9pt;">
+								<option></option>
+								<option>Учет клиентов</option>
+								<option>Склад и торговля</option>
+								<option>Учет компьютеров</option>
+								<option>Учет пациентов</option>
+								<option>Архив документов</option>
+								<option>Учет посетителей</option>
+								<option>Управление проектами</option>
+								<option>Учет книг</option>
+								<option>Мои диски</option>
+								<option>Кулинарные рецепты</option>
+								<option>Анализ результатов поиска</option>
+								<option>Простой сайт</option>
+								<option>PsPhone</option>
+								<option>PsMobile</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1" title='Пожалуйста, укажите полностью версию программы, например "2.123"'>Номер версии</td>
+						<td><input class="input" type="text" id="Version" name="Version" title='Пожалуйста, укажите полностью версию программы, например "2.123"' maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1" title="Система управления базами данных">Формат базы данных (СУБД)</td>
+						<td>
+							<select id="ddlDbms" name="ddlDbms" class="input" style="width: 290px; font-family: Arial; font-size: 9pt;">
+								<option></option>
+								<option>База данных формата Microsoft Access (.mdb)</option>
+								<option>База данных формата Microsoft SQL Server</option>
+								<option>вопрос не понятен</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1"title='Пожалуйста, укажите полностью название вашей Windows, например "Windows XP Prof RU SP3 x86"'>Операционная система</td>
+						<td><input class="input" type="text" id="OS" name="OS" title='Пожалуйста, укажите полностью название вашей Windows, например "Windows XP Prof RU SP3 x86"' maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1" title="Если вы наш клиент, пожалуйста, укажите зарегистрированный у нас емейл">Электронная почта</td>
+						<td><input class="input" type="text" id="CEmail" name="CEmail" placeholder="example@email.ru" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td class="txt1"></td>
+						<td class="txt1" title="">Телефон</td>
+						<td><input class="input" type="text" id="Text1" name="Phone" placeholder="+79111234567" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="txt1">Ваше имя</td>
+						<td><input class="input" type="text" id="FIO" name="FIO"  placeholder="Имя" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="txt1" title="Если вы наш клиент, пожалуйста, укажите название вашей организации для вашей идентификации">Организация</td>
+						<td title="Если вы наш клиент, пожалуйста, укажите название вашей организации для вашей идентификации"><input class="input" type="text" id="Company" name="Company" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr valign="top">
+						<td></td>
+						<td class="txt1">
+							Ваше сообщение<br />
+							<span class="CExample">описание ошибки или пожелание</span>
+						</td>
+						<td>
+							<textarea class="input" id="Comments" name="Comments" rows="2" cols="20" style="width: 290px; height: 80px; font-family: Arial; font-size: 9pt;"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="txt1">
+							Прикрепить файл<br />
+							<span class="CExample">Со скриншотом, описанием<br />или копией БД.</span>&nbsp;
+						</td>
+						<td valign="top">
+							<input type="file" id="mail_file" name="mail_file" size="40" style="width: 290px; font-family: Arial; font-size: 9pt;" />
+							<span class="CExample">Если файлов несколько, запакуйте их в один ZIP-архив.</span><br />
+							<span class="CExample" style="color:Crimson"><b>Максимальный размер файла 4096 Кб.</b></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="txt1"></td>
+						<td>
+                            <input title="" type="checkbox" class="checkbox" id="Checkbox2" name="chkAgreeWithPD"/><label>Согласен с на обработку персональных данных</label>	
+						</td>
+										
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td>
+							<br />
+							<input type="submit" value="Отправить" id="submit1" name="submit1" class="green" />
+						</td>
+					</tr>
+				</table>
+		</form>	  
+	  </div>
+	  
+	  <div id="tabs-2" class="tab_content" style="background-color: #fff5f5;">
+		<form id="SupportForm2" action="sendform.aspx?formtype=SupportForm2" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit2();">
+			<div style="margin: 10px 0 6px;text-align: left;"><span style="display: inline-block;  font-size: 22px;  color: red;  min-width: 210px; max-width: auto;   margin-bottom: 8px;" >Форма платного обращения в поддержку</span></div>
+                <p>(нужна настройка конфигурации, специфическая проблема в моей БД)</p>
+                <table border="0" cellpadding="2" style="font-family: Arial; padding-right: 10px;">
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1">Программа</td>
+						<td>
+							<select id="ddlProgram2" name="ddlProgram2" class="input" style="width: 290px; font-family: Arial; font-size: 9pt;">
+								<option></option>
+								<option>Учет клиентов</option>
+								<option>Склад и торговля</option>
+								<option>Учет компьютеров</option>
+								<option>Учет пациентов</option>
+								<option>Архив документов</option>
+								<option>Учет посетителей</option>
+								<option>Управление проектами</option>
+								<option>Учет книг</option>
+								<option>Мои диски</option>
+								<option>Кулинарные рецепты</option>
+								<option>Анализ результатов поиска</option>
+								<option>Простой сайт</option>
+								<option>PsPhone</option>
+								<option>PsMobile</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1" title='Пожалуйста, укажите полностью версию программы, например "2.123"'>Номер версии</td>
+						<td><input class="input" type="text" id="Version2" name="Version" title='Пожалуйста, укажите полностью версию программы, например "2.123"' maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1" title="Система управления базами данных">Формат базы данных (СУБД)</td>
+						<td>
+							<select class="input" id="ddlDbms2" name="ddlDbms" class="input" style="width: 290px; font-family: Arial; font-size: 9pt;">
+								<option></option>
+								<option>База данных формата Microsoft Access (.mdb)</option>
+								<option>База данных формата Microsoft SQL Server</option>
+								<option>вопрос не понятен</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1" title='Пожалуйста, укажите полностью название вашей Windows, например "Windows XP Prof RU SP3 x86"'>Операционная система</td>
+						<td><input class="input" type="text" id="OS2" name="OS" title='Пожалуйста, укажите полностью название вашей Windows, например "Windows XP Prof RU SP3 x86"' maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td class="txt1">*</td>
+						<td class="txt1" title="Если вы наш клиент, пожалуйста, укажите зарегистрированный у нас емейл">Электронная почта</td>
+						<td><input class="input" type="text" id="CEmail2" name="CEmail" placeholder="example@email.ru" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td class="txt1"></td>
+						<td class="txt1" title="">Телефон</td>
+						<td><input class="input" type="text" id="Phone2" name="Phone" placeholder="+79111234567" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="txt1">Ваше имя</td>
+						<td><input class="input" type="text" id="FIO2" name="FIO" placeholder="Имя" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td  class="txt1" title="Если вы наш клиент, пожалуйста, укажите название вашей организации для вашей идентификации">Организация</td>
+						<td title="Если вы наш клиент, пожалуйста, укажите название вашей организации для вашей идентификации"><input class="input" type="text" id="Text5" name="Company" maxlength="255" style="width: 290px; font-family: Arial; font-size: 9pt;" /></td>
+					</tr>
+					<tr valign="top">
+						<td></td>
+						<td class="txt1">
+							Ваше сообщение<br />
+							<span class="CExample">описание ошибки или пожелание</span>
+						</td>
+						<td>
+							<textarea class="input" id="Comments2" name="Comments" rows="2" cols="20" style="width: 290px; height: 80px; font-family: Arial; font-size: 9pt;"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="txt1">
+							Прикрепить файл<br />
+							<span class="CExample">Со скриншотом, описанием<br />или копией БД.</span>&nbsp;
+						</td>
+						<td valign="top">
+							<input type="file" id="mail_file2" name="mail_file" size="40" style="width: 290px; font-family: Arial; font-size: 9pt;" />
+							<span class="CExample">Если файлов несколько, запакуйте их в один ZIP-архив.</span><br />
+							<span class="CExample" style="color:Crimson"><b>Максимальный размер файла 4096 Кб.</b></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td class="txt1"></td>
+						<td>
+                            <input title="Согласен с договором-публичной офертой" type="checkbox" class="checkbox" id="chkAgreeWithRools" name="chkAgreeWithRools"/><label>Согласен c </label>&nbsp;
+							<a href="supportContract.htm" id="modalFrm" rel="modal:open" style="color: #0086B3;font-size: 12pt;">договором</a><br />
+                            <input title="" type="checkbox" class="checkbox" id="chkAgreeWithPD" name="chkAgreeWithPD"/><label>Согласен с на обработку персональных данных</label>	
+						</td>
+										
+					</tr>
+
+					<tr>
+						<td></td>
+						<td></td>
+						<td>
+							<br />
+							<input type="submit" value="Отправить" id="submit2" name="submit2" class="red" />
+						</td>
+					</tr>
+				</table>
+		</form>  
+	  
+	  </div>
+	</div>
+</div> 
+<br />
+
+<p>
+Специалисты технической поддержки ответят вам в рабочее время: с 10:00 до 18:00 (московское время) по будням.<br />
+Прежде чем отправить сообщение с вопросом, рекомендуется сначала просмотреть раздел <a href="faq.htm">"Вопросы"</a>.<br />
+</p>
+
+<table style="width:100%; height: 170px; margin-top: 30px;">
+	<tr>
+		<td style="width:33%;text-align: center;"><img alt="" src="Images/smartphone.png" style="border-style: none" /></td>
+		<td style="width:33%;text-align: center;"><img alt="" src="Images/paper-plane.png" style="border-style: none" /></td>
+		<td style="width:33%;text-align: center;"><img alt="" src="Images/alarm-clock.png" style="border-style: none" /></td>
+	</tr>
+	<tr>
+		<td>
+						
+			<div style="color: rgb(3, 6, 7); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+			<div style="padding: 0px 5px 5px;"> 
+			<div><p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif; font-size: 18px;">ТЕЛЕФОН</span></p></div></div></div>
+							
+			<div style="color: rgb(3, 6, 7); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+			<div style="padding: 0px;"> 
+			<h4><p style="text-align: center;">
+			<span style="font-size: 16px; font-family: 'Open Sans', sans-serif; color: #464646;">+7 (812) 309-46-42</span></p></h4> </div></div>		
+		</td>
+		<td>
+						
+			<div style="color: rgb(3, 6, 7); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+			<div style="padding: 0px 5px 5px;"> 
+			<div><p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif; font-size: 18px;">EMAIL</span></p></div></div></div>					
+			
+			<div style="color: rgb(3, 6, 7); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+			<div style="padding: 0px;"> 
+			<h4><p style="text-align: center;">
+			<span style="font-size: 16px; font-family: 'Open Sans', sans-serif; color: #464646;">info@prostoysoft.ru</span></p></h4> </div></div>	
+		</td>
+		<td>
+			
+			<div style="color: rgb(3, 6, 7); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+			<div style="padding: 0px 5px 5px;"> 
+			<div><p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif; font-size: 18px;">ВРЕМЯ РАБОТЫ</span></p></div></div></div>
+			
+			<div style="color: rgb(3, 6, 7); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+			<div style="padding: 0px;"> 
+			<h4><p style="text-align: center;">
+			<span style="font-size: 16px; font-family: 'Open Sans', sans-serif; color: #464646;">С 10 до 18 МСК пн-пт</span></p></h4> </div></div>				
+		</td>
+	</tr>
+</table>
+<br />	
+
+		</td>
+		
+		<!-- Right part -->
+		<td>
+		
+		
+		</td>
+	</tr>
+	<tr>
+
+		<!-- Bottom part -->
+                <td colspan="3">
+                    <br />
+
+
+
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body>
+</html>

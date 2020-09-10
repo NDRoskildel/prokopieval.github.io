@@ -1,0 +1,88 @@
+﻿.ya-kassa {
+    padding: 10px;
+}
+
+.ya-kassa p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #ccc;
+    max-width: 1020px;
+}
+
+.ya-kassa form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #FAFAFA;
+    border: 1px solid #ccc;
+    max-width: 1000px;
+}
+
+.ya-kassa form label {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial", sans-serif;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.ya-kassa form input, .ya-kassa form select {
+    padding: 5px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial", sans-serif;
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+    outline: none;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #F1F5FA;
+    transition: .25s ease-out 0s;
+}
+
+.ya-kassa form select option {
+    color: #333;
+    font-style: normal;
+}
+
+.ya-kassa form select:invalid, .ya-kassa form select option[value=""] {
+    color: #ccc;
+    font-style: italic;
+}
+
+.ya-kassa form input:focus {
+    border-left: 7px solid #F41313;
+}
+
+.ya-kassa form select:focus {
+    border-left: 7px solid #F41313;
+}
+
+.ya-kassa form input::placeholder {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial", sans-serif;
+    font-size: 1em;
+    color: #ccc;
+    font-style: italic;
+}
+
+.ya-kassa form button {
+    font-family: "Verdana", sans-serif;
+    margin: 5px auto;
+    font-size: 1.3em;
+    color: #FFF;
+    outline: none;
+    border: 1px solid #538312;
+    padding: 5px 15px 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: .25s ease-out 0s;
+    background-color: #538312;
+    background-image: linear-gradient(0deg, #50800F, #78B12C);
+}
+
+.ya-kassa form button:hover {
+    background-image: linear-gradient(0deg, #78B12C, #50800F);
+}

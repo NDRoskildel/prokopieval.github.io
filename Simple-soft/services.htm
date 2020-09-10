@@ -1,0 +1,547 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+<title>Настройка конфигурации базы данных - Простой софт</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="robots" content="index,follow" />
+<meta name="revisit-after" content="30 days" />
+<meta name="description" content="Программы для автоматизации бизнеса, услуги по разработке баз данных. На сайте Вы можете скачать демо-версии программ: Учет клиентов, компьютеров, пациентов, складской учет, управление проектами и др." />
+<meta name="keywords" content="программы для бизнеса, учет клиентов, настройка софта, разработка софта, разработка баз данных, базы данных, програмы, автоматизация бизнеса, учет, документооборот, делопроизводство, архив документов" />
+<link href="styles.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />	
+	<link rel="stylesheet" type="text/css" href="css/style_serv.css" />
+
+	<!--	
+	<link rel="stylesheet" media="screen" href="fonts/font-awesome/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+	-->
+<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+
+<script language="javascript" type="text/javascript">
+<!--
+    function CheckOnSubmit() {
+        if (document.getElementById('FIO').value == '') { alert('Заполните поле "ФИО"!'); document.getElementById('FIO').focus(); return false }
+        if (document.getElementById('CEmail').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('CEmail').focus(); return false }
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+//-->
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" type="text/css" href="css/adaptive.css" />
+</head>
+
+<body style="margin: 0px 0px 0px 0px;">
+
+<!-- Header -->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm" class="current">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>	
+
+				<li><a href="prices.htm">Цены</a></li>		
+				<li><a href="AllEquipment.htm">Оборудование</a></li>	
+				<li><a href="faq.htm">Вопросы</a></li>			
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm">Галерея</a></li>				
+				<li><a href="responses.htm">Отзывы</a></li>		
+				<li><a href="PsSchool.htm">Обучение</a></li>		
+				<li><a href="partner.htm">Партнеры</a></li>		
+				<li><a href="market.htm">Маркет</a></li>	
+
+				<li><a href="contacts.htm">Контакты</a></li>	
+				<li><a href="support.htm">Поддержка</a></li>	
+				<li><a href="phpBB3/index.php">Форум</a></li>	
+			</ul>
+		</div>
+	</div>
+<!-- Main part -->
+<!-- Nav Menu Section -->
+<!---
+<div class="logo-menu">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
+  <div class="container">	
+	<div class="navbar-header col-md-3">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="#home"><i class="fa fa-briefcase"></i>Простой<span style="color: #6ab580;">Софт</span></a>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbar">
+		<ul class="nav navbar-nav col-md-9 pull-right">
+			<li class="active"><a href="#hero-area"><i class="fa fa-home"></i> Главная</a></li>
+			<li><a href="#services"><i class="fa fa-info"></i> О программе</a></li>
+			<li><a href="#about"><i class="fa fa-cogs"></i> Описание</a></li>						
+			<li><a href="#clients"><i class="fa fa-puzzle-piece"></i> Отзывы</a></li>			
+			<li><a href="#contact"><i class="fa fa-envelope"></i> Контакты</a></li>
+		</ul>
+	</div>
+  </div>
+</nav>
+</div>
+-->
+
+<section id="setting">
+<div class="container">
+<div class="row">
+	<div class="col-md-12">
+			<h1 class="serv" style="color: White; font-size: 43pt">Настройка конфигурации базы данных</h1>
+				<div class="about-us">Автоматизация бизнеса, ИТ-системы, CRM-системы, ERP-системы, WMS-системы, PLM-системы, SCM-системы<br />
+                Производство, Логистика, Сбыт, Доставка, Проектирование, Технологии, Маркетинг, Продажи, Сервис<br /><br /><br />
+                
+                IT-компания "Простой софт" создает системы учета быстро и надежно</div>
+
+				<div class="plan">Схема работы</div>
+			    
+				<div class="how-we-work">
+						<img class="obraschenie" src="Images/obraschenie.png" alt="" />
+						<img class="podgotovka" src="Images/podgotovka.png" alt="" />
+						<img class="soglasovanie" src="Images/soglasovanie.png" alt="" />
+						<img class="realizacija" src="Images/realizacija.png" alt="" />
+						<div class="text-discription">
+							<div class="text-obraschenie"><p class="text_dis"><a href="services.htm#1" style="color:White">Обращение</a></p></div>
+							<div class="text-podgotovka"><p class="text_dis">Подготовка ТЗ</p></div>
+							<div class="text-soglasovanie"><p class="text_dis">Согласование договора</p></div>
+							<div class="text-realizacija"><p class="text_dis">Реализация проекта</p></div>
+						</div>
+				</div>
+
+				<div class="mob-work">
+					<div>
+						<div class="work-img"><img class="obraschenie" src="Images/obraschenie.png" alt="" /></div>
+						<p><a href="services.htm#1">Обращение</a></p>
+					</div>
+					<div>
+						<div class="work-img"><img class="podgotovka" src="Images/podgotovka.png" alt="" /></div>
+						<p>Подготовка ТЗ</p>
+					</div>
+					<div>
+						<div class="work-img"><img class="soglasovanie" src="Images/soglasovanie.png" alt="" /></div>
+						<p>Согласование договора</p>
+					</div>
+					<div>
+						<div class="work-img"><img class="realizacija" src="Images/realizacija.png" alt="" /></div>
+						<p>Реализация проекта</p>
+					</div>
+				</div>
+
+	</div>
+</div>
+</div>
+</section>
+
+<section id="proposal">
+	<div class="container">
+		<div class="row">
+            <br /><br /><br /><br />
+			<div class="title_um">Мы предлагаем</div>
+            <br />
+		</div>
+		<div class="proposal_dicript">
+			<div class="text_discription">
+				<p>Мы предлагаем услугу "Настройка конфигурации базы данных" по требованиям клиента на нашей программной платформе Prostoysoft Tables ®
+                Дешевле и быстрее, чем софт на заказ. Вы экономите время и бюджет, взамен получаете надежную программу под ваш бизнес "под ключ" в кратчайший срок, 
+                со всеми функциями, в соответствии с ТЗ, плюс обучение - записанные видео файлы.</p>
+				
+                <p class="dis2">Реализуем Windows-программы и Web-проекты, а также мобильные приложения. 
+                Быстро и бесплатно мы помогаем воплотить что-то простое, объясняем как это можно настроить самостоятельно. 
+                Преимуществом нашей ИТ - компании является скорость, низкая цена, высокое качество.</p>
+			</div>
+			<div class="discription_img">
+				<img src="Images/predlogenie.png" alt="" style="margin-top: 69px" />
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<section id="advantages">
+	<div class="container">
+
+	    <div class="col-md-12">
+			<div class="serv1">Наши преимущества</div>
+				
+				<div class="advantage">
+					<div class="advantage1">
+						<img src="Images/time.png" alt="" />
+						<div class="text-avantage">1. СКОРОСТЬ - 80% проектов сдаём за неделю</div>
+					</div>
+					<div class="advantage2">
+						<img src="Images/master.png" alt="" />
+						<div class="text-avantage">2. БОЛЬШОЙ ОПЫТ - тысячи сданных проектов</div>
+					</div>
+					<div class="advantage3">
+						<img src="Images/diamand.png" alt="" />
+						<div class="text-avantage">3. НАДЕЖНОСТЬ - отлаженные платформы без багов</div>
+					</div>
+					<div class="advantage4">
+                        <br />
+						<img src="Images/master.png" alt="" />
+						<div class="text-avantage">4. ПРОФЕССИОНАЛИЗМ - работают мастера с лицензией <sup title="Работают специально обученные мастера, а не случайные фрилансеры. Специалист является программистом баз данных и бизнес-аналитиком. Поступившая жалобы от клиента может лишить специалиста лицензии." style="cursor:default; font-size: 15pt">*</sup></div>
+					</div>
+                    <br /><br />
+				</div>
+	    </div>
+    </div>
+</section>
+
+<section id="scheme-of-work">
+	<div class="container">
+	<div class="row">
+		<div class="podgotovka_tz">
+		<div class="block_quadro"><p style="padding-top: 10px">1</p></div>
+			<div class="title_serv">Подготовка технического задания (ТЗ)</div>
+			<div class="discript_tz"><p>Заказчик составляет подробное ТЗ в  отдельном Word - документе. Оно должно быть четко сформулировано, иметь нумерованный список приоритетный целей, а также подробное описание бизнес - процесса. Важно описать то, как видите свой бизнес вы, ведь работать с ним в дальнейшем именно вам. Чем более подробно опишите свое видение, тем больше функций получите на выходе. 
+Необходимые данные, которые вы должны описать в своем ТЗ:</p>
+				
+			</div>
+		
+	
+		<div class="punckt_tz">
+			<p style="padding-top: 8px; padding-left: 17px"> 1. Список основных объектов учета (клиенты, заказы, счета, документы, продукты...) и их атрибуты (поля)</p>
+		</div>
+		<div class="punckt_tz">
+			<p style="padding-top: 8px; padding-left: 17px"> 2. Описание бизнес-процесса, логики взаимодействия, последовательность ввода данных</p>
+		</div>
+		<div class="punckt_tz">
+			<p style="padding-top: 8px; padding-left: 17px"> 3. Отчеты, документы, сводные таблицы, содержащие итоговые расчетные значения</p>
+		</div>
+		<div class="punckt_tz">
+			<p style="padding-top: 8px; padding-left: 17px"> 4. Пользователи и группы пользователей, их функциональные роли и права доступа</p>
+		</div>
+		<div class="punckt_tz">
+			<p style="padding-top: 8px; padding-left: 17px"> 5. Все остальное важное - корректность ввода, защиты, связь с сайтом и другими системами и т.п.</p>
+		</div>
+	</div>
+
+	<div class="agreement">
+		<div class="block_quadro1"><p style="padding-top: 10px">2</p></div>
+			<div class="title1">Согласование договора и стоимости</div>
+			<div class="discript_tz"><p>Две схемы работы, которые мы применяем:</p></div>
+			
+		<div class="punckt_doc">
+			<p style="padding-top: 9px; padding-left: 17px"> 1. Под реализацию проекта - при наличии четкого ТЗ с детализацией всех задач и структурой базы данных</p>
+		</div>
+
+		<div class="punckt_doc">
+			<p style="padding-top: 9px; padding-left: 17px"> 2. Повременная схема - ТЗ не обязательно, все детали выясняются в процессе и тут же реализуются</p>
+		</div>
+		<div class="cost1">Стоимость услуги и примерный срок реализации определяется после получения начального ТЗ.</div>
+	
+	</div>
+
+    <div class="implementation">
+		<div class="block_quadro2"><p style="padding-top: 10px">3</p></div>
+			<div class="title_block">Реализация проекта</div>
+			<div class="discript_tz"><p>Наш IT-специалист уведомит вас о начале работы над проектом. В среднем, первичный вариант программы заказчик видит уже через 2-3 дня. 
+            Как показывает практика, при создании структуры средней сложности, воплощение проекта занимает 1-2 недели. После подписания договора и поступления предоплаты, происходит подбор ИТ-специалиста с учетом его специализации и 
+            высвобождения от предыдущих проектов. Это важный этап, ведь главная цель - на основе опыта прошлых проектов подборать мастера в данной предметной области.</p>
+			<p class="dis2">Наш ИТ - специалист проконсультирует вас, проанализирует ваш бизнес, поможет в составлении правильного техзадания и настроит конфигурацию, которая будет четко и слажено работать. 
+            Мы тщательно контролируем качество всех создаваемых конфигураций.
+            <br /><br />
+            Мы создаем системы учета, которые позволят вашему бизнесу развиваться, делать его более прибыльным и эффективным.</p>
+        </div>
+    </div>
+	</div>
+
+	</div>
+</section>
+
+<section id="application_form">
+	<div class="brif"><p style="padding-top: 10px; text-align: center;">Заполните <u><a href="Brief.zip" style="color: White">Краткий бриф</a></u> с <u><a href="TZExamples.zip" style="color: White">Техзаданием</a></u> и форму ниже или пришлите емейл на <a href="mailto:info@prostoysoft.ru" style="color:White; text-decoration: underline">info@prostoysoft.ru</a></p></div>
+
+    <form id="ConfigForm" action="sendform.aspx?formtype=ConfigForm" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit();">
+	
+    	<div class="CFrame_serv">
+	    <div class="CPageCaption_serv">
+            <a name="1" href="#1" style="color: White; cursor: text; text-decoration: none;">ЗАЯВКА НА РЕАЛИЗАЦИЮ ИТ-ПРОЕКТА</a>
+        </div>
+        <br />
+		<div class="CSmallText_serv" style="font-size:12pt;margin-top:20px;color:White;"><b><i>или отдельной задачи</i></b></div>
+
+		<br />
+
+		<div class="forma" style="background-color: White; margin-left: -50px; position: relative;">
+		<table class="table_zak" border="0" cellpadding="1" style="font-family: Arial; margin-left: 30px;">
+			<tr>
+			    <td style="font-size: 12pt;height: 30px; color: Black;"><b>*</b></td>
+				<td style="width: 350px; height: 30px; font-size: 12pt; color: Black; font-family: Arial;"><b>Ваше имя</b></td>
+				<td><input type="text" id="FIO" name="FIO" maxlength="255" style="width: 270px; height: 30px; font-family: Arial; font-size: 10pt; border-radius: 4px;" /></td>
+			</tr>
+			<tr>
+			    <td style="font-size: 12pt; height: 50px;"><b>*</b></td>
+				<td style="height: 30px; font-size: 12pt; color: Black; font-family: Arial;"><b>Эл. почта</b></td>
+				<td><input type="text" id="CEmail" name="CEmail" maxlength="255" style="width: 270px; font-family: Arial; font-size: 10pt; height: 30px; border-radius: 4px;" /></td>
+			</tr>
+			<tr>
+			    <td></td>
+				<td style="height: 30px; font-size: 12pt; color: Black; font-family: Arial;"><b>Организация</b></td>
+				<td><input type="text" id="Company" name="Company" maxlength="255" style="width: 270px;  font-family: Arial; font-size: 10pt; height: 30px; border-radius: 4px;" /></td>
+			</tr>
+
+			<tr>
+			    <td></td>
+				<td style="height: 30px; font-size: 12pt; color: Black; font-family: Arial;"><b>Город</b></td>
+				<td><input type="text" id="City" name="City" maxlength="255" style="width: 270px; font-family: Arial; font-size: 10pt; height: 30px; border-radius: 4px;" /></td>
+			</tr>
+			<tr>
+			    <td></td>
+				<td style="height: 30px; font-size: 12pt; color: Black; font-family: Arial;"><b>Телефон</b></td>
+				<td><input type="text" id="txtPhone" name="txtPhone" maxlength="255" style="width: 270px; font-family: Arial; font-size: 10pt; height: 30px; border-radius: 4px;" /></td>
+			</tr>
+			<tr>
+			    <td></td>
+				<td style="height: 30px; font-size: 12pt; color: Black; font-family: Arial;"><b>Программа</b><br />
+					<span class="CExample">для которой нужна конфигурация</span>
+				</td>
+				<td>								
+					<select id="ddlProgram" name="ddlProgram" class="input" style="width: 270px; font-family: Arial; font-size: 10pt; height: 30px; border-radius: 4px;">
+						<option></option>
+						<option>Учет клиентов</option>
+						<option>Склад и торговля</option>
+						<option>Архив документов</option>
+						<option>Управление проектами</option>
+						<option>Учет посетителей</option>
+						<option>Учет компьютеров</option>
+						<option>Учет книг</option>
+						<option>Мои диски</option>
+						<option>Кулинарные рецепты</option>
+						<option>Учет пациентов</option>
+						<option>Prostoysoft Tables 3.x - универсальная многоязычная платформа</option>
+						<option>PsPhone - телефония для программ Prostoysoft</option>
+						<option>PsMobile - мобильное приложение-платформа</option>
+						<option>Простой сайт - веб-система (SimpleSite ASP.NET Web-forms system)</option>
+						<option>MyPHP - веб-система (PHP, MySQL, JS-фреймворки)</option>
+						<option>другая (укажите в комментарии)</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+			    <td></td>
+				<td style="height: 30px; font-size: 12pt; color: Black; font-family: Arial;">
+				    <b>Тип лицензии</b><br />
+					<span class="CExample">которую вы планируете приобрести</span>
+				</td>
+				<td>
+					<select id="ddlLicense" name="ddlLicense" class="input" style="width: 270px; font-family: Arial; font-size: 10pt; height: 30px; border-radius: 4px;">
+                        <option></option>
+                        <option>БАЗОВАЯ (на 1 рабочее место)</option>
+                        <option>СТАНДАРТ (на 3 рабочих места)</option>
+                        <option>БИЗНЕС (на 5 рабочих мест)</option>
+                        <option>ПРО (на 10 рабочих мест)</option>
+                        <option>КОРП (на 20 рабочих мест)</option>
+                        <option>ВИП (без ограничений)</option>
+					</select>
+				</td>
+			</tr>
+			<tr valign="top">
+			    <td></td>
+				<td style="height: 30px; font-size: 12pt; color: Black; font-family: Arial;"><b>Ваши комментарии</b></td>
+				<td>
+    				<textarea id="Comments" name="Comments" rows="2" cols="20" style="width: 270px; height: 90px; font-family: Arial; font-size: 10pt; border-radius: 4px;"></textarea>
+				</td>
+			</tr>
+			<tr>
+			    <td></td>
+				<td style="font-weight: bold; font-size: 11pt">
+				    Прикрепить Техзадание или Краткий бриф<br />
+					<span class="CExample">техническое задание в любом виде<br />если много файлов - ZIP-архив</span>
+				</td>
+				<td valign="top">
+                    <input type="file" id="mail_file" name="mail_file" size="40" style="width: 270px; font-family: Arial; font-size: 10pt; border-radius: 4px;" />
+                </td>
+			</tr>
+
+			<tr>
+			    <td></td>
+			    <td></td>
+				<td align="center" valign="top" nowrap style="padding-top: 4px;">
+					<input type="submit" class="green" value="Отправить" style="width: 100%; height: 33px;" />
+                </td>
+			</tr>
+
+			<tr>
+			    <td colspan="3" align="center" style="font-size: 12pt;">
+				    <br />
+				    <br />
+                    <b><i>Мы рады видеть Вас среди наших клиентов!</i></b>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+	</form>
+
+</section>
+
+<!-- Portfolio Section2 -->
+<section id="portfolio2">
+<div class="container">
+	<div class="row  animated fadeInRight delay-0-5" style="text-align: center;">
+		<h1 class="title3">КАК МЫ РАБОТАЕМ</h1>
+			<iframe width="560" height="288" src="https://www.youtube.com/embed/nq3vFYjNaZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+</section>
+<!-- Portfolio Section2 End -->
+
+<!-- Portfolio Section2 -->
+<section id="portfolio2">
+<div class="container">
+	<div class="row  animated fadeInRight delay-0-5" style="text-align: center;">
+		<h1 class="subtitle">Пример видео-отчета о проделанной работе за 20 часов</h1>
+		<iframe width="560" height="288" src="https://www.youtube.com/embed/_E8uSJTAuqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		
+	</div>
+</div>
+</section>
+<!-- Portfolio Section2 End -->
+
+<!-- Portfolio Section2 -->
+<section id="portfolio2">
+<div class="container">
+	<div class="row  animated fadeInRight delay-0-5" style="text-align: center;">
+		<h1 class="subtitle">Пример видео-отчета о проделанной работе за 40 часов</h1>
+		<iframe width="560" height="288" src="https://www.youtube.com/embed/2-RpWKkZpu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		
+	</div>
+</div>
+<br />
+<br />
+</section>
+<!-- Portfolio Section2 End -->
+
+<!-- Bottom part -->
+                <td colspan="3">
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body>
+</html>

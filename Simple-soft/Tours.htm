@@ -1,0 +1,748 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Учет клиентов в турагентстве | Простой софт</title>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="robots" content="index,follow" />
+<meta name="revisit-after" content="30 days" />
+<meta name="description" content="Программа для автоматизации работы и учета клиентов в турагентстве и экскурсионных компаниях. Скачайте и попробуйте её бесплатно" />
+<meta name="keywords" content="автоматизация турагентства, управление турфирмой, учет туристов, учет в туристическом агентстве, учет туров, учет экскурсий, бухгалтерский учет в турагентстве" />
+<link href="styles.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen" />
+
+<script language="javascript" type="text/javascript">
+<!--
+    function CheckOnSubmit() {
+        if (document.getElementById('ClientName').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName').focus(); return false }
+        if (document.getElementById('ClientEmail').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail').focus(); return false }
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+    function CheckOnSubmit2() {
+        if (document.getElementById('ClientName2').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName2').focus(); return false }
+        if (document.getElementById('ClientEmail2').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail2').focus(); return false }
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+    function CheckOnSubmit3() {
+        if (document.getElementById('ClientName3').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName3').focus(); return false }
+        if (document.getElementById('ClientEmail3').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail3').focus(); return false }
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+    function CheckOnSubmit4() {
+        if (document.getElementById('ClientName4').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName4').focus(); return false }
+        if (document.getElementById('ClientEmail4').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail4').focus(); return false }
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+//-->
+</script>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/mobilyslider.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+<style type="text/css">
+    .size {white-space: nowrap; padding-left: 5px; padding-right: 10px; text-align: center; width: 65px;}
+	
+.wrapper {background: #f3f3f3;} /* Весь блок страницы*/
+.title {text-align:center;} /*Блок с заголовком*/
+.title h1 {font-size:36px;} /*Главный заголовок*/
+.title h2 {font-size:20px;} /* Главный подзаголовок */
+.download {text-align:center;border: 1px solid #808080;padding: 20px 0;border-radius:10px;} /*Блок с кнопкой "Скачать" */
+.main_part {margin:0 auto; font-size:15px;width:1300px;} /* Основная часть страницы */
+.main_part h2 {font-size:22px;color:DarkGreen;} 
+.main_part h3 {font-size:18px;color:green}
+.video {border-top:1px solid #ccc;border-bottom:1px solid #ccc; padding:20px 0;} /*Блок с видео на странице для Турагентства*/
+.video_desc {float: right; text-align: right; width: 50%;} /* Блок с описанием видео*/
+.video_desc h2 {text-align: center;font-size: 28px;margin: 0; padding-bottom:20px;} /* Заголовок у описания для видео */
+.cta {text-align:center; font-size:16px;} /* Строка с призывом к действию после ЧаВо*/
+.div {margin:0 auto;text-align:center;} /* Блок с контактами под ЧаВО*/
+::-webkit-input-placeholder {color: rgb(94, 109, 129);}
+::-moz-placeholder          {color: rgb(94, 109, 129);}/* Firefox 19+ */
+:-moz-placeholder           {color: rgb(94, 109, 129);}/* Firefox 18- */
+:-ms-input-placeholder      {color: rgb(94, 109, 129);}
+/* Каждый блок с контактом под ЧаВо*/
+.cont {
+	width: 19%;
+	display: inline-table;
+	line-height:25px;
+}
+.cont i {
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 32px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+	display:inline-table;
+}
+/* Первый блок со списком и формой*/
+.first {
+	width:100%;
+	padding:10px;
+	margin:10px 10px 10px -10px;
+	border:2px solid #ccc;
+	display:inline-flex;
+}
+
+/* Блок с главным списком */
+.checklist {
+	display:inline-block;
+	width:50%;
+	border-right:1px solid #ccc;
+}
+/*Каждый пункт этого списка*/
+.checklist article {
+	font-size:17px;
+	margin:20px 0;
+	background:url('http://prostoysoft.ru/Images/tick.jpg') no-repeat;
+	padding-left:40px;
+	height:32px;
+}
+/* Форма в начале страницы */
+.order_form {
+  width:50%;
+  text-align:center;
+  display:inline-block;
+  margin: 0 20px;
+}
+.order_form h3 {
+  font-size: 17px;
+  line-height: 22px;
+  padding-bottom: 10px;
+}
+.row {
+  margin:10px auto;
+ }
+.download .row {width:33%; display:inline-block;}
+.row input[type="text"]{
+  width: 80%;
+  height: 50px;
+  font-size: 22px;
+  outline: none;
+  line-height: 50px;
+  padding: 0 10px 0 50px;
+}
+.l_name input[type="text"] {
+  background: #ffffff url(./Images/ico01.png) 18px center no-repeat;
+  border-radius: 3px 3px 0 0;
+}
+.l_mail input[type="text"] {
+  background: #ffffff url(./Images/ico03.png) 18px center no-repeat;
+  border-radius: 0 0 3px 3px;
+}
+row_button{
+  padding-top: 5px;
+}
+.row_button button,
+.row_button .button,
+.download .button {
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+  width: 40%;
+}
+
+
+/**Стили блока с текстом внутри спойлера**/
+.spoiler {margin:5px 0;}
+.spoiler-content{
+display:none;  
+padding:15px 20px; 
+border:1px solid #ccc; 
+margin-top:5px; 
+background:#F0F0F0; 
+}
+/**Стили блока оборачивающего каждый блок**/
+.spoiler-block{
+margin-top:10px; 
+}
+/**Стили кнопки спойлера**/
+.spoiler-title {
+border:1px solid #B9B9B9;
+background: #ccc;
+background:linear-gradient(#CACACA, #E8E8E8);
+padding:10px;
+text-decoration:none;
+color:#000; 
+display:block; 
+}
+/* ------ Стили для слайдера
+-----------------------------------------------*/
+
+.slider {
+width:100%;
+position:relative;
+padding-bottom:26px;
+background:url(./gfx/bottom_shadow.png) no-repeat bottom center;
+}
+
+.sliderContent {
+width:100%;
+height:100%;
+text-align:center;
+clear:both;
+position:relative;
+overflow:hidden;
+}
+.slider img {height:100%;width:100%;}
+.slider h2 {text-align:center;}
+.sliderArrows a {
+display:block;
+text-indent:-9999px;
+outline:none;
+z-index:50;
+background-image:url(./gfx/prev_next.png);
+width:42px;
+height:42px;
+position:absolute;
+top:50%;
+margin-top:-34px;
+}
+
+.prev {
+background-position:0 0;
+left:15px;
+}
+
+.prev:hover {
+background-position:0 -44px;
+}
+
+.next {
+right:15px;
+background-position:-44px 0;
+}
+
+.next:hover {
+background-position:-44px -44px;
+}
+
+.sliderContent .item {
+position:absolute;
+width:100%;
+}
+
+.sliderBullets {
+position:absolute;
+bottom:0;
+left:50%;
+z-index:50;
+margin-left:-45px;
+}
+
+.sliderBullets a {
+display:block;
+float:left;
+text-indent:-9999px;
+outline:none;
+margin-left:5px;
+width:10px;
+height:11px;
+background:url(./gfx/bullets.png) no-repeat;
+}
+
+.sliderBullets .active {
+background-position:0 -11px;
+}
+
+.sliderContent a {
+outline:none;
+}
+/* Конец кода для слайдера*/
+
+/* Кнопка Скачать */
+.row_button .button {
+    display: inline-block;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+    
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
+
+.row_button .button span {
+    background-color: #E8E8E8;
+    
+    background-image: 
+        /* gloss gradient */
+        -webkit-gradient(
+            linear, 
+            left bottom, 
+            left top, 
+            color-stop(50%,rgba(255,255,255,0)), 
+            color-stop(50%,rgba(255,255,255,0.3)), 
+            color-stop(100%,rgba(255,255,255,0.2))),
+        
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(210,210,210,0.3)), 
+            color-stop(20%,rgba(210,210,210,0)), 
+            color-stop(80%,rgba(210,210,210,0)), 
+            color-stop(100%,rgba(210,210,210,0.3))),
+        
+        /* light inner gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(20%,rgba(255,255,255,0.5)), 
+            color-stop(80%,rgba(255,255,255,0.5)), 
+            color-stop(100%,rgba(255,255,255,0))),        
+        
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear, 
+            0% 100%, 
+            100% 0%, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(40%,rgba(255,255,255,0)), 
+            color-stop(40%,#D2D2D1), 
+            color-stop(60%,#D2D2D1), 
+            color-stop(60%,rgba(255,255,255,0)), 
+            color-stop(100%,rgba(255,255,255,0)));
+    
+        -webkit-box-shadow:
+            0px -1px #fff, /* top highlight */
+            0px 1px 1px #FFFFFF; /* bottom edge */
+    
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+    
+    -webkit-border-radius: 10px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    
+    color: #3A474D;
+    text-transform: uppercase;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+    font-weight: 700;
+    font-size: 32px;
+    
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+}
+
+        .row_button .button span:hover {
+            color: #AEBF3B;
+            text-shadow: 0px -1px #97A63A;
+            cursor: pointer;
+        }
+
+        .row_button .button:active {
+            -webkit-box-shadow: 
+                0px 3px rgba(128,128,128,1),
+                0px 4px rgba(118,118,118,1),
+                0px 5px rgba(108,108,108,1),
+                0px 6px rgba(98,98,98,1),
+                0px 7px rgba(88,88,88,1),
+                0px 8px rgba(78,78,78,1),
+                0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+        }
+
+        .row_button .button:active span{
+            -webkit-transform: translate(0, 5px); /* depth of button press */
+        }
+
+    .row_button .button span:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+    
+        position: absolute;
+        right: 14px;
+        top: 12px;    
+        
+        font-family: 'Cabin';
+        font-weight: 700;
+        color: #AEBF3B;
+        text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+        font-size: 26px;
+    }
+/* Конец CSS кода для кнопки "скачать" */
+</style>
+<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+</head>
+
+<body style="margin: 0px 0px 0px 0px;">
+
+<!--Header-->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!--End header-->
+
+<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>	
+
+				<li><a href="prices.htm">Цены</a></li>		
+				<li><a href="AllEquipment.htm">Оборудование</a></li>	
+				<li><a href="faq.htm">Вопросы</a></li>			
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm">Галерея</a></li>				
+				<li><a href="responses.htm">Отзывы</a></li>		
+				<li><a href="PsSchool.htm">Обучение</a></li>		
+				<li><a href="partner.htm">Партнеры</a></li>		
+				<li><a href="market.htm">Маркет</a></li>	
+
+				<li><a href="contacts.htm">Контакты</a></li>	
+				<li><a href="support.htm">Поддержка</a></li>	
+				<li><a href="phpBB3/index.php">Форум</a></li>	
+			</ul>
+		</div>
+	</div>
+
+<!-- Main part -->
+<div class="wrapper">
+<div class="main_part">
+<div class="title"><h1>Профессиональная программа для учета клиентов в турагентстве</h1>
+<h2>Или как повысить качество и скорость обслуживания клиентов с помощью всего одной CRM системы</h2>
+<p class="CPrice">6000 руб.<sup><a href="prices.htm" title="Базовая лицензия на программу и конфигурация" class="CL1">*</a></sup></p>
+</div>
+<div class="first">
+	<div class="checklist">
+			<article>База клиентов, туров, заказов и туроператоров в одном месте</article>
+			<article>Полная автоматизация турагентства</article>
+			<article>Контроль за работой менеджеров</article>
+			<article>Легкая установка и внедрение</article>
+			<article>Полная бесплатная версия на 30 дней</article>
+	</div>
+	<div class="order_form">
+		<h3>Скачайте и попробуйте программу в своей компании. <br />Это бесплатно</h3>
+		<form action="sendform.aspx?formtype=GiveMeLinkTours" method="post" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit();">
+            <div class="row l_name"><input id="ClientName" name="ClientName" placeholder="Введите Ваше имя*" type="text"></div>
+            <div class="row l_mail"><input id="ClientEmail" name="ClientEmail" placeholder="Введите Ваш e-mail*" type="text"></div>
+            <div class="row_button"><span><input type="submit" value="Скачать" id="submit1" name="submit1" class="button"></span></div>
+			<h6>После отправки заполненной формы Вам на почту придет письмо с программой и инструкциями</h6>
+		</form>
+	</div>
+</div>
+<div class="text">
+	<p>Представьте, что у Вас или Ваших менеджеров появилось от 10 свободных часов в неделю. На что бы Вы потратили это время? А главное, сколько дополнительного дохода это могло бы принести?</p>
+	<p>А ведь это время можно добавить и без увеличения рабочего дня, сокращения обеда, установки видео окон с трансляцией дневной погоды или каких-то иных манипуляций со временем и сознанием. Всё гораздо проще. Вам просто надо сократить время, затрачиваемое на оформления всех документов и на всю остальную рутину.</p>
+	<p>И для этого мы предлагаем Вам бесплатно скачать программу для турагентства “Учет клиентов:Турагентство”, с которой это время у Вас появится.</p>
+</div>
+<hr />
+<div class="ruk">
+	<h2>Как программа поможет Вам, как руководителю турагентства</h2>
+		<p>Программа “Учет клиентов: Турагентство” от компании “Простой софт” помогает руководителю отслеживать все ключевые бизнес процессы своей компании.</p>
+	<h3>Контроль результатов и мотивация для менеджеров</h3>
+		<p>В программе Вы видите как работает каждый из менеджеров и можете вывести эту информацию в форме отчетов и распечатать. Тем самым Вы наглядно увидите показатели каждого из менеджеров и сможете влиять на их мотивацию и результаты.</p>
+	<h3>Учет финансовых операций</h3>
+		<p>Автоматический расчет стоимости туристического пакета и процента выплаты менеджерам. Учет состояния оплаты, а также суммы задолжености клиентов.</p>
+	<h3>Повышение лояльности клиентов</h3>
+		<p>Через программу можно отправлять SMS и E-mail письма и поздравления. Например, можно поздравлять своих клиентов с Днем рождения и дарить им скидку. Или поздравлять с Новым годом и предлагать отдохнуть на длинных праздниках. Вариантов много и ограничиваются они лишь Вашим маркетинговым мышленим. </p>
+	<h3>Автоматизация бизнеса</h3>
+		<p>Никаких больше таблиц в Excel или тетрадок. Вся информация доступна в одной программе с мощным инструментом фильтров и поиска.</p>
+	<h3>Внедрение без привлечения IT-специалистов</h3>
+		<p>Вы, наверняка, знаете, как устанавливать программы на компьютер. Тут абсолютно тот же принцип. Но даже если у Вас возникли вопросы, то наша техподдержка поможет Вам разобраться.</p>
+	<h3>Пожизненная лицензия</h3>
+		<p>Никаких ежемесячных, ежеквартальных или ежегодных платежей. Заплатили 1 раз 8 000 рублей за программу и пользуетесь ей неограниченное время. Хоть внукам передавайте вместе с бизнесом.</p>
+	<h3>Настройка программы под Ваши нужды</h3>
+		<p>Не бывает одинаковых турфирм, поэтому мы создали гибкую систему, которую можно настроить под решение именно Ваших задач. Причем как самостоятельно, так и с помощью наших специалистов.</p>
+</div>
+<form class="download" action="sendform.aspx?formtype=GiveMeLinkTours" method="post" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit2();">
+<h3>Заполните форму и мы пришлем Вам программу и инструкции на указанный адрес электронной почты</h3>
+	<span>
+        <div class="row l_name"><input id="ClientName2" name="ClientName2" placeholder="Введите Ваше имя*" type="text"></div>
+        <div class="row l_mail"><input id="ClientEmail2" name="ClientEmail2" placeholder="Введите Ваш e-mail*" type="text"></div>
+        <div class="row row_button"><span><input type="submit" value="Скачать" id="submit2" name="submit2" class="button"></span></div>
+	</span>
+</form>
+
+<hr />
+<div class="slider">
+<h2>Посмотрите, как это выглядит изнутри</h2>
+<script>
+$('.slider3').mobilyslider({
+			transition: 'fade',
+			animationSpeed: 800,
+			bullets: true,
+			arrowsHide: false
+		});
+</script>
+	<div class="slider slider3">
+		<div class="sliderContent">
+        	<div class="item"><img src="./Images/tour1.jpg" title="Учет клиентов в турагентстве" alt="Учет клиентов в турагентстве"></div>
+			<div class="item"><img src="./Images/tour2.jpg" title="Учет туров в турагентстве" alt="Учет туров в турагентстве"></div>
+			<div class="item"><img src="./Images/tour3.jpg" title="Учет туристов в турагентстве" alt="Учет туристов в турагентстве"></div>
+			<div class="item"><img src="./Images/tour4.jpg" title="Учет платежей в турагентстве" alt="Учет платежей в турагентстве"></div>
+			<div class="item"><img src="./Images/tour5.jpg" title="Учет туроператоров в турагентстве" alt="Учет туроператоров в турагентстве"></div>
+			<div class="item"><img src="./Images/tour6.jpg" title="Учет сотрудников в турагентстве" alt="Учет сотрудников в турагентстве"></div>
+			<div class="item"><img src="./Images/tour7.jpg" title="SMS и E-mail рассылка для турагентства" alt="SMS и E-mail рассылка для турагентства"></div>
+			<div class="item"><img src="./Images/tour8.jpg" title="Формирование отчетов по работе турагентства" alt="Формирование отчетов по работе турагентства"></div>
+		</div>
+	</div>
+</div>
+<hr />
+<div class="manager">
+	<h2>Как программа поможет Вашим менеджерам</h2>
+		<p>CRM для турагентства “Учет клиентов: Турагентство” автоматизирует работу менеджеров и освобождает им до 3х часов в день.</p>
+	<h3>Учет всех составляющих тура</h3>
+		<p>В программе Ваши менеджеры могут вести всю необходимую информацию для клиентов. Как они будут добираться до места отдыха, встретят ли их по прибытии, в какой гостинице они остановятся, наличие страховки, прививок и так далее. Также можно завести свои таблицы и заносить в них информацию о туроператорах, с которыми Вы работаете, странах, в которые продаете путевки, и многое многое другое.</p>
+	<h3>Программа полностью исключает рутину</h3>
+		<p>Вашим менеджерам не надо будет больше по несколько раз вводить паспортные данные и прочую информацию о клиенте в каждый документ. Достаточно внести всю информацию в программу и создать шаблон типовых документов. Остальное программа сделает сама.</p>
+	<h3>Ведение базы потенциальных клиентов</h3>
+		<p>Ваши менеджеры могут заносить все новые контакты в программу, отмечать откуда они пришли, с каким вопросом обратились и с чем ушли. А потом напоминать им о себе, чтобы сделать контакт клиентом компании, тем самым увеличивая и свой, и Ваш доход.</p>
+	<h3>Программа не требует специальных знаний</h3>
+		<p>Программа достаточно проста в освоении. Вашим менеджерам не надо будет часами сидеть и разбираться в ней. Также в программе есть демонстрационная база, которая поможет разобраться что к чему на рабочем примере.</p>
+	<h3>Быстрый доступ к сканам документов и к другим изображениям</h3>
+		<p>К каждой записи любой таблицы Вы можете прикреплять необходимые изображения. Таким образом, сокращается время поиска их на компьютере и открывается доступ к ним всем работникам Вашей турфирмы.</p>
+	<h3>Уведомления и напоминания</h3>
+		<p>В суматохе дней Вы не забудете больше о чем-то важном. Позвонил потенциальный клиент, задал вопросы и обещал подумать? Заведите его данные в таблицу и создайте уведомление о том, чтобы через неделю позвонить ему и узнать, что он надумал. И так для любой Вашей задачи.</p>
+</div>
+<form class="download" action="sendform.aspx?formtype=GiveMeLinkTours" method="post" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit3();">
+<h3>Заполните форму и мы пришлем Вам программу и инструкции на указанный адрес электронной почты</h3>
+	<span>
+        <div class="row l_name"><input id="ClientName3" name="ClientName3" placeholder="Введите Ваше имя*" type="text"></div>
+        <div class="row l_mail"><input id="ClientEmail3" name="ClientEmail3" placeholder="Введите Ваш e-mail*" type="text"></div>
+        <div class="row row_button"><span><input type="submit" value="Скачать" id="submit3" name="submit3" class="button"></span></div>
+	</span>
+</form>
+<hr />
+<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/4byyqAFAUxM?vq=highres" frameborder="0" allowfullscreen=""></iframe>
+	<div class="video_desc"><h2>Видеопрезентация программы</h2>
+		<p>Из этого 11-минутного ролика Вы узнаете:</p>
+		<ul>
+		<li>Как работать в CRM "Учет клиентов: Турагентство"</li>
+		<li>Как внести в базу данных нового клиента.</li>
+		<li>Как заполнить всю информацию о туре.</li>
+		<li>Как рассчитать процент менеджера</li>
+		</ul>
+	</div>
+</div>
+<hr />
+<div class="faq">
+<h2>Частые вопросы</h2>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Чем пробная версия отличается от купленной?</a>
+		<div class="spoiler-content">Только периодом работы в 30 дней. Функционал полностью идентичен</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Что произойдет после истечения первых 30 дней?</a>
+		<div class="spoiler-content">Программа заблокируется на редактирование. Вы сможете только просматривать уже созданные записи.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Что будет с базой, после истечения 30 дней пробной версии?</a>
+		<div class="spoiler-content">Ничего. Она останется в целости и сохранности, так что пробную версию можно сразу внедрять в работу, не опасаясь того, что через месяц все данные потеряются.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Мы уже ведем базу, нам что, придется вводить всё заново?</a>
+		<div class="spoiler-content">Нет, конечно. Если Вы ведет базу в Excel, то просто импортируйте её в программу. Если же Вы ведете базу в другой программе, то надо будет сначала сделать экспорт из неё в формат экселя, а потом уже импортировать в нашу программу.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Можно ли работать с программой через интернет?</a>
+		<div class="spoiler-content">Да, можно. И тут есть 2 пути:
+			<ol>
+				<li>Установить программу на компьютер с белым IP и держать его постоянно включенным. Работа в таком случае возможна только в системе Windows через программу</li>
+				<li>Воспользоваться нашим решением “Простой сайт”, позволяющий работать с любой базой через браузер компьютера, смартфона или планшета из любой точки мира.</li>
+			</ol>
+		</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Сколько места занимает программа?</a>
+		<div class="spoiler-content">Установленная версия программы занимает чуть больше 30 мегабайт (2-3 песни). Плюс файл базы данных изначально занимает 2 мегабайта, увеличиваясь в размере в зависимости от количества записей, которые Вы вносите в программу. Но увеличивается этот файл очень медленно. Так, если Вы будете вносить по 500 записей в год, то даже через 40 лет работы с программой она не будет занимать более 1,5 гигабайт (размер 1 фильма в стандартном качестве).
+		</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Работает ли программа с торговым оборудованием?</a>
+		<div class="spoiler-content">Да, программа работает со сканерами штрих кода, считывалями магнитных карт, платежными терминалами, принтерами чеков, фискальными регистраторами, веб-камерами и с денежными ящиками.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Мне не хватает существующих таблиц. Можно ли добавить свою?</a>
+		<div class="spoiler-content">Да, можно. Для этого выберите в верхнем меню “Таблицы” - “Добавить таблицу” и укажите название и нужные поля.</div>
+	</div>
+<p class="cta">Остались вопросы? Задайте их любым удобным Вам способом. Контакты Вы видите ниже</p>
+	<div class="div">
+		<div class="cont">
+			<i class="fa fa-map-marker"></i>
+			<p>Санкт-Петербург, <br /> ул.Ворошилова, д.2, <br />офис 104 БЦ "Охта"</p>
+			<p><a href="https://yandex.ru/maps/-/C6A~UA4~" target="_blank">Как проехать</a></p>
+		</div>
+		<div class="cont">
+			<i class="fa fa-phone"></i>
+			<p>Рабочий: <br /> <a href="callto:+7 (812) 309-46-42" title="Нажмите для звонка">+7 (812) 309-46-42</a> <br /> c 10 до 18 пн-пт</p>
+		</div>
+		<div class="cont">
+			<i class="fa fa-mobile"></i>
+			<p>Мобильный:<br /> <a href="callto:+79046474224" title="Нажмите для звонка">+7 (904) 647-42-24</a></p>
+		</div>
+		<div class="cont">
+			<i class="fa fa-envelope-o"></i>
+			<p>E-mail <br /> <a href="mailto:info@prostoysoft.ru">info@prostoysoft.ru</a></p>
+		</div>
+		<div class="cont">
+			<i class="fa fa-skype"></i>
+			<p>Skype:<br /> <a href="skype:prostoysoft?add">prostoysoft</a></p>
+		</div>
+	</div>
+</div> <!-- FAQ end-->
+<hr />
+<div class="text">
+<p>Мы не говорим, что наша программа для турагенства идеальна. Но мы стремимся к этому, добавляя в неё новый функционал или устраняя ошибки, о которых нам сообщают пользователи. Именно по этой причине мы обновляем программу минимум 2 раза в месяц. Причем Вам не надо будет каждый раз скачивать её. Обновление происходит автоматически и Вам надо будет только согласиться с установкой новой версии.</p>
+
+<p>Стоимость программы 8 000 рублей. Но мы не призываем сразу покупать ее. Скачайте и установите бесплатную демо версию, опробуйте ее в работе и только после этого решайте, подходит она именно для Вашего турагентства или нет. Но не забывайте, что программу можно доработать под Ваши нужды и задачи.</p>
+
+</div>
+<form class="download" action="sendform.aspx?formtype=GiveMeLinkTours" method="post" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit4();">
+<h3>Заполните форму и мы пришлем Вам программу и инструкции на указанный адрес электронной почты</h3>
+	<span>
+        <div class="row l_name"><input id="ClientName4" name="ClientName4" placeholder="Введите Ваше имя*" type="text"></div>
+        <div class="row l_mail"><input id="ClientEmail4" name="ClientEmail4" placeholder="Введите Ваш e-mail*" type="text"></div>
+        <div class="row row_button"><span><input type="submit" value="Скачать" id="submit4" name="submit4" class="button"></span></div>
+	</span>
+</form>
+</div> <!-- Main part End -->
+		<!-- Bottom part -->
+                <td colspan="3">
+                    <br />
+
+
+
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body></html>

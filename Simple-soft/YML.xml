@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2020-08-01 11:07">
+<shop>
+<name>Простой софт</name>
+<company>Простой софт, IT-компания</company>
+<url>https://www.prostoysoft.ru/</url>
+<currencies>
+  <currency id="RUR" rate="1"/>
+  <currency id="USD" rate="63.00"/>
+</currencies>
+<categories>
+  <category id="1" parentId="0">Программное обеспечение</category>
+</categories>
+<offers>
+    <offer id="1" available="true">
+      <url>https://www.prostoysoft.ru/ClientsCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ClientsCount1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/ClientsCount2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/ClientsCount3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/ClientsCount4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет клиентов"</name>
+      <description>Программа для учета клиентов, счетов, договоров и тд</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="2" available="true">
+      <url>https://www.prostoysoft.ru/ProductsCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ProductsCount1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductsCount2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductsCount3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductsCount4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Склад и торговля"</name>
+      <description>Программа для автоматизации продаж и склада</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="3" available="true">
+      <url>https://www.prostoysoft.ru/CompCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CompCount1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CompCount2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CompCount3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CompCount4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет компьютеров"</name>
+      <description>Программа для учета компьютеров и оргтехники</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="4" available="true">
+      <url>https://www.prostoysoft.ru/PatientsCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PatientsCount1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PatientsCount2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PatientsCount3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PatientsCount4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет пациентов"</name>
+      <description>Программа для учета пациентов и обследований</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="5" available="true">
+      <url>https://www.prostoysoft.ru/DocumentsCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/DocumentsCount1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/DocumentsCount2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/DocumentsCount3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/DocumentsCount4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Архив документов"</name>
+      <description>Система для хранения и систематизации документов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="6" available="true">
+      <url>https://www.prostoysoft.ru/VisitorsCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/VisitorsCount1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/VisitorsCount2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/VisitorsCount3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/VisitorsCount4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет посетителей"</name>
+      <description>Программа для регистрации посетителей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="7" available="true">
+      <url>https://www.prostoysoft.ru/ProjectsCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ProjectsCount1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProjectsCount2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProjectsCount3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProjectsCount4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Управление проектами"</name>
+      <description>Простое решение для поддержки реализации проектов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="8" available="true">
+      <url>https://www.prostoysoft.ru/BooksCount.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/BooksCount1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/BooksCount2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/BooksCount3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/BooksCount4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет книг"</name>
+      <description>Программа для учета и каталогизации книг</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="9" available="true">
+      <url>https://www.prostoysoft.ru/MyDiscs.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/MyDiscs1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MyDiscs2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MyDiscs3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MyDiscs4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Мои диски"</name>
+      <description>Программа для учета домашних коллекций</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="10" available="true">
+      <url>https://www.prostoysoft.ru/CookRecepts.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CookRecepts1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CookRecepts2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CookRecepts3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CookRecepts4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Кулинарные рецепты"</name>
+      <description>База данных кулинарных рецептов, блюд и продуктов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="11" available="true">
+      <url>https://www.prostoysoft.ru/FindResults.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/FindResults1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FindResults2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FindResults3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FindResults4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Анализ результатов поиска"</name>
+      <description>Программа для извлечения результатов поиска</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="12" available="true">
+      <url>https://www.prostoysoft.ru/SimpleSite.aspx</url>
+      <price>20000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SimpleSite1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SimpleSite2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SimpleSite3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SimpleSite4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Простой сайт"</name>
+      <description>Программа для ведения базы данных через браузер</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="13" available="true">
+      <url>https://www.prostoysoft.ru/PsPhone.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PsPhone1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsPhone2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsPhone3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsPhone4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "PsPhone"</name>
+      <description>Программная ATC, PBX, софтфон позволяет принимать/совершать звонки, создавать голосовые меню, делать переадресацию, запись разговора</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="14" available="true">
+      <url>https://www.prostoysoft.ru/PsMobile.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PsMobile1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsMobile2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsMobile3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsMobile4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "PsMobile"</name>
+      <description>PsMobile – это программа для работы с базой данных на вашем мобильном Android-устройстве. Система включает в себя серверную и клиентскую часть. Работать можно как в онлайн, так и в офлайн режиме.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="15" available="true">
+      <url>https://www.prostoysoft.ru/PsMobileScan.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PSMobileScan_Stores.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/PSMobileScan_Halls.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/PSMobileScan_StoreIn.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/PSMobileScan_About.jpg</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "PsMobileScan"</name>
+      <description>Программа для сканирования штрих-кодов и выгрузки XML-файлов с результатами</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="16" available="true">
+      <url>https://www.prostoysoft.ru/Prostoysoft.htm</url>
+      <price>3000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/prostoysoft_tables_1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/prostoysoft_tables_2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/prostoysoft_tables_3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/prostoysoft_tables_4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Prostoysoft Tables"</name>
+      <description>The program platform for information systems development.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="17" available="true">
+      <url>https://www.prostoysoft.ru/Strahovanie.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Strahovanie1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Strahovanie2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Strahovanie3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Strahovanie4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Страховое агентство"</name>
+      <description>Программа для учета сделок по страхованию ОСАГО и других видов страхования</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="18" available="true">
+      <url>https://www.prostoysoft.ru/Transport.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Transport1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Transport2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Transport3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Transport4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Транспортная компания"</name>
+      <description>Программа для транспортных компаний - учет грузоперевозок, перевозчиков, клиентов, сделок</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="19" available="true">
+      <url>https://www.prostoysoft.ru/AdsAgency.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AdsAgency1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AdsAgency2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AdsAgency3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AdsAgency4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Рекламное агентство"</name>
+      <description>Программа для рекламных агентств – автоматизация управления рекламой и рекламным бизнесом в целом</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="20" available="true">
+      <url>https://www.prostoysoft.ru/LearningCenter.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/LearningCenter1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/LearningCenter2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/LearningCenter3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/LearningCenter4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Обучающий центр"</name>
+      <description>Программа для автоматизации работы обучающих центров и других образовательных учреждений</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="21" available="true">
+      <url>https://www.prostoysoft.ru/Production.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Production1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Production2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Production3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Production4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Производство"</name>
+      <description>Программа для эффективной работы производства - учет материалов, сырья и затрат на производстве</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="22" available="true">
+      <url>https://www.prostoysoft.ru/Potolki.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Potolki1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Potolki2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Potolki3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Potolki4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Производство потолков"</name>
+      <description>Программа для компаний занимающихся производством потолков - учет материалов, сырья и затрат на производстве</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="23" available="true">
+      <url>https://www.prostoysoft.ru/WindowsDoors.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/WindowsDoors1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/WindowsDoors2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/WindowsDoors3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/WindowsDoors4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Окна и двери"</name>
+      <description>Программа для организаций, занимающихся продажей и установкой окон и дверей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="24" available="true">
+      <url>https://www.prostoysoft.ru/Domofon.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Domofon1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Domofon2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Domofon3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Domofon4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Домофоны и антенны"</name>
+      <description>Программа для компаний специализирующихся на оказании услуг по установке и обслуживанию домофонов, антенн и т.п.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="25" available="true">
+      <url>https://www.prostoysoft.ru/Beauty.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Beauty1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Beauty2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Beauty3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Beauty4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Салон красоты"</name>
+      <description>Программа  для организации работы предприятий индустрии красоты (парикмахерские, салоны, СПА и проч.)</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="26" available="true">
+      <url>https://www.prostoysoft.ru/School.htm</url>
+      <price>8000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/School1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/School2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/School3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/School4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет в школе"</name>
+      <description>Программа предназначена для автоматизации учета в школах и других учебных заведениях</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="27" available="true">
+      <url>https://www.prostoysoft.ru/Stolovaya.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Stolovaya1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Stolovaya2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Stolovaya3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Stolovaya4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Простая столовая"</name>
+      <description>Программа для автоматизации ресторанов, кафе, столовых и служб доставки еды</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="28" available="true">
+      <url>https://www.prostoysoft.ru/Events.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Events1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Events2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Events3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Events4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет мероприятий и семинаров"</name>
+      <description>Программа для автоматизации компаний, занимающихся организацией семинаров других деловых мероприятий</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="29" available="true">
+      <url>https://www.prostoysoft.ru/Print.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Print1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Print2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Print3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Print4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Типография"</name>
+      <description>Программа предназначена для автоматизации типографий, печатного производства, полиграфии и проч.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="30" available="true">
+      <url>https://www.prostoysoft.ru/Hotel.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Hotel1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Hotel2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Hotel3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Hotel4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Простая гостиница"</name>
+      <description>Программа для автоматизации работы гостиниц, отелей, баз отдыха, санаториев и пансионатов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="31" available="true">
+      <url>https://www.prostoysoft.ru/Lawyer.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Lawyer1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Lawyer2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Lawyer3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Lawyer4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Юридическое дело"</name>
+      <description>Программа для автоматизации делопроизводства юридического отдела и нотариального документооборота</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="32" available="true">
+      <url>https://www.prostoysoft.ru/Realty.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Realty1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Realty2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Realty3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Realty4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Агентство недвижимости"</name>
+      <description>Программа для решения всего спектра задач агентств недвижимости, маклеров и риэлторов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="33" available="true">
+      <url>https://www.prostoysoft.ru/Fitness.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Fitness1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Fitness2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Fitness3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Fitness4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Фитнес-клуб"</name>
+      <description>Программа для учета клиентов в фитнес-клубе, тренажерном зале, бассейне, спортивном центре и др.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="34" available="true">
+      <url>https://www.prostoysoft.ru/YogaCenter.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/YogaCenter1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/YogaCenter2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/YogaCenter3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/YogaCenter4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Йога-центр"</name>
+      <description>Программа для управления йога-центром – ведение клиентской базы, учет договоров и клубных карт</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="35" available="true">
+      <url>https://www.prostoysoft.ru/PhotoSalon.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PhotoSalon1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PhotoSalon2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PhotoSalon3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PhotoSalon4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Фотосалон"</name>
+      <description>Программа для автоматизации фотосалонов, а также центров, магазинов, студий, оказывающих фотоуслуги</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="36" available="true">
+      <url>https://www.prostoysoft.ru/Dento.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Dento1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Dento2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Dento3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Dento4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Стоматология"</name>
+      <description>Программа для стоматологических клиник -  запись пациентов, учет услуг и историй болезни</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="37" available="true">
+      <url>https://www.prostoysoft.ru/MedicalCenter.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenter1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenter2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenter3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenter4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Медицинский центр"</name>
+      <description>Программа для ведения учета в медицинских центрах, клиниках и других лечебных учреждениях</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="38" available="true">
+      <url>https://www.prostoysoft.ru/Veterinary.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Veterinary1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Veterinary2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Veterinary3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Veterinary4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Ветеринарная клиника"</name>
+      <description>Современное программное обеспечение для автоматизации ветеринарных клиник</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="39" available="true">
+      <url>https://www.prostoysoft.ru/Repairing.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Repairing1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Repairing2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Repairing3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Repairing4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Ремонтная мастерская"</name>
+      <description>Программа для ведения учета в ремонтных мастерских, сервисных центрах и т.п.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="40" available="true">
+      <url>https://www.prostoysoft.ru/Equipment.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Equipment1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Equipment2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Equipment3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Equipment4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Установка и обслуживание оборудования"</name>
+      <description>Программа для автоматизации организаций, занимающихся установкой и обслуживанием оборудования</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="41" available="true">
+      <url>https://www.prostoysoft.ru/Atelier.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Atelier1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Atelier2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Atelier3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Atelier4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Ателье"</name>
+      <description>Программа для ателье - учет одежды и пошива</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="42" available="true">
+      <url>https://www.prostoysoft.ru/Building.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Building1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Building2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Building3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Building4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Строительство"</name>
+      <description>Программа для строительных компаний - учет строительных объектов, работ, материалов и проч.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="43" available="true">
+      <url>https://www.prostoysoft.ru/Rent.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Rent1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Rent2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Rent3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Rent4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Прокат"</name>
+      <description>Программа для автоматизации организаций оказывающих услуги в сфере проката</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="44" available="true">
+      <url>https://www.prostoysoft.ru/CourierService.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CourierService1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CourierService2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CourierService3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CourierService4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Курьерская служба"</name>
+      <description>Программа для автоматизации работы курьерских служб доставки</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="45" available="true">
+      <url>https://www.prostoysoft.ru/Salary.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Salary1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Salary2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Salary3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Salary4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет зарплаты и кадров"</name>
+      <description>Программа предназначена для расчета зарплаты и ведения кадрового учета</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="46" available="true">
+      <url>https://www.prostoysoft.ru/Transports.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Transports1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Transports2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Transports3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Transports4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет автотранспорта"</name>
+      <description>Программа для автотранспортных предприятий - контроль и учет автотранспорта</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="47" available="true">
+      <url>https://www.prostoysoft.ru/Parking.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Parking1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Parking2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Parking3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Parking4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Автостоянка"</name>
+      <description>Программа предназначена для автоматизации учета на автомобильных стоянках</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="48" available="true">
+      <url>https://www.prostoysoft.ru/AutoService.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AutoService1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoService2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoService3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoService4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Автосервис"</name>
+      <description>Программа для автоматизации работы автосервиса - учет клиентов, работ, материалов и проч.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="49" available="true">
+      <url>https://www.prostoysoft.ru/AutoParts.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AutoParts1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoParts2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoParts3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoParts4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Продажа автозапчастей"</name>
+      <description>Программа для автоматизации работы магазина по продаже автозапчастей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="50" available="true">
+      <url>https://www.prostoysoft.ru/Taxi.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Taxi1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Taxi2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Taxi3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Taxi4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Такси"</name>
+      <description>Программа предназначеная для автоматизации работы диспетчерской службы такси</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="51" available="true">
+      <url>https://www.prostoysoft.ru/Furniture.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Furniture1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Furniture2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Furniture3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Furniture4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Производство мебели"</name>
+      <description>Программа для автоматизации компаний, занимающихся производством и продажей мебели</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="52" available="true">
+      <url>https://www.prostoysoft.ru/Pawnshop.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Pawnshop1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pawnshop2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pawnshop3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pawnshop4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Ломбард"</name>
+      <description>Программа для автоматизации ломбарда - учет залогов и платежей, расчет стоимости</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="53" available="true">
+      <url>https://www.prostoysoft.ru/Pharmacy.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Pharmacy1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pharmacy2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pharmacy3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pharmacy4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Аптека"</name>
+      <description>Программа для автоматизации аптек - учет лекарственных средств, продаж и поступлений</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="54" available="true">
+      <url>https://www.prostoysoft.ru/UchetZKH.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/UchetZKH1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/UchetZKH2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/UchetZKH3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/UchetZKH4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет услуг ЖКХ"</name>
+      <description>Программа для автоматизации учета в ЖКХ, ТСЖ, садовых и дачных кооперативах и т.д.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="55" available="true">
+      <url>https://www.prostoysoft.ru/TszVotes.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/TszVotes1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/TszVotes2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/TszVotes3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/TszVotes4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Подсчет голосов в ТСЖ"</name>
+      <description>Программа для автоматического подсчета голосов на общих собраниях членов ТСЖ</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="56" available="true">
+      <url>https://www.prostoysoft.ru/CashierWorkplace.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CashierWorkplace1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CashierWorkplace2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CashierWorkplace3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CashierWorkplace4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "АРМ кассира"</name>
+      <description>Программа для автоматизации рабочего места кассира</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="57" available="true">
+      <url>https://www.prostoysoft.ru/Banya.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Banya1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Banya2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Banya3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Banya4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Баня"</name>
+      <description>Программа предназначена для комплексной автоматизации работы бани или сауны</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="58" available="true">
+      <url>https://www.prostoysoft.ru/Farm.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Farm1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Farm2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Farm3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Farm4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Кролеферма"</name>
+      <description>Программа для автоматизации фермы по разводу кроликов, а также других подобных ферм</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="59" available="true">
+      <url>https://www.prostoysoft.ru/MovieCollection.htm</url>
+      <price>3500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/MovieCollection1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MovieCollection2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MovieCollection3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MovieCollection4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Коллекция аудио и видео"</name>
+      <description>Программа предназначена для учета аудио-видео коллекций</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="60" available="true">
+      <url>https://www.prostoysoft.ru/CasesCount.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CasesCount1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CasesCount2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CasesCount3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CasesCount4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет судебных дел"</name>
+      <description>Программа для автоматизации рабочего места следователя - уголовные, административные и проч. дела</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="61" available="true">
+      <url>https://www.prostoysoft.ru/MigrantsCount.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/MigrantsCount1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MigrantsCount2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MigrantsCount3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/MigrantsCount4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет мигрантов"</name>
+      <description>Программа для ведения учета иностранных сотрудников на предприятии</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="62" available="true">
+      <url>https://www.prostoysoft.ru/PlasticSurgery.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PlasticSurgery1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PlasticSurgery2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PlasticSurgery3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/PlasticSurgery4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Клиника пластической хирургии"</name>
+      <description>Программа для автоматизации работы клиник пластической хирургии</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="63" available="true">
+      <url>https://www.prostoysoft.ru/Andrology.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Andrology1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Andrology2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Andrology3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Andrology4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Центр андрологии"</name>
+      <description>Программа предназначена для автоматизации работы андрологических центров</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="64" available="true">
+      <url>https://www.prostoysoft.ru/WineCellar.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/WineCellar1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/WineCellar2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/WineCellar3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/WineCellar4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Винный погреб"</name>
+      <description>Программа для автоматизации работы винных погребов и систематизации частных винных коллекций</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="65" available="true">
+      <url>https://www.prostoysoft.ru/AutoClaims.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AutoClaims1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoClaims2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoClaims3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoClaims4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет гарантийных заявок"</name>
+      <description>Программа для автоматизации рабочих мест инженеров по гарантийному ремонту автомобилей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="66" available="true">
+      <url>https://www.prostoysoft.ru/Cadres.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Cadres1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cadres2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cadres3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cadres4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Кадровый учет"</name>
+      <description>Программа для автоматизации кадрового отдела - учет всех кадровых операций</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="67" available="true">
+      <url>https://www.prostoysoft.ru/Cleaning.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Cleaning1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cleaning2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cleaning3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cleaning4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Прачечная-химчистка"</name>
+      <description>Программа предназначена для автоматизации учета в химчистках и прачечных</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="68" available="true">
+      <url>https://www.prostoysoft.ru/SecurityCompany.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SecurityCompany1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SecurityCompany2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SecurityCompany3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SecurityCompany4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Охранное предприятие"</name>
+      <description>Программа для автоматизации учёта в охранных фирмах</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="69" available="true">
+      <url>https://www.prostoysoft.ru/CadresAgency.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CadresAgency1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CadresAgency2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CadresAgency3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/CadresAgency4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Кадровое агентство"</name>
+      <description>Программа является комплексным решением для управления бизнес-процессами кадрового агенства</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="70" available="true">
+      <url>https://www.prostoysoft.ru/ClothingStore.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ClothingStore1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ClothingStore2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ClothingStore3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ClothingStore4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Магазин одежды"</name>
+      <description>Программа для автоматизации работы магазина одежды и обуви</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="71" available="true">
+      <url>https://www.prostoysoft.ru/Microfin.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Microfin1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Microfin2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Microfin3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Microfin4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Микрофинансовая организация"</name>
+      <description>Программа для ведения учета в микрофинансовых организациях</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="72" available="true">
+      <url>https://www.prostoysoft.ru/FlatRepair.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/FlatRepair1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FlatRepair2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FlatRepair3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FlatRepair4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Ремонт квартир"</name>
+      <description>Программа для автоматизации учета в строительных компаниях различного масштаба</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="73" available="true">
+      <url>https://www.prostoysoft.ru/Cafe.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Cafe1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cafe2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cafe3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Cafe4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Простое кафе"</name>
+      <description>Программа для автоматизации учета в кафе, ресторанах  и других пунктах общественного питания</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="74" available="true">
+      <url>https://www.prostoysoft.ru/FishFarm.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/FishFarm1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FishFarm2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FishFarm3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/FishFarm4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Рыболовная ферма"</name>
+      <description>Программа для автоматизации учета для рыболовных хозяйств</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="75" available="true">
+      <url>https://www.prostoysoft.ru/HuntBase.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/HuntBase1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/HuntBase2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/HuntBase3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/HuntBase4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "База охоты и рыбалки"</name>
+      <description>Программа предназначена для автоматизации учета на рыболовно-охотничьих базах</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="76" available="true">
+      <url>https://www.prostoysoft.ru/AutoBusiness.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AutoBusiness1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoBusiness2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoBusiness3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoBusiness4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Автобизнес"</name>
+      <description>Программа для автоматизации учета в организациях занимающихся продажей автомобилей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="77" available="true">
+      <url>https://www.prostoysoft.ru/HousesBuilding.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/HousesBuilding1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/HousesBuilding2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/HousesBuilding3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/HousesBuilding4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Строительство многоквартирных домов"</name>
+      <description>Программа для автоматизации учета в строительных компаниях любого масштаба</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="78" available="true">
+      <url>https://www.prostoysoft.ru/GroceryStore.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/GroceryStore1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/GroceryStore2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/GroceryStore3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/GroceryStore4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Магазин продуктов"</name>
+      <description>Программа для автоматизации работы продуктовых магазинов и супермаркетов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="79" available="true">
+      <url>https://www.prostoysoft.ru/SportSchool.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SportSchool1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SportSchool2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SportSchool3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SportSchool4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Спортивная школа"</name>
+      <description>Программа для автоматизации учебно-тренировочного процесса в спортивных школах</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="80" available="true">
+      <url>https://www.prostoysoft.ru/Tours.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Tours1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Tours2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Tours3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Tours4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Турагентство"</name>
+      <description>Программа для автоматизации туристических агентств и фирм, занимающихся экскурсионной деятельностью</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="81" available="true">
+      <url>https://www.prostoysoft.ru/College.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/College1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/College2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/College3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/College4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учебное заведение"</name>
+      <description>Программа для автоматизации ведения учета в учебных заведениях</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="82" available="true">
+      <url>https://www.prostoysoft.ru/Pilorama.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Pilorama1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pilorama2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pilorama3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Pilorama4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Пилорама"</name>
+      <description>Программа для комплексной автоматизации работы пилорамы и лесопилки</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="83" available="true">
+      <url>https://www.prostoysoft.ru/SaleWines.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SaleWines1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SaleWines2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SaleWines3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SaleWines4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Магазин алкогольной продукции"</name>
+      <description>Программа для автоматизации работы магазинов осуществляющих продажу алкогольной продукции</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="84" available="true">
+      <url>https://www.prostoysoft.ru/NewBuildingSales.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/NewBuildingSales1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/NewBuildingSales2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/NewBuildingSales3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/NewBuildingSales4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "CRM-система для отдела продаж новостроек"</name>
+      <description>Программа для комплексной автоматизации работы инвестиционно-строительных организаций</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="85" available="true">
+      <url>https://www.prostoysoft.ru/ProductionSouvenir.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ProductionSouvenir1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionSouvenir2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionSouvenir3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionSouvenir4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Производство сувениров"</name>
+      <description>Программа для ведения учета на предприятиях занимающихся производством сувенирной продукции</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="86" available="true">
+      <url>https://www.prostoysoft.ru/ProductionElectronics.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ProductionElectronics1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionElectronics2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionElectronics3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionElectronics4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Производство электроники"</name>
+      <description>Программа для автоматизации ведения учета производства и продажи электронных товаров</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="87" available="true">
+      <url>https://www.prostoysoft.ru/ManagementCRM.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCRM_01.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCRM_02.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCRM_03.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCRM_04.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Управленческий учет"</name>
+      <description>Программа для автоматизации стратегий взаимодействия с заказчиками, повышения уровня продаж</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="88" available="true">
+      <url>https://www.prostoysoft.ru/BudgetControl.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/BudgetControl_01.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BudgetControl_02.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BudgetControl_03.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BudgetControl_04.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Система бюджетирования"</name>
+      <description>Программа для автоматизации планирования бюджетирования в различных организациях</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="89" available="true">
+      <url>https://www.prostoysoft.ru/BuildingIndividualHouses.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/BuildingIndividualHouses1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BuildingIndividualHouses2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BuildingIndividualHouses3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BuildingIndividualHouses4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Строительство индивидуальных домов"</name>
+      <description>Программа для ведения учета в организациях, занимающихся строительством индивидуальных домов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="90" available="true">
+      <url>https://www.prostoysoft.ru/AutoWash.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AutoWash1.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoWash2.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoWash3.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoWash4.jpg</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Автомойка"</name>
+      <description>Программа для автоматизации учета всех видов автомоек</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="91" available="true">
+      <url>https://www.prostoysoft.ru/AutoDisassembly.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AutoDisassembly1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoDisassembly2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoDisassembly3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoDisassembly4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Авторазборка"</name>
+      <description>Программа для автоматизации ведения учета в магазинах автозапчастей и авторазборок</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="92" available="true">
+      <url>https://www.prostoysoft.ru/MultiParking.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Parking1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Parking2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Parking3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/Parking4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Многоуровневый паркинг"</name>
+      <description>Программа для ведения учета на автомобильных стоянках</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="93" available="true">
+      <url>https://www.prostoysoft.ru/SchoolComp.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SchoolComp1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SchoolComp2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SchoolComp3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/SchoolComp4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет оборудования в школе"</name>
+      <description>Программа для учета компьютеров, оргтехники и другого оборудования в учебных заведениях</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="94" available="true">
+      <url>https://www.prostoysoft.ru/RestBase.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/RestBase1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/RestBase2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/RestBase3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/RestBase4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "База отдыха"</name>
+      <description>Программа для автоматизации ведения учета на базах отдыха</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="95" available="true">
+      <url>https://www.prostoysoft.ru/SushiPizza.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SushiPizza1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SushiPizza2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SushiPizza3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SushiPizza4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Суши и пицца"</name>
+      <description>Программа для учета производства и продаж суши, пиццы и других продовольственных изделий</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="96" available="true">
+      <url>https://www.prostoysoft.ru/ManagementCompany.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCompany1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCompany2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCompany3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ManagementCompany4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Управляющая компания"</name>
+      <description>Программа для ведения учета в управляющих компаниях и организациях занимающихся арендой недвижимости</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="97" available="true">
+      <url>https://www.prostoysoft.ru/InsuranceBroker.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/InsuranceBroker1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/InsuranceBroker2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/InsuranceBroker3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/InsuranceBroker4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Страховой брокер"</name>
+      <description>Программа для автоматизации работы страхового брокера</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="98" available="true">
+      <url>https://www.prostoysoft.ru/CleaningCompany.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CleaningCompany1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CleaningCompany2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CleaningCompany3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CleaningCompany4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Клининговая компания"</name>
+      <description>Программа для автоматизации работы компаний осуществляющих оказание услуг в сфере уборки</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="99" available="true">
+      <url>https://www.prostoysoft.ru/PsBankDocuments.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PsBankDocuments1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsBankDocuments2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsBankDocuments3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsBankDocuments4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Банковские документы"</name>
+      <description>Программа для экспорта банковских документов из банк-клиентов для последующего учета всех платежей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="100" available="true">
+      <url>https://www.prostoysoft.ru/ConsultCompany.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ConsultCompany1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ConsultCompany2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ConsultCompany3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ConsultCompany4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Консалтинг и аудит"</name>
+      <description>Программа для автоматизации организациий по бухгалтерскому и юридическому обслуживанию клиентов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="101" available="true">
+      <url>https://www.prostoysoft.ru/PsMoney.htm</url>
+      <price>3500</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/PsMoney1.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsMoney2.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsMoney3.jpg</picture>
+      <picture>https://www.prostoysoft.ru/Images/PsMoney4.jpg</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Домашняя бухгалтерия"</name>
+      <description>Программа для ведения домашней бухгалтерии и учета личных финансов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="102" available="true">
+      <url>https://www.prostoysoft.ru/MedicalCommission.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCommission1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCommission2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCommission3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCommission4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Медицинская комиссия"</name>
+      <description>Программа для ведения учета в организациях оказывающих услуги по прохождению медицинских комиссий</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="103" available="true">
+      <url>https://www.prostoysoft.ru/Santehnika.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/Santehnika1.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Santehnika2.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Santehnika3.gif</picture>
+      <picture>https://www.prostoysoft.ru/Images/Santehnika4.gif</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Магазин сантехники"</name>
+      <description>Программа для автоматизации магазинов или отделов по продаже сантехнических товаров</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="104" available="true">
+      <url>https://www.prostoysoft.ru/ProductionKitchen.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ProductionKitchen1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionKitchen2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionKitchen3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProductionKitchen4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Производство кухонь"</name>
+      <description>Программа для автоматизации работы компаний, занимающихся производством и продажей кухонной мебели</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="105" available="true">
+      <url>https://www.prostoysoft.ru/StateLerningCenter.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/StateLerningCenter1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/StateLerningCenter2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/StateLerningCenter3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/StateLerningCenter4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Государственный учебный центр"</name>
+      <description>Программа для автоматизации работы государственных образовательных учреждений</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="106" available="true">
+      <url>https://www.prostoysoft.ru/RitualAgency.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/RitualAgency1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/RitualAgency2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/RitualAgency3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/RitualAgency4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Ритуальное агентство"</name>
+      <description>ПО для ритуального агентства, похоронного бюро - учет услуг, производство памятников, склад, генерация документов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="107" available="true">
+      <url>https://www.prostoysoft.ru/EventAgency.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/EventAgency1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/EventAgency2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/EventAgency3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/EventAgency4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Event-агентство"</name>
+      <description>Программа для автоматизации деятельности компаний или работы частных лиц предоставляющих услуги по проведению и организации различных мероприятий по заказам клиентов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="108" available="true">
+      <url>https://www.prostoysoft.ru/ChildCenter.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ChildCenter1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ChildCenter2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ChildCenter3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ChildCenter4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Детский центр"</name>
+      <description>Программа для детского сада, развивающего центра - учет детей, родителей, занятий и других услуг. Склад.</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="109" available="true">
+      <url>https://www.prostoysoft.ru/BuildingMaterials.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/BuildingMaterials1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BuildingMaterials2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BuildingMaterials3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/BuildingMaterials4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Продажа стройматериалов"</name>
+      <description>Программа для автоматизации работы менеджеров по продаже стройматериалов</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="110" available="true">
+      <url>https://www.prostoysoft.ru/SocialProtection.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SocialProtection1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SocialProtection2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SocialProtection3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SocialProtection4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Управление социальной защитой населения"</name>
+      <description>Программа для учета визита посетителей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="111" available="true">
+      <url>https://www.prostoysoft.ru/AutoMotoSklad.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/AutoMotoSklad1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoMotoSklad2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoMotoSklad3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/AutoMotoSklad4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "АвтоМотоСклад"</name>
+      <description>Программа для торговли и складского учета авто мото техники и запчастей</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="112" available="true">
+      <url>https://www.prostoysoft.ru/SchoolDance.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/SchoolDance1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SchoolDance2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SchoolDance3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/SchoolDance4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Студия танцев"</name>
+      <description>Программа для школы танцев для всестороннего учета</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="113" available="true">
+      <url>https://www.prostoysoft.ru/ContractsCount.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ContractsCount1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ContractsCount2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ContractsCount3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ContractsCount4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Учет договоров"</name>
+      <description>Программа для учета и ведения договоров</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="114" available="true">
+      <url>https://www.prostoysoft.ru/DatingServices.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/DatingServices1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/DatingServices2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/DatingServices3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/DatingServices4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Служба знакомств"</name>
+      <description>Программа для свахи брачных контор служб знакомств</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="115" available="true">
+      <url>https://www.prostoysoft.ru/CadastrService.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/CadastrService1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CadastrService2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CadastrService3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/CadastrService4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Кадастровые услуги"</name>
+      <description>Работа с кадастром, участками, учет клиентов и услуг</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="116" available="true">
+      <url>https://www.prostoysoft.ru/MedicalCenterMRT.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenterMRT1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenterMRT2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenterMRT3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/MedicalCenterMRT4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Медицинский центр МРТ"</name>
+      <description>Программа для медицинских центров МРТ</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="117" available="true">
+      <url>https://www.prostoysoft.ru/RepairBuilding.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/RepairBuilding1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/RepairBuilding2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/RepairBuilding3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/RepairBuilding4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Ремонтно-строительная организация"</name>
+      <description>Программа для ремонтно-строительной организации</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="118" available="true">
+      <url>https://www.prostoysoft.ru/FurnitureStore.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/FurnitureStore1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/FurnitureStore2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/FurnitureStore3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/FurnitureStore4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Мебельный магазин"</name>
+      <description>Программа для мебельного магазина</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+    <offer id="119" available="true">
+      <url>https://www.prostoysoft.ru/ProjectCompany.htm</url>
+      <price>6000</price>
+      <currencyId>RUR</currencyId>
+      <categoryId>1</categoryId>
+      <picture>https://www.prostoysoft.ru/Images/ProjectCompany1.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProjectCompany2.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProjectCompany3.png</picture>
+      <picture>https://www.prostoysoft.ru/Images/ProjectCompany4.png</picture>
+      <delivery>true</delivery>
+      <local_delivery_cost>200</local_delivery_cost>
+      <name>Программа "Проектная организация"</name>
+      <description>Программа для проектных организаций</description>
+      <sales_notes></sales_notes>
+      <downloadable>true</downloadable>
+    </offer>
+</offers>
+</shop>
+</yml_catalog>

@@ -1,0 +1,207 @@
+﻿/**
+ * CSS: Contents styles for responses.htm page.
+ */
+
+/* Indents
+    ============================================================== */
+
+/**
+ * 1. Headers.
+ */
+
+main h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/**
+ * 2. Text.
+ */
+
+main p {
+    text-indent: 30px;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+/* Fonts
+    ============================================================== */
+
+/**
+ * 1. Paragraph.
+ */
+
+.responses-container__item p {
+    font-family: Cambria, serif;
+    font-size: 0.95em;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 10px;
+    margin: 15px 0;
+}
+
+/**
+ * 2. Response header.
+ */
+
+.responses-container__item h5 {
+    font-family: Tahoma, sans-serif;
+    font-size: 0.9em;
+    color: #0066ff;
+}
+
+/* Unions
+    ============================================================== */
+
+/**
+ * 1. Union row.
+ */
+
+.union-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/**
+ * 2.Union-column.
+ */
+
+.union-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* Items with response
+    ============================================================== */
+
+/**
+ * 1. Container.
+ */
+
+.items-container {
+    width: 100%;
+    padding: 10px;
+}
+
+/**
+ * 2. Each item.
+ */
+
+.items-container__items {
+    width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.3);
+    margin: 10px;
+    text-align: center;
+}
+
+/**
+ * 3. Image.
+ */
+
+.items-container__items img {
+    
+}
+
+/**
+ * 4. Header.
+ */
+
+.items-container__items h4 {
+    font-family: Tahoma, sans-serif;
+    padding: 5px;
+}
+
+/* Response form
+    ============================================================== */
+
+/**
+ * 1. Root.
+ */
+
+.form-container {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/**
+ * 2. Form.
+ */
+
+.form-container form {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.2);
+    text-align: center;
+    max-width: 700px;
+    min-width: 250px;
+}
+
+/**
+ * 3. Header.
+ */
+
+.form-container h4 {
+    display: block;
+}
+
+/**
+ * 4. Text-box.
+ */
+
+.form-container input[type="text"],
+.form-container select,
+.form-container textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-family: Cambria, serif;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.form-container textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/**
+ * 5. Label.
+ */
+
+.form-container label {
+    margin-top: 10px;
+    display: block;
+    font-family: Cambria, serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: left;
+}
+
+/**
+ * 6. Text.
+ */
+
+.form-container p {
+    text-indent: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+/**
+ * 7. Button.
+ */
+
+.form-container input[type="submit"] {
+    margin: 10px 0;
+    background-color: #0099ff;
+    color: #fff;
+}

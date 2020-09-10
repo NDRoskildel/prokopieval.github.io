@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Оперативная полиграфия">
+	<meta name="Keywords" content="Визитки, календари, листовки, наклейки, брошюры, буклеты"> 
+	<title>Оперативная полиграфия</title>
+
+	<!-- link -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<div class="background-top"></div>
+	<!-- <div class="background-bottom"></div> -->
+	<div id="menu"><!-- menu -->
+		<div class="menu-block">
+			<ul class="navbar">
+				<li><a href="/PsPrint">On-line заказ</a></li>
+				<li><a href="#">Услуги дизайнера</a></li>
+				<li><a href="#">Техтребования</a></li>
+				<li><a href="#">Прайс</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</div>
+	</div><!--end menu -->
+
+	<div class="contain"><!-- contain -->
+		<div id="header"><!-- header -->
+			<div class="logo">
+				<a href="/PsPrint"><img class="logo-img" src="images/logo.png"></a>
+			</div>
+			<div class="phone_block">
+				<div class="phone">тел. 8 (812) 989-22-11</div>
+				<div class="phone">тел. 8 (952) 214-95-91</div>
+				<div class="e-mail">e-mail: psprint@prostoysoft.ru</div>
+			</div>
+		</div><!-- end header -->
+
+
+		<div class="catalog"> <!-- catalog -->
+			<div class="catalog-block">
+				<div class="catalog-img">
+					<a href="#cutaway"><img src="images/img1.png"></a>
+				</div>
+			</div><!--/span-->
+			<div class="catalog-block">
+				<div class="catalog-img">
+					<a href="#calendar"><img src="images/img2.png"></a>
+				</div>
+			</div><!--/span-->
+			<div class="catalog-block">
+				<div class="catalog-img">
+					<a href="#flyers"><img src="images/img3.png"></a>
+				</div>
+			</div><!--/span-->
+			<div class="catalog-block">
+				<div class="catalog-img">
+					<a href="#sticker"><img src="images/img4.png"></a>
+				</div>
+			</div><!--/span-->
+			<div class="catalog-block">
+				<div class="catalog-img">
+					<a href="#brochure"><img src="images/img5.png"></a>
+				</div>
+			</div><!--/span-->
+			<div class="catalog-block">
+				<div class="catalog-img">
+					<a href="#booklet"><img src="images/img6.png"></a>
+				</div>
+			</div><!--/span-->
+		</div> <!--end catalog -->
+
+		<div class="other-order">По поводу другой продукции уточняйте по телефону +7 (812) 989-22-11, +7 (952) 214-95-91 <br>или по e-mail: psprint@prostoysoft.ru</div>
+
+
+
+
+
+		<div id="cutaway" class="general"> <!-- cutaway -->
+			<form id = "PsPrintFormCutaway" action="http://www.prostoysoft.ru/sendform.aspx?formtype=PsPrintFormCards" method="post">
+				<div class="general-contact">
+					<h1>Печать визиток</h1>
+					<div class="line-gray"></div>
+					<div class="print-img">
+						<img src="images/img2_1.png">
+					</div>
+					<div class="general-contact-container">
+						<h2>Контактные данные</h2>
+						<div class="form-block">
+
+							<div class="field">
+								<label for="fio"><span class="star">*</span>Ф.И.О.</label>
+								<input id="fio" name="fio" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="phone"><span class="star">*</span>Тел.</label>
+								<input id="phone" name="phone" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="addres">Адрес</label>
+								<input id="addres" name="addres" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="e-mail"><span class="star">*</span>E-mail</label>
+								<input id="e-mail" name="e-mail" type="text"><br>
+							</div>
+
+						</div>
+						<div class="note">
+							<span class="star">*</span>поля обязательны для заполнения
+						</div>
+					</div>
+				</div>
+
+				<div class="general-form form-cutaway">
+					<h2>Форма заказа</h2>
+					<div class="line-white">
+						<div class="form-general-block">
+							<div class="general-field">
+								<label for="design">Дизайн</label>
+								<select id="design" name="design" class="form-control">
+									<option>Имеется свой оригинал-макет</option>
+									<option>Требуется дизайн макета</option>
+									<option>Требуется корректировка имеющегося макета</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="size">Размер</label>
+								<select id="size" name="size" class="form-control">
+									<option>Стандарт 90x50 мм</option>
+									<option>Евро 85x55 мм</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="paper">Бумага</label>
+								<select id="paper" name="paper" class="form-control">
+									<option>Картон 300 г/м</option>
+									<option>Другая ???</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="side">Стороны печати</label>
+								<select class="mini-select" id="side" name="side" class="form-control">
+									<option>Только лицо</option>
+									<option>Лицо и оборот</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="edition">Тираж</label>
+								<select id="edition" name="edition" class="form-control">
+									<option>100</option>
+									<option>200</option>
+									<option>300</option>
+									<option>400</option>
+									<option>500</option>
+									<option>600</option>
+									<option>700</option>
+									<option>800</option>
+									<option>900</option>
+									<option>1000</option>
+									<option>Более 1000</option>
+								</select>
+							</div >
+							<input class="general-submit" type="submit">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div><!--end cutaway -->
+
+
+
+		<div class="general" id="calendar"> <!-- calendar -->
+			<form id = "PsPrintFormСalendar" action="http://www.prostoysoft.ru/sendform.aspx?formtype=PsPrintFormCalendar" method="post">
+				
+				<div class="general-form form-calendar">
+					<h2>Форма заказа</h2>
+					<div class="line-white">
+						<div class="form-general-block">
+							<div class="general-field">
+								<label for="view">Вид</label>
+								<select id="view" name="view" class="form-control">
+									<option>Перекидной</option>
+									<option>Трио</option>
+									<option>Домик</option>
+									<option>Плакат</option>
+									<option>Карманный</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="design">Дизайн</label>
+								<select id="design" name="design" class="form-control">
+									<option>Имеется свой оригинал-макет</option>
+									<option>Требуется дизайн макета</option>
+									<option>Требуется корректировка имеющегося макета</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="size">Размер</label>
+								<select id="size" name="size" class="form-control">
+									<option>297x210 A4</option>
+									<option>297x420 A3</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="other-size">Свой размер</label>
+								<input name="other-size" id="other-size" type="text">
+							</div>
+							<div class="general-field">
+								<label for="paper">Бумага</label>
+								<select id="paper" name="paper" class="form-control">
+									<option>Картон 300 г/м</option>
+									<option>Бумага 200 гр/м</option>
+									<option>Бумага 160 гр/м</option>
+									<option>Бумага 150 гр/м</option>
+									<option>Бумага 120 гр/м</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="side">Стороны печати</label>
+								<select class="mini-select" id="side" name="side" class="form-control">
+									<option>Только лицо</option>
+									<option>Лицо и оборот</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="edition">Тираж</label>
+								<select id="edition" name="edition" class="form-control">
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+									<option>300</option>
+									<option>400</option>
+									<option>500</option>
+									<option>600</option>
+									<option>700</option>
+									<option>800</option>
+									<option>900</option>
+									<option>1000</option>
+									<option>Более 1000</option>
+								</select>
+							</div >
+							<div class="general-field">
+								<label for="other-edition">Другой тираж</label>
+								<input name="other-edition" id="other-edition" type="text">
+							</div>
+							<input class="general-submit" type="submit">
+						</div>
+					</div>
+				</div>
+
+				<div class="general-contact block-right">
+					<h1 class="header-calendar">Печать календарей</h1>
+					<div class="line-gray line-right"></div>
+					<div class="print-img">
+						<img src="images/img2_2.png">
+					</div>
+					<div class="general-contact-container">
+						<h2>Контактные данные</h2>
+						<div class="form-block">
+
+							<div class="field">
+								<label for="fio"><span class="star">*</span>Ф.И.О.</label>
+								<input id="fio" name="fio" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="phone"><span class="star">*</span>Тел.</label>
+								<input id="phone" name="phone" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="addres">Адрес</label>
+								<input id="addres" name="addres" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="e-mail"><span class="star">*</span>E-mail</label>
+								<input id="e-mail" name="e-mail" type="text"><br>
+							</div>
+
+						</div>
+						<div class="note">
+							<span class="star">*</span>поля обязательны для заполнения
+						</div>
+					</div>
+				</div>
+			</form>
+		</div><!--end calendar -->
+
+
+
+
+		<div class="general" id="flyers">  <!-- flyers -->
+			<form id = "PsPrintFormFlyers" action="http://www.prostoysoft.ru/sendform.aspx?formtype=PsPrintFormFlyers" method="post">
+				<div class="general-contact">
+					<h1>Печать листовок</h1>
+					<div class="line-gray"></div>
+					<div class="print-img">
+						<img src="images/img2_3.png">
+					</div>
+					<div class="general-contact-container">
+						<h2>Контактные данные</h2>
+						<div class="form-block">
+
+							<div class="field">
+								<label for="fio"><span class="star">*</span>Ф.И.О.</label>
+								<input id="fio" name="fio" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="phone"><span class="star">*</span>Тел.</label>
+								<input id="phone" name="phone" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="addres">Адрес</label>
+								<input id="addres" name="addres" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="e-mail"><span class="star">*</span>E-mail</label>
+								<input id="e-mail" name="e-mail" type="text"><br>
+							</div>
+
+						</div>
+						<div class="note">
+							<span class="star">*</span>поля обязательны для заполнения
+						</div>
+					</div>
+				</div>
+
+				<div class="general-form form-flyer">
+					<h2>Форма заказа</h2>
+					<div class="line-white">
+						<div class="form-general-block">
+							<div class="general-field">
+								<label for="design">Дизайн</label>
+								<select id="design" name="design" class="form-control">
+									<option>Имеется свой оригинал-макет</option>
+									<option>Требуется дизайн макета</option>
+									<option>Требуется корректировка имеющегося макета</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="size">Размер</label>
+								<select id="size" name="size" class="form-control">
+									<option>297x210 A4</option>
+									<option>148x210 A5</option>
+									<option>105x148 A6</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="other-size">Свой размер</label>
+								<input name="other-size" id="other-size" type="text">
+							</div>
+							<div class="general-field">
+								<label for="paper">Бумага</label>
+								<select id="paper" name="paper" class="form-control">
+									<option>Картон 300 г/м</option>
+									<option>Бумага 200 гр/м</option>
+									<option>Бумага 160 гр/м</option>
+									<option>Бумага 150 гр/м</option>
+									<option>Бумага 120 гр/м</option>
+									<option>Бумага 100 гр/м</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="side">Стороны печати</label>
+								<select class="mini-select" id="side" name="side" class="form-control">
+									<option>Только лицо</option>
+									<option>Лицо и оборот</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="edition">Тираж</label>
+								<select id="edition" name="edition" class="form-control">
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+									<option>300</option>
+									<option>400</option>
+									<option>500</option>
+									<option>600</option>
+									<option>700</option>
+									<option>800</option>
+									<option>900</option>
+									<option>1000</option>
+									<option>Более 1000</option>
+								</select>
+							</div >
+							<div class="general-field">
+								<label for="other-edition">Другой тираж</label>
+								<input name="other-edition" id="other-edition" type="text">
+							</div>
+							<input class="general-submit" type="submit">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div><!--end flyers -->
+
+
+		<div class="general" id ="sticker"> <!-- sticker -->
+			<form id = "PsPrintFormSticker" action="http://www.prostoysoft.ru/sendform.aspx?formtype=PsPrintFormSticker" method="post">
+
+				<div class="general-form form-sticker">
+					<h2>Форма заказа</h2>
+					<div class="line-white">
+						<div class="form-general-block">
+							<div class="general-field">
+								<label for="design">Дизайн</label>
+								<select id="design" name="design" class="form-control">
+									1">Имеется свой оригинал-макет</option>
+									<option>Требуется дизайн макета</option>
+									<option>Требуется корректировка имеющегося макета</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="size">Размер</label>
+								<select id="size" name="size" class="form-control">
+									<option>297x210 A4</option>
+									<option>148x210 A5</option>
+									<option>105x148 A6</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="other-size">Свой размер</label>
+								<input name="other-size" id="other-size" type="text">
+							</div>
+							<div class="general-field">
+								<label for="paper">Бумага</label>
+								<select id="paper" name="paper" class="form-control">
+									<option>Матовая самоклеющаяся бумага</option>
+									<option>Глянцевая самоклеющаяся бумага</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="edition">Тираж</label>
+								<select id="edition" name="edition" class="form-control">
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+									<option>300</option>
+									<option>400</option>
+									<option>500</option>
+									<option>600</option>
+									<option>700</option>
+									<option>800</option>
+									<option>900</option>
+									<option>1000</option>
+									<option>Более 1000</option>
+								</select>
+							</div >
+							<div class="general-field">
+								<label for="other-edition">Другой тираж</label>
+								<input name="other-edition" id="other-edition" type="text">
+							</div>
+							<input class="general-submit" type="submit">
+						</div>
+					</div>
+				</div>
+
+				<div class="general-contact block-right">
+					<h1>Печать наклеек</h1>
+					<div class="line-gray line-right"></div>
+					<div class="print-img">
+						<img src="images/img2_4.png">
+					</div>
+					<div class="general-contact-container">
+						<h2>Контактные данные</h2>
+						<div class="form-block">
+
+							<div class="field">
+								<label for="fio"><span class="star">*</span>Ф.И.О.</label>
+								<input id="fio" name="fio" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="phone"><span class="star">*</span>Тел.</label>
+								<input id="phone" name="phone" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="addres">Адрес</label>
+								<input id="addres" name="addres" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="e-mail"><span class="star">*</span>E-mail</label>
+								<input id="e-mail" name="e-mail" type="text"><br>
+							</div>
+
+						</div>
+						<div class="note">
+							<span class="star">*</span>поля обязательны для заполнения
+						</div>
+					</div>
+				</div>
+
+
+			</form>
+		</div><!--end sticker -->
+
+
+		<div class="general" id="brochure"> <!-- brochure -->
+			<form id = "PsPrintFormBrochure" action="http://www.prostoysoft.ru/sendform.aspx?formtype=PsPrintFormBrochure" method="post">
+				<div class="general-contact">
+					<h1>Печать брошюр</h1>
+					<div class="line-gray"></div>
+					<div class="print-img">
+						<img src="images/img2_5.png">
+					</div>
+					<div class="general-contact-container">
+						<h2>Контактные данные</h2>
+						<div class="form-block">
+
+							<div class="field">
+								<label for="fio"><span class="star">*</span>Ф.И.О.</label>
+								<input id="fio" name="fio" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="phone"><span class="star">*</span>Тел.</label>
+								<input id="phone" name="phone" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="addres">Адрес</label>
+								<input id="addres" name="addres" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="e-mail"><span class="star">*</span>E-mail</label>
+								<input id="e-mail" name="e-mail" type="text"><br>
+							</div>
+
+						</div>
+						<div class="note">
+							<span class="star">*</span>поля обязательны для заполнения
+						</div>
+					</div>
+				</div>
+
+				<div class="general-form form-brochure">
+					<h2>Форма заказа</h2>
+					<div class="line-white">
+						<div class="form-general-block">
+							<div class="general-field">
+								<label for="view">Вид</label>
+								<select id="view" name="view" class="form-control">
+									<option>На скрепке</option>
+									<option>На пружине</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="design">Дизайн</label>
+								<select id="design" name="design" class="form-control">
+									<option>Имеется свой оригинал-макет</option>
+									<option>Требуется дизайн макета</option>
+									<option>Требуется корректировка имеющегося макета</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="size">Размер</label>
+								<select id="size" name="size" class="form-control">
+									<option>297x210 A4</option>
+									<option>297x420 A3</option>
+									<option>148x210 A5</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="other-size">Свой размер</label>
+								<input name="other-size" id="other-size" type="text">
+							</div>
+							<div class="general-field">
+								<label for="paper">Бумага</label>
+								<select id="paper" name="paper" class="form-control">
+									<option>Картон 300 г/м</option>
+									<option>Бумага 200 гр/м</option>
+									<option>Бумага 160 гр/м</option>
+									<option>Бумага 150 гр/м</option>
+									<option>Бумага 120 гр/м</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="side">Стороны печати</label>
+								<select class="mini-select" id="side" name="side" class="form-control">
+									<option>Только лицо</option>
+									<option>Лицо и оборот</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="paper-inside">Бумага вн. стороны</label>
+								<select class = "select-inside" id="paper-inside" name="paper-inside" class="form-control">
+									<option>Картон 300 г/м</option>
+									<option>Бумага 200 гр/м</option>
+									<option>Бумага 160 гр/м</option>
+									<option>Бумага 150 гр/м</option>
+									<option>Бумага 120 гр/м</option>
+									<option>Бумага 100 гр/м</option>
+									<option>Бумага 90 гр/м</option>
+									<option>Бумага 60 гр/м</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="color">Цветность вн. страниц</label>
+								<select class="select-inside" id="color" name="color" class="form-control">
+									<option>Черно-белые</option>
+									<option>Полноцветные</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="edition">Тираж</label>
+								<select id="edition" name="edition" class="form-control">
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+									<option>300</option>
+									<option>400</option>
+									<option>500</option>
+									<option>600</option>
+									<option>700</option>
+									<option>800</option>
+									<option>900</option>
+									<option>1000</option>
+									<option>Более 1000</option>
+								</select>
+							</div >
+							<div class="general-field">
+								<label for="other-edition">Другой тираж</label>
+								<input name="other-edition" id="other-edition" type="text">
+							</div>
+							<input class="general-submit" type="submit">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div><!--end brochure -->
+
+
+
+
+		<div class="general" id="booklet"> <!-- booklet -->
+			<form id = "PsPrintFormBooklet" action="http://www.prostoysoft.ru/sendform.aspx?formtype=PsPrintFormBooklet" method="post">
+				
+
+				<div class="general-form form-booklet">
+					<h2>Форма заказа</h2>
+					<div class="line-white">
+						<div class="form-general-block">
+							<div class="general-field">
+								<label for="view">Вид</label>
+								<select id="view" name="view" class="form-control">
+									<option>Стандарт (1 сгиб)</option>
+									<option>Евро (2 сгиба)</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="design">Дизайн</label>
+								<select id="design" name="design" class="form-control">
+									<option>Имеется свой оригинал-макет</option>
+									<option>Требуется дизайн макета</option>
+									<option>Требуется корректировка имеющегося макета</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="size">Размер</label>
+								<select id="size" name="size" class="form-control">
+									<option>297x210 A4</option>
+									<option>297x420 A3</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="other-size">Свой размер</label>
+								<input name="other-size" id="other-size" type="text">
+							</div>
+							<div class="general-field">
+								<label for="paper">Бумага</label>
+								<select id="paper" name="paper" class="form-control">
+									<option>Картон 300 г/м</option>
+									<option>Бумага 200 гр/м</option>
+									<option>Бумага 160 гр/м</option>
+									<option>Бумага 150 гр/м</option>
+									<option>Бумага 120 гр/м</option>
+									<option>Бумага 100 гр/м</option>
+								</select>
+							</div>
+							<div class="general-field">
+								<label for="edition">Тираж</label>
+								<select id="edition" name="edition" class="form-control">
+									<option>50</option>
+									<option>100</option>
+									<option>200</option>
+									<option>300</option>
+									<option>400</option>
+									<option>500</option>
+									<option>600</option>
+									<option>700</option>
+									<option>800</option>
+									<option>900</option>
+									<option>1000</option>
+									<option>Более 1000</option>
+								</select>
+							</div >
+							<div class="general-field">
+								<label for="other-edition">Другой тираж</label>
+								<input name="other-edition" id="other-edition" type="text">
+							</div>
+							<input class="general-submit" type="submit">
+						</div>
+					</div>
+				</div>
+
+				<div class="general-contact block-right">
+					<h1>Печать буклетов</h1>
+					<div class="line-gray line-right"></div>
+					<div class="print-img">
+						<img src="images/img2_6.png">
+					</div>
+					<div class="general-contact-container">
+						<h2>Контактные данные</h2>
+						<div class="form-block">
+
+							<div class="field">
+								<label for="fio"><span class="star">*</span>Ф.И.О.</label>
+								<input id="fio" name="fio" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="phone"><span class="star">*</span>Тел.</label>
+								<input id="phone" name="phone" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="addres">Адрес</label>
+								<input id="addres" name="addres" type="text"><br>
+							</div>
+							<div class="field">
+								<label for="e-mail"><span class="star">*</span>E-mail</label>
+								<input id="e-mail" name="e-mail" type="text"><br>
+							</div>
+
+						</div>
+						<div class="note">
+							<span class="star">*</span>поля обязательны для заполнения
+						</div>
+					</div>
+				</div>
+			</form>
+		</div><!--end booklet -->
+
+
+	</div><!-- contain -->
+</body>
+</html>

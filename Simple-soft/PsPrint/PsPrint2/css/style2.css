@@ -1,0 +1,136 @@
+		body{
+			background:#fff;
+			color:#666;	
+			font:12px/18px Trebuchet-MS, Arial, Helvetica, sans-serif;	
+		}
+	
+        .size {
+            white-space: nowrap;
+            padding-left: 5px;
+            padding-right: 10px;
+            text-align: center;
+            width: 65px;
+        }
+
+        .slider_wrap {
+            margin: 0px auto 0;
+            width: 1065px;
+            height: 512px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .slider_wrap img {
+                width: 1024px;
+                height: auto;
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 20px;
+            }
+
+                .slider_wrap img:first-child {
+                    display: block;
+                }
+
+            .slider_wrap span {
+                margin-top: -18px;
+                width: 15px;
+                height: 26px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                cursor: pointer;
+                background: url(Images/slider2_arrow.png) no-repeat;
+            }
+
+                .slider_wrap span.next {
+                    right: 0;
+                    background-position: -15px 0;
+                }
+
+                    .slider_wrap span.next:hover {
+                        background-position: -15px -26px;
+                    }
+
+                .slider_wrap span.prev {
+                    left: 0;
+                    background-position: 0 0;
+                }
+
+                    .slider_wrap span.prev:hover {
+                        background-position: 0 -26px;
+                    }
+					
+			.CButton2 {
+				font-family: Arial, Georgia, "Trebuchet MS";
+				font-size: 18px;
+				font-weight: bold;
+				
+				background-position: left top;
+				background-repeat: no-repeat;
+				border: 0px solid #fff;
+				width: 225px;
+				height: 50px;
+				cursor: pointer;
+				text-align: center;
+				background-color: #6ab580;
+			}		
+
+
+			}
+	#menu{
+	}
+		#menu ul{
+			list-style:none;
+		}
+			#menu li{
+				background:url(menu/menu_035_bg.jpg) repeat-x;			
+				list-style:none;
+				display:block;
+				float:left;
+				height:35px;
+				border-right:1px solid #dbdbdb;
+				line-height:36px;
+			}
+				#menu li a{
+					display:block;
+					float:left;
+					color:#757575;
+					text-transform:uppercase;
+					font-size:11px;
+					font-weight:bold;
+					line-height:36px;
+					text-decoration:none;
+					padding:0 10px;				
+				}
+					#menu li a:hover{
+						color:#747474;
+						background:url(menu/menu_035_h.jpg) repeat-x;
+					}
+				#menu li a.current{
+					display:block;
+					float:left;
+					color:#6c822e;
+					background:url(menu/menu_035_h.jpg) repeat-x;
+					text-transform:uppercase;
+					font-size:11px;
+					font-weight:bold;
+					line-height:34px;
+					text-decoration:none;
+					padding:0 10px;	
+				}
+					#menu li a:hover.current{
+						color:#6c822e;
+					}
+
+
+				.CMenuBox2 {
+					margin: -13px 0px 0px -40px;
+					padding: 0px;
+					color: #fff;
+					height: 36px;
+					background-color: #f8f8f8;
+				}
+				
+		

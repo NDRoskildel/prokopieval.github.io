@@ -1,0 +1,23 @@
+User-agent: *
+
+Disallow: *adm*
+Disallow: /phpBB3/faq.php
+
+Disallow: *mcp.php*
+Disallow: *posting.php*
+Disallow: *report.php*
+Disallow: *search.php*
+
+Disallow: *style.php*
+Disallow: *ucp.php*
+Disallow: *viewonline.php*
+Disallow: *searchuser*
+Disallow: *start*
+Disallow: /Images/
+Disallow: *frommarket*
+Disallow: *previous*
+Disallow: *author*
+Disallow: *hilit*
+Disallow: *next*
+Sitemap: https://www.prostoysoft.ru/sitemap.xml
+host: https://www.prostoysoft.ru

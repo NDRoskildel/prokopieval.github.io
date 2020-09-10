@@ -1,0 +1,717 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Учет клиентов в охранном предприятии | Простой софт</title>
+
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="robots" content="index,follow" />
+<meta name="revisit-after" content="30 days" />
+<meta name="description" content="Специализорованная программа для автоматизации работы и учета клиентов в частном охранном предприятии (ЧОП). Скачайте и попробуйте её бесплатно" />
+<meta name="keywords" content="автоматизация охранного предприятия, управление ЧОП, учет клиентов в чоп, учет в охранном предпритяии, учет охраняемых объектов, учет сотрудников, бухгалтерский учет в чоп" />
+<link href="styles.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen" />
+
+<script language="javascript" type="text/javascript">
+<!--
+    function CheckOnSubmit() {
+        if (document.getElementById('ClientName').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName').focus(); return false }
+        if (document.getElementById('ClientEmail').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail').focus(); return false }
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+    function CheckOnSubmit2() {
+        if (document.getElementById('ClientName2').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName2').focus(); return false }
+        if (document.getElementById('ClientEmail2').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail2').focus(); return false }
+        if (confirm("Отправить форму?")) return true;  // confirmation
+        return false;
+    }
+//-->
+</script>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/mobilyslider.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox-1.2.1.pack.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+    $("a.fancybox").fancybox();
+});
+</script>
+
+<style type="text/css">
+    .size {white-space: nowrap; padding-left: 5px; padding-right: 10px; text-align: center; width: 65px;}
+
+.wrapper {background: #f3f3f3;} /* Весь блок страницы*/
+.title {text-align:center;} /*Блок с заголовком*/
+.title h1 {font-size:36px;} /*Главный заголовок*/
+.title h2 {font-size:20px;} /* Главный подзаголовок */
+.download {text-align:center;border: 1px solid #808080;padding: 20px 0;border-radius:10px;margin:20px auto;} /*Блок с кнопкой "Скачать" */
+.main_part {margin:0 auto; font-size:15px;width:1300px;} /* Основная часть страницы */
+.main_part h2 {font-size:22px;color:DarkGreen;} 
+.main_part h3 {font-size:18px;color:green}
+.cta {text-align:center; font-size:16px;} /* Строка с призывом к действию после ЧаВо*/
+.func_list {display: inline-flex;} /* Блоки в "Основных функциях" */
+.func_img {width:30%;} /* Блок с изображением в "Основных функциях" */
+.func_img img {width:100%;} 
+.func_desc {width:70%; margin:20px;} /*Блок с текстом в "Основных функциях" */
+.sign {text-align:right; margin:20px;font-style:italic;} /* Подпись руководителя внизу страницы ЧОП */
+.div {margin:0 auto;text-align:center;} /* Блок с контактами под ЧаВО*/
+::-webkit-input-placeholder {color: rgb(94, 109, 129);}
+::-moz-placeholder          {color: rgb(94, 109, 129);}/* Firefox 19+ */
+:-moz-placeholder           {color: rgb(94, 109, 129);}/* Firefox 18- */
+:-ms-input-placeholder      {color: rgb(94, 109, 129);}
+/* Каждый блок с контактом под ЧаВо*/
+.cont {
+	width: 19%;
+	display: inline-table;
+	line-height:25px;
+}
+.cont i {
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 32px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+	display:inline-table;
+}
+/* Первый блок со списком и формой*/
+.first {
+	width:100%;
+	padding:10px;
+	margin:10px 10px 10px -10px;
+	border:2px solid #ccc;
+	display:inline-flex;
+}
+/*Блок с фотографией Абрамова И.В.*/
+.photo {
+	width: 50%;
+	text-align: center;
+	margin: 20px;
+	font-size: 12px;
+}
+.download .button {
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+  width: 40%;
+}
+/**Стили блока с текстом внутри спойлера**/
+.spoiler {margin:5px 0;}
+.spoiler-content{
+display:none;  
+padding:15px 20px; 
+border:1px solid #ccc; 
+margin-top:5px; 
+background:#F0F0F0; 
+}
+/**Стили блока оборачивающего каждый блок**/
+.spoiler-block{
+margin-top:10px; 
+}
+/**Стили кнопки спойлера**/
+.spoiler-title {
+border:1px solid #B9B9B9;
+background: #ccc;
+background:linear-gradient(#CACACA, #E8E8E8);
+padding:10px;
+text-decoration:none;
+color:#000; 
+display:block; 
+}
+/* Форма для скачивания */
+.row {
+  margin:10px auto;
+ }
+.download .row {width:33%; display:inline-block;}
+.row input[type="text"]{
+  width: 80%;
+  height: 50px;
+  font-size: 22px;
+  outline: none;
+  line-height: 50px;
+  padding: 0 10px 0 50px;
+}
+.l_name input[type="text"] {
+  background: #ffffff url(./Images/ico01.png) 18px center no-repeat;
+  border-radius: 3px 3px 0 0;
+}
+.l_mail input[type="text"] {
+  background: #ffffff url(./Images/ico03.png) 18px center no-repeat;
+  border-radius: 0 0 3px 3px;
+}
+row_button{
+  padding-top: 5px;
+}
+.row_button button,
+.row_button .button,
+.download .button {
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+  width: 40%;
+}
+
+/* Кнопка Скачать */
+.row_button .button {
+    display: inline-block;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+    
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
+
+.row_button .button span {
+    background-color: #E8E8E8;
+    
+    background-image: 
+        /* gloss gradient */
+        -webkit-gradient(
+            linear, 
+            left bottom, 
+            left top, 
+            color-stop(50%,rgba(255,255,255,0)), 
+            color-stop(50%,rgba(255,255,255,0.3)), 
+            color-stop(100%,rgba(255,255,255,0.2))),
+        
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(210,210,210,0.3)), 
+            color-stop(20%,rgba(210,210,210,0)), 
+            color-stop(80%,rgba(210,210,210,0)), 
+            color-stop(100%,rgba(210,210,210,0.3))),
+        
+        /* light inner gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(20%,rgba(255,255,255,0.5)), 
+            color-stop(80%,rgba(255,255,255,0.5)), 
+            color-stop(100%,rgba(255,255,255,0))),        
+        
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear, 
+            0% 100%, 
+            100% 0%, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(40%,rgba(255,255,255,0)), 
+            color-stop(40%,#D2D2D1), 
+            color-stop(60%,#D2D2D1), 
+            color-stop(60%,rgba(255,255,255,0)), 
+            color-stop(100%,rgba(255,255,255,0)));
+    
+        -webkit-box-shadow:
+            0px -1px #fff, /* top highlight */
+            0px 1px 1px #FFFFFF; /* bottom edge */
+    
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+    
+    -webkit-border-radius: 10px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    
+    color: #3A474D;
+    text-transform: uppercase;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+    font-weight: 700;
+    font-size: 32px;
+    
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+}
+
+        .row_button .button span:hover {
+            color: #AEBF3B;
+            text-shadow: 0px -1px #97A63A;
+            cursor: pointer;
+        }
+
+        .row_button .button:active {
+            -webkit-box-shadow: 
+                0px 3px rgba(128,128,128,1),
+                0px 4px rgba(118,118,118,1),
+                0px 5px rgba(108,108,108,1),
+                0px 6px rgba(98,98,98,1),
+                0px 7px rgba(88,88,88,1),
+                0px 8px rgba(78,78,78,1),
+                0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+        }
+
+        .row_button .button:active span{
+            -webkit-transform: translate(0, 5px); /* depth of button press */
+        }
+
+    .row_button .button span:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+    
+        position: absolute;
+        right: 14px;
+        top: 12px;    
+        
+        font-family: 'Cabin';
+        font-weight: 700;
+        color: #AEBF3B;
+        text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+        font-size: 26px;
+    }
+/* Конец CSS кода для кнопки "скачать" */
+</style>
+<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+</head>
+
+<body style="font: Verdana 9pt; margin: 0px 0px 0px 0px;">
+
+<div class="wrapper">
+<!-- Header -->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>	
+
+				<li><a href="prices.htm">Цены</a></li>		
+				<li><a href="AllEquipment.htm">Оборудование</a></li>	
+				<li><a href="faq.htm">Вопросы</a></li>			
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm">Галерея</a></li>				
+				<li><a href="responses.htm">Отзывы</a></li>		
+				<li><a href="PsSchool.htm">Обучение</a></li>		
+				<li><a href="partner.htm">Партнеры</a></li>		
+				<li><a href="market.htm">Маркет</a></li>	
+
+				<li><a href="contacts.htm">Контакты</a></li>	
+				<li><a href="support.htm">Поддержка</a></li>	
+				<li><a href="phpBB3/index.php">Форум</a></li>	
+			</ul>
+		</div>
+	</div>
+<!-- Main part -->
+<div class="main_part">
+<div class="title">
+<h1>Специализированная программа учета в охранном предприятии (ЧОП)</h1>
+<h2>Автоматизируйте все рутинные процессы с помощью всего одной CRM системы и без привлечения программистов</h2>
+</div>
+
+<table id="tblProductTitle" border="0" width="100%">
+    <tr>
+        <td><b class="CPageCaption" style="font-size:16pt">Конфигурация "Охранное предприятие"</b></td>
+        <td align="center" style="color: DarkRed;"></td>
+        <td align="right" style="padding-right: 20px;"><b class="CPrice">6000 руб.</b></td>
+        <td align="right" class="CButton2"><a href="prices.htm?program=Учет клиентов&conf=Охранное предприятие#OrderForm" style="color: Black; text-decoration: none;" target="_parent">Купить</a></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <hr class="CHr" />
+            <b></b>
+        </td>
+    </tr>
+</table>
+<br />
+
+<div class="first" style="border:0px;">
+	<div class="photo">
+<img src="./Images/AIV.jpg" width="80%">
+<p>Генеральный директор ООО "Простой софт"<br/>
+<strong>Абрамов Иван Валерьевич</strong></p>
+</div>
+	<div class="hello">
+<p>Здравствуйте!</p>
+
+<p>Давайте поговорим как руководитель с руководителем. И пусть сферы деятельности наших компаний различаются, внутренние процессы и задачи очень похожи. И мне, и Вам надо, чтобы бизнес развивался, увеличивал прибыль и сокращал затраты. Чтобы сотрудники были профессионалами своего дела и работали не только ради зарплаты, а менеджеры привлекали новых клиентов и удерживали старых.</p>
+
+<p>А для этого нам, как руководителям, надо создать комфортные условия. И я считаю, что первый шаг к этому - автоматизация всех рутинных процессов, на которые не только уходит много времени, но и тратятся силы сотрудников, снижая их эффективность минимум в 2 раза.</p>
+
+<p>Вы только представьте, что у каждого Вашего менеджера появилось 10 часов в неделю, которые они могут потратить на поиски новых клиентов или на общение со старыми. Как Вы думаете, это увеличило бы Ваши доходы? Я уверен, что да.</p>
+
+<p>И это время у них появится, если Вы внедрите в свою компанию нашу программу по автоматизации работы ЧОП.</p>
+
+<p>Сейчас расскажу о ней подробнее</p>
+	</div>
+</div>
+<hr />
+<div class="func">
+	<h2>Основные функции программы "Учет клиентов: Охранное предприятие"</h2>
+	<p>Автоматизация работы охранного предприятия минимум в 2 раза сокращает время на оформлении всех документов, а также позволяет руководителю осуществлять контроль охранного предприятия по всем направлениям деятельности. И вот благодаря чему это происходит.</p>
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec1_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec1_s.jpg" title="Учет клиентов в охранном предприятии" alt="Учет клиентов в охранном предприятии"></a></div>
+			<div class="func_desc">
+				<h3>Учет нынешних и потенциальных клиентов</h3>
+				<p>Вся необходимая информация о существующих и потенциальных клиентах в одном месте.
+				<ul>
+					<li>Наименование организации</li>
+					<li>ИНН</li>
+					<li>Юридический и фактические адреса</li>
+					<li>Контакты как самой организации, так и людей, с которыми ведется общение</li>
+					<li>И еще 25 полей для заполнения и 6 подчиненных таблиц</li>
+				</ul>
+                </p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec2_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec2_s.jpg" title="Учет сделок в охранном предприятии" alt="Учет сделок в охранном предприятии"></a></div>
+			<div class="func_desc">
+				<h3>Учет сделок</h3>
+				<p>Полная информация по всем сделкам:
+				<ul>
+					<li>Статус клиента и стадии переговоров по сделке</li>
+					<li>Наименование работ</li>
+					<li>Выставленная сумма</li>
+					<li>Учет оплаты</li>
+					<li>И еще 9 полей для заполнения и 5 подчиненных таблиц</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec3_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec3_s.jpg" title="Учет охраняемых объектов" alt="Учет охраняемых объектов"></a></div>
+			<div class="func_desc">
+				<h3>Учет охраняемых объектов</h3>
+				<p>Все объекты, которые находятся у Вас под охраной в одной таблице с подробным описанием работ, которые надо на них совершить.</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec4_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec4_s.jpg" title="Финансовый контроль в охранном предприятии" alt="Финансовый контроль в охранном предприятии"></a></div>
+			<div class="func_desc">
+				<h3>Выставление платежей и учет оплаты</h3>
+				<p>В программе можно автоматически сформировать счет по указанному списку работ с помощью типовых шаблонов. Таким образом, выставление платежа сокращается до 1 минуты.</p>
+				<p>Также можно вывести общий баланс по всем клиентам и напомнить о себе должникам.</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec5_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec5_s.jpg" title="Учет сотрудников в охранном предприятии" alt="Учет сотрудников в охранном предприятии"></a></div>
+			<div class="func_desc">
+				<h3>Учет сотрудников и настройка прав доступа</h3>
+				<p>Ведите полную информацию по каждому из Ваших сотрудников:
+				<ul>
+					<li>ФИО</li>
+					<li>Дата рождения</li>
+					<li>Все контакты (Телефон рабочий, внутренний, мобильный, E-mail)</li>
+					<li>Адрес</li>
+					<li>Образование</li>
+					<li>И еще 19 полей для заполнения.</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec6_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec6_s.jpg" title="Учет работ в охранном предприятии" alt="Учет работ в охранном предприятии"></a></div>
+			<div class="func_desc">
+				<h3>Регистрация и учет работ</h3>
+				<p>Следите за всем, что связано непосредственно с работами, которые у Вас заказывают:
+				<ul>
+					<li>Тип работ</li>
+					<li>Сроки</li>
+					<li>Адрес выполнения работ</li>
+					<li>Ответственные лица</li>
+					<li>Статус выполнения</li>
+					<li>И еще 7 полей для заполнения.</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec7_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec7_s.jpg" title="Формирование документов по шаблонам" alt="Формирование документов по шаблонам"></a></div>
+			<div class="func_desc">
+				<h3>Формирование документов по шаблонам</h3>
+				<p>Один раз создаете шаблоны для типовых документов (договор, счет на оплату и так далее) и далее программа будет сама заполнять нужные поля</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec8_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec8_s.jpg" title="Система напоминаний для охранного предприятия" alt="Система напоминаний для охранного предприятия"></a></div>
+			<div class="func_desc">
+				<h3>Система напоминаний</h3>
+				<p>Создавайте напоминания по любым видам работ и Ваши сотрудники не забудут выставить счет, напомнить об оплате, поздравить клиента с днем рождения или что завтра надо быть в 9 утра для защиты объекта.</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec9_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec9_s.jpg" title="Учет в ЧОП" alt="Учет в ЧОП"></a></div>
+			<div class="func_desc">
+				<h3>Создание и хранение справочников</h3>
+				<p>Учет любых однотипных вещей: городов, станций метро, оружия, спецодежды, автомобилей и так далее. В дальнейшем, их можно использовать для заполнения других таблиц и справочников</p>
+			</div>
+		</div>
+		<hr />
+		<div class="func_list">
+			<div class="func_img"><a href="/Images/sec10_b.jpg" class="fancybox" title="Увеличить"><img src="./Images/sec10_s.jpg" title="Автоматизация работы охранного предприятия" alt="Автоматизация работы охранного предприятия"></a></div>
+			<div class="func_desc">
+				<h3>Быстрый доступ к договорам</h3>
+				<p>Больше не надо будет долго искать нужный договор по каждому клиенту или сделке в папках на компьютере. Достаточно один раз прикрепить его в нужный пункт базы данных и он всегда будет под рукой. Причем для всех пользователей программы, у которых есть доступ.</p>
+			</div>
+		</div>
+</div>
+
+<form class="download" action="sendform.aspx?formtype=GiveMeLinkSecurityCompany" method="post" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit();">
+<h3>Заполните форму и я пришлю Вам программу и инструкции на указанный адрес электронной почты</h3>
+	<span>
+        <div class="row l_name"><input id="ClientName" name="ClientName" placeholder="Введите Ваше имя*" type="text" /></div>
+        <div class="row l_mail"><input id="ClientEmail" name="ClientEmail" placeholder="Введите Ваш e-mail*" type="text" /></div>
+        <div class="row row_button"><span><input type="submit" value="Скачать" id="submit1" name="submit1" class="button" /></span></div>
+	</span>
+</form>
+
+<hr />
+<div class="text">
+<p>Если Вам не хватает этих функций, то мы можем доработать программу под решение задач именно в Вашем охранном предприятии. Для этого свяжитесь лично со мной с помощью контактов ниже: </p>
+	<div class="div">
+		<div class="cont">
+			<i class="fa fa-map-marker"></i>
+			<p>Санкт-Петербург, <br /> ул.Ворошилова, д.2, <br />офис 104 БЦ "Охта"</p>
+			<p><p><a href="https://yandex.ru/maps/-/C6A~UA4~" target="_blank">Как проехать</a></p>
+		</div>
+		<div class="cont">
+			<i class="fa fa-phone"></i>
+			<p>Рабочий: <br /> <a href="callto:+7 (812) 309-46-42" title="Нажмите для звонка">+7 (812) 309-46-42</a> <br /> c 10 до 18 пн-пт</p>
+		</div>
+		<div class="cont">
+			<i class="fa fa-mobile"></i>
+			<p>Мобильный:<br /> <a href="callto:+79046474224" title="Нажмите для звонка">+7 (904) 647-42-24</a></p>
+		</div>
+
+		<div class="cont">
+			<i class="fa fa-envelope-o"></i>
+			<p>E-mail <br /> <a href="mailto:info@prostoysoft.ru">info@prostoysoft.ru</a></p>
+		</div>
+		<div class="cont">
+			<i class="fa fa-skype"></i>
+			<p>Skype:<br /> <a href="skype:prostoysoft?add">prostoysoft</a></p>
+		</div>
+	</div>
+	
+</div>
+<hr />
+<div class="faq">
+<h2>Частые вопросы</h2>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Ваша программа бесплатная?</a>
+		<div class="spoiler-content">Нет, программа учета клиентов в охранном предприятии платная и стоит 6 000 рублей. За эти деньги Вы получаете пожизненную лицензию, год бесплатных обновлений и технической поддержки. При этом первые 30 дней Вы бесплатно можете пользоваться пробной версией программы.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Чем пробная версия отличается от купленной?</a>
+		<div class="spoiler-content">Только периодом работы в 30 дней. Функционал полностью идентичен</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Что произойдет после истечения первых 30 дней?</a>
+		<div class="spoiler-content">Программа заблокируется на редактирование. Вы сможете только просматривать уже созданные записи.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Что будет с базой, после истечения 30 дней пробной версии?</a>
+		<div class="spoiler-content">Ничего. Она останется в целости и сохранности, так что пробную версию можно сразу внедрять в работу, не опасаясь того, что через месяц все данные потеряются.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Мы уже ведем базу, нам что, придется вводить всё заново?</a>
+		<div class="spoiler-content">Нет, конечно. Если Вы ведет базу в Excel, то просто импортируйте её в программу. Если же Вы ведете базу в другой программе, то надо будет сначала сделать экспорт из неё в формат экселя, а потом уже импортировать в нашу программу.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Можно ли работать с программой через интернет?</a>
+		<div class="spoiler-content">Да, можно. И тут есть 2 пути:
+			<ol>
+				<li>Установить программу на компьютер с белым IP и держать его постоянно включенным. Работа в таком случае возможна только в системе Windows через программу</li>
+				<li>Воспользоваться нашим решением “Простой сайт”, позволяющий работать с любой базой через браузер компьютера, смартфона или планшета из любой точки мира.</li>
+			</ol>
+		</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Нужен ли штатный компьютерщик для внедрения программы?</a>
+		<div class="spoiler-content">Нет, это сможет сделать любой, кто хоть раз устанавливал на компьютер программу или игру. Если же у Вас появятся вопросы, то ответы на них Вы найдете в справке самой программы. Там есть как текстовые, так и видео инструкции.
+		</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Сколько места занимает программа?</a>
+		<div class="spoiler-content">Установленная версия программы занимает чуть больше 30 мегабайт (2-3 песни). Плюс файл базы данных изначально занимает 2 мегабайта, увеличиваясь в размере в зависимости от количества записей, которые Вы вносите в программу. Но увеличивается этот файл очень медленно. Так, если Вы будете вносить по 500 записей в год, то даже через 40 лет работы с программой она не будет занимать более 1,5 гигабайт (размер 1 фильма в стандартном качестве).
+		</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Работает ли программа с торговым оборудованием?</a>
+		<div class="spoiler-content">Да, программа работает со сканерами штрих кода, считывалями магнитных карт, платежными терминалами, принтерами чеков, фискальными регистраторами, веб-камерами и с денежными ящиками.</div>
+	</div>
+	<div class="spoiler">
+		<a href="#" class="spoiler-title">Мне не хватает существующих таблиц. Можно ли добавить свою?</a>
+		<div class="spoiler-content">Да, можно. Для этого выберите в верхнем меню “Таблицы” - “Добавить таблицу” и укажите название и нужные поля.</div>
+	</div>
+<p class="cta">Остались вопросы? Позвоните мне по телефону <a href="callto:+7 (812) 309-46-42">+7 (812) 309-46-42</a> или задайте его любым удобным Вам способом. Контакты Вы видели выше.</p>
+</div> <!-- FAQ end-->
+<hr />
+<div class="text">
+<p>Я не говорю, что наша программа для ЧОП идеальна. Но мы стремимся к этому, добавляя в неё новый функционал и устраняя ошибки, о которых нам сообщают пользователи. Именно по этой причине мы обновляем программу минимум 2 раза в месяц. Причем Вам не надо будет каждый раз скачивать её. Обновление проверяется и происходит автоматически при запуске программы. Вам надо будет только согласиться с обновлением.</p>
+
+<p>И я не призываю сразу покупать ее, хотя программа и стоит всего 6 000 рублей. Скачайте и установите бесплатную версию, опробуйте ее в работе и только после этого решайте, подходит она именно для Вашего охранного предприятия или нет. Но не забывайте, что программу можно доработать под Ваши нужды и задачи.</p>
+
+</div>
+
+<form class="download" action="sendform.aspx?formtype=GiveMeLinkSecurityCompany" method="post" enctype="multipart/form-data" method="post" onsubmit="return CheckOnSubmit2();">
+<h3>Заполните форму и я пришлю Вам программу и инструкции на указанный адрес электронной почты</h3>
+	<span>
+        <div class="row l_name"><input id="ClientName2" name="ClientName2" placeholder="Введите Ваше имя*" type="text"></div>
+        <div class="row l_mail"><input id="ClientEmail2" name="ClientEmail2" placeholder="Введите Ваш e-mail*" type="text"></div>
+        <div class="row row_button"><span><input type="submit" value="Скачать" id="submit2" name="submit2" class="button"></span></div>
+	</span>
+</form>
+
+<div class="sign">С уважением к Вам и Вашему бизнесу, <br/> Абрамов Иван Валерьевич. <br/> Генеральный директор ООО "Простой Софт"</div>
+</div> <!-- Main part End -->
+		<!-- Bottom part -->
+                <td colspan="3">
+                    <br />
+
+
+
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body></html>

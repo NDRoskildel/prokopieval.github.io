@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="index,follow" />
+	<meta name="revisit-after" content="30 days" />
+	<meta name="description" content="Программа учета для производства натяжных потолков"/>
+	<meta name="keywords" content="автоматизация производства потолков, учет на производстве потолков, учет произведенных товаров, программа для производства, автоматизация потолочного производства"/>
+	<title>Конфигурация "Производство потолков" - Простой софт</title>
+	<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />	
+	<link rel="stylesheet" type="text/css" href="styles.css" />	
+	<link rel="stylesheet" media="screen" href="fonts/font-awesome/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127262989-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127262989-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+  n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    } (window, document, 'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2017097201740721');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2017097201740721&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+
+<body data-spy="scroll" data-offset="20" data-target="#navbar">
+
+<!--Header-->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!--End header-->
+
+
+<!--Сommon menu-->
+<div id="divMenuLinks" class="CMenuBox2">
+	<div id="menu">
+		<ul>
+			<li><a href="index.htm">Главная</a></li>
+			<li><a href="programs.htm">Программы</a></li>
+			<li><a href="services.htm">Услуги</a></li>
+			<li><a href="sites.htm">Сайты</a></li>
+			<li><a href="download.htm">Скачать</a></li>	
+
+			<li><a href="prices.htm">Цены</a></li>		
+			<li><a href="AllEquipment.htm">Оборудование</a></li>	
+			<li><a href="faq.htm">Вопросы</a></li>			
+			<li><a href="Video.htm">Видео</a></li>
+			<li><a href="gallery.htm">Галерея</a></li>				
+			<li><a href="responses.htm">Отзывы</a></li>		
+			<li><a href="partner.htm">Партнеры</a></li>		
+			<li><a href="PsSchool.htm">Обучение</a></li>		
+				
+			<li><a href="contacts.htm">Контакты</a></li>	
+			<li><a href="support.htm">Поддержка</a></li>	
+			<li><a href="phpBB3/index.php">Форум</a></li>	
+			
+		</ul>
+	</div>
+</div>
+
+
+<!-- Nav Menu Section -->
+<!---
+<div class="logo-menu">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
+  <div class="container">	
+	<div class="navbar-header col-md-3">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="#home"><i class="fa fa-briefcase"></i>Простой<span style="color: #6ab580;">Софт</span></a>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbar">
+		<ul class="nav navbar-nav col-md-9 pull-right">
+			<li class="active"><a href="#hero-area"><i class="fa fa-home"></i> Главная</a></li>
+			<li><a href="#services"><i class="fa fa-info"></i> О программе</a></li>
+			<li><a href="#about"><i class="fa fa-cogs"></i> Описание</a></li>						
+			<li><a href="#clients"><i class="fa fa-puzzle-piece"></i> Отзывы</a></li>			
+			<li><a href="#contact"><i class="fa fa-envelope"></i> Контакты</a></li>
+		</ul>
+	</div>
+  </div>
+</nav>
+</div>
+-->
+<!-- Nav Menu Section End -->
+
+<!-- Hero Area Section -->
+
+<section id="hero-area" style="background-image: url(Images/proizvodstvo_potolki3.jpg); background-repeat: no-repeat; width">
+<div class="container">
+<div class="row">
+	<div class="col-md-121" style="margin-top: -20px;">
+			<h1 class="title" style="color: White;">Программа "Производство потолков"</h1>			
+			<h2 class="subtitle" style="color: White; font-size: 16pt;">Автоматизация бизнеса натяжных потолков</h2>
+			<h2 class="subtitle" style="color: White; font-size: 14pt;" class="CPrice">6000 руб.</h2>
+
+			<img class="col-md-6 col-sm-6 col-xs-12 animated fadeInLeft" style="margin-top: -50px;" src="Images/proizvodstvo_potolkov_13.png" alt="" />
+
+			<div class="col-md-6 col-sm-6 col-xs-12 animated fadeInRight delay-0-5">
+
+				
+				<ul class="fa-ul" style="padding-top: 5px; font-size: 10pt;">
+					<li><i class="fa-li fa fa-check"></i> Экономия времени и средств на ведении учета в бизнесе натяжных потолков</li>
+					<li><i class="fa-li fa fa-check"></i> Всесторонний учет всех рабочих моментов</li>
+					<li><i class="fa-li fa fa-check"></i> Учет работы монтажников, замерщиков и менеджеров</li>
+					<li><i class="fa-li fa fa-check"></i> Запись замеров, монтажей</li>
+					<li><i class="fa-li fa fa-check"></i> Учет денег и складских остатков</li>
+					<li><i class="fa-li fa fa-check"></i> Формирование сопровождающих сделку документов</li>
+					<li><i class="fa-li fa fa-check"></i> Маркетинговые e-mail рассылки</li>
+					<li><i class="fa-li fa fa-check"></i> Быстрый и удобный интерфейс</li>
+					<li><i class="fa-li fa fa-check"></i> Только необходимые функции</li>
+					<li><i class="fa-li fa fa-check"></i> Возможность настройки под себя</li>
+					<li><i class="fa-li fa fa-check"></i> Гибкая система разграничения доступа</li>			
+
+				</ul>
+				
+                <!--
+				<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">СКАЧАТЬ!</button>
+				<button class="btn btn-success btn-lg" data-toggle="modal" onclick=javascript:location.href="prices.htm?program=1#OrderForm">Купить</button>
+
+				<button class="btn btn-success btn-lg" data-toggle="modal" onclick="javascript:location.href=ClientsCount.msi">СКАЧАТЬ!</button>
+				<button class="btn btn-success btn-lg" data-toggle="modal" onclick="javascript:location.href=prices.htm?program=1#OrderForm">Купить</button>
+             
+
+				<a href="ClientsCount.msi" class="btn btn-success btn-lg" title="Скачать полный дистрибутив для начальной установки">СКАЧАТЬ ПРОГРАММУ!</a>	
+				<a href="ClientsCountUpdate.zip" class="btn btn-success btn-lg" title="Скачать только EXE-файл, если программа уже установлена">Скачать обновление</a>	
+                -->
+				<a href='prices.htm?program=Prostoysoft Tables&conf=Производство потолков#OrderForm'" class="btn btn-success btn-lg" style="width: 50%; height: 40px; font-size: 14pt; vertical-align: baseline;">Купить</a>	
+               
+			</div>
+
+	
+	</div>
+
+</div>
+</div>
+</section>
+
+<!-- Hero Area Section End-->
+
+<!---
+<section id="download">
+<div class="container text-center">
+	<div class="row">	
+		<div class="col-md-6">
+			<div>
+				<a href="ClientsCount.msi" class="btn btn-success btn-lg">Скачать сейчас!</a>	
+			</div>
+			<div>
+				<p class="help-block">12 Мб - полный дистрибутив</p>	
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div>
+				<a href="ClientsCountUpdate.zip" class="btn btn-primary btn-lg">Скачать обновление</a>
+			</div>
+			<div>
+				<p class="help-block">4.7 Мб - только EXE-файл</p>	
+			</div>			
+		</div>			
+
+	</div>
+</div>	
+</section>
+-->
+
+
+<!-- About Section -->
+<section id="services">
+	<div class="container">
+		<div class="row  animated fadeInRight delay-0-5">
+			<div class="title2">О программе</div>
+			<div class="subtitle2">О конфигурации "Производство потолков"</div>
+
+			<div class="col-md-8 col-sm-12" style="font-size: 14pt;">
+				<p style="text-align: justify;"><b style="font-size: 14pt; color:#4682B4">«Производство потолков»</b> - это современная, простая и удобная программа для автоматизации учета в компаниях, 
+                занимающихся производством потолков. Программа обеспечивает возможность ведения справочников товаров, материалов и услуг, 
+учет заказов клиентов, контроль производства потолочных изделий, контроль поступления, списания и перемещения материалов, учет остатков. Регистрация и учет продаж. 
+Хранение контактной информации клиентов. Конфигурация легко и быстро настраивается под конкретные требования заказчика.<br/><br/>.</p>
+				<p style="text-align: justify;">Управление конфигурацией можно осуществлять при помощи не только программы <b>"Склад и торговля"</b>, но и универсальной платформы <b>"Prostoysoft Tables"</b>.</p> 
+                <p><b>"Prostoysoft Tables"</b>современная, универсальная,  мультиязычная платформа для создания ИТ-систем для бизнеса любого вида и масштаба (<a href="Prostoysoft.htm">подробнее....</a>).</p>
+			</div>
+
+			<img class="col-md-4 col-md-4 col-sm-12 col-xs-12" src="Images/clientscount/about/graph.png" alt="" />
+		</div>
+	</div>
+</section>
+<!-- About Section End -->
+
+
+
+<!-- Service Section -->
+<section id="about">
+<div class="container text-center" style="text-align: left; font-size: 14pt;">
+
+<h2 style="text-align: center; font-size: 20pt ">Основные функции:</h2>
+<br/>
+<ul>
+<li class="CLi">Ведение номенклатуры всех товаров, услуг организации</li> <br/>
+<li class="CLi">Учет клиентов, их контактной информации</li> <br/>
+<li class="CLi">Регистрация и учет заказов клиентов</li> <br/>
+<li class="CLi">Регистрация и учет заказов поставщикам;</li> <br/>
+<li class="CLi">Регистрация и контроль поступления материалов на склад</li> <br/>
+<li class="CLi">Фиксирование операций производства, учет произведенных изделий</li> <br/>
+<li class="CLi">Контроль списания материалов, затраченных на производство</li> <br/>
+<li class="CLi">Контроль состояния склада, мониторинг количества остатков</li> <br/>
+<li class="CLi">Регистрация продаж, контроль задолженности</li> <br/>
+<li class="CLi">Подготовка разнообразных аналитических отчетов отдельно по заказам, материалам, клиентам</li> <br/>
+<li class="CLi">Минимизация ошибок ввода, уменьшение времени на обработку заказа</li> <br/>
+<li class="CLi">Возможность импорта и экспорта баз материалов</li> <br/>
+<li class="CLi">Отбор, поиск, группировка, сортировка данных по различным критериям</li> <br/>
+<li class="CLi">Гибкая структура БД с настройкой под любые задачи</li> <br/>
+</ul>
+
+</div>
+</section>
+<!-- Service Section End -->
+
+
+
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+<div class="container">
+	<div class="row  animated fadeInRight delay-0-5" >
+		<h1 class="title">Фото</h1>
+		<h2 class="subtitle">Скриншоты программы</h2>
+
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+		<div class="portfolio-item wow fadeInLeft" data-wow-delay=".5s">
+		<a href="#"><img src="Images/proizvodstvo_natiagnyx_potolkov1.png" alt="" /></a>
+		<div class="overlay">
+		<div class="icons">
+		<a data-lightbox="image1" href="Images/proizvodstvo_natiagnyx_potolkov1.png" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+		</div>
+		</div>
+		</div>
+		</div>
+
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+		<div class="portfolio-item wow fadeInLeft" data-wow-delay=".7s">
+		<a href="#"><img src="Images/proizvodstvo_natiagnyx_potolkov2.png" alt="" /></a>
+		<div class="overlay">
+		<div class="icons">
+		<a data-lightbox="image1" href="Images/proizvodstvo_natiagnyx_potolkov2.png" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+		</div>
+		</div>
+		</div>
+		</div>
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+		<div class="portfolio-item wow fadeInLeft" data-wow-delay=".9s">
+		<a href="#"><img src="Images/proizvodstvo_natiagnyx_potolkov3.png" alt="" /></a>
+		<div class="overlay">
+		<div class="icons">
+		<a data-lightbox="image1" href="Images/proizvodstvo_natiagnyx_potolkov3.png" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+		</div>
+		</div>
+		</div>
+		</div>
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.1s">
+		<div class="portfolio-item">
+		<a href="#"><img src="Images/proizvodstvo_natiagnyx_potolkov4.png" alt="" /></a>
+		<div class="overlay">
+		<div class="icons">
+		<a data-lightbox="image1" href="Images/proizvodstvo_natiagnyx_potolkov4.png" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+		</div>
+		</div>
+		</div>
+		</div>
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.3s">
+		<div class="portfolio-item">
+		<a href="#"><img src="Images/proizvodstvo_natiagnyx_potolkov5.png" alt="" /></a>
+		<div class="overlay">
+		<div class="icons">
+		<a data-lightbox="image1" href="Images/proizvodstvo_natiagnyx_potolkov5.png" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+		</div>
+		</div>
+		</div>
+		</div>
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.5s">
+		<div class="portfolio-item">
+		<a href="#"><img src="Images/proizvodstvo_natiagnyx_potolkov6.png" alt="" /></a>
+		<div class="overlay">
+		<div class="icons">
+		<a data-lightbox="image1" href="Images/proizvodstvo_natiagnyx_potolkov6.png" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+		</div>
+		</div>
+		</div>
+		</div>
+	  
+	</div>
+</div>
+</section>
+<!-- Portfolio Section End -->
+
+
+<section>
+<div class="container">
+	<div class="row  animated fadeInRight delay-0-5" >
+		<h1 class="title">Видео</h1>
+	    <div class="row" align="center">					
+			<div class="cta">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/t1OYWlNk0gE" frameborder="0" allowfullscreen="true"></iframe>
+			</div>
+	    </div>
+    </div> 
+</div>
+</section>
+
+
+
+
+
+<!-- Client Section -->
+<section id="clients">
+<div class="container" >
+<div class="row  animated fadeInRight delay-0-5">
+<h1 class="title3">Установка конфигурации "Производство потолков"</h1>
+<h1 class="subtitle">Для установки конфигурации необходимо:</h1>
+
+		<div class="col-md-4">
+			<div class="block1">
+				<i class="fa fa-download fa-3x"></i>
+			</div>		
+			<div class="block2">
+				<a href="Prostoysoft.msi">Скачать</a> и установить программу<br /> <a href="Prostoysoft.htm">"Prostoysoft Tables"</a> или <a href="ProductsCount.htm">"Склад и торговля"</a>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="block1">
+				<i class="fa fa-clone fa-3x"></i>
+			</div>		
+			<div class="block2">
+				Скопировать <a href="Potolki.exe">файл конфигурации</a> "Производство потолков" в папку с базой данных				
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="block1">
+				<i class="fa fa-external-link fa-3x"></i>
+			</div>		
+			<div class="block2">		
+				Запустить программу "Prostoysoft Tables" и открыть соответсвующую базу данных (меню Файл -> Открыть базу данных)
+			</div>
+		</div>		
+</div>
+</div>	
+</section>
+<!-- Client Section End -->	
+
+
+
+
+
+
+	
+<!-- Conatct Section -->
+<!-- 
+<section id="contact">
+	<div class="container text-center">
+		<div class="row  animated fadeInRight delay-0-5">
+			<h1 class="title">Контакты</h1>
+
+			<h2 class="subtitle">Свяжитесь с нами</h2>
+			<div class="col-md-12 wow fadeInRight">
+				<div class="social-links">
+					<a class="social" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+					<a class="social" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+					<a class="social" href="https://vk.com/prostoysoft" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+				</div>
+				<div class="contact-info">
+					<p><i class="fa fa-map-marker"></i> 193318, Россия, г. Санкт-Петербург, ул. Ворошилова, д. 2, офис № 104</p>
+					<p><i class="fa fa-phone"></i> +7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+					<p><i class="fa fa-envelope"></i> info@prostoysoft.ru</p>
+				</div>
+
+				<p>
+					Наша организация работает по рабочим дням с 10:00 до 18:00 по московскому времени<br />
+				</p>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+-->
+<!-- Conatct Section End-->
+
+
+<div id="copyright">
+
+		<footer class="footer-distributed">	
+		
+			<div class="footer-left">
+				<h3>Простой<span>Софт</span></h3>
+				<p class="footer-links">
+					<a href="index.htm">Главная</a>
+					·
+					<a href="programs.htm">Программы</a>
+					·
+					<a href="services.htm">Услуги</a>
+					·
+					<a href="prices.htm">Цены</a>
+					·
+					<a href="faq.htm">Вопросы</a>
+					·
+					<a href="contacts.htm">Контакты</a>
+				</p>
+				<p style="color:white">Программы для дома и офиса</p>
+						
+				<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lightbox.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</html>

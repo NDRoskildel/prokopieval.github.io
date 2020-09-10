@@ -1,0 +1,23 @@
+
+.footer-left-new {
+	width: 100%;
+	text-align: left;
+}
+
+.footer-center-new {
+	width: 100%;
+	text-align: center;
+}
+
+.footer-right-new {
+	width: 100%;
+	text-align: right;
+}
+
+@media (max-width: 1024px) {
+.footer-left-new,
+.footer-center-new,
+.footer-right-new {
+	width: 100%;
+	text-align: center;
+}

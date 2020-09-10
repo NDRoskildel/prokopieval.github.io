@@ -1,0 +1,159 @@
+.mob-work {
+	display: none;
+}
+
+.brif {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 767px) {
+	*, ::after, ::before {
+    	box-sizing: border-box;
+    	max-width: 100%;
+    	height: auto !important;	
+	}
+
+	.row {
+		max-width: initial;
+	}
+
+	.mob-work {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.mob-work * {
+		margin: initial !important;
+	}
+
+	.mob-work > div {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 30px !important;
+	}
+
+	.mob-work p {
+		background: rgb(91, 184, 92);
+    	border-radius: 4px;
+    	margin: auto !important;
+    	width: 240px;
+    	padding-top: 3px;
+    	padding-bottom: 3px;
+	}
+
+	#setting {
+		height: auto;
+	}
+
+	.brif {
+		margin-left: 0;
+		text-align: center;
+	}
+
+	#ConfigForm {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	.CFrame_serv {
+		margin-left: 0;
+	}
+
+	.text-discription {
+		display: none;
+	}
+
+	.table_zak, .table_zak tbody {
+		display: block;
+	}
+
+	.table_zak tr {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.table_zak td {
+		display: block;
+		width: 100%;
+	}
+
+	.CPageCaption_serv {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	.how-we-work {
+		display: none;
+	}
+
+	.title_um {
+		margin-left: 0;
+		font-size: 38px;
+	}
+
+	.serv1 {
+		font-size: 32px;
+	}
+
+	.text_discription {
+		padding-left: 0;
+		margin-top: 0;
+	}
+
+	.discript_tz {
+		padding-left: 15px;
+	}
+
+	.punckt_tz {
+		margin-left: 0;
+	}
+
+	.punckt_doc {
+		margin-left: 0;
+	}
+
+	.title1, .title_serv, .title_block {
+		margin-left: 0;
+		margin-top: 0;
+		font-size: 38px;
+		text-align: center;
+	}
+
+	.block_quadro2, .block_quadro1, .block_quadro {
+		display: none;
+	}
+
+	.CSmallText_serv {
+		margin-left: 0 !important;
+	}
+
+	.forma {
+		margin-top: 0;
+	}
+
+	.discription_img {
+		display: none;
+	}
+
+	.footer-distributed {
+		margin-top: 0 !important;
+	}
+
+	#menu ul {
+	    list-style: none;
+	    display: flex;
+	    overflow: hidden;
+	    overflow-x: scroll;
+	    margin: auto;
+	    padding-left: 0;
+	}
+
+	.CMenuBox2 {
+		margin: 0;
+	}
+
+	#tblHead {
+		height: 160px !important;
+	}
+}

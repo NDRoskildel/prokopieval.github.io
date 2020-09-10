@@ -1,0 +1,521 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+<title>Простой софт - галерея скриншотов</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="robots" content="index,follow" />
+<meta name="revisit-after" content="30 days" />
+<meta name="description" content="Скриншоты различных наших программ и конфигураций, построенных на их основе." />
+<meta name="keywords" content="программы для бизнеса, скриншоты, скриншоты простой софт, скриншоты учет клиентов, скриншот учет пациентов, видео уроки" />
+<link href="styles.css" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />	
+	<link rel="stylesheet" type="text/css" href="styles.css" />	
+	<link rel="stylesheet" media="screen" href="fonts/font-awesome/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127262989-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127262989-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+  n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    } (window, document, 'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2017097201740721');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2017097201740721&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+	<style>
+		.prloadercontainer {
+			height: 1000px;
+		}
+
+		#page-preloader {
+			cursor:pointer;
+			position:fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.8);
+			background-attachment: fixed;
+			background-position: center;
+			z-index: 100;
+		}
+		#panel-preloader 
+		{
+			margin: 0;
+			position:fixed;
+			left:11%;
+			top:9%;			
+			right:11%;
+			bottom:15%;
+			z-index: 101;
+		}
+		#panel-preloader img
+		{				
+			border-color:black;
+			border:solid;
+			border-top-left-radius:10px;
+			border-top-right-radius:10px;
+			width:100%;
+		}
+		#panel-preloader p
+		{
+			background-color:black; color:white;
+			text-align:center;
+			border-bottom-left-radius:5px;
+			border-bottom-right-radius:5px;
+		}
+
+
+		div .picture 
+		{
+			margin-bottom: 20px;
+			float: left;
+			padding-left: 1%;
+			padding-right: 1%;
+			width:33.3%;
+			height: 40%;
+		}
+			div .picture p 
+			{
+
+				background-color: #2b2b2b;
+				color: white;
+				font-size: 100%;
+				margin-top: auto;
+				text-align:center;
+				line-height:23px;
+				height: 50px;
+				border-bottom-left-radius:5px;
+				border-bottom-right-radius:5px;
+				overflow-y: auto;
+			}
+			div .picture img
+			{
+				border-color: #2b2b2b;
+				border:solid;
+			    margin-left: auto;
+			    margin-right: auto;
+			    width: 100%;	
+				border-top-left-radius:5px;
+				border-top-right-radius:5px;
+			}
+			div .picture img:hover {					
+				transition: all 0.3s ease;
+				color:green;
+				cursor:pointer;
+			}
+			div .picture a
+			{
+				color:#2b2b2b;
+			}
+
+			@keyframes picAppear {
+				0% { opacity: 0;  visibility: visible;  }
+				100% { opacity: 1; visibility: visible; }
+			}
+			@keyframes picDisappear {
+				0% { opacity: 1; visibility: visible;  }
+				100% { opacity: 0; visibility: hidden; }
+			}
+
+	</style>
+
+	<script>
+
+		function hidePic()
+		{
+			var divLocation = document.getElementById('preloadlocation');
+			divLocation.style.animation = 'picDisappear 0.6s ease-in-out';
+			divLocation.style.visibility = 'hidden'; 
+		}
+
+		function showPic(src, txtId)
+		{
+			var divLocation = document.getElementById('preloadlocation');
+			divLocation.style.animation = 'picAppear 0.6s ease-in-out';
+			divLocation.style.visibility = 'visible';
+			var textIn = document.getElementById(txtId);
+
+			var picimgpreloader = document.getElementById('imgpreloader');
+			picimgpreloader.src = src;
+			var txtpreloader = document.getElementById('txttpreloader');
+			txtpreloader.textContent = textIn.textContent;
+		}
+
+		function showPicByHash(hash)
+		{
+			var div = document.getElementById(hash);
+			if (div != null)
+			{
+				var indivImg = div.getElementsByTagName('img')[0];
+				var indivP = div.getElementsByTagName('p')[0];
+				showPic(indivImg.src, indivP.id);
+			}
+		}
+
+		function checkHash()
+		{
+			if (location.href.indexOf("#") != -1)
+			{
+				showPicByHash("i" + window.location.hash.substring(1));
+			} 
+		}
+
+		//function createPic(src, txtId)
+		//{
+		//	var textIn = document.getElementById(txtId).value;
+
+		//	var divLocation = document.getElementById('preloadlocation');
+		//	var divMain = document.createElement('div');
+		//	divMain.onclick = "closePic(preloadlocation)";
+		//	divMain.className = "prloadercontainer";
+		//	var divPanel = document.createElement('div');
+		//	divMain.className = "panel-preloader";
+		//	var imgIn = document.createElement('img');
+		//	imgIn.className = "preloader";
+		//	imgIn.src = src;
+		//	var pIn = document.createElement('p');
+		//	pIn.className = "preloader";
+		//	pIn.value = textIn;
+
+		//	divPanel.appendChild(imgIn);
+		//	divPanel.appendChild(pIn);
+		//	divMain.appendChild(divPanel);
+		//	divLocation.appendChild(divMain);
+		//}
+
+		//function destroyPic(div)
+		//{
+		//	var preloadlocation = document.getElementById(div);
+		//	preloadlocation.innerText = null;
+		//}
+
+	</script>
+
+</head>
+
+<body style="margin: 0px 0px 0px 0px;  position: relative;" onload="checkHash()">
+
+	<!-- Header -->
+	<div>
+		<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+			<tr valign="top">
+				<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+					<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;">
+						<tr>
+							<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+						</tr>
+						<tr>
+							<td style="padding-top: 3px; padding-left: 90px">
+								<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+					&nbsp;
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>
+
+				<li><a href="prices.htm">Цены</a></li>
+				<li><a href="AllEquipment.htm">Оборудование</a></li>
+				<li><a href="faq.htm">Вопросы</a></li>
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm" class="current">Галерея</a></li>
+				<li><a href="responses.htm">Отзывы</a></li>
+				<li><a href="PsSchool.htm">Школа</a></li>
+				<li><a href="partner.htm">Партнеры</a></li>
+				<li><a href="market.htm">Маркет</a></li>
+
+				<li><a href="contacts.htm">Контакты</a></li>
+				<li><a href="support.htm">Поддержка</a></li>
+				<li><a href="phpBB3/index.php">Форум</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<section id="hero-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="margin: 20px;">
+					<h1 class="title" style="color: White;">Галерея скриншотов</h1>
+					<h2 class="subtitle" style="color: White; font-weight:100; font-size: 20px;">Скриншоты различных наших программ и конфигураций, построенных на их основе.</h2>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<br />
+	<br />
+	<div id="preloadlocation" style="height:0px; visibility:hidden;">
+		<div class="prloadercontainer" onclick="hidePic()">
+			<div id="page-preloader"></div>
+			<div id="panel-preloader"><img src="Images/Gallary34.JPG" id="imgpreloader" class="preloader" /><p id="txttpreloader" class="preloader">описание</p></div>
+		</div>
+	</div>
+
+	<section id="Gallery">
+
+		<div class="galleryRow">
+			<div class="picture" id="ipic7">
+				<img alt="gallery pic" src="Images/Gallary73.JPG" onclick="showPic(this.src,'txtDescId7')" />
+				<p id="txtDescId7">1. Напоминание задач</p>
+			</div>
+
+			<div class="picture" id="ipic18">
+				<img alt="gallery pic" src="Images/Gallary90.JPG" onclick="showPic(this.src,'txtDescId18')" />
+				<p id="txtDescId18">2. Видимость полей</p>
+			</div>
+
+			<div class="picture" id="ipic2">
+				<img alt="gallery pic" src="Images/Gallary44.JPG" onclick="showPic(this.src,'txtDescId2')" />
+				<p id="txtDescId2">3. Конструктор форм</p>
+			</div>
+
+			<div class="picture" id="ipic9">
+				<img alt="gallery pic" src="Images/Gallary81.JPG" onclick="showPic(this.src,'txtDescId9')" />
+				<p id="txtDescId9">4. Дерево данных</p>
+			</div>
+
+			<div class="picture" id="ipic10">
+				<img alt="gallery pic" src="Images/Gallary82.JPG" onclick="showPic(this.src,'txtDescId10')" />
+				<p id="txtDescId10">5. Импорт и экспорт данных</p>
+			</div>
+
+			<div class="picture" id="ipic14">
+				<img alt="gallery pic" src="Images/Gallary86.JPG" onclick="showPic(this.src,'txtDescId14')" />
+				<p id="txtDescId14">6. Настройка иконок</p>
+			</div>
+
+			<div class="picture" id="ipic13">
+				<img alt="gallery pic" src="Images/Gallary85.JPG" onclick="showPic(this.src,'txtDescId13')" />
+				<p id="txtDescId13">7. Настройка быстрого поиска для каждой таблицы</p>
+			</div>
+
+			<div class="picture" id="ipic8">
+				<img alt="gallery pic" src="Images/Gallary80.JPG" onclick="showPic(this.src,'txtDescId8')" />
+				<p id="txtDescId8">8. Настройка прав доступа</p>
+			</div>
+
+			<div class="picture" id="ipic3">
+				<img alt="gallery pic" src="Images/Gallary34.JPG" onclick="showPic(this.src,'txtDescId3')" />
+				<p id="txtDescId3">9. Выделение цветом полей</p>
+			</div>
+
+			<div class="picture" id="ipic16">
+				<img alt="gallery pic" src="Images/Gallary88.JPG" onclick="showPic(this.src,'txtDescId16')" />
+				<p id="txtDescId16">10. Поиск информации с использование различных возможностей</p>
+			</div>
+
+			<div class="picture" id="ipic5">
+				<img alt="gallery pic" src="Images/Gallary51.JPG" onclick="showPic(this.src,'txtDescId5')" />
+				<p id="txtDescId5">11. Создание отчётов</p>
+			</div>
+
+			<div class="picture" id="ipic1">
+				<img alt="gallery pic" src="Images/Gallary35.JPG" onclick="showPic(this.src, 'txtDescId1')" />
+				<p id="txtDescId1">12. Задаём ответственного сотрудника из списка</p>
+			</div>
+
+			<div class="picture" id="ipic12">
+				<img alt="gallery pic" src="Images/Gallary84.JPG" onclick="showPic(this.src,'txtDescId12')" />
+				<p id="txtDescId12">13. Интегрированная возможность sms-рассылок</p>
+			</div>
+
+			<div class="picture" id="ipic15">
+				<img alt="gallery pic" src="Images/Gallary87.JPG" onclick="showPic(this.src,'txtDescId15')" />
+				<p id="txtDescId15">14. Отправка Email из программы</p>
+			</div>
+
+			<div class="picture" id="ipic6">
+				<img alt="gallery pic" src="Images/Gallary65.JPG" onclick="showPic(this.src,'txtDescId6')" />
+				<p id="txtDescId6">15. Табель учета посещаемости</p>
+			</div>
+
+			<div class="picture" id="ipic11">
+				<img alt="gallery pic" src="Images/Gallary83.JPG" onclick="showPic(this.src,'txtDescId11')" />
+				<p id="txtDescId11">16. Конструктор отчетов</p>
+			</div>
+
+			<div class="picture" id="ipic17">
+				<img alt="gallery pic" src="Images/Gallary38.JPG" onclick="showPic(this.src,'txtDescId17')" />
+				<p id="txtDescId17">17. Организация таблицы Склады</p>
+			</div>
+
+			<div class="picture" id="ipic4">
+				<img alt="gallery pic" src="Images/Gallary50.JPG" onclick="showPic(this.src,'txtDescId4')" />
+				<p id="txtDescId4">18. Пример цветовыделения полей</p>
+			</div>
+		</div>
+
+		<table align="center">
+			<td>
+				<p style="text-align: center; font-size: 14pt">
+					<a href="Gallery2.htm">Еще больше скриншотов >></a>
+				</p>
+				<br />
+
+				<a name="1" href="#1" style="cursor: text; text-decoration: none;"><h3 class="CPageCaption">Видео для скачивания</h3></a>
+				<p>1. <a href="RunProlong.rar">Запуск с ключом prolong</a> - ролик демонстрирует запуск программы с параметром "prolong" в соответствии с <a href="faq.htm#1">типовым вопросом №1</a></p>
+				<p>2. <a href="CondVisibility.zip">Условная видимость</a> - данный краткий видеоролик показыват условную видимость полей в действии</p>
+				<p>3. <a href="CopyRecordAndSubTable.zip">Копирование записи в другую таблицу</a> - демонстрация переноса текущей записи главной таблицы и подчиненных записей в другую таблицу</p>
+				<p>4. <a href="Instalments.rar">Продажи в рассрочку</a> - генерация графика платежей, которые в будущем будут погашаться клиентом. Добавление нескольких записей в подчиненную таблицу из триггера в цикле</p>
+				<p>5. <a href="MultiCurrency.zip">Многовоалютность</a> - демонстрация ввода суммы в разных валютах</p>
+				<p>6. <a href="LinkOnPicFile.zip">Ссылка на файл-картинку</a> - и значение по умолчанию для полей-картинок</p>
+				<p>7. <a href="LearningCenterVideo.zip">Генерация расписания</a> - конкретных занятий по датам для группы и отметка присутствующих на занятии на примере конфигурации "Обучающий центр"</p>
+				<p>8. <a href="VisitsCounter.zip">Счетчик посещений клиентов</a> - демонстрация работы счетчика визитов клиентов на примере конфигурации "Фитнес-клуб"</p>
+				<p>9. <a href="AddFormula.rar">Добавление нового поля с формулой</a> - инструкция по добавлению формулы в поле для его автоматического расчета. Использование функции SWITCH в формуле поля</p>
+				<p>10. <a href="AmountWithDiscount.rar">Формула суммы с учетом скидки</a> - задается в параметре "Значение по умолчанию" в свойствах поля. Использование функции IIF в формуле хранимого числового поля</p>
+				<p>11. <a href="ImportFromXml.7z">Запрос, чтение XML и импорт</a> - демонстрация получения информации о курсах валют через форму и через команду GoToUrlAndImportXml из кода кнопки</p>
+				<p>12. <a href="CloudsRepl.rar">Облачные диски</a> - демонстрация синхронизации копий баз данных (реплик) через облачные диски</p>
+				<p>13. <a href="SpellMoney.rar">Сумма прописью</a> - демонстрация использования функции SpellMoney с разными валютами</p>
+				<p>14. <a href="ExportXml.rar">Экспорт в XML и импорт</a> - демонстрация использования экспорта в XML и последующего импорта</p>
+
+				<br />
+
+			</td>
+	</table>
+		
+
+	</section>
+
+
+	<footer class="footer-distributed">
+		<div class="footer-left">
+
+			<h3>Простой<span>Софт</span></h3>
+
+			<p class="footer-links">
+				<a href="index.htm">Главная</a>
+				·
+				<a href="programs.htm">Программы</a>
+				·
+				<a href="services.htm">Услуги</a>
+				·
+				<a href="prices.htm">Цены</a>
+				·
+				<a href="faq.htm">Вопросы</a>
+				·
+				<a href="contacts.htm">Контакты</a>
+			</p>
+
+			<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+
+
+			<!-- Rating Mail.ru counter -->
+			<script type="text/javascript">
+				var _tmr = window._tmr || (window._tmr = []);
+				_tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+				(function (d, w, id) {
+					if (d.getElementById(id)) return;
+					var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+					ts.src = "https://top-fwz1.mail.ru/js/code.js";
+					var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+					if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+				})(document, window, "topmailru-code");
+			</script><noscript>
+				<div>
+					<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+				</div>
+			</noscript>
+			<!-- //Rating Mail.ru counter -->
+			<!-- Rating Mail.ru logo -->
+			<a href="https://top.mail.ru/jump?from=1029407">
+				<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" />
+			</a>
+			<!-- //Rating Mail.ru logo -->
+			<!--LiveInternet counter--><script type="text/javascript">
+<!--
+										document.write("<a href='https://www.liveinternet.ru/click' " +
+											"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+											escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+												";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+													screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+											";" + Math.random() +
+											"' alt='' title='LiveInternet: показано число просмотров за 24" +
+											" часа, посетителей за 24 часа и за сегодня' " +
+											"border=0 width=88 height=31><\/a>")//--></script>
+			<!--/LiveInternet-->
+			<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript">(function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, trackHash: true });</script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+		</div>
+
+		<div class="footer-center">
+
+			<div>
+				<i class="fa fa-map-marker"></i>
+				<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+			</div>
+
+			<div>
+				<i class="fa fa-phone"></i>
+				<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+			</div>
+
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p><a href="support.htm">Обратиться в поддержку</a></p>
+			</div>
+
+		</div>
+
+		<div class="footer-right">
+
+			<p class="footer-company-about">
+				<span>О компании</span>
+				Программы для дома и офиса!
+			</p>
+
+			<p class="CAge">12+</p>
+
+			<div class="footer-icons">
+				<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+				<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+				<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+			</div>
+
+		</div>
+	</footer>
+
+
+
+</body>
+</html>

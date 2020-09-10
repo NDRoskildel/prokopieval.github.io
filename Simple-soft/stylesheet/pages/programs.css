@@ -1,0 +1,118 @@
+﻿/**
+ * CSS: Contents styles for pgrorams.htm
+ */
+
+/* Programs list
+    ================================================ */
+
+/**
+ * 1. Root.
+ */
+
+main > ol {
+    border: 1px solid rgba(0,0,0,.3);
+}
+
+/**
+ * 2. Item.
+ */
+
+main > ol > li {
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    padding: 5px;
+}
+
+main > ol > li:last-child {
+    border-bottom: none;
+}
+
+/**
+ * 3. Link.
+ */
+
+main > ol > li > a:hover {
+    text-decoration: underline;
+}
+
+/* Configuration list
+    ================================================ */
+
+/**
+ * 1. Root (wrapper all configuration).
+ */
+
+.configures-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/**
+ * 2. Each list.
+ */
+
+.configures-list .list {
+    width: 25%;
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,.2);
+    margin: 10px;
+    text-align: center;
+}
+
+/**
+ * 3. List image.
+ */
+
+.list img {
+    margin: 5px;
+}
+
+/**
+ * 4. List item.
+ */
+
+.list ul {
+    border-top: 2px solid rgba(0,0,0,.6);
+    padding-top: 5px;
+}
+
+.list li {
+    text-align: left;
+}
+
+/**
+ * 5. List header.
+ */
+
+.list h5 {
+    background-color: #66CC66;
+    padding: 10px;
+    color: #fff;
+}
+
+/**
+ * 6. List link.
+ */
+
+.list a:hover {
+    text-decoration: underline;
+}
+
+/* Indents
+    ================================================ */
+
+/**
+ * 1. Main text.
+ */
+
+main p {
+    margin: 5px 0;
+    padding: 5px 0;
+    text-indent: 30px;
+}
+
+main h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

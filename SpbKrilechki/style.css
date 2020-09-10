@@ -1,0 +1,1392 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(assets/fonts/SFProDisplay-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(assets/fonts/SFProDisplay-Semibold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(assets/fonts/FontsFree-Net-SFProDisplay-Bold.ttf);
+  font-weight: 700;
+}
+.sf-reg {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+}
+.sf-med {
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+}
+.sf-semi {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+}
+.sf-bold {
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 18px;
+}
+.header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.header-logo img {
+  width: 100%;
+}
+.header-nav {
+  width: 100%;
+  display: flex;
+}
+.header-nav a {
+  display: block;
+  padding-right: 30px;
+  color: #000000;
+  font-size: 18px;
+}
+.header-container {
+  position: relative;
+  width: 100%;
+  text-align: right;
+}
+.header-time {
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+.header-tel {
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+  display: block;
+  font-size: 24px;
+  color: #000000;
+}
+.header-tel:hover {
+  color: #000000;
+}
+.header-button {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  margin-bottom: -90px;
+}
+.header-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  height: 60px;
+  padding-left: 37px;
+  padding-right: 37px;
+  color: #ffffff !important;
+  background-color: #fc3232;
+  border: none;
+  cursor: pointer;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+}
+.title {
+  text-align: center;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 48px;
+}
+.title-line {
+  width: 100%;
+  height: 3px;
+  background-color: #448cdb;
+}
+.main {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.main-slider {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.main-slider-item {
+  width: 100%;
+  height: 100%;
+}
+.main-slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.main-slider-item p {
+  display: none;
+}
+.main-title {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 60px;
+  color: #ffffff;
+}
+.main-form {
+  background-color: #448cdb;
+  padding: 40px 30px;
+}
+.main-form label {
+  display: block;
+  width: 100%;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+}
+.main-form input {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 45px;
+  border: none;
+  margin-bottom: 30px;
+}
+.main-form button {
+  outline: none;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #ffffff;
+  background-color: #fc3232;
+  border: none;
+  cursor: pointer;
+  height: 60px;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 17px;
+}
+.main-form p {
+  color: #ffffff;
+  font-size: 14px;
+}
+.main-form p a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.main-slider > .slick-list {
+  height: 100%;
+  position: relative;
+}
+.main-slider > .slick-list > .slick-track {
+  height: 100%;
+  position: relative;
+}
+.main-slider > .slick-dots {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.main-slider > .slick-dots > li > button {
+  visibility: hidden;
+}
+.main-slider > .slick-dots > li {
+  position: relative;
+}
+.main-slider > .slick-dots > li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.main-slider > .slick-dots > li.slick-active:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #448cdb;
+}
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about-container {
+  padding-top: 50px;
+}
+.about-item img {
+  width: 180px;
+  height: 180px;
+}
+.about-item p {
+  padding-top: 30px;
+  margin-bottom: 0;
+  height: 140px;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+}
+.about-line {
+  padding-top: 75px;
+  position: relative;
+}
+.about-firstline {
+  width: 100%;
+  height: 30px;
+}
+.about-secondline {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+}
+.services-mob {
+  display: none;
+}
+.services-desc {
+  padding-top: 60px;
+}
+.services-item {
+  position: relative;
+  width: 100%;
+  height: 263px;
+  background-color: #448cdb;
+  margin-bottom: 30px;
+}
+.services-item-hover {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.services-item-hover p {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 30px;
+}
+.services-item-hover img {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.services-item-hover button {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 24px;
+  z-index: 4;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  background: inherit;
+  opacity: 0;
+  outline: none;
+}
+.services-item-hover:hover img {
+  opacity: 0.3;
+}
+.services-item-hover:hover button {
+  opacity: 1;
+}
+.services-item-hover:active img {
+  opacity: 1;
+}
+.design {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.design-desc-title {
+  margin-top: 100px;
+  color: #909090;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+.design-desc-text {
+  margin-bottom: 0;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 18px;
+}
+.design-desc-img {
+  margin-top: 60px;
+}
+.design-desc-img img {
+  width: 100%;
+}
+.design-mob {
+  display: none;
+}
+.portfolio {
+  padding-bottom: 100px;
+}
+.portfolio-slider {
+  width: 100%;
+}
+.portfolio-slider-arrows {
+  text-align: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.portfolio-slider-arrows-left {
+  cursor: pointer;
+  margin-right: 60px;
+}
+.portfolio-slider-arrows-right {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.portfolio-slider-item {
+  padding: 15px;
+}
+.portfolio-slider-item img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+.portfolio-slider-item h5 {
+  padding-top: 30px;
+  color: #909090;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+.portfolio-slider-item p {
+  margin-bottom: 0;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 18px;
+}
+.reviews-desc {
+  padding-bottom: 200px;
+}
+.reviews-desc-containerleft {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  height: 355px;
+  width: 100%;
+  background: url(assets/img/reviews-bg-1.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.reviews-desc-containerright {
+  margin-top: 100px;
+  display: flex;
+  position: relative;
+  height: 355px;
+  width: 100%;
+  background-color: #448cdb;
+}
+.reviews-desc-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.reviews-desc-content p {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+.reviews-desc-title {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+.reviews-desc-img {
+  position: relative;
+  width: 50%;
+}
+.reviews-desc-img img {
+  position: absolute;
+  top: 40px;
+}
+.reviews-mob {
+  display: none;
+}
+.map {
+  position: relative;
+}
+.map-container {
+  position: relative;
+}
+.map-mob {
+  display: none;
+}
+.map-desc {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.map-desc-info {
+  width: 40%;
+}
+.map-desc-title {
+  width: 100%;
+  color: #ffffff;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.map-desc-text {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.map-desc-tel {
+  display: block;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.map-desc-tel:hover {
+  color: #ffffff;
+}
+.map-form {
+  margin-top: 60px;
+  background-color: #448cdb;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.map-form form {
+  width: 50%;
+}
+.map-form form label {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 16px;
+}
+.map-form form input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  margin-bottom: 30px;
+}
+.map-form form button {
+  height: 60px;
+  width: 100%;
+  background-color: #fc3232;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 17px;
+}
+.map-form form p {
+  padding-top: 20px;
+  color: #ffffff;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 14px;
+}
+.map-form form p a {
+  color: #ffffff;
+}
+.footer {
+  padding-top: 60px;
+  padding-bottom: 110px;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #fc3232;
+  border: none;
+  outline: none;
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer-title {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 48px;
+}
+.footer-nav p {
+  padding-top: 40px;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.footer-nav a {
+  display: block;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 20px;
+  color: #909090 !important;
+  line-height: 34px;
+}
+.footer-hr {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  background-color: #CDCDCD;
+}
+.footer-social {
+  display: flex;
+}
+.footer-social a {
+  display: block;
+  padding-right: 30px;
+  color: #909090;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 20px;
+}
+.popup-success {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.popup-success-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.popup-success-content {
+  text-align: center;
+  background-color: #ffffff;
+  width: 100%;
+}
+.popup-success-content p {
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.popup-success-content button {
+  width: 288px;
+  height: 60px;
+  color: #ffffff;
+  background-color: #fc3232;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 50px;
+}
+.popup-success-title {
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 48px;
+  padding-bottom: 50px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 900;
+}
+.popup-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.popup-content {
+  padding: 60px;
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+.popup-close {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 36px;
+  height: 36px;
+}
+.popup-mob-galery {
+  display: none;
+}
+.popup-desc-galery {
+  width: 50%;
+  padding-top: 50px;
+  padding-left: 70px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.popup-desc-galery-img {
+  width: 50%;
+  padding: 15px;
+  height: 225px;
+}
+.popup-desc-galery-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.popup-form {
+  width: 50%;
+}
+.popup-form p {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+.popup-form form {
+  background-color: #448cdb;
+  padding: 40px;
+}
+.popup-form form label {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-size: 16px;
+}
+.popup-form form input {
+  height: 45px;
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  margin-bottom: 30px;
+}
+.popup-form form button {
+  width: 100%;
+  height: 60px;
+  background-color: #fc3232;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+.popup-form form p {
+  color: #ffffff;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  padding-bottom: 0;
+}
+.popup-form form p a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.popup-title {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .header {
+    background-color: #C4C4C4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .header-logo img {
+    width: 100%;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-time {
+    padding-right: 30px;
+    font-size: 12px;
+    padding-bottom: 0px;
+  }
+  .header-tel {
+    font-size: 18px;
+  }
+  .header-button {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    margin-bottom: -60px;
+  }
+  .header-button button {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .title-line {
+    display: none;
+  }
+  .main {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: #448cdb;
+  }
+  .main-slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .main-slider-item {
+    width: 100%;
+    height: 320px;
+    position: relative;
+  }
+  .main-slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .main-slider-item p {
+    color: #ffffff;
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-size: 24px;
+    padding-left: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+  }
+  .main-title {
+    display: none;
+  }
+  .main-form {
+    padding: 40px 30px;
+  }
+  .main-slider > .slick-dots {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 0;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .main-slider > .slick-dots > li > button {
+    visibility: hidden;
+  }
+  .main-slider > .slick-dots > li {
+    position: relative;
+  }
+  .main-slider > .slick-dots > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  .main-slider > .slick-dots > li.slick-active:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #448cdb;
+  }
+  .about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .about-container {
+    padding-top: 30px;
+  }
+  .about-item {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .about-item img {
+    width: 180px;
+    height: 180px;
+  }
+  .about-item p {
+    text-align: left;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 20px;
+    height: auto;
+  }
+  .about-line {
+    display: none;
+  }
+  #services-1 {
+    display: none;
+  }
+  #services-2 {
+    display: none;
+  }
+  #services-3 {
+    display: none;
+  }
+  .services-mob {
+    display: block;
+  }
+  .services-mob-container {
+    padding-bottom: 30px;
+  }
+  .services-mob-container:first-child {
+    padding-top: 30px;
+  }
+  .services-mob-name {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 25px;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 24px;
+    background: url(assets/img/services-arrow-down.svg) #cddef0;
+    background-position: 95% center;
+    background-repeat: no-repeat;
+  }
+  .services-mob-round {
+    width: 45px;
+    height: 45px;
+    background: url(assets/img/services-round.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .services-mob-arrow {
+    width: 60px;
+    height: 30px;
+    background: url(assets/img/services-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .services-mob-item {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .services-mob-item div {
+    display: flex;
+    align-items: center;
+  }
+  .services-mob-item div img {
+    width: 45px;
+    height: 45px;
+  }
+  .services-mob-item div p {
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 30px;
+    padding-left: 30px;
+    margin: 0;
+  }
+  .services-mob-item:active .services-mob-round {
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background: url(assets/img/services-round-active.svg);
+  }
+  .services-mob-item:active .services-mob-arrow {
+    width: 60px;
+    height: 30px;
+    background: url(assets/img/services-arrow-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .services-desc {
+    display: none;
+  }
+  .design {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  .design-desc {
+    display: none;
+  }
+  .design-mob {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .design-mob-slider {
+    width: 100%;
+  }
+  .design-mob-slider-item {
+    width: 100%;
+  }
+  .design-mob-slider-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  .design-mob-title {
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #909090;
+    font-size: 24px;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+  }
+  .design-mob-text {
+    font-size: 18px;
+  }
+  .design-mob-slider > .slick-dots {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: 120px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .design-mob-slider > .slick-dots > li > button {
+    visibility: hidden;
+  }
+  .design-mob-slider > .slick-dots > li {
+    position: relative;
+  }
+  .design-mob-slider > .slick-dots > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  .design-mob-slider > .slick-dots > li.slick-active:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #448cdb;
+  }
+  .portfolio {
+    padding-bottom: 60px;
+  }
+  .portfolio-slider {
+    width: 100%;
+  }
+  .portfolio-slider-arrows {
+    display: none;
+  }
+  .portfolio-slider-item {
+    padding: 0px;
+  }
+  .portfolio-slider-item img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+  }
+  .portfolio-slider-item h5 {
+    padding-top: 30px;
+    color: #909090;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+  .portfolio-slider-item p {
+    margin-bottom: 0;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .portfolio-slider > .slick-dots {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: 300px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .portfolio-slider > .slick-dots > li > button {
+    visibility: hidden;
+  }
+  .portfolio-slider > .slick-dots > li {
+    position: relative;
+    display: none;
+  }
+  .portfolio-slider > .slick-dots > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  .portfolio-slider > .slick-dots > li.before {
+    display: block;
+  }
+  .portfolio-slider > .slick-dots > li.after {
+    display: block;
+  }
+  .portfolio-slider > .slick-dots > li.slick-active {
+    display: block;
+  }
+  .portfolio-slider > .slick-dots > li.slick-active:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #448cdb;
+  }
+  .reviews-desc {
+    display: none;
+  }
+  .reviews-mob {
+    display: block;
+    background-color: #448cdb;
+  }
+  .reviews-mob-item {
+    height: 430px;
+    width: 100%;
+    padding: 15px;
+  }
+  .reviews-mob-item img {
+    margin-top: 3px;
+    height: 200px;
+  }
+  .reviews-mob-item p {
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+  .reviews-mob-title {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: #ffffff;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 24px;
+  }
+  .reviews-mob > .slick-dots {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 0px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .reviews-mob > .slick-dots > li > button {
+    visibility: hidden;
+  }
+  .reviews-mob > .slick-dots > li {
+    position: relative;
+  }
+  .reviews-mob > .slick-dots > li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  .reviews-mob > .slick-dots > li.slick-active:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #448cdb;
+  }
+  .map {
+    position: relative;
+  }
+  .map-container {
+    position: relative;
+    height: 280px;
+  }
+  .map-container iframe {
+    height: 280px;
+  }
+  .map-mob {
+    display: block;
+    position: absolute;
+    top: 140px;
+    left: 15px;
+  }
+  .map-mob-title {
+    margin-bottom: 10px;
+    font-family: 'SF Pro Display';
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .map-mob-text {
+    margin-bottom: 10px;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .map-mob-tel {
+    margin-bottom: 10px;
+    display: block;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+  }
+  .map-desc {
+    position: relative;
+    background-color: #448cdb;
+  }
+  .map-desc-info {
+    display: none;
+  }
+  .map-form {
+    margin-top: 0px;
+    padding: 40px;
+  }
+  .map-form form {
+    width: 100%;
+  }
+  .footer {
+    padding-bottom: 40px;
+  }
+  .footer-nav p {
+    padding-top: 30px;
+  }
+  .footer-hr {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .footer-social {
+    width: 100%;
+  }
+  .popup-success-content p {
+    margin-bottom: 30px;
+  }
+  .popup-success-content button {
+    margin-bottom: 50px;
+  }
+  .popup-success-title {
+    padding-top: 50px;
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
+  .popup-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .popup-content {
+    padding: 0;
+  }
+  .popup-close {
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+  }
+  .popup-mob-galery {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .popup-mob-galery-img {
+    width: 50%;
+    padding: 5px;
+    height: 180px;
+  }
+  .popup-mob-galery-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .popup-desc-galery {
+    display: none;
+  }
+  .popup-form {
+    width: 100%;
+  }
+  .popup-form p {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+  .popup-form form {
+    background-color: #448cdb;
+    padding: 40px;
+  }
+  .popup-form form label {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-family: 'SF Pro Display';
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .popup-form form input {
+    height: 45px;
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+  }
+  .popup-form form button {
+    width: 100%;
+    height: 60px;
+    background-color: #fc3232;
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+  }
+  .popup-form form p {
+    font-size: 14px;
+    padding-bottom: 0;
+  }
+  .popup-title {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .footer-social {
+    flex-wrap: wrap;
+  }
+}

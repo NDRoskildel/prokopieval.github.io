@@ -1,0 +1,886 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru" g_init="2288281201904021955" style="margin-top: 38px !important;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Форма заказа | Разработке нормативной документации</title>
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="30 days" />
+    <link href="./styles.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/Images/jquery.fancybox.css" media="screen" />
+    <script language="javascript" type="text/javascript">
+<!--
+        function CheckOnSubmit() {
+            if (document.getElementById('ClientName').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName').focus(); return false }
+            if (document.getElementById('ClientEmail').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail').focus(); return false }
+            if (confirm("Отправить форму?")) return true;  // confirmation
+            return false;
+        }
+        function CheckOnSubmit2() {
+            if (document.getElementById('ClientName2').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName2').focus(); return false }
+            if (document.getElementById('ClientEmail2').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail2').focus(); return false }
+            if (confirm("Отправить форму?")) return true;  // confirmation
+            return false;
+        }
+        function CheckOnSubmit3() {
+            if (document.getElementById('ClientName3').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName3').focus(); return false }
+            if (document.getElementById('ClientEmail3').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail3').focus(); return false }
+            if (document.getElementById('ClientTel3').value == '') { alert('Заполните поле "Телефон"!'); document.getElementById('ClientTel3').focus(); return false }
+            if (confirm("Отправить форму?")) return true;  // confirmation
+            return false;
+        }
+        function CheckOnSubmit4() {
+            if (document.getElementById('ClientName4').value == '') { alert('Заполните поле "Имя"!'); document.getElementById('ClientName4').focus(); return false }
+            if (document.getElementById('ClientEmail4').value == '') { alert('Заполните поле "Эл. почта"!'); document.getElementById('ClientEmail4').focus(); return false }
+            if (confirm("Отправить форму?")) return true;  // confirmation
+            return false;
+        }
+        //-->
+    </script>
+    <style type="text/css">
+
+        BODY {
+            font-family: Verdana;
+            font-size: 9pt;
+        }
+
+        H1 {
+            font-family: Arial;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+
+        H2 {
+            font-family: Arial;
+            font-size: 12pt;
+        }
+
+        H3 {
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: bold;
+            color: black;
+        }
+
+        H4 {
+            margin-bottom: 8px;
+            font-family: Verdana;
+            font-size: 10pt;
+            font-weight: bold;
+            color: #005000;
+            font-style: italic;
+        }
+
+        TABLE {
+            font-family: Verdana;
+            font-size: 9pt;
+        }
+
+        HR {
+            border-color: LightGrey;
+        }
+
+        A {
+            color: RoyalBlue;
+        }
+
+            A:visited {
+                color: DarkOrchid;
+            }
+
+            A.CMenu:link {
+                color: white;
+            }
+
+            A.CMenu:hover {
+                color: white;
+                background-color: Orange;
+                text-decoration: underline;
+            }
+
+            A.CMenu:visited {
+                color: white;
+            }
+
+        .CPhone {
+            font-family: Arial;
+            font-size: 11pt;
+            font-weight: bold;
+            color: Teal;
+        }
+
+        .CAge {
+            font-family: Trebuchet MS;
+            font-size: 22pt;
+            color: DarkGray;
+            margin-top: 4px;
+        }
+
+        /* Футер */
+        .footer-distributed {
+            background-color: #292c2f;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            /*width: 100%;*/
+            text-align: left;
+            font: bold 14px Trebuchet;
+            padding: 15px 20px;
+            margin-top: 20px;
+        }
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .footer-distributed .footer-left {
+                width: 40%;
+                padding-left: 9px;
+            }
+
+            /* The company logo */
+            .footer-distributed h3 {
+                color: #ffffff;
+                font: normal 36px 'Trebuchet';
+                margin: 0;
+            }
+
+                .footer-distributed h3 span {
+                    color: #6ab580;
+                }
+
+            /* Footer links */
+            .footer-distributed .footer-links {
+                color: #ffffff;
+                margin: 20px 0 12px;
+                padding: 0;
+            }
+
+                .footer-distributed .footer-links a {
+                    display: inline-block;
+                    line-height: 1.8;
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+            .footer-distributed .footer-company-name {
+                color: #8f9296;
+                font-size: 14px;
+                font-weight: normal;
+                margin: 0;
+            }
+
+            /* Footer Center */
+            .footer-distributed .footer-center {
+                width: 40%;
+            }
+
+                .footer-distributed .footer-center i {
+                    background-color: #33383b;
+                    color: #ffffff;
+                    font-size: 25px;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 42px;
+                    margin: 10px 15px;
+                    vertical-align: middle;
+                }
+
+                    .footer-distributed .footer-center i.fa-envelope {
+                        font-size: 17px;
+                        line-height: 38px;
+                    }
+
+                .footer-distributed .footer-center p {
+                    display: inline-block;
+                    color: #ffffff;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+
+                    .footer-distributed .footer-center p span {
+                        display: block;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 2;
+                    }
+
+                    .footer-distributed .footer-center p a {
+                        color: #6ab580;
+                        text-decoration: none;
+                    }
+
+
+            /* Footer Right */
+            .footer-distributed .footer-right {
+                width: 18%;
+                text-align: right;
+            }
+
+            .footer-distributed .footer-company-about {
+                line-height: 20px;
+                color: #92999f;
+                font-size: 13px;
+                font-weight: normal;
+                margin: 0;
+            }
+
+                .footer-distributed .footer-company-about span {
+                    display: block;
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+
+            .footer-distributed .footer-icons {
+                margin-top: 25px;
+            }
+
+                .footer-distributed .footer-icons a {
+                    display: inline-block;
+                    width: 35px;
+                    height: 35px;
+                    cursor: pointer;
+                    background-color: #33383b;
+                    border-radius: 2px;
+                    font-size: 20px;
+                    color: #ffffff;
+                    text-align: center;
+                    line-height: 35px;
+                    margin-right: 3px;
+                    margin-bottom: 5px;
+                }
+
+        /* Иконки для VK, FB, TW и др. */
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('/fonts/fontawesome-webfont.eot?v=4.6.3');
+            src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('/fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('/fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('/fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+
+
+        .fa-vk:before {
+            content: "\f189";
+        }
+
+        .fa-facebook-square:before {
+            content: "\f082";
+        }
+
+        .fa-facebook-f:before,
+        .fa-facebook:before {
+            content: "\f09a";
+        }
+
+        .fa-facebook-official:before {
+            content: "\f230";
+        }
+
+        .fa-twitter-square:before {
+            content: "\f081";
+        }
+
+        .fa-twitter:before {
+            content: "\f099";
+        }
+
+        .fa-instagram:before {
+            content: "\f16d";
+        }
+
+        .fa-map-marker:before {
+            content: "\f041";
+        }
+
+        .fa-phone:before {
+            content: "\f095";
+        }
+
+        .fa-phone-square:before {
+            content: "\f098";
+        }
+
+        .fa-envelope:before {
+            content: "\f0e0";
+        }
+
+        .fa-envelope-square:before {
+            content: "\f199";
+        }
+
+        ::-webkit-input-placeholder {
+            color: #d1d1d1;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+            color: #d1d1d1;
+        }
+
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: #d1d1d1;
+        }
+
+        :-ms-input-placeholder {
+            color: #d1d1d1;
+        }
+
+
+        .panelGoUpper {
+            position: relative;
+            height: 200px;
+            width: 1270px;
+            margin-top: 7px;
+            margin-bottom: 10px;
+            padding-left: 15px;
+            background-color: #e2e2e2;
+        }
+
+            .panelGoUpper h6 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 26px;
+                color: #717171;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                margin-right: 650px;
+                padding-top: 70px;
+                text-align: inherit
+            }
+
+            .panelGoUpper p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                margin-right: 650px;
+            }
+
+        .picWithText {
+            display: inline-block;
+            position: relative;
+            border-radius: 10px;
+            height: 400px;
+            width: 620px;
+        }
+
+        .picText {
+            display: inline-block;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .picText {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #fff;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            background-color: rgba(0,0,0,.7);
+        }
+
+            .picText h6 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 23px;
+                margin-bottom: 20px;
+                margin-top: 30px;
+            }
+
+        .size {
+            white-space: nowrap;
+            padding-left: 5px;
+            padding-right: 10px;
+            text-align: center;
+            width: 65px;
+        }
+
+        .wrapper {
+            background: #f3f3f3;
+        }
+        /* Весь блок страницы*/
+        .title {
+            align-self: center;
+            text-align:center;
+            align-content: center;
+            margin: 4px;
+        }
+            /*Блок с заголовком*/
+            .title h1 {
+                font-size: 36px;
+            }
+            /*Главный заголовок*/
+            .title h2 {
+                font-size: 20px;
+            }
+        /* Главный подзаголовок */
+        .download {
+            text-align: center;
+            border: 1px solid #808080;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+        /*Блок с кнопкой "Скачать" */
+        .main_part {
+            margin: 0 auto;
+            font-size: 15px;
+            width: 1300px;
+        }
+            /* Основная часть страницы */
+            .main_part h2 {
+                font-size: 22px;
+                color: DarkGreen;
+            }
+
+            .main_part h3 {
+                font-size: 18px;
+                color: green
+            }
+
+        .cta {
+            text-align: center;
+            font-size: 16px;
+        }
+        /* Блок с контактами под ЧаВО*/
+        ::-webkit-input-placeholder {
+            color: rgb(94, 109, 129);
+        }
+        .description {
+            text-align: center;
+            align-content: center;
+            margin: 1px;
+            font-style:italic
+        }
+            .description h3 {
+                color: black;
+                margin: 15px;
+                font-style: italic;
+            }
+            .description h5 {
+                color: dimgrey;
+                margin: 10px;
+                font-style: italic;
+            }
+            .description h1 {
+                color: darkorange;
+                font-style: oblique;
+            }
+            .description hr{
+                width:700px;
+            }
+        ::-moz-placeholder {
+            color: rgb(94, 109, 129);
+        }
+        /* Firefox 19+ */
+        :-moz-placeholder {
+            color: rgb(94, 109, 129);
+        }
+        /* Firefox 18- */
+        :-ms-input-placeholder {
+            color: rgb(94, 109, 129);
+        }
+        /* Каждый блок с контактом под ЧаВо*/
+        .cont {
+            width: 19%;
+            display: inline-table;
+            line-height: 25px;
+        }
+
+            .cont i {
+                background-color: #33383b;
+                color: #ffffff;
+                font-size: 32px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 42px;
+                margin: 10px 15px;
+                vertical-align: middle;
+                display: inline-table;
+            }
+
+        .download .button {
+            text-align: center;
+            line-height: 45px;
+            font-size: 20px;
+            width: 40%;
+        }
+
+        /* Форма для скачивания */
+        .row {
+            margin: 10px auto;
+        }
+
+        .download .row {
+            width: 33%;
+            display: inline-block;
+        }
+
+        .row input[type="text"] {
+            width: 80%;
+            height: 50px;
+            font-size: 22px;
+            outline: none;
+            line-height: 50px;
+            padding: 0 10px 0 50px;
+        }
+
+        .l_name input[type="text"] {
+            background: #ffffff url(./Images/ico01.png) 18px center no-repeat;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .l_tel input[type="text"] {
+            background: #ffffff url(./Images/ico01.png) 18px center no-repeat;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .l_mail input[type="text"] {
+            background: #ffffff url(./Images/ico03.png) 18px center no-repeat;
+            border-radius: 0 0 3px 3px;
+        }
+
+        row_button {
+            padding-top: 5px;
+        }
+
+        hr.big {
+            margin-top: -3px;
+            border: none; /* Убираем границу */
+            background-color: lightgrey; /* Цвет линии */
+            color: lightgrey; /* Цвет линии для IE6-7 */
+            height: 30px; /* Толщина линии */
+        }
+
+        .row_button button,
+        .row_button .button,
+        .download .button {
+            text-align: center;
+            line-height: 45px;
+            font-size: 20px;
+            width: 40%;
+        }
+        .div {
+            margin: 0 auto;
+            text-align: center;
+        }
+        /* Блок с контактами под ЧаВО*/
+        ::-webkit-input-placeholder {
+            color: rgb(94, 109, 129);
+        }
+
+        ::-moz-placeholder {
+            color: rgb(94, 109, 129);
+        }
+        /* Firefox 19+ */
+        :-moz-placeholder {
+            color: rgb(94, 109, 129);
+        }
+        /* Firefox 18- */
+        :-ms-input-placeholder {
+            color: rgb(94, 109, 129);
+        }
+
+        /* Кнопка Скачать */
+        .row_button .button {
+            display: inline-block;
+            margin: 0 auto;
+            -webkit-border-radius: 10px;
+            -webkit-box-shadow: 0px 3px rgba(128,128,128,1), /* gradient effects */
+            0px 4px rgba(118,118,118,1), 0px 5px rgba(108,108,108,1), 0px 6px rgba(98,98,98,1), 0px 7px rgba(88,88,88,1), 0px 8px rgba(78,78,78,1), 0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+            -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+        }
+
+            .row_button .button span {
+                background-color: #E8E8E8;
+                background-image:
+                /* gloss gradient */
+                -webkit-gradient( linear, left bottom, left top, color-stop(50%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0.2))),
+                /* dark outside gradient */
+                -webkit-gradient( linear, left top, right top, color-stop(0%,rgba(210,210,210,0.3)), color-stop(20%,rgba(210,210,210,0)), color-stop(80%,rgba(210,210,210,0)), color-stop(100%,rgba(210,210,210,0.3))),
+                /* light inner gradient */
+                -webkit-gradient( linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(20%,rgba(255,255,255,0.5)), color-stop(80%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0))),
+                /* diagonal line pattern */
+                -webkit-gradient( linear, 0% 100%, 100% 0%, color-stop(0%,rgba(255,255,255,0)), color-stop(40%,rgba(255,255,255,0)), color-stop(40%,#D2D2D1), color-stop(60%,#D2D2D1), color-stop(60%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)));
+                -webkit-box-shadow: 0px -1px #fff, /* top highlight */
+                0px 1px 1px #FFFFFF; /* bottom edge */
+                -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+                -webkit-border-radius: 10px;
+                -webkit-transition: -webkit-transform .1s ease-in-out;
+                display: inline-block;
+                padding: 10px 40px 10px 40px;
+                color: #3A474D;
+                text-transform: uppercase;
+                font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+                font-weight: 700;
+                font-size: 32px;
+                text-shadow: 0px 1px #fff, 0px -1px #262F33;
+            }
+
+                .row_button .button span:hover {
+                    color: #AEBF3B;
+                    text-shadow: 0px -1px #97A63A;
+                    cursor: pointer;
+                }
+
+            .row_button .button:active {
+                -webkit-box-shadow: 0px 3px rgba(128,128,128,1), 0px 4px rgba(118,118,118,1), 0px 5px rgba(108,108,108,1), 0px 6px rgba(98,98,98,1), 0px 7px rgba(88,88,88,1), 0px 8px rgba(78,78,78,1), 0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+            }
+
+                .row_button .button:active span {
+                    -webkit-transform: translate(0, 5px); /* depth of button press */
+                }
+
+            .row_button .button span:after {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                right: 14px;
+                top: 12px;
+                font-family: 'Cabin';
+                font-weight: 700;
+                color: #AEBF3B;
+                text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+                font-size: 26px;
+            }
+        /* Конец CSS кода для кнопки "скачать" */
+    </style>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Images/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- Main part -->
+        <br /><br /> 
+              <div class="main_part">
+                  <div class="title">
+                      <h1 style="margin:-10px; color:chocolate; margin-top: -15px; height: -19px;">«Разработка нормативных документов»</h1>
+                     <br />
+                  </div>
+                  <div style="text-align:center;">
+                  <p style="font-size: 14px;"><strong>
+                      В настоящее время организации стремятся стандартизировать работу своих бухгалтерских, технических, юридических и других служб, разрабатывая документацию 
+                      по организации их деятельности согласно нормам действующего законодательства.
+                      </strong></p>
+                      <p style="font-size: 14px;"><strong>
+                      Наши специалисты имеют опыт успешной разработки эксклюзивных документов, которые регулируют основные вопросы работы организации.
+                      </strong></p>
+                       
+                  <h3 style="color:Black;">Наши основные направления:</h3>
+                        <h4 style="text-align:left;">1. ТЕХНИЧЕСКАЯ ДОКУМЕНТАЦИЯ на производство и продукцию;</h4> 
+                      
+                        <h4 style="text-align:left;">2. ДОКУМЕНТАЦИЯ ПО ОХРАНЕ ТРУДА;</h4>
+                        <h4 style="text-align:left;">3. ДОКУМЕНТАЦИЯ ПО КАДРОВОМУ ДЕЛОПРОИЗВОДСТВУ;</h4>
+                        <h4 style="text-align:left;">4. БУХГАЛТЕРСКОЕ СОПРОВОЖДЕНИЕ</h4>
+
+                     
+                      <hr />
+                  </div>
+                  <form class="download" action="sendform.aspx?formtype=zakazDocumentov" method="post" enctype="multipart/form-data" onsubmit="return CheckOnSubmit3();">
+                      <h3>Заполните форму и мы свяжемся с вами по поводу вашего заказа</h3>
+                      <div class="row l_name"><input id="ClientName3" name="ClientName3" placeholder="Введите Ваше имя*" type="text"></div>
+                      <div class="row l_tel"><input id="ClientTel3" name="ClientTel3" placeholder="Введите Ваш телефон*" type="text"></div>
+                      <div class="row l_mail"><input id="ClientEmail3" name="ClientEmail3" placeholder="Введите Ваш e-mail*" type="text"></div>
+                      <div class="row row_button"><span><input type="submit" value="Отправить" id="submit3" name="submit3" class="button"></span></div>
+                  </form>
+                  <br />
+           <div class="description">
+                      <img src="./Images/zakazDocumentov.png" width="1300" height="700" />
+                      <br />
+                      
+                        <h3 style="color:Black;">3 повода работать с нами:</h3>
+                      <div style="text-align:left;">
+                        <p style="font-size: 14px;"><strong>1. Экономия.</strong> Вы оплачиваете только результат труда, а не должность исполнителя и его присутствие на рабочем месте;</p> 
+                      
+                        <p style="font-size: 14px;"><strong>2. Гарантии.</strong> Мы четко отслеживаем изменения в законодательстве;</p> 
+                        <p style="font-size: 14px;"><strong>3. Производительность труда и взаимозаменяемость.</strong> Мы не бросим работу на пол-пути. Нас целая команда и мы всегда рядом с Вами!</p> 
+                     </div>
+                      <hr />
+                    
+                  </div>
+
+                  </div>
+
+                  <hr />
+                      <p class="cta" style="color:slategrey; font-style:italic; font-size:15px">Остались вопросы? Задайте их любым удобным Вам способом. Контакты Вы видите ниже</p>
+                      <div class="div">
+                          <div class="cont">
+                              <i class="fa fa-map-marker"></i>
+                              <p>Санкт-Петербург, <br> ул.Ворошилова, д.2, <br>офис 104 БЦ "Охта"</p>
+                              <p><a href="https://yandex.ru/maps/-/C6A~UA4~" target="_blank">Как проехать</a></p>
+                          </div>
+                          <div class="cont">
+                              <i class="fa fa-phone"></i>
+                              <p>Рабочий: <br> <a href="callto:+7 (812) 309-46-42" title="Нажмите для звонка">+7 (812) 309-46-42</a> <br> c 10 до 18 пн-пт</p>
+                          </div>
+                          <div class="cont">
+                              <i class="fa fa-mobile"></i>
+                              <p>Мобильный:<br> <a href="callto:+79046474224" title="Нажмите для звонка">+7 (904) 647-42-24</a></p>
+                          </div>
+                          <div class="cont">
+                              <i class="fa fa-envelope-o"></i>
+                              <p>E-mail <br> <a href="mailto:info@prostoysoft.ru">info@prostoysoft.ru</a></p>
+                          </div>
+                          <div class="cont">
+                              <i class="fa fa-skype"></i>
+                              <p>Skype:<br> <a href="skype:prostoysoft?add">prostoysoft</a></p>
+                          </div>
+                      </div>
+                      <hr />
+                  </div>
+
+             
+
+
+                  <!-- Bottom part -->
+                <td colspan="3">
+                    <br />
+
+
+
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body></html>

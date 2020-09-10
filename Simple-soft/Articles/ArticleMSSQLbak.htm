@@ -1,0 +1,43 @@
+<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+    <title>Простой софт - Статья "Microsoft SQL сервер"</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="30 days" />
+    <meta name="description" content="Программы для автоматизации бизнеса, услуги по разработке баз данных. На сайте Вы можете скачать демо-версии программ: Учет клиентов, компьютеров, пациентов, складской учет, управление проектами и др." />
+    <meta name="keywords" content="программы для бизнеса, учет клиентов, разработка софта, скачать программы, разработка баз данных, базы данных, програмы, автоматизация, учет, документооборот, делопроизводство, архив документов" />
+    <link href="../styles.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body style="font: Verdana 9pt; margin: 0px 0px 0px 0px;">
+
+<html>
+
+<p>В зависимости от используемой СУБД процесс резервирования базы данных несколько отличается.</p>
+
+<h2>СУБД Microsoft&trade; Access</h2>
+
+<p>Создание резервной копии базы данных производится непосредственно из программы через меню <i>Файл - Создать резервную копию</i></p>
+<p style="text-align: center"><img src="4.jpg" width="730" height="467" alt=""></p>
+<p style="text-align: center"><img src="01.jpg" width="853" height="670" alt=""></p>
+<p>В каталоге, заданном в настройках программы в качестве папки для резервных копий базы данных, будет создан файл с указанным именем.</p>
+
+<h2>СУБД Microsoft&trade; SQL SERVER</h2>
+<p>Создание резервной копии базы данных возможно несколькими способами:</p>
+<ul>
+    <li>В среде Microsoft&trade; SQL SERVER Managment Studio (предпочтительно)</li>
+    <li>Непосредственно в программе</li>
+</ul>
+<h3>Создание резервной копии базы данных в среде Microsoft&trade; SQL SERVER Managment Studio</h3>
+<p>Необходимо вызвать контекстное меню целевой базы данных и выбрать пункт <i>Задачи - Создать резервную копию...</i>. </p><p style="text-align: center"><img src="1.jpg" width="819" height="671" alt=""></p>
+<p>В открывшемся окне убеждаемся,&nbsp;что тип резервной копии - полная, а в нижней части окна будет автоматически указан полный путь и имя файла резервной копии. При необходимости путь и имя файла можно изменить, необходимо следить только, чтобы у учетной записи, под которой стартует служба SQL SERVER в системе, были достаточные полномочия для записи файлов в указанный каталог.
+</p>
+<p style="text-align: center"><img src="2.jpg" width="925" height="675" alt=""></p>
+<p>В каталоге, заданном в настройках программа в качестве папки для резервных копий базы данных или в каталоге резервных копий SQL SERVER, будет создан файл с указанным именем.</p>
+<p style="text-align: center"><img src="3.jpg" width="648" height="299" alt=""></p>
+<h3>Создание резервной копии базы данных из программы</h3>
+<p>В данном случае создание резервной копии происходит точно также, как и в случае с СУБД Microsoft&trade; Access: через меню <i>Файл - Создать резервную копию</i></p>
+<p style="text-align: center"><img src="5.jpg" width="719" height="448" alt=""></p>
+</html>

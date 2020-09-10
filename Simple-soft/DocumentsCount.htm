@@ -1,0 +1,1667 @@
+﻿<html xmlns="https://www.w3.org/1999/xhtml/" lang="ru">
+<head>
+    <title>Программа "Архив документов"</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="text/css" http-equiv="Content-Style-Type" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="30 days" />
+    <meta name="description" content="Программа Архив документов. Программа позволяет автоматизировать процесс делопроизводства в организации." />
+    <meta name="keywords" content="программы для бизнеса, программа Архив документов, автоматизировать регистрацию, электронный документооборот, систематизировать хранение документов, создание шаблонов документов" />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+
+    <style type="text/css">
+        .size {
+            white-space: nowrap;
+            padding-left: 5px;
+            padding-right: 10px;
+            text-align: center;
+            width: 65px;
+        }
+
+        .slider_wrap {
+            margin: 0px auto 0;
+            width: 1065px;
+            height: 512px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .slider_wrap img {
+                width: 1024px;
+                height: auto;
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 20px;
+            }
+
+                .slider_wrap img:first-child {
+                    display: block;
+                }
+
+            .slider_wrap span {
+                margin-top: -18px;
+                width: 15px;
+                height: 26px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                cursor: pointer;
+                background: url(Images/slider2_arrow.png) no-repeat;
+            }
+
+                .slider_wrap span.next {
+                    right: 0;
+                    background-position: -15px 0;
+                }
+
+                    .slider_wrap span.next:hover {
+                        background-position: -15px -26px;
+                    }
+
+                .slider_wrap span.prev {
+                    left: 0;
+                    background-position: 0 0;
+                }
+
+                    .slider_wrap span.prev:hover {
+                        background-position: 0 -26px;
+                    }
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var elWrap = $('#slider'),
+                el = elWrap.find('img'),
+                indexImg = 1,
+                indexMax = el.length;
+
+            function change() {
+                el.fadeOut(500);
+                el.filter(':nth-child(' + indexImg + ')').fadeIn(500);
+            }
+
+            function autoCange() {
+                indexImg++;
+                if (indexImg > indexMax) {
+                    indexImg = 1;
+                }
+                change();
+            }
+            var interval = setInterval(autoCange, 3000);
+
+            elWrap.mouseover(function () {
+                clearInterval(interval);
+            });
+            elWrap.mouseout(function () {
+                interval = setInterval(autoCange, 3000);
+            });
+
+            elWrap.append('<span class="next"></span><span class="prev"></span>');
+
+            $('span.next').click(function () {
+                indexImg++;
+                if (indexImg > indexMax) {
+                    indexImg = 1;
+                }
+                change();
+            });
+            $('span.prev').click(function () {
+                indexImg--;
+                if (indexImg < 1) {
+                    indexImg = indexMax;
+                }
+                change();
+            });
+        });
+    </script>
+
+</head>
+
+<body style="font: Verdana 9pt; margin: 0px 0px 0px 0px;">
+
+    <!-- Header -->
+<div>
+	<table id="tblHead" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 0px; height: 160px;">
+		<tr valign="top">
+			<td style="width: 365px; background-image: url(Images/HeadBg.jpg); background-repeat: repeat-x;">
+				<table id="tblLogo" border="0" cellspacing="0" cellpadding="0" style="color: DimGray;"> 
+					<tr>
+						<td><a href="index.htm"><img alt="" border="0" src="Images/Logo.png" style="margin-top: 40px; margin-bottom: 2px; margin-left: 22px;" /></a><a href="index.htm"><img alt="" border="0" src="Images/Logotype.png" style="margin-top: 36px; margin-bottom: 2px; margin-left: 5px; width: 60px; height: 60px" /></a></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 3px; padding-left: 90px">
+							<div class="CPhone">+7 (812) 309-46-42 c 10 до 18</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-image: url(Images/Head.jpg); background-repeat: repeat-x;">
+				&nbsp;
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- Common menu -->
+	<div id="divMenuLinks" class="CMenuBox2">
+		<div id="menu">
+			<ul>
+				<li><a href="index.htm">Главная</a></li>
+				<li><a href="programs.htm">Программы</a></li>
+				<li><a href="services.htm">Услуги</a></li>
+				<li><a href="sites.htm">Сайты</a></li>
+				<li><a href="download.htm">Скачать</a></li>	
+
+				<li><a href="prices.htm">Цены</a></li>		
+				<li><a href="AllEquipment.htm">Оборудование</a></li>	
+				<li><a href="faq.htm">Вопросы</a></li>			
+				<li><a href="Video.htm">Видео</a></li>
+				<li><a href="gallery.htm">Галерея</a></li>				
+				<li><a href="responses.htm">Отзывы</a></li>		
+				<li><a href="PsSchool.htm">Обучение</a></li>		
+				<li><a href="partner.htm">Партнеры</a></li>		
+				<li><a href="market.htm">Маркет</a></li>	
+
+				<li><a href="contacts.htm">Контакты</a></li>	
+				<li><a href="support.htm">Поддержка</a></li>	
+				<li><a href="phpBB3/index.php">Форум</a></li>	
+			</ul>
+		</div>
+	</div>
+<!-- Main part -->
+    <table border="0" width="100%" cellspacing="15" style="margin-top: 7px;">
+        <tbody valign="top">
+            <tr>
+                <!-- Left part -->
+                <td></td>
+
+                <!-- Center part -->
+                <td>
+                    <table id="tblLogoAndProgramInfo" border="0" width="100%" cellpadding="10">
+                        <tr>
+                            <td valign="top" rowspan="9" style="width: 1%; padding-top:20px;">
+                                <img alt="" src="Images/DocumentsCountLogo.jpg" style="border-style: none" />
+                            </td>
+                            <td colspan="9" style="white-space: nowrap">
+                                <table id="tblProductTitle" border="0" width="100%">
+                                    <tr>
+                                        <td><a name="0" href="#0" style="cursor: text; text-decoration: none;"><b class="CPageCaption">Программа "Архив документов"</b></a></td>
+                                        <td align="center" style="color: DarkRed;"></td>
+                                        <td class="CPrice">3000 руб.<sup><a href="prices.htm" title="Базовая редакция на одно рабочее место" class="CL1">*</a></sup></td>
+                                        <td align="center" class="green"><a href="prices.htm?program=5#OrderForm" style="color: White; text-decoration: none;" target="_parent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Купить&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <hr class="CHr" />
+                                            <b class="CProgVersion">Версия 2.652 от 06.08.2020</b>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+
+                                <table border="2" cellpadding="3" cellspacing="0" bordercolor="Gainsboro" style="border-color:LightGray;border-width:2px;border-style:solid;border-collapse:collapse;font-weight:bold;">
+                                    <tr>
+                                        <td nowrap><img alt="" src="Images/Download1.png" style="border-style: none" /></td>
+                                        <td nowrap><a href="DocumentsCount.msi">Скачать программу</a></td>
+                                        <td class="size">12 Мб</td>
+                                        <td nowrap>полный дистрибутив</td>
+                                    </tr>
+                                    <tr>
+                                        <td nowrap><img alt="" src="Images/Download1.png" style="border-style: none" /></td>
+                                        <td nowrap><a href="DocumentsCountUpdate.zip">Скачать обновление</a></td>
+                                        <td class="size">4,7 Мб</td>
+                                        <td nowrap>только EXE-файл</td>
+                                    </tr>
+                                    <tr>
+                                        <td nowrap><img alt="" src="Images/Download1.png" style="border-style: none" /></td>
+                                        <td nowrap><a href="DocumentsCount_help.pdf" target="_blank">Документация</a></td>
+                                        <td class="size">10 Мб</td>
+                                        <td nowrap>PDF-файл</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br />
+
+                    <p><strong>Программа "Архив документов"</strong> позволяет автоматизировать процесс управления документооборотом и делопроизводством в организации.</p>
+                    
+                    <p>Информационная система дает возможность создать единую базу документов, категоризировать их, настроить поиск, оптимизировать учет и контроль сроков, задач, поручений, повысить эффективность.</p>
+
+                    <p>Благодаря гибкой и структуре базы данных, программу можно настроить самостоятельно под любые бизнес-процессы без специальных знаний.</p>
+
+                    <br />
+
+                    <div id="slider" class="slider_wrap">
+                        <img alt="Image 1" class="active" src="Images/DocumentsCountSlide1.jpg" />
+                        <img alt="Image 2" src="Images/DocumentsCountSlide2.jpg" />
+                        <img alt="Image 3" src="Images/DocumentsCountSlide3.jpg" />
+                        <img alt="Image 2" src="Images/DocumentsCountSlide4.jpg" />
+                        <img alt="Image 3" src="Images/DocumentsCountSlide5.jpg" />
+                    </div>
+
+                    <br />
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/PlayLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />Видео презентация</h3> </td>
+                        </tr>
+                    </table>
+
+
+                    <table border="0" cellspacing="0" align="left">
+                        <tr>
+                            <td nowrap colspan="2">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Vfmq5_TRmrA" frameborder="0" allowfullscreen="true"></iframe>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td nowrap><img alt="" src="Images/Download.jpg" style="border-style: none; padding-right: 15px;" /></td>
+                            <td><a href="DocumentsCount.ppt"><b>Презентация PowerPoint</b></td>
+                        </tr>
+                    </table>
+
+                    <br /><br />
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/FunctionLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />Основные функции программы</h3> </td>
+                        </tr>
+                    </table>
+                    <br />
+
+                    <div style="border: thin solid #E5E5E5; border-radius: 15px; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 50px; padding: 0px 12px 12px 12px; width: 95%">
+                        <table width="100%" border="0" cellpadding="10">
+                            <tbody valign="top">
+                                <tr>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Учет и хранение документов</b></div>
+                                        Регистрация и учет документов по следующим параметрам:<br />
+                                        - по типу (договор, смета), виду (бухгалтерский, отчетный)<br />
+                                        - по срокам действия, сумме, валюте (актуально для договоров и т.п.)<br />
+                                        - по авторам, ответственным подразделениям и исполнителям<br />
+                                        - по компаниям-партнерам (с указанием полных координат компаний)<br />
+                                        - по теме (возможно описание содержания)<br />- по статусу (выполняется, завершено)<br />
+                                        - если документ содержится в электронном виде, указывается путь к файлу.<br />
+                                        По каждому документу можно фиксировать дополнительную информацию.
+                                    </td>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Систематизация документов</b></div>
+                                        Программа позволяет систематизировать хранение документов. <br />
+                                        В базе указывается:<br />
+                                        - место хранения документов (№ шкафа, полки, папки…)<br />
+                                        - дата, до которой документы должны храниться<br />
+                                        - история выдачи документов на руки (кто, что и когда брал)<br />
+                                        По каждому документу можно фиксировать произвольную<br />
+                                        дополнительную информацию.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Контроль исполнения документов по срокам</b></div>
+                                        Возможность эффективно управлять процессами движения<br />
+                                        и обработки документов.<br />Реализован контроль работ по документам на всех стадиях:<br />
+                                        - фиксация сроков начала и окончания работы с документом<br />каждым исполнителем<br />
+                                        - контроль сроков: автоматическое выделение цветом<br />незавершенных заданий.
+                                    </td>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Контроль исполнения документов по<br />ответственным исполнителям</b></div>
+                                        Отслеживание истории прохождения документов по ответственным<br />
+                                        исполнителям.<br />Учет контактной информации по сотрудникам – исполнителям<br />
+                                        с указанием их прав доступа к информации.<br />
+                                        Контроль состояния выполняемых процессов, анализ загрузки персонала.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Оперативный доступ к документам</b></div>
+                                        Возможность мгновенного поиска нужного документа. Удобные<br />
+                                        способы сортировки и фильтрации данных.<br />
+                                        Разграничение прав доступа сотрудников к документам.
+                                    </td>
+                                    <td><img alt="" src="Images/tick.jpg" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Ведение отчетности</b></div>
+                                        Набор стандартных отчетов .  Возможность создания и настройки<br />
+                                        новых – простых и нестандартных отчетов по различным<br />
+                                        параметрам.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/PlusLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />Преимущества системы</h3> </td>
+                        </tr>
+                    </table>
+                    <br />
+
+                    <div style="border: thin solid #E5E5E5; border-radius: 15px; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 50px; padding: 0px 12px 12px 12px; width: 95%">
+                        <table width="100%" border="0" cellpadding="10">
+                            <tbody valign="top">
+                                <tr>
+                                    <td><img alt="" src="Images/Plus1.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Возможность изменения структуры данных</b></div>
+                                        Возможность удаления, скрытия/отображения, создавать<br />
+                                        новых поле и таблиц.<br />
+                                        Можно создавать новые поля не только с хранимой, но и<br />
+                                        с вычисляемой по формулам типа SELECT информацией,<br />
+                                        а также создавать поля типа "картинка".<br />
+                                        К таблицам можно назначать подчиненные таблицы различными<br />
+                                        типами связей ("один-ко-многим" или "многие-ко-многим").
+                                    </td>
+                                    <td><img alt="" src="Images/Plus3.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Удобные способы сортировки и фильтрации данных</b></div>
+                                        "Архив документов" строит сложные логические запросы к<br />
+                                        базе данных, что позволяет быстро найти нужные документы,<br />
+                                        проанализировать состояние их выполнения.<br />
+                                        Когда необходимо отобрать данные с одинаковыми значениями<br />
+                                        полей удобно использовать дерево данных, задавая поля для<br />
+                                        его уровней (веток). Например, первый уровень - тип документа,<br />
+                                        второй уровень - ответственный исполнитель, и т.д.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="" src="Images/Plus2.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Возможность создания шаблонов документов</b></div>
+                                        В программе предусмотрена возможность экспорта в MS-Word и<br />
+                                        html, и создания шаблонов исходных документов.<br />
+                                        Например, можно создать шаблон отчета по документам,<br />
+                                        прошедшим через отдел за месяц и т.п.
+                                    </td>
+                                    <td><img alt="" src="Images/Plus4.png" style="border-style: none" /></td>
+                                    <td>
+                                        <div style="padding-top: 2px; padding-bottom: 5px"><b>Многопользовательский режим</b></div>
+                                        Права на просмотр и изменение информации в системе<br />
+                                        Настраиваются администратором в зависимости от функциональных<br />
+                                        обязанностей каждого пользователя.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/ScreenShotLogo1.png" style="border-style: none;" /> </td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt">Скриншоты конфигурации</h3> </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <div style="border: thin solid #E5E5E5; border-radius: 15px; background-color: #FFFFFF; box-shadow: 0 0 15px rgba(0,0,0,0.4); margin-bottom: 50; padding: 0px 12px 12px 12px; width: 95%">
+                        <table border="0" cellpadding="10" width="100%">
+
+                            <tr>
+                                <td><p style="color: #086585; font-weight: bolder">Учет документов организации</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">Создание новой базы данных</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">Отчет по договорам с компаниями</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href="Images/DocumentsCount1.png" target="_blank"><img alt="Кликните для увеличения" src="Images/DocumentsCount1_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/DocumentsCount2.png" target="_blank"><img alt="Кликните для увеличения" src="Images/DocumentsCount2_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/DocumentsCount3.png" target="_blank"><img alt="Кликните для увеличения" src="Images/DocumentsCount3_small.png" style="border-style: none" /></a></td>
+                            </tr>
+
+                            <tr>
+                                <td><p style="color: #086585; font-weight: bolder">Учет сотрудников организации</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">История выдачи документов</p></td>
+                                <td><p style="color: #086585; font-weight: bolder">Главная таблица с документами</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href="Images/DocumentsCount4.png" target="_blank"><img alt="Кликните для увеличения" src="Images/DocumentsCount4_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/DocumentsCount5.png" target="_blank"><img alt="Кликните для увеличения" src="Images/DocumentsCount5_small.png" style="border-style: none" /></a></td>
+                                <td><a href="Images/DocumentsCount6.png" target="_blank"><img alt="Кликните для увеличения" src="Images/DocumentsCount6_small.png" style="border-style: none" /></a></td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/InstallLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />Установка программы</h3> </td>
+                        </tr>
+                    </table>
+                    <p>Для установки программы необходимо:</p>
+                    <ul>
+                        <li>Скачать программу <a href="DocumentsCount.msi">DocumentsCount.msi</a></li>
+                        <li>Запустить программу установки сделав двойной клик на скаченном файле</li>
+                        <li>Следуя инструкциям программы-установщика инсталлировать программу на жесткий диск</li>
+                        <li>Запустить программу, выбрав ее в меню «Программы» по нажатию кнопки «Пуск» или ярлык на рабочем столе.</li>
+                    </ul>
+
+                    <p>
+                        Чтобы заменить вашу текущую версию программы новой, надо сначала удалить текущую и затем установить новую.
+                    </p>
+                    <br />					
+					
+	<h3 style="color: #4682b4;font-size:15.5pt">Свидетельство Роспатента</h3>
+<table border="0" cellpadding="5">
+    <tr>
+        <td><a href="Images/Rosp9.jpg" target="_blank"><img alt="Кликните для увеличения" src="Images/Rosp9.jpg" width="232" height="332" style="border-style: none" /></a></td>
+    </tr>
+</table>
+
+                    <table>
+                        <tr>
+                            <td> <img alt="" src="Images/HistoryLogo.png" style="border-style: none;" /> </td>
+                            <td></td>
+                            <td> <h3 style="color: #4682b4;font-size:15.5pt"><br />История версий</h3> </td>
+                        </tr>
+                    </table>
+                    <br />
+
+                    <table border="1" cellpadding="4" cellspacing="0" bordercolor="LightGrey">
+                        <tr><th>Версия</th><th align="left">Что нового</th></tr><tr>
+<td>2.652</td>
+<td>
+1. Новая возможность задать частоту сжатия базы данных при выходе из программы (редко, часто, иногда, всегда) в параметрах<br>
+2. Доработки в форме отчетов - посроение SQL с учетом сортировки в различных случаях пользовательских выражений<br>
+3. Новые внутренние команды InputNumber, InputFromSlider (#ToBeDeveloped)
+</td>
+</tr>
+<tr>
+<td>2.651</td>
+<td>
+1. Доработка генерации Word-документов по шаблонам - поиск и обработка закладок в колонтирулах<br>
+2. Доработки в отчетах - усовершенствована логика посроения SQL (фильтры в часть WHERE или HAVING)
+</td>
+</tr>
+<tr>
+<td>2.650</td>
+<td>
+1. Доработка параметра Формула списка в свойствах поля<br>
+2. Доработки интерпретатора VBScript
+</td>
+</tr>
+<tr>
+<td>2.649</td>
+<td>
+1. Доработки по использованию функции Fromat, которая появилась в версии MS SQL Server 2019<br>
+2. Доработки по интерпретатору VBScript в части использования дробных чисел
+</td>
+</tr>
+<tr>
+<td>2.648</td>
+<td>
+1. Доработки интерпретатора VBScript
+</td>
+</tr>
+<tr>
+<td>2.645</td>
+<td>
+1. Улучшения по быстрому поиску
+</td>
+</tr>
+<tr>
+<td>2.641</td>
+<td>
+1. Доработки формы Создание пакета документов
+</td>
+</tr>
+<tr>
+<td>2.639</td>
+<td>
+1. Доработки в интерпретаторе VBScript
+</td>
+</tr>
+<tr>
+<td>2.637</td>
+<td>
+1. Новые команды PasteFromClipboard, ClearClipboard<br>
+2. Новая галочка в настройах быстрого поиска - Поиск по Enter<br>
+3. Новая галочка в форме печати чека - Вести журнал
+</td>
+</tr>
+<tr>
+<td>2.636</td>
+<td>
+1. Исправлен баг показа пустых форм, связанный с нехваткой буферной памяти
+</td>
+</tr>
+<tr>
+<td>2.623</td>
+<td>
+1. Доработки форм экспорта и импорта по расписанию<br>
+2. Исправлен баг долгого запуска при периодической проверке структуры
+</td>
+</tr>
+<tr>
+<td>2.619</td>
+<td>
+1. Доработка формы "Создание пакета документов"
+</td>
+</tr>
+<tr>
+<td>2.618</td>
+<td>
+1. Доработки формы соединения с Microsoft SQL Server - новый параемтр Именованный экземпляр<br>
+2. Доработки настройки панели инструментов формы для редактирования - управление видимостью стандартных кнопок ОК, Отмена, Применить<br>
+3. Доработка формы Сканировать папку
+</td>
+</tr>
+<tr>
+<td>2.614</td>
+<td>
+1. Новые формы "Обмен данными" и "Веб-запросы" доступны из меню "Сервис"<br>
+2. Доработки формы "Групповое обновление" - возможность указывать подзапросы со ссылками в угловых скобках, сохранение формы<br>
+3. Защита от нежелательного выключения многопользовательского режима
+</td>
+</tr>
+<tr>
+<td>2.609</td>
+<td>
+1. Возможность персонализации запланированных задач по импорту - галочка "Для пользователя"<br>
+2. Доработки по экспорту в RTF
+</td>
+</tr>
+<tr>
+<td>2.603</td>
+<td>
+1. В форме экспорта в XML Новая галочка Создать отдельный файл для каждой записи
+</td>
+</tr>
+<tr>
+<td>2.592</td>
+<td>
+1. Доработки интерпретатора VBScript
+</td>
+</tr>
+<tr>
+<td>2.590</td>
+<td>
+1. При перемещении записи наверх или вниз теперь учитываются подчиненные записи.<br>
+2. Новые внутренние команды GenerateBarcode и GenerateBarcodeEan13
+</td>
+</tr>
+<tr>
+<td>2.588</td>
+<td>
+1. Две новые формы - Экспорт в папку с CSV-файлами и Импорт из папки с CSV-файлами
+</td>
+</tr>
+<tr>
+<td>2.587</td>
+<td>
+1. Улучшена производительность при импорте из XML и CSV
+</td>
+</tr>
+<tr>
+<td>2.583</td>
+<td>
+1. Новая форма "Настройка счетчика" (вызывается из контекстного меню по правому клику на поле ID)
+</td>
+</tr>
+<tr>
+<td>2.574</td>
+<td>
+1. Доработки формы SMS-рассылки
+</td>
+</tr>
+<tr>
+<td>2.571</td>
+<td>
+1. Доработки функциональностей: интерпретатор, внутренние команды
+</td>
+</tr>
+<tr>
+<td>2.556</td>
+<td>
+1. Дорабоки SMS-рассылки<br>
+2. Доработки по интерпретатору VBScript
+</td>
+</tr>
+<tr>
+<td>2.541</td>
+<td>
+1. Доработки по интеграции с принтерами чеков
+</td>
+</tr>
+<tr>
+<td>2.532</td>
+<td>
+1. Доработки по импорту
+</td>
+</tr>
+<tr>
+<td>2.525</td>
+<td>
+1. Интеграция с новыми моделями чековых принтеров - Атол 30Ф, ШтрихМ ПТК<br>
+2. Доработки функциональности "Простые фильтры"
+</td>
+</tr>
+<tr>
+<td>2.520</td>
+<td>
+1. Добавлена возможность задать персонализацию дерева
+</td>
+</tr>
+<tr>
+<td>2.517</td>
+<td>
+1. Новая галочка в свойствах таблицы - "Простые фильтры"
+</td>
+</tr>
+<tr>
+<td>2.516</td>
+<td>
+1. Добавлена возможность задавать бизнес-правила для подчиненных таблиц - разный набор таблиц в зависимости от условия
+</td>
+</tr>
+<tr>
+<td>2.504</td>
+<td>
+1. Доработка экспорта в XML и импорта из XML<br>
+2. Доработка напоминаний с галочкой "Все напоминания в одной форме"
+</td>
+</tr>
+<tr>
+<td>2.502</td>
+<td>
+1. В правилах цветовыделения добавлено новое свойство "Размер шрифта поля"<br>
+2. Новые внутренние команды: AddRecordsIntoSchedule (заполнить календарь на год вперед), SetValueForCellRange (добавить в группу ячеек), Sum (сумма)
+</td>
+</tr>
+<tr>
+<td>2.491</td>
+<td>
+1. Доработки экспорта - в формах экспорта любого типа можно выбирать файл-шаблон из таблицы БД<br>
+2. Доработки по экспорту в RTF - можно использовать метки [REPEAT], [REPEATSUB], [REPEAT_tblSub]
+</td>
+</tr>
+<tr>
+<td>2.486</td>
+<td>
+1. Добавлена возможность делать экспорт в XML по шаблону
+</td>
+</tr>
+<tr>
+<td>2.482</td>
+<td>
+1. Доработки по импорту по расписанию
+</td>
+</tr>
+<tr>
+<td>2.480</td>
+<td>
+1. Доработки по импорту, возможность импортировать по расписанию<br>
+2. Возможность просматривать список баз данных на разных серверах MS SQL Server
+</td>
+</tr>
+<tr>
+<td>2.478</td>
+<td>
+1. Доработки формы по защите конфигурации - новые опции<br>
+2. Реализации функции Replace в значении по умолчанию и других местах
+</td>
+</tr>
+<tr>
+<td>2.475</td>
+<td>
+1. Новая галочка "Не печатать пустые колонки таблиц" в форме генерации Word-документа по шаблону<br>
+2. Возможность хранения файлов-шаблонов в отдельной таблице БД - tblTemplates
+</td>
+</tr>
+<tr>
+<td>2.474</td>
+<td>
+1. Доработки при типе связи "Многие-ко-многим"<br>
+2. Доработки генерации документов по шаблонам с метками [REPEAT] и [REPEATSUB]
+</td>
+</tr>
+<tr>
+<td>2.473</td>
+<td>
+1. Возможность задать более одной пользовательской кнопки для подчиненных таблиц<br>
+2. Возможность включить кнопку "ДОБАВИТЬ" на панели инструментов главной<br>
+3. Доработки интерпретатора VBScript
+</td>
+</tr>
+<tr>
+<td>2.469</td>
+<td>
+1. Переработка формы "Экспорт в CSV" - возможность экспортировать главную и подчиненную, а также экспорт по шаблону
+</td>
+</tr>
+<tr>
+<td>2.448</td>
+<td>
+1. Доработки напоминаний в случае "Показывать все напоминания в одной форме"<br>
+2. Доработка SMS-рассылки - новый параметр "XML-запрос"
+</td>
+</tr>
+<tr>
+<td>2.437</td>
+<td>
+1. Доработка емейл-рассылок - возможность вставлять более одной картинки при HTML-формате, возможность использовать закладки из подчиненных таблиц
+</td>
+</tr>
+<tr>
+<td>2.428</td>
+<td>
+1. Доработка формы "Печать чеков и этикеток", новый пункт в меню "Сервис", поддержка нового оборудования и возможность использовать шаблон RTF
+</td>
+</tr>
+<tr>
+<td>2.414</td>
+<td>
+1. Новая галочка в настройках полей "Разрешить выделять группу ячеек", полезна для таблиц-календарей при вводе ФИО в диапазон дат
+</td>
+</tr>
+<tr>
+<td>2.413</td>
+<td>
+1. Новая внутренняя команда Translit - для написания русского текста латиницей<br>
+2. Новая внутренняя команда SetVisibleTabs - для установки видимых вкладок на форме для редактирования по условию из скрипта<br>
+3. Доработка команд RefreshTable, RefreshActiveTable, RefreshActiveSubTable
+</td>
+</tr>
+<tr>
+<td>2.408</td>
+<td>
+1. Добавлена возможность настройки панели инструментов для подчиненных таблиц<br>
+2. В свойствах поля доработан функционал создания составных индексов по нескольким полям
+</td>
+</tr>
+<tr>
+<td>2.399</td>
+<td>
+1. Доработка формы "Печать чеков и этикеток", новое оборудование
+</td>
+</tr>
+<tr>
+<td>2.398</td>
+<td>
+1. Доработка интерпретатора VBScript<br>
+2. Доработка функционала Условие на значение<br>
+3. Доработка правил цветовыделения
+</td>
+</tr>
+<tr>
+<td>2.391</td>
+<td>
+1. Доработка формы "Печать чека" - добавлен принтер чеков Fprint-11, возможность задать скрипт для работы оборудования POS<br>
+2. Доработка условий на значение - возможность вызывать процедуры<br>
+3. Новые команды GetControlValue, SetControlValue<br>
+4. Доработка правил цветовыдения - возможность распознавать значения NULL
+</td>
+</tr>
+<tr>
+<td>2.381</td>
+<td>
+1. Доработка генерации Word-документов - новые окончания _LETTERS для вставки каждой буквы в отдельную ячейку Word-таблицы, _DAYS, _WORKDAYS<br>
+2. Новые типы триггеров - после добавления записи, после удаления записи<br>
+3. Доработки по полям-картинкам - вывод на панель справа из другой таблицы с возможностью редактирования и прочее
+</td>
+</tr>
+<tr>
+<td>2.374</td>
+<td>
+1. Новый пункт контекстного меню по правому клику на вкладке подтаблицы "Показывать панель фильтров"<br>
+2. Доработка экспорта в CSV - возможность выбора полей
+</td>
+</tr>
+<tr>
+<td>2.373</td>
+<td>
+1. Новая кнопка на панели инструментов "Экспорт таблицы в XML"
+</td>
+</tr>
+<tr>
+<td>2.371</td>
+<td>
+1. Показ полей-файлов в форме для редактирования<br>
+2. Хранение пользовательских картинок непосредственно в БД для формы для редактирования, правил цветовыделения<br>
+3. Возможность задать команду при клике на пользовательскую картинку для формы
+</td>
+</tr>
+<tr>
+<td>2.353</td>
+<td>
+1. Доработка функционала хранения картинок в БД, отображение ссылок на картинки.<br>
+2. Новые типы ссылок - "Ссылка на файл-картинку" и "Ссылка на файл - короткое имя"<br>
+3. Доработки по интеграции с программой IP-телефонии PsPhone - показ карточки звонящего, вызов PsPhone из программы с набором номера<br>
+4. Новые внутренние команды: SetTab, HideTab, актуальные для гибкой настройки формы для редактирования с использованием условий
+</td>
+</tr>
+<tr>
+<td>2.348</td>
+<td>
+1. Реализована интеграция с программой IP-телефонии PsPhone - при входящем звонке показывается карточка клиента<br>
+2. Новая внутренняя команда SetTab для установки текущей основной вкладки или вкладке формы для редактирования<br>
+3. Галочка "Печатать все записи в одном файле" реализована в форме "Экспорт в HTML" и другие доработки
+</td>
+</tr>
+<tr>
+<td>2.333</td>
+<td>
+1. Новая возможность быстрого поиска по нескольким полям
+</td>
+</tr>
+<tr>
+<td>2.316</td>
+<td>
+1. Новая галочка в свойствах таблицы "Произвольная настройка дерева"
+</td>
+</tr>
+<tr>
+<td>2.315</td>
+<td>
+1. Возможность передачи параметров в пользовательские процедуры<br>
+2. Доработка по дублированию записей - учитываются подчиненные таблицы второго уровня
+</td>
+</tr>
+<tr>
+<td>2.306</td>
+<td>
+1. Новый тип ссылки в свойствах поля - ссылка на файл-короткое имя
+</td>
+</tr>
+<tr>
+<td>2.300</td>
+<td>
+1. Новый тип триггера - при двойном клике на записи<br>
+2. Новая возможность задавать гиперссылки в форме для редактирования и в пользовательских формах
+</td>
+</tr>
+<tr>
+<td>2.298</td>
+<td>
+1. Новая внутренняя команда GoToUrlAndImportXml, предназначенная для получения различной информации с сайтов (курсы валют, контрагент по ИНН и др.)
+</td>
+</tr>
+<tr>
+<td>2.291</td>
+<td>
+1. Новая настройка в отчетах "Объединять по полям"
+</td>
+</tr>
+<tr>
+<td>2.287</td>
+<td>
+1. Доработка формы "Настройка полей" - панель слева и правила полей теперь персональные настройки
+</td>
+</tr>
+<tr>
+<td>2.282</td>
+<td>
+1. Доработка формы "Поиск в Интернет" для получения XML
+</td>
+</tr>
+<tr>
+<td>2.277</td>
+<td>
+1. Два новых типа триггеров: При открытии таблицы и При переключении на вкладку<br>
+2. Доработки экспорта по шаблону в RTF-документы
+</td>
+</tr>
+<tr>
+<td>2.270</td>
+<td>
+1. Новая версия справки
+</td>
+</tr>
+<tr>
+<td>2.257</td>
+<td>
+1. Доработки по функциональности "Добавить много"
+</td>
+</tr>
+<tr>
+<td>2.256</td>
+<td>
+1. Возможность создания форм и показа их, например, при старте программы или командой. Список форм в окне "Свойства базы данных"
+</td>
+</tr>
+<tr>
+<td>2.249</td>
+<td>
+1. Возможность добавлять пользовательские кнопки и картинки на формы для редактирования.<br>
+2. Доработки по генерации документов по шаблонам
+</td>
+</tr>
+<tr>
+<td>2.246</td>
+<td>
+1. Реализация галочки "Печатать все записи в одном файле" для Excel<br>
+2. Реализация меток [REPEAT] [/REPEAT] или [RECORD] [/RECORD] для выделения повторяющегося блока в файлах-шаблонах Word и Excel и в отчетах
+</td>
+</tr>
+<tr>
+<td>2.245</td>
+<td>
+1. Форма генерации документов по шаблонам - вместо одной две галочки "Печатать все записи в одном файле" и "С нового листа каждая запись"
+</td>
+</tr>
+<tr>
+<td>2.243</td>
+<td>
+1. Возможность изменять ширину ниспадающего списка в главной или подчиненных таблицах
+</td>
+</tr>
+<tr>
+<td>2.240</td>
+<td>
+1. Новая возможность настройки панели слева, где можно расположить фильтры-списки для фильтрации таблицы одним кликом, а также календарь
+</td>
+</tr>
+<tr>
+<td>2.239</td>
+<td>
+1. Новая внутренняя команда InputFromList<br>
+2. Новое окончание закладки _NOFORMAT и _CODE128 для печати штрих-кодов в офисных документах
+</td>
+</tr>
+<tr>
+<td>2.232</td>
+<td>
+1. Доработки по отчетам - можно применять фильтры для отчетов любого типа, для полей "Дата и время" показывается выпадающий календарь
+</td>
+</tr>
+<tr>
+<td>2.229</td>
+<td>
+1. Доработки по отчетам - цветовыделение и другие настройки можно применять при выводе в Excel в различных комбинациях, по шаблону и с учетом стилей
+</td>
+</tr>
+<tr>
+<td>2.226</td>
+<td>
+1. Доработки по экспорту в Excel - поля-картинки сохраняются в самом файле  <br>
+2. Доработки по отчетам - возможность вывода отчета в Excel с группировкой по шаблону
+</td>
+</tr>
+<tr>
+<td>2.223</td>
+<td>
+1. Доработки по импорту - кнопки сохранения и загрузки всех настроек формы
+</td>
+</tr>
+<tr>
+<td>2.221</td>
+<td>
+1. Доработки по экспорту в Word и Excel в плане цветовыделения, а также в отчетах <br>
+2. Доработки по экспорту в RTF. Возможность указывать символ # в закладках вида tblTable_#_Field2_Field3, печатающий порядковый номер записи<br>
+3. В формах импорта новая галочка "По окончании вызвать процедуру"
+</td>
+</tr>
+<tr>
+<td>2.215</td>
+<td>
+1. В правилах цветовыделения появилась новая возможность задать картинку (файл формата BMP) для отображения ее в ячейке таблицы
+</td>
+</tr>
+<tr>
+<td>2.208</td>
+<td>
+1. Новая галочка в настройках "Автоматически проверять обновления при старте" и новая форма проверки наличия новой версии<br>
+2. Доработки по отчетам - возможность указывать сложные SQL-выражения, содержащие вложенные запросы, а также несколько инструкций, не обязательно SELECT
+</td>
+</tr>
+<tr>
+<td>2.193</td>
+<td>
+1. Новая галочка в настройках "Печатать сетку" в форме "Экспорт таблицы в Excel"<br>
+2. При генерации документа по шаблону выводятся выделенные записи подчиненной таблицы<br>
+3. Доработки интерпретатора VBScript
+</td>
+</tr>
+<tr>
+<td>2.183</td>
+<td>
+1. Доработки формы "Импорт из клиент-банка" - возможность запустить обработку сразу после импорта<br>
+2. Настройка "Шрифт" и "Размер шрифта" перенесена из свойств таблицы в настройку полей (где персонализированные настройки)<br>
+3. Доработки формы "Настройка полей", новая галочка "Разрешить менять высоту строк" редизайн формы
+</td>
+</tr>
+<tr>
+<td>2.182</td>
+<td>
+1. Новая форма "Импорт из клиент-банка"<br>
+2. Доработки по импорту, редизайн формы импорта
+</td>
+</tr>
+<tr>
+<td>2.180</td>
+<td>
+1. Доработки настройки подсказок - их можно задавать для полей формы<br>
+2. Доработки при выводе отчетов в Excel  - при указании нескольких SQL-инструкций все таблицы показываются последовательно с заголовками<br>
+3. Реализован алгоритм автоматической расстановки Tab-последовательности для полей формы
+</td>
+</tr>
+<tr>
+<td>2.176</td>
+<td>
+1. Доработки настройки подсказок<br>
+2. Новые внутренние команды: InputDate,  InputDateRange, SetStatusText, SetMousePointer, SetVisibleFields, SetInvisibleFields, SetFieldsVisibility<br>
+3. Доработки по импорту из Excel-файлов<br>
+4. Доработки интерпретатора VBScript
+</td>
+</tr>
+<tr>
+<td>2.168</td>
+<td>
+1. Настройка подсказок для показа дополнительной информации при наведении мышки, можно задавать формулы с зависимостью от текста под мышкой. Вызывается из формы "Свойства таблицы"
+</td>
+</tr>
+<tr>
+<td>2.167</td>
+<td>
+1. В настройках полей добавлена возможность фиксации определенных колонок таблицы, чтобы они не прокручивались при горизонтальной прокрутке<br>
+2. Доработки интерпретатора VBScript
+</td>
+</tr>
+<tr>
+<td>2.162</td>
+<td>
+1. Новые предустановленные значения для фильтров полей даты и времени: Текущий квартал, Прошлый квартал, Позапрошлый квартал, Следующий квартал<br>
+2. Доработки по импорту из Excel-файлов - автоматический поиск начала таблицы<br>
+3. Доработки экспорта в Excel по шаблону
+</td>
+</tr>
+<tr>
+<td>2.158</td>
+<td>
+1. Новые типы команд для триггеров: Отправка email для всех, Отправка sms для всех, VBScript для всех, которые будут срабатывать для всех записей, удовлетворяющих условию, прописанному в параметре "Условие", а не для текущей записи.<br>
+2. Доработки экспорта в Excel
+</td>
+</tr>
+<tr>
+<td>2.143</td>
+<td>
+1. Новые типы окончаний закладок при генерации документов: _LETTERS (каждая буква в отдельной ячейке документа Excel), _LETTERSOVER#, LCASE, UCASE, _LEFT#, _RIGHT#, _MID#, _MID#AND#<br>
+2. Усовершенствован анализатор пользовательских SQL-выражений и формул<br>
+3. Доработки при работе с MS SQL Server<br>
+4. Добавлены новые SMS-провайдеры
+</td>
+</tr>
+<tr>
+<td>2.135</td>
+<td>
+1. Новая галочка в настройках "Подтверждение при выходе из программы"<br>
+2. Галочка "Разрешить группировку перетаскиванием полей" перенесена в форму "Настройка полей"<br>
+3. Доработка экспорта в Excel по шаблону - при вставке в закладку таблицы учитывается объединение ячеек<br>
+4. Значительно ускорен импорт в таблицы при СУБД MS SQL Server (чтение файла-источника)<br>
+5. Доработки интерпретатора VBScript и некоторых внутренних команд<br>
+6. Новая настройка автоформы AutoSavePeriod, задается в минутах и предназначена для автоматического сохранения долго открытой формы для редактирования
+</td>
+</tr>
+<tr class="old">
+                            <td>2.122</td>
+                            <td>
+                                1. Реализованы права доступа "По ролям" с возможностью создавать пользовательские роли<br />
+                                2. Добавлена возможность делать резервные копии БД каждый интервал времени<br />
+                                3. Добавлена возможность задавать значение по умолчанию для полей типа "Картинка" - путь к файлу<br />
+                                4. Новый тип ссылки "Ссылка на файл-картинку" в свойствах поля, картинки будут отображаться так же, как и хранимые поля-картинки<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.119</td>
+                            <td>
+                                1. Новая форма "Отправить e-mail по шаблону"<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.81</td>
+                            <td>
+                                1. Новая галочка в настройках полей "Выравнивание заголовков полей по центру"<br />
+                                2. Добавлена возможность указать "любое поле" в правилах цветовыделения<br />
+                                3. Доработки по дереву - возможность задавать произвольные формулы для построения уровней и для фильтрации данных<br />
+                                4. Доработки по экспорту таблицы в Excel<br />
+                                5. Доработки по VBScript
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.79</td>
+                            <td>
+                                1. Добавлены новые внутренние команды ExportTableToExcel, LoadFilters, CheckFilters<br />
+                                2. Доработки по экспорту таблицы в Excel - подхватывается цветовыделение<br />
+                                3. Доработки по вводу в таблицы - невозможность покинуть таблицу при незаполнении обязательных полей, сохранение сортировки ниспадающего списка<br />
+                                4. Доработки по отчетам - можно указать несколько SQL-инструкций через точку с запятой и получить соответственно, несколько таблиц в отчете<br />
+                                5. Доработки по VBScript
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.72</td>
+                            <td>
+                                1. Добавлены новые внутренние команды: GoToRecord, GoToTableAndRecord, CopyRecord, CopyRecordAndSubTable, которые можно использовать для пользовательских кнопок, а также в триггерах, напоминаниях и т.д.<br />
+                                2. Для пользовательских кнопок панели инструментов добавлена возможность указать команду VBScript и соответственно код на этом языке. Пример в Галерее <a href="Images/Gallary23.gif">скриншот №23</a><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.66</td>
+                            <td>
+                                1. Добавлена реализация подтаблиц второго уровня в форме для редактирования (при настройке ShowSubTables=1)<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.62</td>
+                            <td>
+                                1. Для MS SQL Server можно в качестве SQL-инструкции указывать вызов хранимой процедуры, например "call dbo.sp1('param1')" или "exec dbo.sp1('param1')"<br />
+                                2. Новая галочка в форме импорта - "Заполнять значения по умолчанию"<br />
+                                3. Доработки по триггерам - можно ссылаться на вычисляемые поля сохраняемой записи<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.58</td>
+                            <td>
+                                1. Доработки по SMS-рассылке<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.57</td>
+                            <td>
+                                1. Доработки по импорту<br />
+                                2. Новая форма "Импорт из XML-файла" с возможностью установки расписания для данной задачи<br />
+                                3. Новая галочка в форме "Новый документ Word/Excel по шаблону" - "Не печатать пустые таблицы"<br />
+                                4. Изменение формы параметров отчетов - добавлено имя целевого файла отчета с возможность сохранения отчетов в заданной папке<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.56</td>
+                            <td>
+                                1. Реализована настройка "Показывать список баз данных при старте" в случае MS SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.52</td>
+                            <td>
+                                1. В свойствах таблицы добавлена возможность задавать цветовыделение отдельных ячеек для таблицы<br />
+                                2. Доработки при работе с MS SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.51</td>
+                            <td>
+                                1. Доработки в настройке меню и панелей инструментов<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.49</td>
+                            <td>
+                                1. Добавлен функциональный блок для SMS-рассылки<br />
+                                2. Доработки при работе с MS SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.48</td>
+                            <td>
+                                1. Доработки при работе с MS SQL Server<br />
+                                2. Доработки по отчетам<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.44</td>
+                            <td>
+                                1. Добавлена функциональность экспорта всей БД в текстовый формат XML произвольной кодировки, вызывается администратором из меню "Файл"<br />
+                                2. Расширены возможности полей со ссылкой на файл - по нажатию на кнопку с троеточием показываются пункты меню, в т.ч. пункт "Назначить ссылку на файл с копированием на сервер"<br />
+                                3. Доработки по правам доступа - для правил горизонтальной фильтрации в колонке "Значение" можно задавать через AND или OR и другие условия<br />
+                                4. Доработки по подчиненным таблицам второго уровня - теперь можно назначать для любой подтаблицы<br />
+                                5. Доработки по функциональности множественного добавления в подтаблицы<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.42</td>
+                            <td>
+                                1. Расширены возможности полей со ссылкой на файл - по нажатию на кнопку с троеточием показываются пункты меню, в т.ч. пункт "Назначить ссылку на файл с копированием на сервер"<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.39</td>
+                            <td>
+                                1. Доработки по условиям триггеров<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.35</td>
+                            <td>
+                                1. Доработки по напоминаниям<br />
+                                2. Доработки по триггерам<br />
+                                3. Доработки при функционалу работы со сканером штрих-кодов<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.30</td>
+                            <td>
+                                1. Новый тип поля - "Файл" для хранения относительно небольших файлов в поле таблицы БД (до 1024 Кб)<br />
+                                2. Добавлен второй параметр "Параметр 2" в настроечной таблице панели инструментов - можно сохранять имя сгенерированного файла в поле при нажатии на пользовательскую кнопку<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.28</td>
+                            <td>
+                                1. Добавлены два пункта в контекстное меню для записей: "Переместить запись наверх" и "Переместить запись вниз"<br />
+                                2. Новая возможность запуска отчетов по расписанию - в форму настроек отчета добавлена кнопка "По расписанию"<br />
+                                3. Добавлена возможность переименования имени таблицы в свойствах таблицы<br />
+                                4. Улучшения по работе с MS SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.25</td>
+                            <td>
+                                1. Улучшения при работе с MS SQL Server<br />
+                                2. Доработки конструктора пользовательских форм<br />
+                                3. Улучшения по экспорту в Excel - более корректно преобразуются типы данных и применяется форматирование<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.24</td>
+                            <td>
+                                1. Улучшения по триггерам - новый тип операции "отправка e-mail"<br />
+                                2. Улучшения по рассылке - новая кнопка "Удалить дубли"<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.21</td>
+                            <td>
+                                1. Добавлены ниспадающие календарики для полей типа "Дата и время" при формате без времени ("dd.MM.yyyy" и др.)<br />
+                                2. Доработки по дублированию записей в подчиненных таблицах<br />
+                                3. Доработки формы группового обновления<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.19</td>
+                            <td>
+                                1. Новый дизайн панели инструментов<br />
+                                2. Доработки ниспадающих списков таблицы (изменение размеров списка с множественным выбором и др.)<br />
+                                3. Доработки функциональности генерации Excel и RTF документов по шаблонам<br />
+                                4. Доработки условия на значение<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.18</td>
+                            <td>
+                                1. В свойствах поля добавлена возможность добавлять сразу несколько полей из другой таблицы<br />
+                                2. Добавлена вертикальная линейка прокрутки в случае использования кастомизированных форм для редактирования<br />
+                                3. Доработки по работе с MS SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.16</td>
+                            <td>
+                                1. Доработки по триггерам<br />
+                                2. Доработки по экспорту в формат RTF<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.15</td>
+                            <td>
+                                1. Добавлен конструктор форм - возможность конструировать пользовательские формы для редактирования с группировкой по вкладкам<br />
+                                2. При генерации офисных документов по шаблонам добавлена обработка еще одного окончания _spellmoneyint - сумма прописью без указания 00 копеек<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.13</td>
+                            <td>
+                                1. Добавлена возможность задать триггеры на удаление и на перемещение по записям в таблице<br />
+                                2. Улучшения по удалению полей и записей из сложных представлений<br />
+                                3. Улучшения при работе с MS SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.10</td>
+                            <td>
+                                1. Усовершенствован поиск: добавлены новые опции "(Все поля)" и "(Все поля главной и подчиненных таблиц)"<br />
+                                2. Улучшения при работе с MS SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                            <td>
+                                1. Добавлен экспорт и генерация документов по шаблону в формат RTF<br />
+                                2. Добавлена возможность поиска по всем полям<br />
+                                3. В свойствах поля и свойствах таблицы новая галочка "Только чтение"<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b><i>2.0</i></b></td>
+                            <td>
+                                1. Добавлена поддержка СУБД Microsoft SQL Server<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.73</td>
+                            <td>
+                                1. В форму сканирования папки файловой системы добавлена новая галочка "Подчиненная таблица" для импорта в нее<br />
+                                2. Ряд исправлений при работе с реплицированными БД<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.70</td>
+                            <td>
+                                1. Оптимизация скорости работы с БД<br />
+                                2. В свойствах таблицы новая галочка "Только чтение"<br />
+                                3. В свойствах поля новая галочка "Объединение"<br />
+                                4. Добавлена возможность вывода картинок в отчеты HTML формата, а также поля-ссылки теперь показываются как ссылки<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.69</td>
+                            <td>
+                                1. Новая галочка "Быстрый поиск" в форме поиска<br />
+                                2. Доработан импорт данных из файлов Excel 2007<br />
+                                3. В свойствах таблицы возможность задания разных стилей выделения текущей записи<br />
+                                4. Улучшения по напоминаниям в одной форме - возможность делать переходы в разные вкладки<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.65</td>
+                            <td>
+                                1. В настройке напоминаний добавлена галочка "Показывать все напоминания в одной форме"<br />
+                                2. Для панели детального просмотра справа добавлена вертикальная линейка прокрутки в случае, если поля не помещаются<br />
+                                3. Оптимизация хранения настроек<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.61</td>
+                            <td>
+                                1. Доработана функциональность сортировки веток дерева с учетом пользовательских форматов полей "Дата и время"<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.56</td>
+                            <td>
+                                1. Оптимизация размера БД<br />
+                                2. Добавлена возможность настройки панели быстрого просмотра справа, поля для которой задаются в настройках полей<br />
+                                3. Двухколончатые списки в некоторых формах настроек (свойства таблицы, права доступа, настройка полей)<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.54</td>
+                            <td>
+                                1. Значительно усовершенствована функциональность экспорта в HTML и генерации документов HTML<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.52</td>
+                            <td>
+                                1. Реализована обработка закладок с суммой прописью (окончания "_прописью", "_spell") при экспорте в HTML<br />
+                                2. Ряд других улучшений и исправлений<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.47</td>
+                            <td>
+                                1. Для полей типа "Дата и время" добавлены предустановленные значения фильтров "Текущая неделя", "Прошлая неделя", "Следующая неделя"<br />
+                                2. Добавлена возможность задавать глобальные константы для фильтров (в угловых скобках)<br />
+                                3. Ряд других улучшений и исправлений<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.45</td>
+                            <td>
+                                1. Добавлен пункт в контекстное меню записей "Фильтр по тексту", позволяющий быстро отфильтровать таблицу по значению в ячейке<br />
+                                2. Добавлена возможность задавать стили для отчетов (в случае не использования шаблона)<br />
+                                3. Ряд других улучшений и исправлений<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.42</td>
+                            <td>
+                                1. Доработка генерации офисных документов с учетом новых форматов MS Office 2007 и расширений файлов<br />
+                                2. Незначительные доработки функциональности сканирования файлов в папке<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.40</td>
+                            <td>
+                                1. Обновлена справка<br />
+                                2. Изменена структура демонстрационной базы данных: новые поля в главной таблице, новая подчиненная таблица "Документы", дающая возможность указывать подчиненные документы к документу в главной таблице<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.35</td>
+                            <td>
+                                1. Новая галочка в форме для генерации Word-документа по шаблону: "В одном файле для каждой записи документ с нового листа"<br />
+                                2. Пользователи с ролью "Пользователь" теперь могут удалять записи<br />
+                                3. Улучшения для работы пользователей с ролью "Гость": сохраняются многие настройки<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.35</td>
+                            <td>
+                                1. Новая галочка в форме для генерации Word-документа по шаблону: "В одном файле для каждой записи документ с нового листа"<br />
+                                2. Пользователи с ролью "Пользователь" теперь могут удалять записи<br />
+                                3. Улучшения для работы пользователей с ролью "Гость": сохраняются многие настройки<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.34</td>
+                            <td>
+                                1. Улучшена функциональность "Сканирование папки файловой системы": можно импортировать разные свойства файла в разные поля целевой таблицы БД<br />
+                                2. Возможность точно указывать тип хранимой ссылки: ссылка на файл, на сайт, на e-mail, на телефон (в случае, если в поле хранятся ссылки)<br />
+                                3. Ряд других улучшений и исправлений<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.33</td>
+                            <td>
+                                1. Доработаны триггеры - можно задать триггер, срабатывающий при изменении только конкретного поля<br />
+                                2. Возможность задавать редактирование в отдельной форме для каждой таблицы отдельно в свойствах таблицы<br />
+                                3. Для полей со ссылкой на файл добавлены пункты контекстного меню для стандартных файловых операций<br />
+                                4. Новая галочка "Разрешить ввод в поле из другой таблицы" в свойствах поля<br />
+                                5. Улучшения по настройке дерева<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.28</td>
+                            <td>
+                                1. Незначительно изменена структура демонстрационной базы данных<br />
+                                2. Новые пункты контекстного меню по правому клику на поля со ссылкой на файл: "Проверить существование файлов", "Копировать все файлы в папку"<br />
+                                3. Ряд других улучшений и исправлений<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.26</td>
+                            <td>
+                                1. Усовершенствована генерация документов Word - новые галочки: Экспорт заголовков полей подчиненных таблиц, Экспорт итогов полей подчиненных таблиц, возможность задания закладок вида "tblSub_Field1_Field2" (подтаблица с явно указанными полями)<br />
+                                2. Улучшения функциональности по отчетам<br />
+                                3. Улучшения функциональности "Групповое обновление"<br />
+                                4. Русификация процесса установки, возможность устанавливать для всех пользователей компьютера<br />
+                                5. Улучшения по работе под Windows Vista<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.23</td>
+                            <td>
+                                1. Усовершенствована функциональность по сканированию папки файловой системы для импорта ссылок на файлы<br />
+                                2. Усовершенствован экспорт таблицы в Microsoft Word<br />
+                                3. Улучшения функциональности по отчетам - возможность сохранить измененные настройки отчета<br />
+                                4. В поиск добавлена галочка "Вывод результатов в список"<br />
+                                5. Ряд других улучшений и исправлений<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.18</td>
+                            <td>
+                                1. Добавлена возможность сканирования произвольной папки для импорта имен файлов в таблицу базы данных из файловой системы<br />
+                                2. Новый функциональный блок "Отчеты", добавлены новые отчеты.<br />
+                                3. Гибкая настройка основного меню<br />
+                                4. Усовершенствован экспорт во все форматы<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.17</td>
+                            <td>
+                                1. Усовершенствован экспорт таблицы в Microsoft Excel - показывается форма с рядом настроек<br />
+                                2. Редизайн формы свойств таблицы, новые настройки: краткое описание таблицы, шрифт, высота строк, количество строк в заголовках полей<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.10</td>
+                            <td>
+                                1. Усовершенствована функциональность по напоминаниям<br />
+                                2. Усовершенствован экспорт в формат HTML по шаблону и в Microsoft Word<br />
+                                3. Новая функциональность - настройка полей, условная видимость полей<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.8</td>
+                            <td>
+                                1. Новая функциональность - триггеры на добавление и обновление записей, позволяющие прописывать нужные SQL инструкции для других таблиц<br />
+                                2. Редизайн формы добавления полей - некоторые настройки теперь можно задавать и для вычисляемых полей, новый атрибут у поля "Позиция"<br />
+                                3. Новая кнопка в настройках "Установить текущую настройку вкладок для всех пользователей"<br />
+                                4. Усовершенствован поиск дублей: добавлена возможность задать второе поле<br />
+                                5. Усовершенствована функциональность по работе с уникальными полями<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1.5</td>
+                            <td>
+                                1. Редизайн формы создания таблиц<br />
+                                2. Добавлена справка<br />
+                                3. Новый атрибут в свойствах поля: "Поле для выбора"<br />
+                                4. Ряд других улучшений и исправлений<br />
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+
+                <!-- Right part -->
+                <td></td>
+            </tr>
+            <tr>
+
+                <!-- Bottom part -->
+                <td colspan="3">
+                    <br />
+
+
+
+					<footer class="footer-distributed">						<div class="footer-left">
+
+							<h3>Простой<span>Софт</span></h3>
+
+							<p class="footer-links">
+								<a href="index.htm">Главная</a>
+								·
+								<a href="programs.htm">Программы</a>
+								·
+								<a href="services.htm">Услуги</a>
+								·
+								<a href="prices.htm">Цены</a>
+								·
+								<a href="faq.htm">Вопросы</a>
+								·
+								<a href="contacts.htm">Контакты</a>
+							</p>
+
+							<p class="footer-company-name">Prostoysoft &copy; 2007 – 2020</p>
+							
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({ id: "1029407", type: "pageView", start: (new Date()).getTime() });
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+<!-- Rating Mail.ru logo -->
+<a href="https://top.mail.ru/jump?from=1029407">
+<img src="https://top-fwz1.mail.ru/counter?id=1029407;t=479;l=1" style="border:0;" height="31" width="88" alt="Top.Mail.Ru" /></a>
+<!-- //Rating Mail.ru logo -->
+
+
+								<!--LiveInternet counter--><script type="text/javascript"><!--
+								                               document.write("<a href='https://www.liveinternet.ru/click' " +
+								"target=_blank><img src='https://counter.yadro.ru/hit?t14.6;r" +
+								escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+								";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+								screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+								";" + Math.random() +
+								"' alt='' title='LiveInternet: показано число просмотров за 24" +
+								" часа, посетителей за 24 часа и за сегодня' " +
+								"border=0 width=88 height=31><\/a>")//--></script>
+								<!--/LiveInternet-->
+
+<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=6041278&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/6041278/2_1_FFFFFFFF_EEEEEEFF_0_pageviews" style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="6041278" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(6041278, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/6041278" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</div>
+
+						<div class="footer-center">
+
+							<div>
+								<i class="fa fa-map-marker"></i>
+								<p><span>Санкт-Петербург</span>ул.Ворошилова, д.2, офис 104 БЦ "Охта"</p>
+							</div>
+
+							<div>
+								<i class="fa fa-phone"></i>
+								<p>+7 (812) 309-46-42 c 10 до 18 пн-пт</p>
+							</div>
+
+							<div>
+								<i class="fa fa-envelope"></i>
+								<p><a href="support.htm">Обратиться в поддержку</a></p>								
+							</div>
+
+						</div>
+
+						<div class="footer-right">
+
+							<p class="footer-company-about">
+								<span>О компании</span>
+								Программы для дома и офиса!
+							</p>							
+							
+							<p class="CAge">12+</p>
+
+<div class="footer-icons">
+<a href="https://www.instagram.com/prostoysoft/"><i class="fa fa-instagram"></i></a>
+<a href="https://vk.com/prostoysoft"><i class="fa fa-vk"></i></a>
+<a href="https://www.facebook.com/prostoysoft.ru"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/infoprostoysoft"><i class="fa fa-twitter"></i></a>
+</div>
+
+						</div></footer>
+
+					
+                </td></tr>
+</tbody>
+</table>
+
+</body>
+</html>
