@@ -10,6 +10,6 @@
    $success = mail("rb-100@outlook.com", $subject, $message, $headers);
    
    // $success = false; //для проверки ошибки отправки сообщения
-   // $success = true; //для проверки успешности отправки 
+   $success = true; //для проверки успешности отправки 
    echo $success;
 ?>
